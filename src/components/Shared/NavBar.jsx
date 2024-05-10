@@ -3,7 +3,7 @@ import logo from '../../assets/logowhite.png'
 
 const NavBar = () => {
     return (
-        <div className="navbar  md:px-28 bg-[#1E2D24] text-white fixed z-10 bg-opacity-80">
+        <div className="navbar  md:px-28 bg-[#1E2D24] text-white fixed z-10 ">
             <div className="navbar-start">
                 <div className="dropdown">
                 <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -24,7 +24,7 @@ const NavBar = () => {
                    
                 </ul>
                 </div>
-                <a className="btn btn-ghost text-xl"><img className="h-full " src={logo} alt="" /></a>
+                <Link to="/" className="btn btn-ghost text-xl"><img className="h-full " src={logo} alt="" /></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
