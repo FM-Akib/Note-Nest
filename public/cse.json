@@ -1,0 +1,296 @@
+[
+    {
+        "semester": "first",
+        "courseCode": "CSE101",
+        "courseTitle": "Introduction to Computer Science",
+        "Playlist": [
+            {
+                "PlaylistTitle": "Introduction to Programming",
+                "Url": "https://example.com/playlist1",
+                "Description": "Learn the basics of programming with this introductory playlist.",
+                "authorName": "John Doe",
+                "stars": 4.5,
+                "img": "https://example.com/playlist1.jpg",
+                "type": "mid"
+            }
+        ],
+        "Note": [
+            {
+                "NoteTitle": "Variables and Data Types",
+                "Url": "https://example.com/note1",
+                "Description": "Detailed notes on variables and different data types in programming.",
+                "authorName": "Jane Smith",
+                "stars": 4.2,
+                "img": "https://example.com/note1.jpg",
+                "type": "final"
+            }
+        ],
+        "questionBank": [
+            {
+                "questionTitle": "Control Structures",
+                "Url": "https://example.com/questions1",
+                "Description": "A collection of practice questions on control structures.",
+                "authorName": "Alice Johnson",
+                "stars": 4.0,
+                "img": "https://example.com/questions1.jpg",
+                "type": "mid"
+            }
+        ],
+        "other": [
+            {
+                "Title": "Recommended Textbook",
+                "Url": "https://example.com/textbook1",
+                "Description": "A highly recommended textbook for this course.",
+                "authorName": "Book Publisher",
+                "stars": 4.8,
+                "img": "https://example.com/textbook1.jpg",
+                "type": "final"
+            }
+        ]
+    },
+    {
+        "semester": "first",
+        "courseCode": "CSE102",
+        "courseTitle": "Introduction to Software Development",
+        "Playlist": [
+            {
+                "PlaylistTitle": "Introduction to Programming",
+                "Url": "https://example.com/playlist1",
+                "Description": "Learn the basics of programming with this introductory playlist.",
+                "authorName": "John Doe",
+                "stars": 4.5,
+                "img": "https://example.com/playlist1.jpg",
+                "type": "mid"
+            }
+        ],
+        "Note": [
+            {
+                "NoteTitle": "Variables and Data Types",
+                "Url": "https://example.com/note1",
+                "Description": "Detailed notes on variables and different data types in programming.",
+                "authorName": "Jane Smith",
+                "stars": 4.2,
+                "img": "https://example.com/note1.jpg",
+                "type": "final"
+            }
+        ],
+        "questionBank": [
+            {
+                "questionTitle": "Control Structures",
+                "Url": "https://example.com/questions1",
+                "Description": "A collection of practice questions on control structures.",
+                "authorName": "Alice Johnson",
+                "stars": 4.0,
+                "img": "https://example.com/questions1.jpg",
+                "type": "mid"
+            }
+        ],
+        "other": [
+            {
+                "Title": "Recommended Textbook",
+                "Url": "https://example.com/textbook1",
+                "Description": "A highly recommended textbook for this course.",
+                "authorName": "Book Publisher",
+                "stars": 4.8,
+                "img": "https://example.com/textbook1.jpg",
+                "type": "final"
+            }
+        ]
+    },
+    {
+        "semester": "second",
+        "courseCode": "CSE101",
+        "courseTitle": "Introduction to Computer Science",
+        "Playlist": [
+            {
+                "PlaylistTitle": "Advanced Programming Concepts",
+                "Url": "https://example.com/playlist2",
+                "Description": "Explore advanced programming concepts in this playlist.",
+                "authorName": "Emily White",
+                "stars": 4.3,
+                "img": "https://example.com/playlist2.jpg",
+                "type": "mid"
+            }
+        ],
+        "Note": [
+            {
+                "NoteTitle": "Object-Oriented Programming",
+                "Url": "https://example.com/note2",
+                "Description": "Detailed notes on object-oriented programming principles.",
+                "authorName": "David Brown",
+                "stars": 4.1,
+                "img": "https://example.com/note2.jpg",
+                "type": "final"
+            }
+        ],
+        "questionBank": [
+            {
+                "questionTitle": "Data Structures",
+                "Url": "https://example.com/questions2",
+                "Description": "A collection of practice questions on data structures.",
+                "authorName": "Sophia Green",
+                "stars": 4.2,
+                "img": "https://example.com/questions2.jpg",
+                "type": "mid"
+            }
+        ],
+        "other": [
+            {
+                "Title": "Advanced Textbook",
+                "Url": "https://example.com/textbook2",
+                "Description": "An advanced textbook for this course.",
+                "authorName": "Book Publisher",
+                "stars": 4.7,
+                "img": "https://example.com/textbook2.jpg",
+                "type": "final"
+            }
+        ]
+    },
+    {
+        "semester": "second",
+        "courseCode": "CSE103",
+        "courseTitle": "Introduction to Math",
+        "Playlist": [
+            {
+                "PlaylistTitle": "Advanced Programming Concepts",
+                "Url": "https://example.com/playlist2",
+                "Description": "Explore advanced programming concepts in this playlist.",
+                "authorName": "Emily White",
+                "stars": 4.3,
+                "img": "https://example.com/playlist2.jpg",
+                "type": "mid"
+            }
+        ],
+        "Note": [
+            {
+                "NoteTitle": "Object-Oriented Programming",
+                "Url": "https://example.com/note2",
+                "Description": "Detailed notes on object-oriented programming principles.",
+                "authorName": "David Brown",
+                "stars": 4.1,
+                "img": "https://example.com/note2.jpg",
+                "type": "final"
+            }
+        ],
+        "questionBank": [
+            {
+                "questionTitle": "Data Structures",
+                "Url": "https://example.com/questions2",
+                "Description": "A collection of practice questions on data structures.",
+                "authorName": "Sophia Green",
+                "stars": 4.2,
+                "img": "https://example.com/questions2.jpg",
+                "type": "mid"
+            }
+        ],
+        "other": [
+            {
+                "Title": "Advanced Textbook",
+                "Url": "https://example.com/textbook2",
+                "Description": "An advanced textbook for this course.",
+                "authorName": "Book Publisher",
+                "stars": 4.7,
+                "img": "https://example.com/textbook2.jpg",
+                "type": "final"
+            }
+        ]
+    },
+    {
+        "semester": "third",
+        "courseCode": "CSE101",
+        "courseTitle": "Introduction to Computer Science",
+        "Playlist": [
+            {
+                "PlaylistTitle": "Advanced Algorithms",
+                "Url": "https://example.com/playlist3",
+                "Description": "Explore advanced algorithms in this playlist.",
+                "authorName": "Olivia Davis",
+                "stars": 4.4,
+                "img": "https://example.com/playlist3.jpg",
+                "type": "mid"
+            }
+        ],
+        "Note": [
+            {
+                "NoteTitle": "Algorithm Design and Analysis",
+                "Url": "https://example.com/note3",
+                "Description": "Detailed notes on algorithm design and analysis.",
+                "authorName": "Michael Clark",
+                "stars": 4.0,
+                "img": "https://example.com/note3.jpg",
+                "type": "final"
+            }
+        ],
+        "questionBank": [
+            {
+                "questionTitle": "Advanced Data Structures",
+                "Url": "https://example.com/questions3",
+                "Description": "A collection of practice questions on advanced data structures.",
+                "authorName": "Sophia White",
+                "stars": 4.3,
+                "img": "https://example.com/questions3.jpg",
+                "type": "mid"
+            }
+        ],
+        "other": [
+            {
+                "Title": "Advanced Textbook",
+                "Url": "https://example.com/textbook3",
+                "Description": "An advanced textbook for this course.",
+                "authorName": "Book Publisher",
+                "stars": 4.9,
+                "img": "https://example.com/textbook3.jpg",
+                "type": "final"
+            }
+        ]
+    },
+    {
+        "semester": "third",
+        "courseCode": "CSE105",
+        "courseTitle": "Introduction to Database",
+        "Playlist": [
+            {
+                "PlaylistTitle": "Advanced Algorithms",
+                "Url": "https://example.com/playlist3",
+                "Description": "Explore advanced algorithms in this playlist.",
+                "authorName": "Olivia Davis",
+                "stars": 4.4,
+                "img": "https://example.com/playlist3.jpg",
+                "type": "mid"
+            }
+        ],
+        "Note": [
+            {
+                "NoteTitle": "Algorithm Design and Analysis",
+                "Url": "https://example.com/note3",
+                "Description": "Detailed notes on algorithm design and analysis.",
+                "authorName": "Michael Clark",
+                "stars": 4.0,
+                "img": "https://example.com/note3.jpg",
+                "type": "final"
+            }
+        ],
+        "questionBank": [
+            {
+                "questionTitle": "Advanced Data Structures",
+                "Url": "https://example.com/questions3",
+                "Description": "A collection of practice questions on advanced data structures.",
+                "authorName": "Sophia White",
+                "stars": 4.3,
+                "img": "https://example.com/questions3.jpg",
+                "type": "mid"
+            }
+        ],
+        "other": [
+            {
+                "Title": "Advanced Textbook",
+                "Url": "https://example.com/textbook3",
+                "Description": "An advanced textbook for this course.",
+                "authorName": "Book Publisher",
+                "stars": 4.9,
+                "img": "https://example.com/textbook3.jpg",
+                "type": "final"
+            }
+        ]
+    }
+]
