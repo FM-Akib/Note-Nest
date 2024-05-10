@@ -12,9 +12,9 @@ const ResourceLeftNav = () => {
 
 
     const cse = useCseResources()
-    console.log(cse)
+    // console.log(cse)
     const firstSemester = cse[0].filter(course=>course.semester==='first')
-    console.log(firstSemester) 
+    // console.log(firstSemester) 
 
 
     return (

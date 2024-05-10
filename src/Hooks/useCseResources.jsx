@@ -21,7 +21,7 @@ const useCseResources = () => {
         .then(response => response.json())
         .then(data=>setCse(data));
     },[])
-
+//  console.log(cse)
     return [cse]
 };
 

@@ -5,13 +5,22 @@
         "courseTitle": "Introduction to Computer Science",
         "Playlist": [
             {
-                "PlaylistTitle": "Introduction to Programming",
+                "PlaylistTitle": "Introduction to Programming mid",
+                "Url": "https://example.com/playlist1",
+                "Description": "Learn the basics of programming with this introductory playlist.Learn the basics of programming with this introductory playlist.Learn the basics of programming with this introductory playlist. ",
+                "authorName": "John Doe",
+                "stars": 4.5,
+                "img": "https://example.com/playlist1.jpg",
+                "type": "mid"
+            },
+            {
+                "PlaylistTitle": "Introduction to Programming final",
                 "Url": "https://example.com/playlist1",
                 "Description": "Learn the basics of programming with this introductory playlist.",
                 "authorName": "John Doe",
                 "stars": 4.5,
                 "img": "https://example.com/playlist1.jpg",
-                "type": "mid"
+                "type": "final"
             }
         ],
         "Note": [
@@ -23,6 +32,15 @@
                 "stars": 4.2,
                 "img": "https://example.com/note1.jpg",
                 "type": "final"
+            },
+            {
+                "NoteTitle": "Variables and Data Types mid",
+                "Url": "https://example.com/note1",
+                "Description": "Detailed notes on variables and different data types in programming.",
+                "authorName": "Jane Smith",
+                "stars": 4.2,
+                "img": "https://example.com/note1.jpg",
+                "type": "mid"
             }
         ],
         "questionBank": [
