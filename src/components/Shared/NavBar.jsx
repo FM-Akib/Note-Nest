@@ -68,10 +68,10 @@ const NavBar = () => {
             </div>
                
 
- <a className="px-6 py-2 min-w-[120px] text-center text-[#FF1B1C] border border-[#FF1B1C] rounded hover:bg-[#FF1B1C] hover:text-white active:bg-[#FF1B1C] focus:outline-none focus:ring"
-            href="/download">
+        <Link className="px-4 py-2  text-center text-white border border-[#FF1B1C] rounded hover:bg-[#FF1B1C] hover:text-white active:bg-[#FF1B1C] focus:outline-none focus:ring"
+            to="/login">
             Login
-        </a>
+        </Link>
             </div>
       </div>
     );
