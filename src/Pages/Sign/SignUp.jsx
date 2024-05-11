@@ -1,18 +1,92 @@
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
-// const image_hosting_key= import.meta.env.VITE_apiKey_Image_2;
-// const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
+ const image_hosting_key= import.meta.env.VITE_apiKey_Image;
+ const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
 
 
 const SignUp = () => {
     const {register,handleSubmit} = useForm();
-
+    const axiosPublic = useAxiosPublic();
+    const {CreateUserEmailPassword,SigninWithGoogle} = useContext(AuthContext); 
 
 		
-		const onSubmit = (data) => {
-			console.log(data);
-		}
+
+    const handleGoogleSignUp= ()=>{
+        SigninWithGoogle()
+        .then((result) => {
+            const Loggeduser = result.user;
+                console.log(Loggeduser)
+    
+                const user ={
+                    name: result.user?.displayName,
+                    email: result.user?.email
+                }
+                axiosPublic.post('/users',user)
+                .then((result) => {
+                    if(result.insertedId>0){
+                        Swal.fire({
+                            position: "top-center",
+                            icon: "success",
+                            title: "Sign up successful.",
+                            showConfirmButton: false,
+                            timer: 1500
+                          });
+                         
+                    }
+                    // navigate('/',{replace: true})
+                })
+                
+          })
+          .catch((error) => {
+            console.log(error.message);
+          });
+      }
+    
+    const onSubmit =async (data) => {
+        const imageFile = {image: data.image[0]}
+        const res = await axiosPublic.post(image_hosting_api,imageFile,{
+            headers: {
+                'content-type': 'multipart/form-data',
+            }
+        })
+        if(res.data.success){
+            console.log(data)
+        }
+        CreateUserEmailPassword(data.email,data.password)
+        .then((result) => {
+            const Loggeduser = result.user;
+                console.log(Loggeduser)
+                const user = {
+                    name: data.name,
+                    email: data.email
+                }
+                axiosPublic.post('/users',user)
+                .then(result => {
+                    if(result.data.insertedId) {
+                        Swal.fire({
+                            position: "top-center",
+                            icon: "success",
+                            title: "Sign up successful.",
+                            showConfirmButton: false,
+                            timer: 1500
+                          });
+                        //   navigate('/',{replace: true})
+                    }
+                })
+               
+          })
+          .catch((error) => {
+            console.log(error.message);
+          });
+    }
+
+
+	
     return (
         <div className="md:grid grid-cols-10 p-2 md:p-14 ">
 
@@ -29,8 +103,8 @@ const SignUp = () => {
                 <input {...register("name")} type="text" name="name" id="name" placeholder="Name" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
             </div>
             <div className="space-y-1 text-sm">
-                <label htmlFor="img" className="block text-gray-600">Profile Photo</label>
-                <input {...register("img")} type="file" name="img" id="img"  className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
+                <label htmlFor="image" className="block text-gray-600">Profile Photo</label>
+                <input {...register("image")} type="file" name="image" id="image"  className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
             </div>
             <div className="space-y-1 text-sm">
                 <label htmlFor="email" className="block text-gray-600">Email</label>
@@ -48,7 +122,7 @@ const SignUp = () => {
             <div className="flex-1 h-px sm:w-16 bg-gray-300"></div>
             </div>
             <div className="flex justify-center space-x-4">
-            <button aria-label="Log in with Google" className="p-3 rounded-sm">
+            <button onClick={handleGoogleSignUp} aria-label="Log in with Google" className="p-3 rounded-sm">
             <svg width="30px" height="30px" viewBox="0 0 32 32" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"><path d="M23.75,16A7.7446,7.7446,0,0,1,8.7177,18.6259L4.2849,22.1721A13.244,13.244,0,0,0,29.25,16" fill="#00ac47"/><path d="M23.75,16a7.7387,7.7387,0,0,1-3.2516,6.2987l4.3824,3.5059A13.2042,13.2042,0,0,0,29.25,16" fill="#4285f4"/><path d="M8.25,16a7.698,7.698,0,0,1,.4677-2.6259L4.2849,9.8279a13.177,13.177,0,0,0,0,12.3442l4.4328-3.5462A7.698,7.698,0,0,1,8.25,16Z" fill="#ffba00"/><polygon fill="#2ab2db" points="8.718 13.374 8.718 13.374 8.718 13.374 8.718 13.374"/><path d="M16,8.25a7.699,7.699,0,0,1,4.558,1.4958l4.06-3.7893A13.2152,13.2152,0,0,0,4.2849,9.8279l4.4328,3.5462A7.756,7.756,0,0,1,16,8.25Z" fill="#ea4435"/><polygon fill="#2ab2db" points="8.718 18.626 8.718 18.626 8.718 18.626 8.718 18.626"/><path d="M29.25,15v1L27,19.5H16.5V14H28.25A1,1,0,0,1,29.25,15Z" fill="#4285f4"/></svg>
             </button>
 
