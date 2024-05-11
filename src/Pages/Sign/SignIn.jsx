@@ -1,6 +1,13 @@
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
 const SignIn = () => {
+	const {register,handleSubmit} = useForm();
+
+		
+		const onSubmit = (data) => {
+			console.log(data);
+		}
     return (
         <div className="md:grid grid-cols-10 p-2 md:p-14 ">
 
@@ -21,14 +28,15 @@ const SignIn = () => {
 
             <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-white text-gray-800">
 	<h1 className="text-2xl font-bold text-center">Login</h1>
-	<form noValidate="" action="" className="space-y-6">
+
+	<form onSubmit={handleSubmit(onSubmit)} noValidate="" action="" className="space-y-6">
 		<div className="space-y-1 text-sm">
-			<label htmlFor="username" className="block text-gray-600">Username</label>
-			<input type="text" name="username" id="username" placeholder="Username" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
+			<label htmlFor="email" className="block text-gray-600">Username</label>
+			<input {...register("email")} type="email" name="email" id="email" placeholder="Email" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
 		</div>
 		<div className="space-y-1 text-sm">
 			<label htmlFor="password" className="block text-gray-600">Password</label>
-			<input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
+			<input {...register("password")} type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
 			{/* <div className="flex justify-end text-xs text-gray-600">
 				<a rel="noopener noreferrer" href="#">Forgot Password?</a>
 			</div> */}

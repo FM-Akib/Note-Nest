@@ -1,6 +1,18 @@
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
+// const image_hosting_key= import.meta.env.VITE_apiKey_Image_2;
+// const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
+
+
 const SignUp = () => {
+    const {register,handleSubmit} = useForm();
+
+
+		
+		const onSubmit = (data) => {
+			console.log(data);
+		}
     return (
         <div className="md:grid grid-cols-10 p-2 md:p-14 ">
 
@@ -10,22 +22,23 @@ const SignUp = () => {
             <h1 className="text-2xl font-bold text-center">Register</h1>
 
 
-            <form noValidate="" action="" className="space-y-6">
-            <div className="space-y-1 text-sm">
+            <form onSubmit={handleSubmit(onSubmit)} noValidate="" action="" className="space-y-6">
+           
+           <div className="space-y-1 text-sm">
                 <label htmlFor="name" className="block text-gray-600">Name</label>
-                <input type="text" name="name" id="name" placeholder="Name" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
+                <input {...register("name")} type="text" name="name" id="name" placeholder="Name" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
             </div>
             <div className="space-y-1 text-sm">
                 <label htmlFor="img" className="block text-gray-600">Profile Photo</label>
-                <input type="file" name="img" id="img"  className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
+                <input {...register("img")} type="file" name="img" id="img"  className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
             </div>
             <div className="space-y-1 text-sm">
                 <label htmlFor="email" className="block text-gray-600">Email</label>
-                <input type="text" name="email" id="email" placeholder="Email" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
+                <input type="text" {...register("email")} name="email" id="email" placeholder="Email" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
             </div>
             <div className="space-y-1 text-sm">
                 <label htmlFor="password" className="block text-gray-600">Password</label>
-                <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
+                <input {...register("password")} type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
             </div>
             <button className="block w-full p-3 text-center rounded-sm text-gray-50 bg-[#F50057]">Sign in</button>
             </form>
