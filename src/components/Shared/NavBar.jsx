@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logowhite.png'
+import iiuc from '../../assets/iiucLogo.png';
 
 const NavBar = () => {
     return (
@@ -24,7 +25,9 @@ const NavBar = () => {
                    
                 </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost text-xl"><img className="h-full " src={logo} alt="" /></Link>
+                <Link to="/" className="btn btn-ghost text-xl">
+                    <img className="h-full "  src={iiuc} alt="" />
+                    <img className="h-full " src={logo} alt="" /></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
