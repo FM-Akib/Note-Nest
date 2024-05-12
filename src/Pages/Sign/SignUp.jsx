@@ -27,10 +27,11 @@ const SignUp = () => {
                     email: result.user?.email,
                     image: result.user?.photoURL,
                 }
+                console.log(user)
                
                 axiosPublic.post('/users',user)
                 .then((result) => {
-                  
+                  console.log(result)
                     if(result.data.insertedId){
                         Swal.fire({
                             position: "top-center",
