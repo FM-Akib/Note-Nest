@@ -16,7 +16,7 @@ const SignUp = () => {
 
 		
 
-    const handleGoogleSignUp= ()=>{
+    const handleGoogleSignUp = ()=>{
         SigninWithGoogle()
         .then((result) => {
             const Loggeduser = result.user;
@@ -24,11 +24,14 @@ const SignUp = () => {
     
                 const user ={
                     name: result.user?.displayName,
-                    email: result.user?.email
+                    email: result.user?.email,
+                    image: result.user?.photoURL,
                 }
+               
                 axiosPublic.post('/users',user)
                 .then((result) => {
-                    if(result.insertedId>0){
+                  
+                    if(result.data.insertedId){
                         Swal.fire({
                             position: "top-center",
                             icon: "success",
@@ -55,15 +58,15 @@ const SignUp = () => {
             }
         })
         if(res.data.success){
-            console.log(data)
-        }
-        CreateUserEmailPassword(data.email,data.password)
+            CreateUserEmailPassword(data.email,data.password)
         .then((result) => {
             const Loggeduser = result.user;
                 console.log(Loggeduser)
                 const user = {
                     name: data.name,
-                    email: data.email
+                    email: data.email,
+                    image: res.data.data.display_url,
+                    password: data.password
                 }
                 axiosPublic.post('/users',user)
                 .then(result => {
@@ -83,6 +86,8 @@ const SignUp = () => {
           .catch((error) => {
             console.log(error.message);
           });
+        }
+       
     }
 
 

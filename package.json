@@ -19,6 +19,7 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.51.4",
     "react-icons": "^5.2.1",
+    "react-notifications-component": "^4.0.1",
     "react-query": "^3.39.3",
     "react-router-dom": "^6.23.0",
     "sort-by": "^1.2.0",
