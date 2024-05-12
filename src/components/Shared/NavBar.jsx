@@ -3,11 +3,16 @@ import logo from '../../assets/logowhite.png'
 import iiuc from '../../assets/iiucLogo.png';
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
+import avatar from '../../assets/Male_avatar.png'
 
 const NavBar = () => {
-    const {user} = useContext(AuthContext)
-console.log(user)
-
+    const {user,logOut} = useContext(AuthContext)
+ console.log(user)
+const handleLogout = () => {
+    logOut()
+    .then(() => {})
+    .catch(err => console.log(err));
+}
     return (
         <div className="navbar  md:px-28 bg-[#1E2D24] text-white fixed z-10 ">
             <div className="navbar-start">
@@ -60,7 +65,7 @@ console.log(user)
                     user ? <div className="dropdown dropdown-end mr-4">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                        <img alt="Tailwind CSS Navbar component" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                        <img alt="" src={user?.photoURL ? user.photoURL: avatar} />
                         </div>
                     </div>
                     <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content  rounded-box w-52 bg-[#1E2D24]">
@@ -71,7 +76,7 @@ console.log(user)
                         </a>
                         </li>
                         <li><a>Settings</a></li>
-                        <li><a>Logout</a></li>
+                        <li><button onClick={handleLogout}>Logout</button></li>
                     </ul>
                     </div> : <Link className="px-4 py-2  text-center text-white border border-[#FF1B1C] rounded hover:bg-[#FF1B1C] hover:text-white active:bg-[#FF1B1C] focus:outline-none focus:ring"
                 to="/login"> Login</Link>

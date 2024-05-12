@@ -27,7 +27,7 @@ const SignUp = () => {
                     email: result.user?.email,
                     image: result.user?.photoURL,
                 }
-                console.log(user)
+                // console.log(user)
                
                 axiosPublic.post('/users',user)
                 .then((result) => {
@@ -120,7 +120,7 @@ const SignUp = () => {
                 <label htmlFor="password" className="block text-gray-600">Password</label>
                 <input {...register("password")} type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
             </div>
-            <button className="block w-full p-3 text-center rounded-sm text-gray-50 bg-[#F50057]">Sign in</button>
+            <button className="block w-full p-3 text-center rounded-sm text-gray-50 bg-[#F50057]">Sign Up</button>
             </form>
             <div className="flex items-center pt-4 space-x-1">
             <div className="flex-1 h-px sm:w-16 bg-gray-300"></div>
