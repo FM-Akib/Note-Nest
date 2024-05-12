@@ -1,0 +1,111 @@
+[
+    {
+      "id": 1,
+      "semester": 1,
+      "courseCode": "CSE-1121",
+      "courseTitle": "Computer Programming I"
+    },
+    {
+      "id": 2,
+      "semester": 1,
+      "courseCode": "CSE-1122",
+      "courseTitle": "Computer Programming I Lab"
+    },
+    {
+      "id": 3,
+      "semester": 1,
+      "courseCode": "EEE-1121",
+      "courseTitle": "Basic Electrical Engineering"
+    },
+    {
+      "id": 4,
+      "semester": 1,
+      "courseCode": "EEE-1122",
+      "courseTitle": "Basic Electrical Engineering Lab"
+    },
+    {
+      "id": 5,
+      "semester": 1,
+      "courseCode": "MATH-1107",
+      "courseTitle": "Mathematics I (Differential and Integral Calculus)"
+    },
+    {
+      "id": 6,
+      "semester": 1,
+      "courseCode": "PHY-1101",
+      "courseTitle": "Physics I (Mechanics, Waves, Heat and Thermodynamics)"
+    },
+    {
+      "id": 7,
+      "semester": 1,
+      "courseCode": "UREL-1106",
+      "courseTitle": "Advanced English"
+    },
+    {
+      "id": 8,
+      "semester": 1,
+      "courseCode": "UREM-1101",
+      "courseTitle": "Text of Ethics and Morality"
+    },
+    {
+        "id": 9,
+        "semester": 2,
+        "courseCode": "CSE-1221",
+        "courseTitle": "Computer Programming II"
+      },
+      {
+        "id": 10,
+        "semester": 2,
+        "courseCode": "CSE-1222",
+        "courseTitle": "Computer Programming II Lab"
+      },
+      {
+        "id": 11,
+        "semester": 2,
+        "courseCode": "CSE-1223",
+        "courseTitle": "Discrete Mathematics"
+      },
+      {
+        "id": 12,
+        "semester": 2,
+        "courseCode": "CSE-1230",
+        "courseTitle": "Competitive Programming I"
+      },
+      {
+        "id": 13,
+        "semester": 2,
+        "courseCode": "EEE-1221",
+        "courseTitle": "Electronics"
+      },
+      {
+        "id": 14,
+        "semester": 2,
+        "courseCode": "EEE-1222",
+        "courseTitle": "Electronics Lab"
+      },
+      {
+        "id": 15,
+        "semester": 2,
+        "courseCode": "MATH-1207",
+        "courseTitle": "Mathematics II (Geometry and Differential Equations)"
+      },
+      {
+        "id": 16,
+        "semester": 2,
+        "courseCode": "PHY-1201",
+        "courseTitle": "Physics II (Electromagnetism, Optics and Modern Physics)"
+      },
+      {
+        "id": 17,
+        "semester": 2,
+        "courseCode": "PHY-1204",
+        "courseTitle": "Physics II Lab (Electromagnetism, Optics and Modern Physics)"
+      },
+      {
+        "id": 18,
+        "semester": 2,
+        "courseCode": "URED-1201",
+        "courseTitle": "Basic Principles of Islam ('Aqidah + 'Ibadah)"
+      }
+  ]
+  

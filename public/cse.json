@@ -1,7 +1,7 @@
 [
     {
         "semester": "first",
-        "courseCode": "CSE101",
+        "courseCode": "CSE-1121",
         "courseTitle": "Introduction to Computer Science",
         "Playlist": [
             {
@@ -68,7 +68,7 @@
     },
     {
         "semester": "first",
-        "courseCode": "CSE102",
+        "courseCode": "CSE-1122",
         "courseTitle": "Introduction to Software Development",
         "Playlist": [
             {
@@ -117,7 +117,7 @@
     },
     {
         "semester": "second",
-        "courseCode": "CSE101",
+        "courseCode": "CSE-101",
         "courseTitle": "Introduction to Computer Science",
         "Playlist": [
             {
@@ -166,7 +166,7 @@
     },
     {
         "semester": "second",
-        "courseCode": "CSE103",
+        "courseCode": "CSE-103",
         "courseTitle": "Introduction to Math",
         "Playlist": [
             {
