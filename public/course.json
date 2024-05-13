@@ -106,6 +106,420 @@
         "semester": 2,
         "courseCode": "URED-1201",
         "courseTitle": "Basic Principles of Islam ('Aqidah + 'Ibadah)"
+      },
+      {
+        "id": 19,
+        "semester": 3,
+        "courseCode": "CHEM-2301",
+        "courseTitle": "Chemistry"
+      },
+      {
+        "id": 20,
+        "semester": 3,
+        "courseCode": "CHEM-2304",
+        "courseTitle": "Chemistry Lab"
+      },
+      {
+        "id": 21,
+        "semester": 3,
+        "courseCode": "CSE-2321",
+        "courseTitle": "Data Structures"
+      },
+      {
+        "id": 22,
+        "semester": 3,
+        "courseCode": "CSE-2322",
+        "courseTitle": "Data Structures Lab"
+      },
+      {
+        "id": 23,
+        "semester": 3,
+        "courseCode": "CSE-2323",
+        "courseTitle": "Digital Logic Design"
+      },
+      {
+        "id": 24,
+        "semester": 3,
+        "courseCode": "CSE-2324",
+        "courseTitle": "Digital Logic Design Lab"
+      },
+      {
+        "id": 25,
+        "semester": 3,
+        "courseCode": "CSE-2340",
+        "courseTitle": "Software Development I"
+      },
+      {
+        "id": 26,
+        "semester": 3,
+        "courseCode": "MATH-2307",
+        "courseTitle": "Mathematics III (Matrices, Linear System of Equations and Vector Analysis)"
+      },
+      {
+        "id": 27,
+        "semester": 3,
+        "courseCode": "STAT-2311",
+        "courseTitle": "Probability and Statistics"
+      },
+      {
+        "id": 28,
+        "semester": 3,
+        "courseCode": "URED-2302",
+        "courseTitle": "Sciences of Quran and Hadith"
+      },
+      {
+        "id": 29,
+        "semester": 4,
+        "courseCode": "CSE-2421",
+        "courseTitle": "Computer Algorithms"
+      },
+      {
+        "id": 30,
+        "semester": 4,
+        "courseCode": "CSE-2422",
+        "courseTitle": "Computer Algorithms Lab"
+      },
+      {
+        "id": 31,
+        "semester": 4,
+        "courseCode": "CSE-2423",
+        "courseTitle": "Database Management Systems"
+      },
+      {
+        "id": 32,
+        "semester": 4,
+        "courseCode": "CSE-2424",
+        "courseTitle": "Database Management Systems Lab"
+      },
+      {
+        "id": 33,
+        "semester": 4,
+        "courseCode": "CSE-2425",
+        "courseTitle": "Theory of Computing"
+      },
+      {
+        "id": 34,
+        "semester": 4,
+        "courseCode": "CSE-2430",
+        "courseTitle": "Competitive Programming II"
+      },
+      {
+        "id": 35,
+        "semester": 4,
+        "courseCode": "EEE-2421",
+        "courseTitle": "Electrical Drives and Instrumentation"
+      },
+      {
+        "id": 36,
+        "semester": 4,
+        "courseCode": "EEE-2422",
+        "courseTitle": "Electrical Drives and Instrumentation Lab"
+      },
+      {
+        "id": 37,
+        "semester": 4,
+        "courseCode": "GEBL-2401",
+        "courseTitle": "Bangla Language and Literature"
+      },
+      {
+        "id": 38,
+        "semester": 4,
+        "courseCode": "MATH-2407",
+        "courseTitle": "Mathematics IV (Complex Variable, Fourier Analysis and Z-transform)"
+      },
+      {
+        "id": 39,
+        "semester": 4,
+        "courseCode": "ME-2412",
+        "courseTitle": "Engineering Drawing Lab"
+      },
+      {
+        "id": 40,
+        "semester": 4,
+        "courseCode": "ACC-2401",
+        "courseTitle": "Financial and Managerial Accounting"
+      },
+      {
+        "id": 41,
+        "semester": 5,
+        "courseCode": "CSE-3521",
+        "courseTitle": "Computer Architecture"
+      },
+      {
+        "id": 42,
+        "semester": 5,
+        "courseCode": "CSE-3523",
+        "courseTitle": "Microprocessors, Microcontrollers and Embedded Systems"
+      },
+      {
+        "id": 43,
+        "semester": 5,
+        "courseCode": "CSE-3524",
+        "courseTitle": "Microprocessors, Microcontrollers and Embedded Systems Lab"
+      },
+      {
+        "id": 44,
+        "semester": 5,
+        "courseCode": "CSE-3525",
+        "courseTitle": "Data Communication"
+      },
+      {
+        "id": 45,
+        "semester": 5,
+        "courseCode": "CSE-3527",
+        "courseTitle": "Compiler"
+      },
+      {
+        "id": 46,
+        "semester": 5,
+        "courseCode": "CSE-3528",
+        "courseTitle": "Compiler Lab"
+      },
+      {
+        "id": 47,
+        "semester": 5,
+        "courseCode": "CSE-3529",
+        "courseTitle": "Systems Analysis and Design"
+      },
+      {
+        "id": 48,
+        "semester": 5,
+        "courseCode": "CSE-3532",
+        "courseTitle": "Tools and Technologies for Internet Programming"
+      },
+      {
+        "id": 49,
+        "semester": 5,
+        "courseCode": "URED-3503",
+        "courseTitle": "Political Thoughts and Social Behavior"
+      },
+      {
+        "id": 50,
+        "semester": 6,
+        "courseCode": "CSE-3631",
+        "courseTitle": "Operating Systems"
+      },
+      {
+        "id": 51,
+        "semester": 6,
+        "courseCode": "CSE-3632",
+        "courseTitle": "Operating Systems Lab"
+      },
+      {
+        "id": 52,
+        "semester": 6,
+        "courseCode": "CSE-3633",
+        "courseTitle": "Computer Networks"
+      },
+      {
+        "id": 53,
+        "semester": 6,
+        "courseCode": "CSE-3634",
+        "courseTitle": "Computer Networks Lab"
+      },
+      {
+        "id": 54,
+        "semester": 6,
+        "courseCode": "CSE-3635",
+        "courseTitle": "Artificial Intelligence"
+      },
+      {
+        "id": 55,
+        "semester": 6,
+        "courseCode": "CSE-3636",
+        "courseTitle": "Artificial Intelligence Lab"
+      },
+      {
+        "id": 56,
+        "semester": 6,
+        "courseCode": "CSE-3637",
+        "courseTitle": "Software Engineering"
+      },
+      {
+        "id": 57,
+        "semester": 6,
+        "courseCode": "CSE-3638",
+        "courseTitle": "Software Engineering Lab"
+      },
+      {
+        "id": 58,
+        "semester": 6,
+        "courseCode": "CSE-3640",
+        "courseTitle": "Software Development II Lab"
+      },
+      {
+        "id": 59,
+        "semester": 6,
+        "courseCode": "URED-3604",
+        "courseTitle": "Life and Teachings of Prophet Muhammad (SAAS)"
+      },
+      {
+        "id": 60,
+        "semester": 6,
+        "courseCode": "GEHE-3601",
+        "courseTitle": "History of the Emergence of Bangladesh"
+      },
+      {
+        "id": 61,
+        "semester": 7,
+        "courseCode": "CSE-4708",
+        "courseTitle": "Field Work"
+      },
+      {
+        "id": 62,
+        "semester": 7,
+        "courseCode": "CSE-4741",
+        "courseTitle": "Computer Graphics"
+      },
+      {
+        "id": 63,
+        "semester": 7,
+        "courseCode": "CSE-4742",
+        "courseTitle": "Computer Graphics Lab"
+      },
+      {
+        "id": 64,
+        "semester": 7,
+        "courseCode": "CSE-4743",
+        "courseTitle": "Computer Security"
+      },
+      {
+        "id": 65,
+        "semester": 7,
+        "courseCode": "CSE-4744",
+        "courseTitle": "Computer Security Lab"
+      },
+      {
+        "id": 66,
+        "semester": 7,
+        "courseCode": "CSE-4745",
+        "courseTitle": "Numerical Methods"
+      },
+      {
+        "id": 67,
+        "semester": 7,
+        "courseCode": "CSE-4746",
+        "courseTitle": "Numerical Methods Lab"
+      },
+      {
+        "id": 68,
+        "semester": 7,
+        "courseCode": "CSE-4747",
+        "courseTitle": "Mathematical Analysis for Computer Science"
+      },
+      {
+        "id": 69,
+        "semester": 7,
+        "courseCode": "CSE-4750",
+        "courseTitle": "Technical Writing and Presentation"
+      },
+      {
+        "id": 70,
+        "semester": 7,
+        "courseCode": "CSE-4800",
+        "courseTitle": "Project / Thesis"
+      },
+      {
+        "id": 71,
+        "semester": 7,
+        "courseCode": "ECON-3501",
+        "courseTitle": "Principles of Economics"
+      },
+      {
+        "id": 72,
+        "semester": 7,
+        "courseCode": "URIH-4701",
+        "courseTitle": "A Survey of Islamic History and Culture"
+      },
+      {
+        "id": 73,
+        "semester": 8,
+        "courseCode": "CSE-4805",
+        "courseTitle": "Social, Professional and Ethical Issues in Computing"
+      },
+      {
+        "id": 74,
+        "semester": 8,
+        "courseCode": "CSE-4822",
+        "courseTitle": "General Viva"
+      },
+      {
+        "id": 75,
+        "semester": 8,
+        "courseCode": "CSE-4823",
+        "courseTitle": "Fault Tolerant System"
+      },
+      {
+        "id": 76,
+        "semester": 8,
+        "courseCode": "CSE-4824",
+        "courseTitle": "Fault Tolerant System Lab"
+      },
+      {
+        "id": 77,
+        "semester": 8,
+        "courseCode": "CSE-4825",
+        "courseTitle": "Basic Graph Theory"
+      },
+      {
+        "id": 78,
+        "semester": 8,
+        "courseCode": "CSE-4826",
+        "courseTitle": "Basic Graph Theory Lab"
+      },
+      {
+        "id": 79,
+        "semester": 8,
+        "courseCode": "CSE-4871",
+        "courseTitle": "Neural Network and Fuzzy System"
+      },
+      {
+        "id": 80,
+        "semester": 8,
+        "courseCode": "CSE-4872",
+        "courseTitle": "Neural Network and Fuzzy System Lab"
+      },
+      {
+        "id": 81,
+        "semester": 8,
+        "courseCode": "CSE-4873",
+        "courseTitle": "Computer Vision and Robotics"
+      },
+      {
+        "id": 82,
+        "semester": 8,
+        "courseCode": "CSE-4874",
+        "courseTitle": "Computer Vision and Robotics Lab"
+      },
+      {
+        "id": 83,
+        "semester": 8,
+        "courseCode": "CSE-4875",
+        "courseTitle": "Pattern Recognition and Image Processing"
+      },
+      {
+        "id": 84,
+        "semester": 8,
+        "courseCode": "CSE-4876",
+        "courseTitle": "Pattern Recognition and Image Processing Lab"
+      },
+      {
+        "id": 85,
+        "semester": 8,
+        "courseCode": "CSE-4877",
+        "courseTitle": "Machine Learning and Data Mining"
+      },
+      {
+        "id": 86,
+        "semester": 8,
+        "courseCode": "CSE-4878",
+        "courseTitle": "Machine Learning and Data Mining Lab"
+      },
+      {
+        "id": 87,
+        "semester": 8,
+        "courseCode": "MGT-3601",
+        "courseTitle": "Industrial Management"
       }
   ]
   
