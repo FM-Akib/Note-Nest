@@ -29,8 +29,8 @@ const ResourceLeftNav = () => {
 
 
     return (
-        <div className="h-screen bg-red-600 p-4 text-white overflow-y-scroll">
-            <ul className="flex flex-col gap-2 max-w-[280px] mx-auto mt-4  ">
+        <div className="h-screen bg-[#9A031E] p-4 text-white overflow-y-scroll">
+            <ul className="flex flex-col gap-3 max-w-[280px] mx-auto mt-4  ">
                 
                 <li>
                     <details className="group ">
@@ -54,11 +54,11 @@ const ResourceLeftNav = () => {
                                 </path>
                             </svg>
                         </summary>
-                        <article className="px-4 pb-4 ">
-                            <ul className="flex flex-col gap-4 pl-2 mt-4 ">
+                        <article className="px-2 pb-4 ">
+                            <ul className="flex flex-col gap-1 pl-2 mt-4 ">
                                {
                                 firstSemester.map(course=>  <li key={course.courseCode}
-                                 className="flex gap-2">
+                                 className="flex gap-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 py-2  px-2 rounded-sm ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                                     stroke="currentColor" className="w-6 h-6">
                                     <path strokeLinecap="round" strokeLinejoin="round"
@@ -97,11 +97,11 @@ const ResourceLeftNav = () => {
                                 </path>
                             </svg>
                         </summary>
-                        <article className="px-4 pb-4">
-                            <ul className="flex flex-col gap-4 pl-2 mt-4 ">
+                        <article className="px-2 pb-4">
+                            <ul className="flex flex-col gap-1 pl-2 mt-4 ">
                             {
                                 secondSemester.map(course=>  <li key={course.courseCode}
-                                 className="flex gap-2">
+                                 className="flex gap-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 py-2  px-2 rounded-sm ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                                     stroke="currentColor" className="w-6 h-6">
                                     <path strokeLinecap="round" strokeLinejoin="round"
@@ -139,11 +139,11 @@ const ResourceLeftNav = () => {
                                 </path>
                             </svg>
                         </summary>
-                        <article className="px-4 pb-4">
-                            <ul className="flex flex-col gap-4 pl-2 mt-4 ">
+                        <article className="px-2 pb-4">
+                            <ul className="flex flex-col gap-1 pl-2 mt-4 ">
                             {
                                 thirdSemester.map(course=>  <li key={course.courseCode}
-                                 className="flex gap-2">
+                                 className="flex gap-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 py-2  px-2 rounded-sm ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                                     stroke="currentColor" className="w-6 h-6">
                                     <path strokeLinecap="round" strokeLinejoin="round"
@@ -181,11 +181,11 @@ const ResourceLeftNav = () => {
                                 </path>
                             </svg>
                         </summary>
-                        <article className="px-4 pb-4">
-                            <ul className="flex flex-col gap-4 pl-2 mt-4 ">
+                        <article className="px-2 pb-4">
+                            <ul className="flex flex-col gap-1 pl-2 mt-4 ">
                             {
                                 fourthSemester.map(course=>  <li key={course.courseCode}
-                                 className="flex gap-2">
+                                 className="flex gap-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 py-2  px-4 rounded-sm ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                                     stroke="currentColor" className="w-6 h-6">
                                     <path strokeLinecap="round" strokeLinejoin="round"
@@ -223,11 +223,11 @@ const ResourceLeftNav = () => {
                                 </path>
                             </svg>
                         </summary>
-                        <article className="px-4 pb-4">
-                            <ul className="flex flex-col gap-4 pl-2 mt-4 ">
+                        <article className="px-2 pb-4">
+                            <ul className="flex flex-col gap-1 pl-2 mt-4 ">
                             {
                                 fifthSemester.map(course=>  <li key={course.courseCode}
-                                 className="flex gap-2">
+                                 className="flex gap-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 py-2  px-4 rounded-sm ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                                     stroke="currentColor" className="w-6 h-6">
                                     <path strokeLinecap="round" strokeLinejoin="round"
@@ -265,11 +265,11 @@ const ResourceLeftNav = () => {
                                 </path>
                             </svg>
                         </summary>
-                        <article className="px-4 pb-4">
-                            <ul className="flex flex-col gap-4 pl-2 mt-4 ">
+                        <article className="px-2 pb-4">
+                            <ul className="flex flex-col gap-1 pl-2 mt-4 ">
                             {
                                 sixthSemester.map(course=>  <li key={course.courseCode}
-                                 className="flex gap-2">
+                                 className="flex gap-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 py-2  px-4 rounded-sm ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                                     stroke="currentColor" className="w-6 h-6">
                                     <path strokeLinecap="round" strokeLinejoin="round"
@@ -307,11 +307,11 @@ const ResourceLeftNav = () => {
                                 </path>
                             </svg>
                         </summary>
-                        <article className="px-4 pb-4">
-                            <ul className="flex flex-col gap-4 pl-2 mt-4 ">
+                        <article className="px-2 pb-4">
+                            <ul className="flex flex-col gap-1 pl-2 mt-4 ">
                             {
                                 seventhSemester.map(course=>  <li key={course.courseCode}
-                                 className="flex gap-2">
+                                 className="flex gap-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 py-2  px-4 rounded-sm ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                                     stroke="currentColor" className="w-6 h-6">
                                     <path strokeLinecap="round" strokeLinejoin="round"
@@ -349,11 +349,11 @@ const ResourceLeftNav = () => {
                                 </path>
                             </svg>
                         </summary>
-                        <article className="px-4 pb-4">
-                            <ul className="flex flex-col gap-4 pl-2 mt-4 ">
+                        <article className="px-2 pb-4">
+                            <ul className="flex flex-col gap-1 pl-2 mt-4 ">
                             {
                                 eightSemester.map(course=>  <li key={course.courseCode}
-                                 className="flex gap-2">
+                                 className="flex gap-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 py-2  px-4 rounded-sm ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                                     stroke="currentColor" className="w-6 h-6">
                                     <path strokeLinecap="round" strokeLinejoin="round"
@@ -392,7 +392,7 @@ const ResourceLeftNav = () => {
                                 </path>
                             </svg>
                         </summary>
-                        <article className="px-4 pb-4">
+                        <article className="px-2 pb-4">
                             <ul className="flex flex-col gap-1 pl-2">
                                 <li><a href="">Course title</a></li>
                                 <li><a href="">Course title</a></li>

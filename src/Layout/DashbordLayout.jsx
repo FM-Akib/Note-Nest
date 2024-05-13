@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import {  NavLink, Outlet } from "react-router-dom";
 import NavBar from "../components/Shared/NavBar";
 
 const DashbordLayout = () => {
@@ -18,15 +18,35 @@ const DashbordLayout = () => {
        <div className="relative flex h-screen min-w-full py-16">
    
         {/* Navigation */}
-        <div className={`bg-red-600 text-white w-full md:w-1/5 z-10 ${isNavOpen ? 'absolute' : 'hidden'} md:block`}>
+        <div className={`bg-[#9A031E] text-white w-full md:w-1/5 z-10 ${isNavOpen ? 'absolute' : 'hidden'} md:block`}>
           <div className="p-6">
             <h1 className="text-xl font-bold">Dashboard</h1>
+
             <ul className="mt-4">
-             <Link to="/" className=" "> <li className="py-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 font-semibold  px-4 rounded-sm " onClick={closeNav}>Link 1 </li></Link>
-              <li className="py-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 font-semibold  px-4 rounded-sm " onClick={closeNav}>Link 2</li>
-              <li className="py-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 font-semibold  px-4 rounded-sm " onClick={closeNav}>Link 3</li>
+             <NavLink to="/dashboard/home" > <li className=" flex items-center py-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 font-semibold  px-4 rounded-sm " onClick={closeNav}>
+             <svg className="mr-1"  height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path  d="M2.33537 7.87495C1.79491 9.00229 1.98463 10.3208 2.36407 12.9579L2.64284 14.8952C3.13025 18.2827 3.37396 19.9764 4.54903 20.9882C5.72409 22 7.44737 22 10.8939 22H13.1061C16.5526 22 18.2759 22 19.451 20.9882C20.626 19.9764 20.8697 18.2827 21.3572 14.8952L21.6359 12.9579C22.0154 10.3208 22.2051 9.00229 21.6646 7.87495C21.1242 6.7476 19.9738 6.06234 17.6731 4.69181L16.2882 3.86687C14.199 2.62229 13.1543 2 12 2C10.8457 2 9.80104 2.62229 7.71175 3.86687L6.32691 4.69181C4.02619 6.06234 2.87583 6.7476 2.33537 7.87495ZM12 18.75C11.5858 18.75 11.25 18.4142 11.25 18V15C11.25 14.5858 11.5858 14.25 12 14.25C12.4142 14.25 12.75 14.5858 12.75 15V18C12.75 18.4142 12.4142 18.75 12 18.75Z" fill="#EFCA08"/>
+</svg> Home </li></NavLink>
+
+            <NavLink to="/dashboard/myContribution"><li className="flex items-center py-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 font-semibold  px-4 rounded-sm " onClick={closeNav}>
+            <svg className="mr-1" width="25px"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" fill="#1C274C"/>
+<path d="M10.4127 8.49812L10.5766 8.20419C11.2099 7.06807 11.5266 6.5 12 6.5C12.4734 6.5 12.7901 7.06806 13.4234 8.20419L13.5873 8.49813C13.7672 8.82097 13.8572 8.98239 13.9975 9.0889C14.1378 9.19541 14.3126 9.23495 14.6621 9.31402L14.9802 9.38601C16.2101 9.66428 16.825 9.80341 16.9713 10.2739C17.1176 10.7443 16.6984 11.2345 15.86 12.215L15.643 12.4686C15.4048 12.7472 15.2857 12.8865 15.2321 13.0589C15.1785 13.2312 15.1965 13.4171 15.2325 13.7888L15.2653 14.1272C15.3921 15.4353 15.4554 16.0894 15.0724 16.3801C14.6894 16.6709 14.1137 16.4058 12.9622 15.8756L12.6643 15.7384C12.337 15.5878 12.1734 15.5124 12 15.5124C11.8266 15.5124 11.663 15.5878 11.3357 15.7384L11.0378 15.8756C9.88633 16.4058 9.31059 16.6709 8.92757 16.3801C8.54456 16.0894 8.60794 15.4353 8.7347 14.1272L8.76749 13.7888C8.80351 13.4171 8.82152 13.2312 8.76793 13.0589C8.71434 12.8865 8.59521 12.7472 8.35696 12.4686L8.14005 12.215C7.30162 11.2345 6.88241 10.7443 7.02871 10.2739C7.17501 9.80341 7.78994 9.66427 9.01977 9.38601L9.33794 9.31402C9.68743 9.23495 9.86217 9.19541 10.0025 9.0889C10.1428 8.98239 10.2328 8.82097 10.4127 8.49812Z" fill="#EFCA08"/>
+</svg>
+                My Contribution</li></NavLink> 
+
+            <NavLink to="/dashboard/bookmarked"><li className="flex items-center py-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 font-semibold  px-4 rounded-sm " onClick={closeNav}>
+            <svg className="mr-1" width="25px"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.5" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#1C274D"/>
+<path d="M16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229L13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z" fill="#EFCA08"/>
+</svg>
+                Bookmarked</li></NavLink> 
+
+
               {/* Add more navigation links as needed */}
             </ul>
+
+
           </div>
         </div>
   
@@ -34,9 +54,12 @@ const DashbordLayout = () => {
         <div className="w-full md:w-4/5">
 
           {/* Toggle Button for Mobile */}
-          <button className="md:hidden fixed bottom-4 right-4 z-20 bg-gray-800 text-white rounded-full p-3"
+          <button className="md:hidden fixed bottom-4 right-4 z-20 bg-gray-600 text-white rounded-full p-3"
             onClick={toggleNav}>
-            {isNavOpen ? 'Close' : 'Menu'}
+            {isNavOpen ? <svg fill="#EFCA08" width="25px" viewBox="0 0 200 200" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"><title/><path d="M100,15a85,85,0,1,0,85,85A84.93,84.93,0,0,0,100,15Zm0,150a65,65,0,1,1,65-65A64.87,64.87,0,0,1,100,165Z"/><path d="M128.5,74a9.67,9.67,0,0,0-14,0L100,88.5l-14-14a9.9,9.9,0,0,0-14,14l14,14-14,14a9.9,9.9,0,0,0,14,14l14-14,14,14a9.9,9.9,0,0,0,14-14l-14-14,14-14A10.77,10.77,0,0,0,128.5,74Z"/></svg> :     <svg fill="#9A031E" width="25px" viewBox="0 0 24 24" id="dashboard" data-name="Flat Color" xmlns="http://www.w3.org/2000/svg" className="icon flat-color">
+      <path id="secondary" d="M22,4V7a2,2,0,0,1-2,2H15a2,2,0,0,1-2-2V4a2,2,0,0,1,2-2h5A2,2,0,0,1,22,4ZM9,15H4a2,2,0,0,0-2,2v3a2,2,0,0,0,2,2H9a2,2,0,0,0,2-2V17A2,2,0,0,0,9,15Z" style={{ fill: 'rgb(239, 202, 8)' }} />
+      <path id="primary" d="M11,4v7a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V4A2,2,0,0,1,4,2H9A2,2,0,0,1,11,4Zm9,7H15a2,2,0,0,0-2,2v7a2,2,0,0,0,2,2h5a2,2,0,0,0,2-2V13A2,2,0,0,0,20,11Z" style={{ fill: 'rgb(255, 255, 255)' }} />
+    </svg>}
           </button>
   
 
