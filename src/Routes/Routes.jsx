@@ -8,6 +8,8 @@ import CseHome from "../Pages/Cse/CseHome";
 import CseContent from "../Pages/Cse/CseContent";
 import SignIn from "../Pages/Sign/SignIn";
 import SignUp from "../Pages/Sign/SignUp";
+import DashbordLayout from "../Layout/DashbordLayout";
+import UserHome from "../Pages/Dashboard/UserHome";
 
   export const router = createBrowserRouter([
     {
@@ -40,6 +42,16 @@ import SignUp from "../Pages/Sign/SignUp";
           path: "content/:id",
           element: <CseContent></CseContent>
       }
+      ]
+    },
+    {
+      path: "dashboard",
+      element: <DashbordLayout></DashbordLayout>,
+      children: [
+        {
+          path: "/",
+          element: <UserHome></UserHome>
+        }
       ]
     }
   ]);
