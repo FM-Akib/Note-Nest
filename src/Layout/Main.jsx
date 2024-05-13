@@ -6,7 +6,7 @@ const Main = () => {
     return (
         <div className="Inter-font bg-[#F8F0FB]">
         <NavBar></NavBar>
-        <div className="max-w-[1300px] py-10  mx-auto">
+        <div className="max-w-full py-10  mx-auto">
         <Outlet></Outlet>
         </div>
         </div>

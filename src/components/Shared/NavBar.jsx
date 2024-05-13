@@ -14,7 +14,7 @@ const handleLogout = () => {
     .catch(err => console.log(err));
 }
     return (
-        <div className="navbar  md:px-28 bg-[#1E2D24] text-white fixed z-10 ">
+        <div className="navbar  md:px-28 bg-[#1E2D24] text-white fixed z-30 ">
             <div className="navbar-start">
                 <div className="dropdown">
                 <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -70,10 +70,10 @@ const handleLogout = () => {
                     </div>
                     <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content  rounded-box w-52 bg-[#1E2D24]">
                         <li>
-                        <a className="justify-between">
+                        <Link to="/dashboard/home" className="justify-between">
                             Profile
                             <span className="badge">New</span>
-                        </a>
+                        </Link>
                         </li>
                         <li><a>Settings</a></li>
                         <li><button onClick={handleLogout}>Logout</button></li>

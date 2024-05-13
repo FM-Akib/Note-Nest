@@ -49,7 +49,7 @@ import UserHome from "../Pages/Dashboard/UserHome";
       element: <DashbordLayout></DashbordLayout>,
       children: [
         {
-          path: "/",
+          path: "home",
           element: <UserHome></UserHome>
         }
       ]
