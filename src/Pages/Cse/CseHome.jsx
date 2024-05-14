@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import '../../App.css';
 const CseHome = () => {
     return (
@@ -31,12 +32,11 @@ const CseHome = () => {
                         Contribute in this resource hub 
                     </h2>
                     <p className="my-4 bg-transparent font-medium leading-relaxed tracking-wide text-gray-600">
-                        Natural Language Processing (NLP): The SmartAI Assistant understands and interprets natural
-                        language commands, allowing users to communicate with it effortlessly.
+                    This <span className="mx-2 text-emerald-600 font-semibold text-xl">Note Nest</span> journey is to ensure that your own PDF of notes, your favorite YouTube playlists or question solves do not get lost and help juniors. Contribute them and become a note hero!!
                     </p>
                 </div>
                 <div className="flex flex-wrap items-center justify-center gap-6 ">
-                    <button className="bg-[#9a031e] hover:bg-[#181313] text-white font-semibold button-text flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 px-8 py-3 text-xs sm:text-sm tracking-widest">Contribute</button>
+                   <Link to="/resources/contribute"> <button className="bg-[#9a031e] hover:bg-[#181313] text-white font-semibold button-text flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 px-8 py-3 text-xs sm:text-sm tracking-widest">Contribute</button></Link>
                     <button className="flex items-center justify-center whitespace-nowrap rounded-md border border-zinc-700 bg-zinc-900 text-center text-white backdrop-blur transition-all hover:bg-zinc-800 px-8 py-3 text-xs sm:text-sm">Learn More</button>
                 </div>
             </div>

@@ -1,7 +1,10 @@
+import useCseCourses from "../../Hooks/useCseCourses";
 
 
 const Contribute = () => {
-    return (
+  const [cse] = useCseCourses()
+console.log(cse)
+  return (
   <div className="h-screen overflow-y-scroll">
 
 {/* Heading */}
@@ -27,7 +30,7 @@ const Contribute = () => {
 
 
  <div className="mx-2 mt-10 border-2 border-red-400 rounded-lg">
-  <div className="mt-10 text-center font-bold">Every contribution have 20 points</div>
+  <div className="mt-10 text-center font-bold">For every contribution you have 30 points</div>
   {/* <div className="mt-3 text-center text-4xl font-bold">Make an Appointment</div> */}
 
 
@@ -49,7 +52,10 @@ const Contribute = () => {
 
     <div className="my-6 flex gap-4">
       <select name="select" id="select" className="block w-1/2 rounded-md border border-red-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
-        <option  className="font-semibold text-slate-800">Please select course code</option>
+        {
+          cse.map(item=>  <option key={item.id}  className="font-semibold text-slate-800">{item.courseCode}</option> )
+        }
+       
       </select>
       <select name="select" id="select" className="block w-1/2 rounded-md border border-red-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
         <option  className="font-semibold text-slate-600">Mid Term</option>

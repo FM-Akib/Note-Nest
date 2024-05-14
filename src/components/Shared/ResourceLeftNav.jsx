@@ -1,6 +1,7 @@
-import  { useEffect, useState } from 'react';
+import  {  useState } from 'react';
 // import useCseResources from '../../Hooks/useCseResources';
 import { Link } from 'react-router-dom';
+import useCseCourses from '../../Hooks/useCseCourses';
 
 const ResourceLeftNav = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -9,13 +10,8 @@ const ResourceLeftNav = () => {
         setIsOpen(!isOpen);
     };
 
-
-    const [cse,setCse] = useState([]);
-    useEffect(()=>{
-        fetch('/course.json')
-        .then(response => response.json())
-        .then(data=>setCse(data));
-    },[])
+     const [cse] = useCseCourses()
+ 
     
      const firstSemester = cse.filter(course=>course.semester===1)
      const secondSemester = cse.filter(course=>course.semester===2)
