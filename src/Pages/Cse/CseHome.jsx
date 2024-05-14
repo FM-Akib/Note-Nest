@@ -13,7 +13,7 @@ const CseHome = () => {
                 <header className="mx-auto max-w-2xl text-center">
                     <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">Computer Science & Engineering</h1>
                     <p className="mt-2 text-lg font-semibold text-gray-400 tiro-bangla-regular">
-                    "আঁরা বেজ্ঞুন সি এস ই ইঞ্জিনিয়ার"
+                    &quot;আঁরা বেজ্ঞুন সি এস ই ইঞ্জিনিয়ার&quot;
                     </p>
                 </header>
             </div>

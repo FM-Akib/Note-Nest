@@ -29,7 +29,7 @@ console.log(cse)
         </div>
 
 
- <div className="mx-2 mt-10 border-2 border-red-400 rounded-lg">
+ <div className="mx-2 mt-10 border-2 border-slate-200 rounded-lg">
   <div className="mt-10 text-center font-bold">For every contribution you have 30 points</div>
   {/* <div className="mt-3 text-center text-4xl font-bold">Make an Appointment</div> */}
 
