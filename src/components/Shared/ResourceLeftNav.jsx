@@ -31,6 +31,27 @@ const ResourceLeftNav = () => {
     return (
         <div className="h-screen bg-[#9A031E] p-4 text-white overflow-y-scroll">
             <ul className="flex flex-col gap-3 max-w-[280px] mx-auto mt-4  ">
+
+            <li>
+                    <details className="group ">
+                        <summary
+                            className="bg-white text-gray-700 rounded-sm flex items-center justify-between gap-2 p-2 font-medium marker:content-none hover:cursor-pointer"
+                            onClick={toggleOpen}>
+                            <span className="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
+                                    stroke="currentColor" className="w-6 h-6">
+                                    <path strokeLinecap="round" strokeLinejoin="round"
+                                        d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
+                                </svg>
+                                <span>
+                                   Contribute
+                                </span>
+                            </span>
+                         
+                        </summary>
+                       
+                    </details>
+                </li>
                 
                 <li>
                     <details className="group ">
@@ -58,7 +79,7 @@ const ResourceLeftNav = () => {
                             <ul className="flex flex-col gap-1 pl-2 mt-4 ">
                                {
                                 firstSemester.map(course=>  <li key={course.courseCode}
-                                 className="flex gap-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 py-2  px-2 rounded-sm ">
+                                 className="flex items-center gap-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 py-2  px-4 rounded-sm ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                                     stroke="currentColor" className="w-6 h-6">
                                     <path strokeLinecap="round" strokeLinejoin="round"
@@ -101,7 +122,7 @@ const ResourceLeftNav = () => {
                             <ul className="flex flex-col gap-1 pl-2 mt-4 ">
                             {
                                 secondSemester.map(course=>  <li key={course.courseCode}
-                                 className="flex gap-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 py-2  px-2 rounded-sm ">
+                                 className="flex gap-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 py-2  px-4 rounded-sm ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                                     stroke="currentColor" className="w-6 h-6">
                                     <path strokeLinecap="round" strokeLinejoin="round"
@@ -143,7 +164,7 @@ const ResourceLeftNav = () => {
                             <ul className="flex flex-col gap-1 pl-2 mt-4 ">
                             {
                                 thirdSemester.map(course=>  <li key={course.courseCode}
-                                 className="flex gap-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 py-2  px-2 rounded-sm ">
+                                 className="flex gap-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 py-2  px-4 rounded-sm ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                                     stroke="currentColor" className="w-6 h-6">
                                     <path strokeLinecap="round" strokeLinejoin="round"
