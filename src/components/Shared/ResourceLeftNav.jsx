@@ -30,7 +30,7 @@ const ResourceLeftNav = () => {
 
     return (
         <div className="h-screen bg-[#9A031E] p-4 text-white overflow-y-scroll">
-            <ul className="flex flex-col gap-3 max-w-[280px] mx-auto mt-4  ">
+            <ul className="flex flex-col gap-3 max-w-[280px] mx-auto my-4  ">
 
             <li> <Link to="/resources/contribute">
                     <details className="group ">
