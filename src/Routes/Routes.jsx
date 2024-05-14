@@ -10,6 +10,7 @@ import SignIn from "../Pages/Sign/SignIn";
 import SignUp from "../Pages/Sign/SignUp";
 import DashbordLayout from "../Layout/DashbordLayout";
 import UserHome from "../Pages/Dashboard/UserHome";
+import Contribute from "../Pages/Cse/Contribute";
 
   export const router = createBrowserRouter([
     {
@@ -41,7 +42,11 @@ import UserHome from "../Pages/Dashboard/UserHome";
         {
           path: "content/:id",
           element: <CseContent></CseContent>
-      }
+        },
+        {
+          path: "contribute",
+          element: <Contribute></Contribute>
+        }
       ]
     },
     {
