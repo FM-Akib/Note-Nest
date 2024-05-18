@@ -1,7 +1,9 @@
 import { useForm } from "react-hook-form";
 import useCseCourses from "../../Hooks/useCseCourses";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
-
+const image_hosting_key= import.meta.env.VITE_apiKey_Image;
+const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
 const Contribute = () => {
   const [cse] = useCseCourses()
 
@@ -12,8 +14,19 @@ const Contribute = () => {
     formState: { errors }
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data); // Handle form submission logic here
+  const axiosPublic = useAxiosPublic();
+
+  const onSubmit = async(data) => {
+    // const imageFile = {image: data.image[0]}
+    // const res = await axiosPublic.post(image_hosting_api,imageFile,{
+    //     headers: {
+    //         'content-type': 'multipart/form-data',
+    //     }
+    // })
+    // if(res.data.success){
+
+    // }
+    console.log(data)
    
   };
 
@@ -54,62 +67,90 @@ const Contribute = () => {
 
   <form onSubmit={handleSubmit(onSubmit)} className="p-2 md:p-8">
 
-    <div className="md:flex gap-4 ">
-      <input  {...register("title", { required: true })}  type="text" name="title" className="mt-1 block w-full md:w-1/2 rounded-md border border-red-300 bg-white px-3 py-4 placeholder-red-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm" placeholder="Title for your contribution *" />
-      {errors.title && <p className="text-red-500 ">{errors.title.message}</p>}
-     
-      <select {...register("semester", { required: true })}   className="block w-full md:w-1/2 rounded-md border border-red-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
-        <option  value="1st" >1st</option>
-        <option  value="2nd" >2nd</option>
-        <option  value="3rd" >3rd</option>
-        <option  value="4th" >4th</option>
-        <option  value="5th" >5th</option>
-        <option  value="6th" >6th</option>
-        <option  value="7th" >7th</option>
-        <option  value="8th" >8th</option>
-      </select>
-      {errors.courseCode && <span className="text-red-500">{errors.courseCode.message}</span>}
-    </div>
-
-    <div className="my-6 flex gap-4">
-      <select {...register("courseCode", { required: true })}   className="block w-1/2 rounded-md border border-red-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
-        {
-          cse.map(item=>  <option key={item.id} value={item.courseCode} >{item.courseCode}</option> )
-        } 
-      </select>
-      {errors.url && <span className="text-red-500">{errors.url.message}</span>}
-
-      <select {...register("exam", { required: true })}   className="block w-1/2 rounded-md border border-red-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
-        <option value="mid" >Mid Term</option>
-        <option value="final" >Final Term</option>
-      </select>
-      {errors.imgCover && <span className="text-red-500">{errors.imgCover.message}</span>}
-
-    </div>
+<div className="md:flex gap-4 items-center">
+   <label className="block w-full md:w-1/2 text-sm font-semibold text-gray-700 mb-2">
+    Title for your contribution *
+    <input  {...register("title", { required: true })}  type="text" name="title" className="mt-1 block w-full rounded-md border border-red-300 bg-white px-3 py-4 placeholder-red-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm" placeholder="Add a meaningful title..." />
+    {errors.title && <p className="text-red-500">{errors.title.message}</p>}
+  </label>
+  
+  <label className="block w-full md:w-1/2 text-sm font-semibold text-gray-700 mb-2">
+    Select your content semester *
+    <select {...register("semester", { required: true })} className=" mt-1 block w-full rounded-md border border-red-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
+      <option value="1st">1st</option>
+      <option value="2nd">2nd</option>
+      <option value="3rd">3rd</option>
+      <option value="4th">4th</option>
+      <option value="5th">5th</option>
+      <option value="6th">6th</option>
+      <option value="7th">7th</option>
+      <option value="8th">8th</option>
+    </select>
+    {errors.semester && <p className="text-red-500">{errors.semester.message}</p>}
+  </label>
+</div>
 
 
-    <div className="my-6">
-    <input {...register("url", { required: true })} type="url" className="mt-1 block  w-full  rounded-md border border-red-300 bg-white px-3 py-4 placeholder-red-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm" placeholder="URL: Upload your file in Google drive or youTube then Submit your shareable drive link or youtube link*" />
+
+<div className="my-6 flex gap-4">
+  <label className="block w-1/2 text-sm font-semibold text-gray-700 mb-2">
+    Course Code *
+    <select {...register("courseCode", { required: true })} className="mt-1 block w-full rounded-md border border-red-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
+      {cse.map(item => <option key={item.id} value={item.courseCode}>{item.courseCode}</option>)}
+    </select>
+    {errors.courseCode && <span className="text-red-500">{errors.courseCode.message}</span>}
+  </label>
+
+  <label className="block w-1/2 text-sm font-semibold text-gray-700 mb-2">
+    Exam *
+    <select {...register("exam", { required: true })} className="mt-1 block w-full rounded-md border border-red-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
+      <option value="mid">Mid Term</option>
+      <option value="final">Final Term</option>
+    </select>
+    {errors.exam && <span className="text-red-500">{errors.exam.message}</span>}
+  </label>
+
+  <label className="block w-1/2 text-sm font-semibold text-gray-700 mb-2">
+    Content About
+    <select {...register("content", { required: true })} className="mt-1 block w-full rounded-md border border-red-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
+      <option value="Playlist">PlayList</option>
+      <option value="Note">Note</option>
+      <option value="questionBank">Question Bank</option>
+      <option value="other">Other</option>
+    </select>
+    {errors.exam && <span className="text-red-500">{errors.exam.message}</span>}
+  </label>
+
+
+
+</div>
+
+<div className="my-6">
+  
+  <input {...register("url", { required: true })} type="url" className="mt-1 block w-full rounded-md border border-red-300 bg-white px-3 py-4 placeholder-red-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm" placeholder="URL: Upload your file in Google Drive or YouTube then Submit your shareable drive link or YouTube link*" />
+    {errors.url && <span className="text-red-500">{errors.url.message}</span>}
+</div>
+
+<div className="my-6">
+  <label htmlFor="cover" className="block text-sm font-semibold text-gray-700 mb-2">
+    Cover Image for your contribution *
+    <input {...register("imgCover", { required: true })} type="file" className="mt-1 block w-full rounded-md border border-red-300 bg-white px-3 py-4 placeholder-red-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm" />
+    {errors.imgCover && <span className="text-red-500">{errors.imgCover.message}</span>}
+  </label>
+</div>
+
+<div className="my-6">
+    <textarea {...register("description", { required: true })} cols="30" rows="10" className="mb-10 h-40 w-full resize-none rounded-md border border-red-300 p-5 font-semibold text-gray-400" placeholder="Description: Write a short instruction on how to read the given resource, how much to read and how much of the syllabus is covered."></textarea>
     {errors.description && <span className="text-red-500">{errors.description.message}</span>}
-    </div>
 
+</div>
 
-    <div className="my-6">
-    <label htmlFor="cover" className="block text-sm font-semibold text-gray-700 mb-2">
-      Cover Img for your contribution*
-      </label>
-      <input {...register("imgCover", { required: true })}  type="file"  className="mt-1 block  w-full  rounded-md border border-red-300 bg-white px-3 py-4 placeholder-red-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm"  />
-    </div>
+<div className="flex justify-center items-center">
+  <button type="submit" className="cursor-pointer rounded-lg bg-[#9a031e] px-8 py-5 tracking-widest text-sm font-semibold text-white" placeholder="Contribute">Contribute</button>
+</div>
 
-    <div className="">
-      <textarea {...register("description", { required: true })}  cols="30" rows="10" className="mb-10 h-40 w-full resize-none rounded-md border border-red-300 p-5 font-semibold text-gray-400" placeholder="Description: Write a short instruction on how to read the given resource, how much to read and how much of the syllabus is covered."></textarea>
-    </div>
+</form>
 
-  <div className=" flex justify-center items-center">
-  <button  type="submit" className=" cursor-pointer rounded-lg bg-[#9a031e] px-8 py-5 tracking-widest text-sm font-semibold text-white" placeholder="Contribute">Contribute</button>
-  </div>
-
-  </form>
 
 </div>
 
