@@ -1,14 +1,32 @@
+import { useForm } from "react-hook-form";
 import useCseCourses from "../../Hooks/useCseCourses";
 
 
 const Contribute = () => {
   const [cse] = useCseCourses()
-console.log(cse)
+
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data); // Handle form submission logic here
+   
+  };
+
+// if(errors){
+//   console.log(errors)
+// }
+
+
   return (
   <div className="h-screen overflow-y-scroll">
 
 {/* Heading */}
-        <div className="relative border-t border-gray-200 bg-gray-50 mb-2">
+<div className="relative border-t border-gray-200 bg-gray-50 mb-2">
             <div className="absolute inset-0 h-36 opacity-90 lg:h-full"
                 style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" viewBox=\"0 0 100 100\"%3E%3Cg fill-rule=\"evenodd\"%3E%3Cg fill=\"%23e0e7ff\" fill-opacity=\"1\"%3E%3Cpath opacity=\".5\" d=\"M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z\"/%3E%3Cpath d=\"M6 5V0H5v5H0v1h5v94h1V6h94V5H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')" }}>
             </div>
@@ -26,7 +44,7 @@ console.log(cse)
                     </p>
                 </header>
             </div>
-        </div>
+</div>
 
 
  <div className="mx-2 mt-10 border-2 border-slate-200 rounded-lg">
@@ -34,60 +52,65 @@ console.log(cse)
   {/* <div className="mt-3 text-center text-4xl font-bold">Make an Appointment</div> */}
 
 
-  <div className="p-2 md:p-8">
+  <form onSubmit={handleSubmit(onSubmit)} className="p-2 md:p-8">
 
     <div className="md:flex gap-4 ">
-      <input type="Title" name="title" className="mt-1 block w-full md:w-1/2 rounded-md border border-red-300 bg-white px-3 py-4 placeholder-red-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm" placeholder="Title for your contribution *" />
-      <select name="select" id="select" className="block w-full md:w-1/2 rounded-md border border-red-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
-        <option  className="font-semibold text-slate-600">1st Semester</option>
-        <option  className="font-semibold text-slate-600">2nd Semester</option>
-        <option  className="font-semibold text-slate-600">3rd Semester</option>
-        <option  className="font-semibold text-slate-600">4th Semester</option>
-        <option  className="font-semibold text-slate-600">5th Semester</option>
-        <option  className="font-semibold text-slate-600">6th Semester</option>
-        <option  className="font-semibold text-slate-600">7th Semester</option>
-        <option  className="font-semibold text-slate-600">8th Semester</option>
+      <input  {...register("title", { required: true })}  type="text" name="title" className="mt-1 block w-full md:w-1/2 rounded-md border border-red-300 bg-white px-3 py-4 placeholder-red-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm" placeholder="Title for your contribution *" />
+      {errors.title && <p className="text-red-500 ">{errors.title.message}</p>}
+     
+      <select {...register("semester", { required: true })}   className="block w-full md:w-1/2 rounded-md border border-red-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
+        <option  value="1st" >1st</option>
+        <option  value="2nd" >2nd</option>
+        <option  value="3rd" >3rd</option>
+        <option  value="4th" >4th</option>
+        <option  value="5th" >5th</option>
+        <option  value="6th" >6th</option>
+        <option  value="7th" >7th</option>
+        <option  value="8th" >8th</option>
       </select>
+      {errors.courseCode && <span className="text-red-500">{errors.courseCode.message}</span>}
     </div>
 
     <div className="my-6 flex gap-4">
-      <select name="select" id="select" className="block w-1/2 rounded-md border border-red-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
+      <select {...register("courseCode", { required: true })}   className="block w-1/2 rounded-md border border-red-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
         {
-          cse.map(item=>  <option key={item.id}  className="font-semibold text-slate-800">{item.courseCode}</option> )
-        }
-       
+          cse.map(item=>  <option key={item.id} value={item.courseCode} >{item.courseCode}</option> )
+        } 
       </select>
-      <select name="select" id="select" className="block w-1/2 rounded-md border border-red-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
-        <option  className="font-semibold text-slate-600">Mid Term</option>
-        <option  className="font-semibold text-slate-600">Final Term</option>
-      </select>
-    </div>
+      {errors.url && <span className="text-red-500">{errors.url.message}</span>}
 
-    <div className="my-6">
-     
-    <input type="email" name="email" className="mt-1 block  w-full  rounded-md border border-red-300 bg-white px-3 py-4 placeholder-red-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm" placeholder="URL: Upload your file in Google drive or youTube then Submit your shareable drive link or youtube link*" />
- 
+      <select {...register("exam", { required: true })}   className="block w-1/2 rounded-md border border-red-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
+        <option value="mid" >Mid Term</option>
+        <option value="final" >Final Term</option>
+      </select>
+      {errors.imgCover && <span className="text-red-500">{errors.imgCover.message}</span>}
+
     </div>
 
 
     <div className="my-6">
-     
+    <input {...register("url", { required: true })} type="url" className="mt-1 block  w-full  rounded-md border border-red-300 bg-white px-3 py-4 placeholder-red-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm" placeholder="URL: Upload your file in Google drive or youTube then Submit your shareable drive link or youtube link*" />
+    {errors.description && <span className="text-red-500">{errors.description.message}</span>}
+    </div>
+
+
+    <div className="my-6">
     <label htmlFor="cover" className="block text-sm font-semibold text-gray-700 mb-2">
       Cover Img for your contribution*
       </label>
-      <input type="file" name="cover" className="mt-1 block  w-full  rounded-md border border-red-300 bg-white px-3 py-4 placeholder-red-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm" placeholder="cover*" />
-
+      <input {...register("imgCover", { required: true })}  type="file"  className="mt-1 block  w-full  rounded-md border border-red-300 bg-white px-3 py-4 placeholder-red-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm"  />
     </div>
 
     <div className="">
-      <textarea name="textarea" id="text" cols="30" rows="10" className="mb-10 h-40 w-full resize-none rounded-md border border-red-300 p-5 font-semibold text-gray-400" placeholder="Description: Write a short instruction on how to read the given resource, how much to read and how much of the syllabus is covered."></textarea>
+      <textarea {...register("description", { required: true })}  cols="30" rows="10" className="mb-10 h-40 w-full resize-none rounded-md border border-red-300 p-5 font-semibold text-gray-400" placeholder="Description: Write a short instruction on how to read the given resource, how much to read and how much of the syllabus is covered."></textarea>
     </div>
 
-    <div className="text-center">
-      <a className="cursor-pointer rounded-lg bg-[#9a031e] px-8 py-5 tracking-widest text-sm font-semibold text-white">Contribute</a>
-    </div>
-
+  <div className=" flex justify-center items-center">
+  <button  type="submit" className=" cursor-pointer rounded-lg bg-[#9a031e] px-8 py-5 tracking-widest text-sm font-semibold text-white" placeholder="Contribute">Contribute</button>
   </div>
+
+  </form>
+
 </div>
 
 
