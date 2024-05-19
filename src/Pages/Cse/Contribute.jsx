@@ -1,6 +1,9 @@
 import { useForm } from "react-hook-form";
 import useCseCourses from "../../Hooks/useCseCourses";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const image_hosting_key= import.meta.env.VITE_apiKey_Image;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
@@ -14,19 +17,43 @@ const Contribute = () => {
     formState: { errors }
   } = useForm();
 
+  const {user} = useContext(AuthContext)
+  console.log(user)
   const axiosPublic = useAxiosPublic();
 
   const onSubmit = async(data) => {
-    // const imageFile = {image: data.image[0]}
-    // const res = await axiosPublic.post(image_hosting_api,imageFile,{
-    //     headers: {
-    //         'content-type': 'multipart/form-data',
-    //     }
-    // })
-    // if(res.data.success){
-
-    // }
-    console.log(data)
+    const imageFile = {image: data.imgCover[0]}
+    const res = await axiosPublic.post(image_hosting_api,imageFile,{
+        headers: {
+            'content-type': 'multipart/form-data',
+        }
+    })
+    if(res.data.success){
+      const contentType = data.content;
+      const courseCode = data.courseCode;
+      const resource = {
+        title: data.title,
+        url: data.url,
+        imgCover: res.data.data.display_url,
+        semseter: data.semester,
+        description: data.description,
+        authorName: user.displayName,
+        authorImg: user.photoURL,
+      }
+      console.log(resource)
+      const result = await axiosPublic.patch(`/courses/${courseCode}`,{contentType, resource})
+      if(result.data.modifiedCount>0){
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: `${data.name} is updated to menu!`,
+          showConfirmButton: false,
+          timer: 1500
+        });
+      }
+    
+    }
+    // console.log(data)
    
   };
 
