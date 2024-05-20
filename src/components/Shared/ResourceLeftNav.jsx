@@ -13,14 +13,14 @@ const ResourceLeftNav = () => {
      const [cse] = useCseCourses()
  
     
-     const firstSemester = cse.filter(course=>course.semester===1)
-     const secondSemester = cse.filter(course=>course.semester===2)
-     const thirdSemester = cse.filter(course=>course.semester===3)
-     const fourthSemester = cse.filter(course=>course.semester===4)
-     const fifthSemester = cse.filter(course=>course.semester===5)
-     const sixthSemester = cse.filter(course=>course.semester===6)
-     const seventhSemester = cse.filter(course=>course.semester===7)
-     const eightSemester = cse.filter(course=>course.semester===8)
+     const firstSemester = cse.filter(course=>course.semester==='1st')
+     const secondSemester = cse.filter(course=>course.semester==='2nd')
+     const thirdSemester = cse.filter(course=>course.semester==='3rd')
+     const fourthSemester = cse.filter(course=>course.semester==='4th')
+     const fifthSemester = cse.filter(course=>course.semester==='5th')
+     const sixthSemester = cse.filter(course=>course.semester==='6th')
+     const seventhSemester = cse.filter(course=>course.semester==='7th')
+     const eightSemester = cse.filter(course=>course.semester==='8th')
     
 
 

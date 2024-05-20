@@ -33,6 +33,8 @@ const Contribute = () => {
       const courseCode = data.courseCode;
       const resource = {
         title: data.title,
+        type: data.exam,
+        star: 20,
         url: data.url,
         imgCover: res.data.data.display_url,
         semseter: data.semester,
@@ -42,15 +44,19 @@ const Contribute = () => {
       }
       console.log(resource)
       const result = await axiosPublic.patch(`/courses/${courseCode}`,{contentType, resource})
-      if(result.data.modifiedCount>0){
+       console.log(result)
+
+      if(result.data.result.modifiedCount>0){
+        
         Swal.fire({
           position: "top-end",
           icon: "success",
-          title: `${data.name} is updated to menu!`,
+          title: `Thank You for your contribution!`,
           showConfirmButton: false,
           timer: 1500
         });
       }
+      console.log(result)
     
     }
     // console.log(data)
@@ -97,13 +103,13 @@ const Contribute = () => {
 <div className="md:flex gap-4 items-center">
    <label className="block w-full md:w-1/2 text-sm font-semibold text-gray-700 mb-2">
     Title for your contribution *
-    <input  {...register("title", { required: true })}  type="text" name="title" className="mt-1 block w-full rounded-md border border-red-300 bg-white px-3 py-4 placeholder-red-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm" placeholder="Add a meaningful title..." />
+    <input  {...register("title", { required: true })}  type="text" name="title" className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-4 placeholder-red-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm" placeholder="Add a meaningful title..." />
     {errors.title && <p className="text-red-500">{errors.title.message}</p>}
   </label>
   
   <label className="block w-full md:w-1/2 text-sm font-semibold text-gray-700 mb-2">
     Select your content semester *
-    <select {...register("semester", { required: true })} className=" mt-1 block w-full rounded-md border border-red-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
+    <select {...register("semester", { required: true })} className=" mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
       <option value="1st">1st</option>
       <option value="2nd">2nd</option>
       <option value="3rd">3rd</option>
@@ -122,7 +128,7 @@ const Contribute = () => {
 <div className="my-6 flex gap-4">
   <label className="block w-1/2 text-sm font-semibold text-gray-700 mb-2">
     Course Code *
-    <select {...register("courseCode", { required: true })} className="mt-1 block w-full rounded-md border border-red-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
+    <select {...register("courseCode", { required: true })} className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
       {cse.map(item => <option key={item.id} value={item.courseCode}>{item.courseCode}</option>)}
     </select>
     {errors.courseCode && <span className="text-red-500">{errors.courseCode.message}</span>}
@@ -130,7 +136,7 @@ const Contribute = () => {
 
   <label className="block w-1/2 text-sm font-semibold text-gray-700 mb-2">
     Exam *
-    <select {...register("exam", { required: true })} className="mt-1 block w-full rounded-md border border-red-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
+    <select {...register("exam", { required: true })} className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
       <option value="mid">Mid Term</option>
       <option value="final">Final Term</option>
     </select>
@@ -139,7 +145,7 @@ const Contribute = () => {
 
   <label className="block w-1/2 text-sm font-semibold text-gray-700 mb-2">
     Content About
-    <select {...register("content", { required: true })} className="mt-1 block w-full rounded-md border border-red-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
+    <select {...register("content", { required: true })} className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
       <option value="Playlist">PlayList</option>
       <option value="Note">Note</option>
       <option value="questionBank">Question Bank</option>
@@ -154,20 +160,20 @@ const Contribute = () => {
 
 <div className="my-6">
   
-  <input {...register("url", { required: true })} type="url" className="mt-1 block w-full rounded-md border border-red-300 bg-white px-3 py-4 placeholder-red-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm" placeholder="URL: Upload your file in Google Drive or YouTube then Submit your shareable drive link or YouTube link*" />
+  <input {...register("url", { required: true })} type="url" className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-4 placeholder-red-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm" placeholder="URL: Upload your file in Google Drive or YouTube then Submit your shareable drive link or YouTube link*" />
     {errors.url && <span className="text-red-500">{errors.url.message}</span>}
 </div>
 
 <div className="my-6">
   <label htmlFor="cover" className="block text-sm font-semibold text-gray-700 mb-2">
     Cover Image for your contribution *
-    <input {...register("imgCover", { required: true })} type="file" className="mt-1 block w-full rounded-md border border-red-300 bg-white px-3 py-4 placeholder-red-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm" />
+    <input {...register("imgCover", { required: true })} type="file" className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-4 placeholder-red-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm" />
     {errors.imgCover && <span className="text-red-500">{errors.imgCover.message}</span>}
   </label>
 </div>
 
 <div className="my-6">
-    <textarea {...register("description", { required: true })} cols="30" rows="10" className="mb-10 h-40 w-full resize-none rounded-md border border-red-300 p-5 font-semibold text-gray-400" placeholder="Description: Write a short instruction on how to read the given resource, how much to read and how much of the syllabus is covered."></textarea>
+    <textarea {...register("description", { required: true })} cols="30" rows="10" className="mb-10 h-40 w-full resize-none rounded-md border border-gray-300 p-5 font-semibold text-gray-400" placeholder="Description: Write a short instruction on how to read the given resource, how much to read and how much of the syllabus is covered."></textarea>
     {errors.description && <span className="text-red-500">{errors.description.message}</span>}
 
 </div>
