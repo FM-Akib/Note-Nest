@@ -41,6 +41,7 @@ const Contribute = () => {
         description: data.description,
         authorName: user.displayName,
         authorImg: user.photoURL,
+        contentType: data.content
       }
       console.log(resource)
       const result = await axiosPublic.patch(`/courses/${courseCode}`,{contentType, resource})
@@ -55,8 +56,15 @@ const Contribute = () => {
           showConfirmButton: false,
           timer: 1500
         });
+
+
+        //resource add to cse database done 
+        //Now user my contribution handle
+        const userResult = await axiosPublic.patch(`/users/${user?.email}`,{resource})
+         
+        console.log(userResult)
       }
-      console.log(result)
+     
     
     }
     // console.log(data)

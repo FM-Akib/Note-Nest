@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { GoVideo } from "react-icons/go";
 
+
 const CseContent = () => {
     const {id} = useParams();
     const [resourceCse, setResourceCse] = useState([]);
@@ -43,7 +44,6 @@ const CseContent = () => {
 
     
 
-   
 
 
 

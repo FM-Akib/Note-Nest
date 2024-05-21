@@ -1,5 +1,9 @@
+import useUserInfo from "../../Hooks/useUserInfo";
 
 const UserHome = () => {
+    
+   const {userInfo} = useUserInfo()
+   console.log(userInfo);
     return (
         <div className="pt-20 ">
 
@@ -29,7 +33,7 @@ const UserHome = () => {
             <div className="stat-figure text-secondary">
             <div className="avatar online">
                 <div className="w-16 rounded-full">
-                <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                <img src={userInfo.image} />
                 </div>
             </div>
             </div>
