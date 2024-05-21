@@ -4,6 +4,9 @@ import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import { v4 as uuidv4 } from 'uuid';
+
+
 
 const image_hosting_key= import.meta.env.VITE_apiKey_Image;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
@@ -31,7 +34,10 @@ const Contribute = () => {
     if(res.data.success){
       const contentType = data.content;
       const courseCode = data.courseCode;
+      const id = uuidv4();
+
       const resource = {
+        id,
         title: data.title,
         type: data.exam,
         star: 20,

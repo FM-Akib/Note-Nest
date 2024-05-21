@@ -6,6 +6,7 @@ import { LiaBullseyeSolid } from "react-icons/lia";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import { v4 as uuidv4 } from 'uuid';
 
 
 const CseContent = () => {
@@ -49,7 +50,10 @@ const CseContent = () => {
 
 
     
-   const handleBookMark=async(resource) => {
+   const handleBookMark=async(item) => {
+    const id = uuidv4();
+    const resource = {id,...item}
+    // console.log(resource);
     const userBookmark = await axiosPublic.patch(`/users/bookmark/${user?.email}`,{resource})
     console.log(userBookmark)
     if(userBookmark.data.result.modifiedCount>0){

@@ -23,7 +23,8 @@
     "react-query": "^3.39.3",
     "react-router-dom": "^6.23.0",
     "sort-by": "^1.2.0",
-    "sweetalert2": "^11.11.0"
+    "sweetalert2": "^11.11.0",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
