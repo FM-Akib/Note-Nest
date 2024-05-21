@@ -41,7 +41,8 @@ const Contribute = () => {
         description: data.description,
         authorName: user.displayName,
         authorImg: user.photoURL,
-        contentType: data.content
+        contentType: data.content,
+        courseCode: data.courseCode,
       }
       console.log(resource)
       const result = await axiosPublic.patch(`/courses/${courseCode}`,{contentType, resource})
