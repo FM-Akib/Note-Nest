@@ -12,6 +12,7 @@ import DashbordLayout from "../Layout/DashbordLayout";
 import UserHome from "../Pages/Dashboard/UserHome";
 import Contribute from "../Pages/Cse/Contribute";
 import MyContribution from "../Pages/Dashboard/MyContribution";
+import Bookmarked from "../Pages/Dashboard/Bookmarked";
 
 
   export const router = createBrowserRouter([
@@ -62,6 +63,10 @@ import MyContribution from "../Pages/Dashboard/MyContribution";
         {
           path: "myContribution",
           element: <MyContribution></MyContribution>
+        },
+        {
+          path: "bookmarked",
+          element: <Bookmarked></Bookmarked>
         }
       ]
     }

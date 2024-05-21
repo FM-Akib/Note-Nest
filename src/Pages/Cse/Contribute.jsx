@@ -25,7 +25,7 @@ const Contribute = () => {
     const imageFile = {image: data.imgCover[0]}
     const res = await axiosPublic.post(image_hosting_api,imageFile,{
         headers: {
-            'content-type': 'multipart/form-data',
+          'content-type': 'multipart/form-data',
         }
     })
     if(res.data.success){

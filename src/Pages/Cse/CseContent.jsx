@@ -1,14 +1,18 @@
 import { Link, useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { GoVideo } from "react-icons/go";
 import { FaStar } from "react-icons/fa";
 import { LiaBullseyeSolid } from "react-icons/lia";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import { AuthContext } from "../../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const CseContent = () => {
     const {id} = useParams();
     const [resourceCse, setResourceCse] = useState([]);
-
+    const {user} = useContext(AuthContext)
+    const axiosPublic = useAxiosPublic();
     
     useEffect(() => {
         fetch('http://localhost:5000/cseCourses')
@@ -45,7 +49,20 @@ const CseContent = () => {
 
 
     
+   const handleBookMark=async(resource) => {
+    const userBookmark = await axiosPublic.patch(`/users/bookmark/${user?.email}`,{resource})
+    console.log(userBookmark)
+    if(userBookmark.data.result.modifiedCount>0){
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: `Bookmarked resources!`,
+        showConfirmButton: false,
+        timer: 1500
+      });
 
+    }
+   }
 
 
 
@@ -105,23 +122,23 @@ const CseContent = () => {
         </summary>
 
         <div className="mt-4  leading-relaxed text-gray-700">
-          {midPlaylist.map((playlist, i) => (
+          {midPlaylist.map((item, i) => (
             <div key={i} className="flex flex-col md:flex-row  items-center justify-center mb-4 ">
               <div className="flex border-2 p-4 items-center justify-between w-full max-w-5xl bg-gray-200 rounded-xl group space-x-6 bg-opacity-50 shadow-xl hover:rounded-2xl">
-                <img className="block w-full md:w-1/3 h-40 rounded-lg mx-0" alt="art cover" src={playlist.imgCover} />
+                <img className="block w-full md:w-1/3 h-40 rounded-lg mx-0" alt="art cover" src={item.imgCover} />
                 <div className="md:w-2/3 pl-0 p-5">
                   <div className="space-y-2">
                     <div className="space-y-1">
                       <h4 className="text-md font-semibold text-cyan-900 text-justify">
-                        {playlist.title}
+                        {item.title}
                       </h4>
-                      <p className="break-words">{playlist.description}</p>
+                      <p className="break-words">{item.description}</p>
                       <p className="font-semibold">{courseCode} - {courseTitle}</p>
                     </div>
                     <div className="flex items-center space-x-4 justify-between">
                       <div className="flex items-center gap-3">
-                        <img src={playlist.authorImg} className="rounded-full h-8 w-8" />
-                        <span className="text-sm">{playlist.authorName} <br /> <span className="text-xs">3AM</span>  </span>
+                        <img src={item.authorImg} className="rounded-full h-8 w-8" />
+                        <span className="text-sm">{item.authorName} <br /> <span className="text-xs">3AM</span>  </span>
                       </div>
                     </div>
                     <div className="flex items-center space-x-4 justify-between">
@@ -133,7 +150,7 @@ const CseContent = () => {
                       </div>
                       <div className="flex flex-row items-center space-x-1">
 
-                      <button className=" text-white  font-bold py-2 px-4 rounded ">
+                      <button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
                       <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path 
                           fillRule="evenodd" 
@@ -144,14 +161,15 @@ const CseContent = () => {
                       </svg>
                       </button>
 
-                        <Link to={playlist.url} target="_blank">
+                        <Link to={item.url} target="_blank">
                           <button className="bg-emerald-500 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded mr-[10px] flex justify-between items-center">
                           <LiaBullseyeSolid className="mr-1"/> View
                           </button>
                         </Link>
+
                         <button className="bg-amber-500 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded flex justify-between items-center">
                         <FaStar />
-                          <span className="ml-1">{playlist?.star}</span>
+                          <span className="ml-1">{item?.star}</span>
                         </button>
                       </div>
                     </div>
