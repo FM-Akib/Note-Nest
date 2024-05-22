@@ -1,3 +1,4 @@
+import Hero from "./Hero";
 
 
 
@@ -5,9 +6,9 @@ const Landing = () => {
  
 
     return (
-        <div className="">
-          <h1 className="pt-16">Laaaaaaaaaaaaaaaanding  </h1>
-
+        <div className="px-2 md:px-20">
+          <Hero></Hero>
+          
 
 
         </div>
