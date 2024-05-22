@@ -7,7 +7,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const Bookmarked = () => {
-   const {userInfo} = useUserInfo();
+   const {userInfo,refetch} = useUserInfo();
    const {bookmarked} = userInfo;
    const axiosPublic = useAxiosPublic();
    const {user} = useContext(AuthContext)
@@ -24,9 +24,10 @@ const Bookmarked = () => {
         confirmButtonText: "Yes, delete it!"
       }).then(async(result) => {
         if (result.isConfirmed) {
-          const deleteBookmark = await axiosPublic.delete(`/users/bookmark/${user?.email}`,{id})
-        console.log(deleteBookmark);
-        if(deleteBookmark.data.result.deletedCount>0){
+          const deleteBookmark = await axiosPublic.delete(`/users/${user?.email}/bookmarks/${id}`)
+        // console.log(deleteBookmark);
+        if(deleteBookmark.data.result.modifiedCount>0){
+            refetch();
             Swal.fire({
                 title: "Deleted!",
                 text: "Your file has been deleted.",
