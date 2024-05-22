@@ -5,6 +5,8 @@ import Swal from "sweetalert2";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import HeadDash from "./HeadDash";
+import { IoMdBookmarks } from "react-icons/io";
 
 const Bookmarked = () => {
    const {userInfo,refetch} = useUserInfo();
@@ -42,6 +44,7 @@ const Bookmarked = () => {
 
     return (
         <div className="pt-20 md:px-20 px-2">
+            <HeadDash icn={<IoMdBookmarks className="text-[#EFCA08]" />} head="Bookmarked" subHead="All your bookmarked resources are here."></HeadDash>
 
         {
             bookmarked?.map((acontribution, i) => (

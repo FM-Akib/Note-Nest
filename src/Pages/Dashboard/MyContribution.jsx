@@ -1,5 +1,7 @@
  import { Link } from "react-router-dom";
 import useUserInfo from "../../Hooks/useUserInfo";
+import HeadDash from "./HeadDash";
+import { RiShieldStarFill } from "react-icons/ri";
 
 const MyContribution = () => {
 
@@ -10,6 +12,8 @@ const MyContribution = () => {
 
     return (
         <div className="pt-20 md:px-20 px-2">
+            <HeadDash icn={<RiShieldStarFill className="text-[#EFCA08]" />} head="My Contribution" subHead="All your remarkable contribution are here."></HeadDash>
+
 
 {
     myContribution?.map((acontribution, i) => (

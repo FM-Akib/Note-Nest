@@ -1,4 +1,6 @@
+import { TbHomeStar } from "react-icons/tb";
 import useUserInfo from "../../Hooks/useUserInfo";
+import HeadDash from "./HeadDash";
 
 const UserHome = () => {
     
@@ -11,9 +13,11 @@ const UserHome = () => {
     return (
         <div className="pt-20 ">
 
+       <HeadDash icn={<TbHomeStar className="text-[#EFCA08]" />} head="Your Nest" subHead="Welcome to your Nest."></HeadDash>
+
 
        <div className="flex justify-center">
-       <div className="stats shadow-lg border-2  w-4/5 px-5  ">
+       <div className="stats shadow-lg border-2  w-5/6 px-4  ">
   
         <div className="stat">
             <div className="stat-figure text-primary">
