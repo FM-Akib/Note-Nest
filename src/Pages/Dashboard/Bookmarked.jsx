@@ -43,7 +43,7 @@ const Bookmarked = () => {
    }
 
     return (
-        <div className="pt-20 md:px-20 px-2">
+        <div className="pt-20 md:px-20 px-2 overflow-y-auto max-h-screen">
             <HeadDash icn={<IoMdBookmarks className="text-[#EFCA08]" />} head="Bookmarked" subHead="All your bookmarked resources are here."></HeadDash>
 
         {

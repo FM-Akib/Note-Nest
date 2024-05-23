@@ -11,7 +11,7 @@ const MyContribution = () => {
    console.log(myContribution);
 
     return (
-        <div className="pt-20 md:px-20 px-2">
+        <div className="pt-20 md:px-20 px-2 overflow-y-auto max-h-screen">
             <HeadDash icn={<RiShieldStarFill className="text-[#EFCA08]" />} head="My Contribution" subHead="All your remarkable contribution are here."></HeadDash>
 
 
