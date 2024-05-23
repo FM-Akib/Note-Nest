@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import { v4 as uuidv4 } from 'uuid';
+import { GiRoundStar } from "react-icons/gi";
 
 
 
@@ -109,7 +110,7 @@ const Contribute = () => {
 
 
  <div className="mx-2 mt-10 border-2 border-slate-200 rounded-lg">
-  <div className="mt-10 text-center font-bold">For every contribution you have 30 points</div>
+  <div className="mt-10 text-center font-bold flex justify-center items-center"><GiRoundStar className="mr-1 text-[#EFCA08]"/> For every contribution you have 20 points</div>
   {/* <div className="mt-3 text-center text-4xl font-bold">Make an Appointment</div> */}
 
 

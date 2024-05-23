@@ -129,7 +129,7 @@ const CseContent = () => {
         <div className="mt-4  leading-relaxed text-gray-700">
           {midPlaylist?.length? midPlaylist?.map((item, i) => (
             <div key={i} className="flex flex-col md:flex-row  items-center justify-center mb-4 ">
-              <div className="flex border-2 p-4 items-center justify-between w-full max-w-5xl bg-gray-200 rounded-xl group space-x-6 bg-opacity-50 shadow-xl hover:rounded-2xl">
+              <div className="flex border-2 p-4 items-center justify-between w-full max-w-5xl bg-gray-200 rounded-xl group space-x-6 bg-opacity-50 shadow-sm hover:rounded-2xl">
                 <img className="block w-full md:w-1/3 h-40 rounded-lg mx-0" alt="art cover" src={item.imgCover} />
                 <div className="md:w-2/3 pl-0 p-5">
                   <div className="space-y-2">

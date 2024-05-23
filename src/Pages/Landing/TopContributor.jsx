@@ -15,7 +15,7 @@ const TopContributor = () => {
 
             <div className="flex items-center justify-center py-10">
             <RiMedalFill className="text-[#EFCA08] text-3xl mr-1" />
-                <h1 className="font-semibold text-2xl">Top Contributors</h1>
+                <h1 className="font-semibold text-2xl tracking-widest">Top Contributors</h1>
             </div>
 
 

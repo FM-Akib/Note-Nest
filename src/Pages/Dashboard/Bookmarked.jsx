@@ -49,7 +49,7 @@ const Bookmarked = () => {
         {
             bookmarked?.map((acontribution, i) => (
                 <div key={i} className="flex items-center justify-center mb-4">
-                    <div className="p-4 items-center justify-between w-full bg-gray-200 rounded-xl group sm:flex space-x-6 bg-opacity-50 shadow-xl hover:rounded-2xl">
+                    <div className="p-4 items-center justify-between w-full bg-gray-200 rounded-xl group sm:flex space-x-6 bg-opacity-50 shadow-sm border-[1px] hover:rounded-2xl">
                         <img className="block md:w-3/12 h-40 rounded-lg mx-0" alt="art cover" src={acontribution.imgCover} />
                         <div className="md:w-9/12 pl-0 p-5">
                             <div className="space-y-2">
