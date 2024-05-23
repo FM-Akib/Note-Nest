@@ -43,13 +43,13 @@ const Bookmarked = () => {
    }
 
     return (
-        <div className="pt-20 md:px-20 px-2 overflow-y-auto max-h-screen">
+        <div className="pt-20 md:px-20 px-2 overflow-y-auto max-h-screen md:mb-20">
             <HeadDash icn={<IoMdBookmarks className="text-[#EFCA08]" />} head="Bookmarked" subHead="All your bookmarked resources are here."></HeadDash>
 
         {
             bookmarked?.map((acontribution, i) => (
-                <div key={i} className="flex items-center justify-center mb-4">
-                    <div className="p-4 items-center justify-between w-full bg-gray-200 rounded-xl group sm:flex space-x-6 bg-opacity-50 shadow-sm border-[1px] hover:rounded-2xl">
+                <div key={i} className="flex items-center justify-center mb-4 ">
+                    <div className="p-4 items-center justify-between w-full  bg-white rounded-xl group sm:flex space-x-6 bg-opacity-50 shadow-sm border-[1px] hover:rounded-2xl">
                         <img className="block md:w-3/12 h-40 rounded-lg mx-0" alt="art cover" src={acontribution.imgCover} />
                         <div className="md:w-9/12 pl-0 p-5">
                             <div className="space-y-2">

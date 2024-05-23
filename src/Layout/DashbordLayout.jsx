@@ -87,7 +87,7 @@ const DashbordLayout = () => {
 
 
 
-          <div className="p-4">
+          <div className="p-4 bg-[#F8F0FB]">
            <Outlet></Outlet>
           </div>
 

@@ -13,6 +13,7 @@ import UserHome from "../Pages/Dashboard/UserHome";
 import Contribute from "../Pages/Cse/Contribute";
 import MyContribution from "../Pages/Dashboard/MyContribution";
 import Bookmarked from "../Pages/Dashboard/Bookmarked";
+import Clubs from "../Pages/Clubs/Clubs";
 
 
   export const router = createBrowserRouter([
@@ -31,6 +32,10 @@ import Bookmarked from "../Pages/Dashboard/Bookmarked";
         {
         path: "/signup",
         element: <SignUp></SignUp>
+       },
+       {
+        path: "/clubs",
+        element: <Clubs></Clubs>
        }
       ]
     },
