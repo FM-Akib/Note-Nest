@@ -1,4 +1,5 @@
-
+import { Link } from 'react-router-dom';
+import competionHubLogo from '../../assets/competitonHublogo.png'
 
 const Hero = () => {
     return (
@@ -23,27 +24,29 @@ const Hero = () => {
               A platform for IIUC students to share and access academic resources like notes and papers. It&apos;s organized by courses, allows users to contribute materials, search and filter content, bookmark resources, and receive notifications. It fosters collaborative learning among students.
               </p>
               <span className="block font-semibold text-gray-500 dark:text-gray-500">
-                The best companion site for your exam.
+                Our collaboration partner,
               </span>
               <div className="grid grid-cols-3 space-x-4 md:space-x-6 md:flex md:justify-center lg:justify-start">
-                <a
+                <Link
                   aria-label="add to slack"
-                  href="#"
-                  className="p-4 border border-gray-200 dark:bg-gray-800 dark:border-gray-700 rounded-full duration-300 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/20 dark:hover:border-cyan-300/30"
+                  to="https://m.facebook.com/groups/1134953564340876/?ref=share&mibextid=NSMWBT" target="_blank"
+                  className="p-4 border border-gray-200 bg-[#455A64] hover:bg-[#556d78]  rounded-lg duration-300 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/20 dark:hover:border-cyan-300/30"
                 >
-                  <div className="flex justify-center space-x-4">
+                  <div className="flex justify-center items-center space-x-4 px-2">
                     <img
-                      className="w-6 h-6"
-                      src="https://tailus.io/sources/blocks/tech-startup/preview/images/slack.png"
+                      className="w-8 h-8"
+                      src={competionHubLogo}
                       alt="slack logo"
                       loading="lazy"
                       width="128"
                       height="128"
                     />
-                    <span className="hidden font-medium md:block dark:text-white">Slack</span>
+                    <span className="hidden font-medium md:block dark:text-white">IIUC Competition Hub</span>
                   </div>
-                </a>
-                <a
+                </Link>
+
+
+                {/* <a
                   aria-label="add to chat"
                   href="#"
                   className="p-4 border border-gray-200 dark:bg-gray-800  dark:border-gray-700 rounded-full duration-300 hover:border-green-400 hover:shadow-lg hover:shadow-lime-600/20 dark:hover:border-green-300/30"
@@ -59,8 +62,8 @@ const Hero = () => {
                     />
                     <span className="hidden font-medium md:block dark:text-white">Google Chat</span>
                   </div>
-                </a>
-                <a
+                </a> */}
+                {/* <a
                   aria-label="add to zoom"
                   href="#"
                   className="p-4 border border-gray-200 dark:bg-gray-800  dark:border-gray-700 rounded-full duration-300 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-600/20 dark:hover:border-blue-300/30"
@@ -76,13 +79,13 @@ const Hero = () => {
                     />
                     <span className="hidden font-medium md:block dark:text-white">Zoom</span>
                   </div>
-                </a>
+                </a> */}
               </div>
   
               <div className="dark:text-gray-600">
-                🔥🌟 <span>Other integrations :</span>
-                <a href="#" className="font-semibold text-gray-700 ">Discord,</a>
-                <a href="#" className="font-semibold text-gray-700 ">Telegram</a>
+                🔥🌟 <span>A product by iiuc team <span className="font-semibold">Hatti Matim Tim</span> .</span>
+                {/* <a href="#" className="font-semibold text-gray-700 ">Discord,</a>
+                <a href="#" className="font-semibold text-gray-700 ">Telegram</a> */}
               </div>
   
               <div className="pt-12 flex gap-6 lg:gap-12 justify-between grayscale lg:w-2/3">

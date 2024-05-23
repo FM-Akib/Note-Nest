@@ -26,7 +26,7 @@ export default {
         }
       },
       animation: {
-        typing: "typing 3s steps(30) infinite alternate, blink .7s infinite"
+        typing: "typing 3s steps(50) infinite alternate, blink .7s infinite"
       }
     },
   },
