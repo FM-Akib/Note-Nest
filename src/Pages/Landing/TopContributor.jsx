@@ -10,7 +10,7 @@ const TopContributor = () => {
     if (isError) return <div>Error: {error.message}</div>;
     console.log(users) 
     return (
-        <div className=" px-16 mt-20">
+        <div className="px-2 md:px-16 mt-20">
 
 
             <div className="flex items-center justify-center py-10">

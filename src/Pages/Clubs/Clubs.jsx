@@ -12,6 +12,7 @@ const Clubs = () => {
         .then(data => setClubs(data));
     }, []);
     console.log(clubs)
+    const departmental = clubs.filter(club=>club.category==='Departmental')
     return (
         <div>
             {/* club Heading */}
@@ -27,19 +28,21 @@ const Clubs = () => {
             </div>
         </div>
         
+
     <div className="">
+
     <div className="flex justify-center items-center mt-6">
-    <span 
-    className="border flex items-center border-slate-500 bg-white  rounded-lg py-2 px-4 text-white-400 0 text-sm  transition duration-300 ease-in-out hover:text-gray-500 ">
-    <IoIosMedical className="mr-2 text-orange-500" />Department Clubs <IoIosMedical className="ml-2 text-orange-500" />
-   </span>
+        <span 
+        className="border flex items-center border-slate-500 bg-white  rounded-lg py-2 px-4 text-white-400 0 text-sm  transition duration-300 ease-in-out hover:text-gray-500 ">
+        <IoIosMedical className="mr-2 text-orange-500" />Department Clubs <IoIosMedical className="ml-2 text-orange-500" />
+        </span>
    </div>  
   
 
     <div className="grid gap-8 md:grid-cols-2 lg:gap-10 p-6 md:p-10 ">
     
         {
-            clubs.map((club,i)=>     <Link  to={club.pageLink} key={i}
+            departmental.map((club,i)=>     <Link  to={club.pageLink} key={i}
             className="flex flex-col p-6 space-y-6 transition-all duration-500 bg-white border border-indigo-100 rounded-lg shadow hover:shadow-xl lg:p-8 lg:flex-row lg:space-y-0 lg:space-x-6">
             <div
                 className="flex items-center justify-center w-16 h-16 bg-green-100 border border-green-200 rounded-full shadow-inner lg:h-20 lg:w-20">
@@ -57,6 +60,7 @@ const Clubs = () => {
         }
     
     </div> 
+
     </div>
 
     </div>
