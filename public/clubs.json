@@ -1,0 +1,75 @@
+[
+    {
+      "clubName": "IIUC Computer Club",
+      "pageLink": "https://www.facebook.com/computerclubiiuc2021",
+      "groupLink": "https://www.facebook.com/groups/iiuccomputerclub",
+      "department": "Computer science and engineering (CSE)",
+      "category": "Departmental",
+      "description": "IIUC Computer Club is a approved Club in International Islamic University Chittagong (IIUC) founded in 2002. It is approved by Student Affairs Division (SAD) of IIUC. IIUC Computer Club is only the information technology based club in IIUC with a large number of members.",
+      "origin": "",
+      "img": "https://i.ibb.co/HhyYQwM/258533174-108720048301306-7813881221454635733-n.jpg"
+    },
+    {
+      "clubName": "EEE Club (IIUC) ",
+      "pageLink": "https://www.facebook.com/EEEclubofficialpage",
+      "groupLink": "https://www.facebook.com/EeeClubiiuc",
+      "department": "Electrical and Electronic Engineering",
+      "category": "Departmental",
+      "description": "EEE Club (IIUC) is a approved Club in International Islamic University Chittagong (IIUC). It is approved by Student Affairs Division (SAD) of IIUC.",
+      "origin": "",
+      "img": "https://i.ibb.co/kM3myR6/303979945-584843846759925-1166405654038519348-n.jpg"
+    },
+   
+    {
+      "clubName": "IIUC Pharma Club",
+      "pageLink": "https://www.facebook.com/iiucpharmaclub",
+      "groupLink": "https://www.facebook.com/groups/831890420238751",
+      "department": "Department of Pharmacy",
+      "category": "Departmental",
+      "description": "Pharma Club is a approved Club in International Islamic University Chittagong (IIUC). It is approved by Student Affairs Division (SAD) of IIUC.",
+      "origin": "",
+      "img": "https://i.ibb.co/6X4HmY8/278714470-5598414036855186-7657092402221678616-n.jpg"
+    },
+    {
+        "clubName": "IIUC Business Club",
+        "pageLink": "https://www.facebook.com/IIUCBusinessClub",
+        "groupLink": "https://www.linkedin.com/groups/businessleaders",
+        "department": "Business Administration",
+        "category": "Departmental",
+        "description": "Business Club is a approved Club in International Islamic University Chittagong (IIUC). It is approved by Student Affairs Division (SAD) of IIUC.",
+        "origin": "",
+        "img": "https://i.ibb.co/dmGSRJd/383951563-630633389256551-4185527112803418408-n.jpg"
+      },
+    {
+        "clubName": "IIUC Law Club ",
+        "pageLink": "https://www.facebook.com/iiuclawclub",
+        "groupLink": "https://www.facebook.com/groups/1763644513911941",
+        "department": "Department of Law",
+        "category": "Departmental",
+        "description": "Law Club is a approved Club in International Islamic University Chittagong (IIUC). It is approved by Student Affairs Division (SAD) of IIUC.",
+        "origin": "",
+        "img": "https://i.ibb.co/PhPVFwr/309266970-195469356182782-518053733300807819-n.jpg"
+      },
+   
+    { 
+      "clubName": "IIUC Qur'anic Sciences Club ",
+      "pageLink": "https://www.facebook.com/DQSIS",
+      "groupLink": "https://www.facebook.com/groups/roboticsclub",
+      "department": "Qur’anic Sciences and Islamic Studies (QSIS)",
+      "category": "Departmental",
+      "description": "Qur'anic Sciences Club is a approved Club in International Islamic University Chittagong (IIUC). It is approved by Student Affairs Division (SAD) of IIUC.",
+      "origin": "",
+      "img": "https://i.ibb.co/z28STCh/360086352-675392927936598-2657933159338805262-n.jpg"
+    },
+    { 
+      "clubName": "IEEE Computer Society IIUC Student Branch Chapter",
+      "pageLink": "https://www.facebook.com/CS.IIUC",
+      "groupLink": "https://www.facebook.com/groups/176988779410047",
+      "department": "Computer science and engineering (CSE)",
+      "category": "International",
+      "description": "IEEE CS is the trusted organization dedicated to engaging the engineers, scientists, academia, and industry professionals from across the globe driving continued advancements in computer science and technology.",
+      "origin": "",
+      "img": "https://i.ibb.co/hBLBhSw/367001074-718013033674426-1996992789129344167-n.jpg"
+    }
+  ]
+  

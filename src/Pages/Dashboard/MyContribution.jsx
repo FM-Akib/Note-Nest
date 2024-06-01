@@ -6,9 +6,9 @@ import { RiShieldStarFill } from "react-icons/ri";
 const MyContribution = () => {
 
    const {userInfo} = useUserInfo()
-   console.log(userInfo)
+//    console.log(userInfo)
    const {myContribution} = userInfo;
-   console.log(myContribution);
+//    console.log(myContribution);
 
     return (
         <div className="pt-20 md:px-20 px-2 overflow-y-auto max-h-screen">
@@ -29,7 +29,7 @@ const MyContribution = () => {
                             <p className="w-full whitespace-normal break-words">
                                 {acontribution.description}
                             </p>
-                            {/* <p className="font-semibold">{courseCode} - {courseTitle}</p> */}
+                            <p className="font-semibold">{acontribution.courseCode} </p>
                         </div>
                         <div className="flex items-center space-x-4 justify-between">
                             <div className="flex items-center gap-3">
@@ -48,6 +48,11 @@ const MyContribution = () => {
                                 <p className="text-xs">2 hours ago</p>
                             </div>
                             <div className="flex flex-row space-x-1">
+                               <Link to={`/dashboard/editContribution/${acontribution.id}`} target="_blank">
+                                    <button className="bg-emerald-500 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded mr-2">
+                                        Edit
+                                    </button>
+                                </Link>
                                 <Link to={acontribution.url} target="_blank">
                                     <button className="bg-emerald-500 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded mr-2">
                                         View

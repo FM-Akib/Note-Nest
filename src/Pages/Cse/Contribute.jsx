@@ -114,7 +114,7 @@ const Contribute = () => {
   {/* <div className="mt-3 text-center text-4xl font-bold">Make an Appointment</div> */}
 
 
-  <form onSubmit={handleSubmit(onSubmit)} className="p-2 md:p-8">
+<form onSubmit={handleSubmit(onSubmit)} className="p-2 md:p-8">
 
 <div className="md:flex gap-4 items-center">
    <label className="block w-full md:w-1/2 text-sm font-semibold text-gray-700 mb-2">

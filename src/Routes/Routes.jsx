@@ -14,6 +14,7 @@ import Contribute from "../Pages/Cse/Contribute";
 import MyContribution from "../Pages/Dashboard/MyContribution";
 import Bookmarked from "../Pages/Dashboard/Bookmarked";
 import Clubs from "../Pages/Clubs/Clubs";
+import EditMyContribution from "../Pages/Dashboard/EditMyContribution";
 
 
   export const router = createBrowserRouter([
@@ -72,6 +73,10 @@ import Clubs from "../Pages/Clubs/Clubs";
         {
           path: "bookmarked",
           element: <Bookmarked></Bookmarked>
+        },
+        {
+          path: "editContribution/:id",
+          element: <EditMyContribution></EditMyContribution>
         }
       ]
     }

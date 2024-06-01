@@ -15,7 +15,7 @@ const UserHome = () => {
 
        <HeadDash icn={<TbHomeStar className="text-[#EFCA08]" />} head="Your Nest" subHead="Welcome to your Nest."></HeadDash>
 
-
+      {/* user home state */}
        <div className="flex justify-center">
        <div className="stats shadow-lg border-2  w-5/6 px-4  ">
   
@@ -51,9 +51,25 @@ const UserHome = () => {
         </div>
         
     </div>
-    </div>    
+       </div>    
 
+
+
+        <div className="px-10">
+        <div className="bg-white rounded-3xl mx-4 md:mx-auto  border-2 border-gray-400 mt-10">
+        <div className="px-8 py-6 md:p-10">
+            <h1 className="text-4xl md:text-4xl font-medium leading-tight text-gray-800 mb-6"> go,  Google I/O</h1>
+            <p className="text-base md:text-lg font-normal leading-normal text-gray-800 mb-6">Join us online on May 10, 2023</p>
+            <p className="text-base md:text-lg font-normal leading-normal text-gray-800 mt-6">Hi Young,</p>
+            <p className="text-sm md:text-base font-normal leading-normal text-gray-800 mt-2">Google I/O 2023 is around the
+                corner! Tune in to watch the livestreamed keynotes at 10am PT, then dive into 100+ technical sessions,
+                codelabs, and more, on demand. Learn about...
+            </p>
+            </div>
         </div>
+        </div>
+
+    </div>
     );
 };
 
