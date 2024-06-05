@@ -30,7 +30,7 @@ const Hero = () => {
                 <Link
                   aria-label="add to slack"
                   to="https://m.facebook.com/groups/1134953564340876/?ref=share&mibextid=NSMWBT" target="_blank"
-                  className="p-4 border border-gray-200 bg-[#455A64] hover:bg-[#556d78]  rounded-lg duration-300 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/20 dark:hover:border-cyan-300/30"
+                  className="p-4 border border-gray-400   hover:bg-[#ecffc1]  rounded-lg duration-300 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/20 dark:hover:border-cyan-300/30"
                 >
                   <div className="flex justify-center items-center space-x-4 px-2">
                     <img
@@ -41,7 +41,7 @@ const Hero = () => {
                       width="128"
                       height="128"
                     />
-                    <span className="hidden font-medium md:block dark:text-white">IIUC Competition Hub</span>
+                    <span className="hidden font-medium md:block text-gray-700 ">IIUC Competition Hub</span>
                   </div>
                 </Link>
 
