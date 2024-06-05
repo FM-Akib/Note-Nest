@@ -3,7 +3,7 @@ import  {  useState } from 'react';
 import { Link } from 'react-router-dom';
 import useCseCourses from '../../Hooks/useCseCourses';
 
-const ResourceLeftNav = () => {
+const ResourceLeftNav = ({closeNav }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleOpen = () => {
@@ -28,7 +28,7 @@ const ResourceLeftNav = () => {
         <div className="h-screen bg-[#9A031E] p-4 text-white overflow-y-scroll">
             <ul className="flex flex-col gap-3 max-w-[280px] mx-auto my-4  ">
 
-            <li> <Link to="/resources/contribute">
+            <li onClick={closeNav}> <Link to="/resources/contribute">
                     <details className="group ">
                        
                         <summary
@@ -73,7 +73,7 @@ const ResourceLeftNav = () => {
                         <article className="px-2 pb-4 ">
                             <ul className="flex flex-col gap-1 pl-2 mt-4 ">
                                {
-                                firstSemester.map(course=>  <li key={course.courseCode}
+                                firstSemester.map(course=>  <li onClick={closeNav} key={course.courseCode}
                                  className="flex items-center gap-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 py-2  px-4 rounded-sm ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                                     stroke="currentColor" className="w-6 h-6">
@@ -116,7 +116,7 @@ const ResourceLeftNav = () => {
                         <article className="px-2 pb-4">
                             <ul className="flex flex-col gap-1 pl-2 mt-4 ">
                             {
-                                secondSemester.map(course=>  <li key={course.courseCode}
+                                secondSemester.map(course=>  <li onClick={closeNav} key={course.courseCode}
                                  className="flex gap-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 py-2  px-4 rounded-sm ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                                     stroke="currentColor" className="w-6 h-6">
@@ -158,7 +158,7 @@ const ResourceLeftNav = () => {
                         <article className="px-2 pb-4">
                             <ul className="flex flex-col gap-1 pl-2 mt-4 ">
                             {
-                                thirdSemester.map(course=>  <li key={course.courseCode}
+                                thirdSemester.map(course=>  <li onClick={closeNav} key={course.courseCode}
                                  className="flex gap-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 py-2  px-4 rounded-sm ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                                     stroke="currentColor" className="w-6 h-6">
@@ -200,7 +200,7 @@ const ResourceLeftNav = () => {
                         <article className="px-2 pb-4">
                             <ul className="flex flex-col gap-1 pl-2 mt-4 ">
                             {
-                                fourthSemester.map(course=>  <li key={course.courseCode}
+                                fourthSemester.map(course=>  <li onClick={closeNav} key={course.courseCode}
                                  className="flex gap-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 py-2  px-4 rounded-sm ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                                     stroke="currentColor" className="w-6 h-6">
@@ -242,7 +242,7 @@ const ResourceLeftNav = () => {
                         <article className="px-2 pb-4">
                             <ul className="flex flex-col gap-1 pl-2 mt-4 ">
                             {
-                                fifthSemester.map(course=>  <li key={course.courseCode}
+                                fifthSemester.map(course=>  <li onClick={closeNav} key={course.courseCode}
                                  className="flex gap-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 py-2  px-4 rounded-sm ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                                     stroke="currentColor" className="w-6 h-6">
@@ -284,7 +284,7 @@ const ResourceLeftNav = () => {
                         <article className="px-2 pb-4">
                             <ul className="flex flex-col gap-1 pl-2 mt-4 ">
                             {
-                                sixthSemester.map(course=>  <li key={course.courseCode}
+                                sixthSemester.map(course=>  <li onClick={closeNav} key={course.courseCode}
                                  className="flex gap-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 py-2  px-4 rounded-sm ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                                     stroke="currentColor" className="w-6 h-6">
@@ -326,7 +326,7 @@ const ResourceLeftNav = () => {
                         <article className="px-2 pb-4">
                             <ul className="flex flex-col gap-1 pl-2 mt-4 ">
                             {
-                                seventhSemester.map(course=>  <li key={course.courseCode}
+                                seventhSemester.map(course=>  <li onClick={closeNav} key={course.courseCode}
                                  className="flex gap-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 py-2  px-4 rounded-sm ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                                     stroke="currentColor" className="w-6 h-6">
@@ -368,7 +368,7 @@ const ResourceLeftNav = () => {
                         <article className="px-2 pb-4">
                             <ul className="flex flex-col gap-1 pl-2 mt-4 ">
                             {
-                                eightSemester.map(course=>  <li key={course.courseCode}
+                                eightSemester.map(course=>  <li onClick={closeNav} key={course.courseCode}
                                  className="flex gap-2 transition duration-300 ease-in-out hover:bg-white hover:text-red-600 py-2  px-4 rounded-sm ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
                                     stroke="currentColor" className="w-6 h-6">
