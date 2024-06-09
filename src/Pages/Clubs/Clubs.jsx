@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaFacebook } from "react-icons/fa";
-// import { IoIosMedical } from "react-icons/io";
+import { IoIosMedical } from "react-icons/io";
 import { RiGroup2Fill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
 const Clubs = () => {
     const [clubs,setClubs] =  useState([])
     const [filterclubs,setFilterClubs] =  useState([clubs])
+    const [filterhead,setFilterHead] = useState(['All'])
     const {
         register,
         handleSubmit,
@@ -18,7 +19,9 @@ const Clubs = () => {
     useEffect(() => {
         fetch('clubs.json')
         .then(response => response.json())
-        .then(data => setClubs(data));
+        .then(data => {setClubs(data)
+            setFilterClubs(data)
+        });
     }, []);
  
    
@@ -27,18 +30,26 @@ const Clubs = () => {
         if(data.filter==='Departmental'){
         const updated_clubs = clubs.filter(club=>club.category==='Departmental')
         setFilterClubs(updated_clubs);
+        setFilterHead('Departmental')
         }
         if(data.filter==='Needful'){
             const updated_clubs = clubs.filter(club=>club.category==='Needful')
             setFilterClubs(updated_clubs);
+            setFilterHead('Needful')
         }
         if(data.filter==='International'){
             const updated_clubs = clubs.filter(club=>club.category==='International')
             setFilterClubs(updated_clubs);
+            setFilterHead('International')
         }
         if(data.filter==='Sports'){
             const updated_clubs = clubs.filter(club=>club.category==='Sports')
             setFilterClubs(updated_clubs);
+            setFilterHead('Sports')
+        }
+        if(data.filter==='All'){
+            setFilterClubs(clubs);
+            setFilterHead('All')
         }
        
     }
@@ -60,17 +71,11 @@ const Clubs = () => {
 
     <div className="">
 
-    {/* <div className="flex justify-center items-center mt-6">
-        <span 
-        className="border flex items-center border-slate-500 bg-white  rounded-lg py-2 px-4 text-white-400 0 text-sm  transition duration-300 ease-in-out hover:text-gray-500 ">
-        <IoIosMedical className="mr-2 text-orange-500" />Department Clubs <IoIosMedical className="ml-2 text-orange-500" />
-        </span>
-   </div>   */}
-  
+
 
   <div className="w-full max-w-3xl my-4 mx-auto p-2 ">
 
-    <div className="border border-[#063F24] p-4 md:p-6 rounded-lg text-center bg-white">  
+<div className="border border-[#5fffb4] p-4 md:p-6 rounded-lg text-center bg-white">  
     <p className="text-lg mb-4 text-gray-700">       
     💡Discover the clubs and groups that match your interests and needs right here!
     </p>
@@ -78,19 +83,27 @@ const Clubs = () => {
     <div className="w-full">
     <form onSubmit={handleSubmit(onSubmit)}>
     <select {...register("filter", { required: true })} defaultChecked={false}
-		className="mr-3 h-10 border-2 border-[#063F24] focus:outline-none focus:border-sky-500 text-emerald-500-500 rounded px-2 md:px-3 py-0 md:py-1 tracking-wider">
+		className="mr-3 h-10 border-2 border-[#41ef9e] focus:outline-none focus:border-sky-500 text-emerald-500-500 rounded px-2 md:px-3 py-0 md:py-1 tracking-wider">
 		<option value="All" selected="">All</option>
 		<option value="Departmental">Departmental</option>
 		<option value="Needful">Needful</option>
 		<option value="International">International</option>
 		<option value="Sports">Sports</option>
 	</select>
-    <button type="submit" className="font-bold inline-block bg-indigo-100 text-[#063F24] py-2 px-4 rounded-lg hover:bg-indigo-100 transition duration-300 ease-in-out">
+    <button type="submit" className="tracking-wider font-bold inline-block bg-indigo-100 text-[#20794f] py-2 px-4 rounded-lg hover:bg-indigo-100 transition duration-300 ease-in-out">
         Filter
     </button>
     </form>
     </div>
 </div>
+
+<div className="flex justify-center items-center mt-6">
+        <span 
+        className="border flex items-center border-slate-500 bg-white  rounded-lg py-2 px-4 text-white-400 0 text-sm  transition duration-300 ease-in-out hover:text-gray-500 ">
+        <IoIosMedical className="mr-2 text-orange-500" />{filterhead} <IoIosMedical className="ml-2 text-orange-500" />
+        </span>
+   </div>  
+  
 
 </div>
 
