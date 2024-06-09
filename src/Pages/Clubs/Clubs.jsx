@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
 import { FaFacebook } from "react-icons/fa";
 // import { IoIosMedical } from "react-icons/io";
 import { RiGroup2Fill } from "react-icons/ri";
@@ -6,13 +7,41 @@ import { Link } from "react-router-dom";
 
 const Clubs = () => {
     const [clubs,setClubs] =  useState([])
+    const [filterclubs,setFilterClubs] =  useState([clubs])
+    const {
+        register,
+        handleSubmit,
+      } = useForm();
+    
+    console.log(clubs);
+    console.log(filterclubs);
     useEffect(() => {
         fetch('clubs.json')
         .then(response => response.json())
         .then(data => setClubs(data));
     }, []);
-    console.log(clubs)
-    // const departmental = clubs.filter(club=>club.category==='Departmental')
+ 
+   
+    const onSubmit = async(data) => {
+        console.log(data.filter)
+        if(data.filter==='Departmental'){
+        const updated_clubs = clubs.filter(club=>club.category==='Departmental')
+        setFilterClubs(updated_clubs);
+        }
+        if(data.filter==='Needful'){
+            const updated_clubs = clubs.filter(club=>club.category==='Needful')
+            setFilterClubs(updated_clubs);
+        }
+        if(data.filter==='International'){
+            const updated_clubs = clubs.filter(club=>club.category==='International')
+            setFilterClubs(updated_clubs);
+        }
+        if(data.filter==='Sports'){
+            const updated_clubs = clubs.filter(club=>club.category==='Sports')
+            setFilterClubs(updated_clubs);
+        }
+       
+    }
     return (
         <div>
             {/* club Heading */}
@@ -39,25 +68,28 @@ const Clubs = () => {
    </div>   */}
   
 
-  <div className="w-full max-w-2xl my-4 mx-auto p-2">
+  <div className="w-full max-w-3xl my-4 mx-auto p-2 ">
 
-<div className="border border-indigo-500 p-4 md:p-6 rounded-lg text-center">
-    {/* <h2 className="text-2xl md:text-3xl font-bold mb-4">We need your help!</h2> */}
-
-    <p className="text-lg mb-4 text-gray-700">
-        developing a website for <strong>study materials for students</strong>.
-        <br/>
-        We would love to hear your answers to some of the questions.
+    <div className="border border-[#063F24] p-4 md:p-6 rounded-lg text-center bg-white">  
+    <p className="text-lg mb-4 text-gray-700">       
+    💡Discover the clubs and groups that match your interests and needs right here!
     </p>
 
-    <a href="#"
-        className="font-bold inline-block bg-indigo-100 text-indigo-700 py-2 px-4 rounded-lg hover:bg-indigo-100 transition duration-300 ease-in-out">
-        Take Survey
-    </a>
-
-    {/* <p className="text-sm py-2 text-gray-500">
-        You will be rewarded for completing survey
-    </p> */}
+    <div className="w-full">
+    <form onSubmit={handleSubmit(onSubmit)}>
+    <select {...register("filter", { required: true })} defaultChecked={false}
+		className="mr-3 h-10 border-2 border-[#063F24] focus:outline-none focus:border-sky-500 text-emerald-500-500 rounded px-2 md:px-3 py-0 md:py-1 tracking-wider">
+		<option value="All" selected="">All</option>
+		<option value="Departmental">Departmental</option>
+		<option value="Needful">Needful</option>
+		<option value="International">International</option>
+		<option value="Sports">Sports</option>
+	</select>
+    <button type="submit" className="font-bold inline-block bg-indigo-100 text-[#063F24] py-2 px-4 rounded-lg hover:bg-indigo-100 transition duration-300 ease-in-out">
+        Filter
+    </button>
+    </form>
+    </div>
 </div>
 
 </div>
@@ -66,7 +98,7 @@ const Clubs = () => {
     <div className="grid gap-8 md:grid-cols-2 lg:gap-10 p-6 md:p-10 ">
     
         {
-            clubs.map((club,i)=>     <Link  to={club.pageLink} key={i}
+            filterclubs?.map((club,i)=>     <Link  to={club.pageLink} key={i}
             className="flex flex-col p-6 space-y-6 transition-all duration-500 bg-white border border-indigo-100 rounded-lg shadow hover:shadow-xl lg:p-8 lg:flex-row lg:space-y-0 lg:space-x-6">
             <div
                 className="flex items-center justify-center w-16 h-16 bg-green-100 border border-green-200 rounded-full shadow-inner lg:h-20 lg:w-20">
