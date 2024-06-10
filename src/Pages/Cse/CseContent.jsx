@@ -97,10 +97,10 @@ const CseContent = () => {
 
     <div role="tablist" className="tabs tabs-lifted">
         <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Mid" checked/>
-            <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">
+            <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-0 md:p-6">
                   
       {/* Mid Term */}
-      <details className="p-6 group border-b-2 ">
+      <details className="p-4 md:p-6 group border-b-2 max-w-80 md:max-w-full ">
         <summary className="flex items-center justify-between cursor-pointer">
           <h5 className="text-lg font-medium text-gray-900 flex items-center gap-2">
             <svg width="30px" height="30px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -129,16 +129,16 @@ const CseContent = () => {
         <div className="mt-4  leading-relaxed text-gray-700">
           {midPlaylist?.length? midPlaylist?.map((item, i) => (
             <div key={i} className="flex flex-col md:flex-row  items-center justify-center mb-4 ">
-              <div className="flex border-2 p-4 items-center justify-between w-full max-w-5xl bg-gray-200 rounded-xl group space-x-6 bg-opacity-50 shadow-sm hover:rounded-2xl">
+              <div className="flex flex-col md:flex-row border-2 p-2 md:p-4 items-center justify-between w-full max-w-5xl bg-gray-200 rounded-xl group md:space-x-6 space-x-2 bg-opacity-50 shadow-sm hover:rounded-2xl">
                 <img className="block w-full md:w-1/3 h-56 rounded-lg mx-0" alt="art cover" src={item.imgCover} />
-                <div className="md:w-2/3 pl-0 p-5">
+                <div className="md:w-2/3 w-full pl-0 p-5">
                   <div className="space-y-2">
                     <div className="space-y-1">
                       <h4 className="text-md font-semibold text-cyan-900 text-justify">
                         {item.title}
                       </h4>
                       <p className="break-words">{item.description}</p>
-                      <p className="font-semibold">{courseCode} - {courseTitle}</p>
+                      <p className="font-semibold text-sm md:text-md">{courseCode} - {courseTitle}</p>
                     </div>
                     <div className="flex items-center space-x-4 justify-between">
                       <div className="flex items-center gap-3">
@@ -146,14 +146,14 @@ const CseContent = () => {
                         <span className="text-sm">{item.authorName} <br /> <span className="text-xs">3AM</span>  </span>
                       </div>
                     </div>
-                    <div className="flex items-center space-x-4 justify-between">
+                    <div className="flex flex-col md:flex-row items-center space-x-4 justify-between">
                       <div className="text-grey-500 flex flex-row space-x-1 my-4">
                         <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                           <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                         <p className="text-xs">2 hours ago</p>
                       </div>
-                      <div className="flex flex-row items-center space-x-1">
+                      <div className="flex flex-row items-center space-x-1 ">
 
                       <button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
                       <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
