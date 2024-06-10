@@ -71,7 +71,7 @@ const Bookmarked = () => {
                                         </span>
                                     </div>
                                 </div>
-                                <div className="flex items-center space-x-4 justify-between">
+                                <div className="flex flex-col md:flex-row items-center space-x-4 justify-between">
                                     <div className="text-grey-500 flex flex-row space-x-1 my-4">
                                         <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
