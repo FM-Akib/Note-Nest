@@ -2,18 +2,18 @@ import {  useParams } from "react-router-dom";
 import useUserInfo from "../../Hooks/useUserInfo";
 import HeadDash from "./HeadDash";
 import { RiShieldStarFill } from "react-icons/ri";
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 import useCseCourses from "../../Hooks/useCseCourses";
 import { useForm } from "react-hook-form";
-import useAxiosPublic from "../../Hooks/useAxiosPublic";
+// import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { useContext } from "react";
 import { GiRoundStar } from "react-icons/gi";
 
 
 
-const image_hosting_key= import.meta.env.VITE_apiKey_Image;
-const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
+// const image_hosting_key= import.meta.env.VITE_apiKey_Image;
+// const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
 const EditMyContribution = () => {
     const {id}= useParams()
     // console.log(id)
@@ -37,7 +37,7 @@ const EditMyContribution = () => {
   
     const {user} = useContext(AuthContext)
     // console.log(user)
-    const axiosPublic = useAxiosPublic();
+    // const axiosPublic = useAxiosPublic();
   
     const onSubmit = async(data) => {
     //   const imageFile = {image: data.imgCover[0]}
@@ -173,13 +173,13 @@ const EditMyContribution = () => {
     {errors.url && <span className="text-red-500">{errors.url.message}</span>}
 </div>
 
-<div className="my-6">
+{/* <div className="my-6">
   <label htmlFor="cover" className="block text-sm font-semibold text-gray-700 mb-2">
     Cover Image for your contribution *
     <input {...register("imgCover", { required: true })} defaultValue={aContribution?.imgCover} type="file" className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-4 placeholder-red-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm" />
     {errors.imgCover && <span className="text-red-500">{errors.imgCover.message}</span>}
   </label>
-</div>
+</div> */}
 
 <div className="my-6">
     <textarea {...register("description", { required: true })} defaultValue={aContribution?.description} cols="30" rows="10" className="mb-10 h-40 w-full resize-none rounded-md border border-gray-300 p-5 font-semibold text-gray-400" placeholder="Description: Write a short instruction on how to read the given resource, how much to read and how much of the syllabus is covered."></textarea>
