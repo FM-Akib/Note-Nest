@@ -9,8 +9,8 @@ import { GiRoundStar } from "react-icons/gi";
 
 
 
-const image_hosting_key= import.meta.env.VITE_apiKey_Image;
-const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
+// const image_hosting_key= import.meta.env.VITE_apiKey_Image;
+// const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
 const Contribute = () => {
   const [cse] = useCseCourses()
 
@@ -26,14 +26,28 @@ const Contribute = () => {
   const axiosPublic = useAxiosPublic();
 
   const onSubmit = async(data) => {
-    const imageFile = {image: data.imgCover[0]}
-    const res = await axiosPublic.post(image_hosting_api,imageFile,{
-        headers: {
-          'content-type': 'multipart/form-data',
-        }
-    })
-    if(res.data.success){
+    // const imageFile = {image: data.imgCover[0]}
+    // const res = await axiosPublic.post(image_hosting_api,imageFile,{
+    //     headers: {
+    //       'content-type': 'multipart/form-data',
+    //     }
+    // })
+    // if(res.data.success){}
+     let imageCover ='';
+
       const contentType = data.content;
+      if(contentType==='Note'){
+        imageCover ='https://i.ibb.co/PFWLzS5/Hands-2.png';
+      }
+      if(contentType==='Playlist'){
+       imageCover='https://i.ibb.co/fpD594d/YouTube.png'
+      }
+      if(contentType==='questionBank'){
+       imageCover='https://i.ibb.co/4MR0GKt/Questions-Solve.png'
+      }
+      if(contentType==='other'){
+       imageCover='https://i.ibb.co/1msKgzx/resources.png'
+      }
       const courseCode = data.courseCode;
       const id = uuidv4();
 
@@ -43,7 +57,7 @@ const Contribute = () => {
         type: data.exam,
         star: 20,
         url: data.url,
-        imgCover: res.data.data.display_url,
+        imgCover: imageCover,
         semseter: data.semester,
         description: data.description,
         authorName: user.displayName,
@@ -74,7 +88,7 @@ const Contribute = () => {
       }
      
     
-    }
+    
     // console.log(data)
    
   };
@@ -180,13 +194,13 @@ const Contribute = () => {
     {errors.url && <span className="text-red-500">{errors.url.message}</span>}
 </div>
 
-<div className="my-6">
+{/* <div className="my-6">
   <label htmlFor="cover" className="block text-sm font-semibold text-gray-700 mb-2">
     Cover Image for your contribution *
     <input {...register("imgCover", { required: true })} type="file" className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-4 placeholder-red-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm" />
     {errors.imgCover && <span className="text-red-500">{errors.imgCover.message}</span>}
   </label>
-</div>
+</div> */}
 
 <div className="my-6">
     <textarea {...register("description", { required: true })} cols="30" rows="10" className="mb-10 h-40 w-full resize-none rounded-md border border-gray-300 p-5 font-semibold text-gray-400" placeholder="Description: Write a short instruction on how to read the given resource, how much to read and how much of the syllabus is covered."></textarea>

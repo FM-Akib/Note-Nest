@@ -130,7 +130,7 @@ const CseContent = () => {
           {midPlaylist?.length? midPlaylist?.map((item, i) => (
             <div key={i} className="flex flex-col md:flex-row  items-center justify-center mb-4 ">
               <div className="flex border-2 p-4 items-center justify-between w-full max-w-5xl bg-gray-200 rounded-xl group space-x-6 bg-opacity-50 shadow-sm hover:rounded-2xl">
-                <img className="block w-full md:w-1/3 h-40 rounded-lg mx-0" alt="art cover" src={item.imgCover} />
+                <img className="block w-full md:w-1/3 h-56 rounded-lg mx-0" alt="art cover" src={item.imgCover} />
                 <div className="md:w-2/3 pl-0 p-5">
                   <div className="space-y-2">
                     <div className="space-y-1">
@@ -226,7 +226,7 @@ const CseContent = () => {
           <p className="mt-4 leading-relaxed text-gray-700">
           {midNote.map((item, i) => (<div key={i} className='flex items-center justify-center mb-4'>
                             <div className="p-4 bg-gray-200 items-center justify-between w-full rounded-xl group sm:flex space-x-6  bg-opacity-50 shadow-xl hover:rounded-2xl">
-                                <img className="block w-3/12 h-40 rounded-lg mx-0" alt="art cover" src='https://picsum.photos/seed/2/2000/1000' />
+                                <img className="block w-3/12 h-56 rounded-lg mx-0" alt="art cover" src='https://picsum.photos/seed/2/2000/1000' />
                                 <div className="sm:w-9/12 pl-0 p-5">
                                     <div className="space-y-2">
                                         <div className="space-y-1">
@@ -287,7 +287,7 @@ const CseContent = () => {
           <p className="mt-4 leading-relaxed text-gray-700">
           {midquestionBank.map((item, i) => (<div key={i} className='flex items-center justify-center mb-4'>
                             <div className="p-4 bg-gray-200 items-center justify-between w-full rounded-xl group sm:flex space-x-6  bg-opacity-50 shadow-xl hover:rounded-2xl">
-                                <img className="block w-3/12 h-40 rounded-lg mx-0" alt="art cover" src='https://picsum.photos/seed/2/2000/1000' />
+                                <img className="block w-3/12 h-56 rounded-lg mx-0" alt="art cover" src='https://picsum.photos/seed/2/2000/1000' />
                                 <div className="sm:w-9/12 pl-0 p-5">
                                     <div className="space-y-2">
                                         <div className="space-y-1">
@@ -351,7 +351,7 @@ const CseContent = () => {
           <p className="mt-4 leading-relaxed text-gray-700">
           {midOther.map((item, i) => (<div key={i} className='flex items-center justify-center mb-4'>
                             <div className="p-4 bg-gray-200 items-center justify-between w-full rounded-xl group sm:flex space-x-6  bg-opacity-50 shadow-xl hover:rounded-2xl">
-                                <img className="block w-3/12 h-40 rounded-lg mx-0" alt="art cover" src='https://picsum.photos/seed/2/2000/1000' />
+                                <img className="block w-3/12 h-56 rounded-lg mx-0" alt="art cover" src='https://picsum.photos/seed/2/2000/1000' />
                                 <div className="sm:w-9/12 pl-0 p-5">
                                     <div className="space-y-2">
                                         <div className="space-y-1">
