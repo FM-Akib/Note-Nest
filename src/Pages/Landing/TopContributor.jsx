@@ -22,7 +22,7 @@ const TopContributor = () => {
             <div className="py-4 bg-white border-[1px]  shadow-xl border-slate-300 rounded-3xl flex ">
             <Marquee >
                 {
-                    users?.map(auser=>  <div key={auser._id}  className="flex items-center flex-col ml-4 space-y-4 sm:flex-row sm:space-y-0 sm:space-x-6 p-4 border-e-2 rounded-2xl">
+                    users?.map(auser=>  <div key={auser._id}  className="flex items-center flex-col ml-4 space-y-4 sm:flex-row sm:space-y-0 sm:space-x-6 p-4 border-e-2 ">
                     {/* <img className="object-cover w-20 h-20 mt-3 mr-3 rounded-full" src="https://www.fakepersongenerator.com/Face/male/male20171086011485596.jpg" /> */}
                     <div className="avatar">
                         <div className="w-14 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
