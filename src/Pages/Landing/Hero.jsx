@@ -30,7 +30,7 @@ const Hero = () => {
                 <Link
                   aria-label="add to slack"
                   to="https://m.facebook.com/groups/1134953564340876/?ref=share&mibextid=NSMWBT" target="_blank"
-                  className="p-4 border border-gray-400   hover:bg-[#ecffc1]  rounded-lg duration-300 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/20 dark:hover:border-cyan-300/30"
+                  className="p-4 border border-gray-400 bg-white   hover:bg-[#fdf8f8]  rounded-lg duration-300 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/20 dark:hover:border-cyan-300/30"
                 >
                   <div className="flex justify-center items-center space-x-4 px-2">
                     <img
