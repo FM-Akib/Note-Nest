@@ -65,10 +65,9 @@ const EditMyContribution = () => {
           contentType: data.content,
           courseCode: data.courseCode,
         }
-        // console.log(resource)
-        // const result = await axiosPublic.patch(`/courses/${courseCode}`,{contentType, resource})
+        
         const result = await axiosPublic.patch(`/courses/${courseCode}/resources/${id}`,{contentType, resource})
-        //  console.log(result)
+   
   
         if(result.data.result.modifiedCount>0){
           
@@ -83,20 +82,12 @@ const EditMyContribution = () => {
   
           //resource add to cse database done 
           //Now user my contribution handle
-          // const userResult = await axiosPublic.patch(`/users/${user?.email}`,{resource})
           const userResult = await axiosPublic.patch(`/users/${user?.email}/contribution/${id}`,{resource})
            
            console.log(userResult)
          }
-       
-      
-      
-      // console.log(data)
-     
     };
-  // if(errors){
-  //   console.log(errors)
-  // }
+ 
 
     return (
         <div className="pt-20 md:px-20 px-2 overflow-y-auto max-h-screen">
