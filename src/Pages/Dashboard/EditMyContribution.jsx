@@ -2,32 +2,25 @@ import {  useParams } from "react-router-dom";
 import useUserInfo from "../../Hooks/useUserInfo";
 import HeadDash from "./HeadDash";
 import { RiShieldStarFill } from "react-icons/ri";
-// import Swal from "sweetalert2";
+import Swal from "sweetalert2";
 import useCseCourses from "../../Hooks/useCseCourses";
 import { useForm } from "react-hook-form";
-// import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { useContext } from "react";
 import { GiRoundStar } from "react-icons/gi";
 
 
 
-// const image_hosting_key= import.meta.env.VITE_apiKey_Image;
-// const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
 const EditMyContribution = () => {
     const {id}= useParams()
-    // console.log(id)
-
-
+    
     const {userInfo} = useUserInfo()
-    // console.log(userInfo)
     const {myContribution} = userInfo;
 
-    const aContribution = myContribution?.filter(item=>item.id===id)[0]
-    // console.log(aContribution);
-    
+    const aContribution = myContribution?.filter(item=>item.id===id)[0]  
     const [cse] = useCseCourses()
-
+   console.log(aContribution)
 
     const {
       register,
@@ -36,20 +29,27 @@ const EditMyContribution = () => {
     } = useForm();
   
     const {user} = useContext(AuthContext)
-    // console.log(user)
-    // const axiosPublic = useAxiosPublic();
+    const axiosPublic = useAxiosPublic();
   
     const onSubmit = async(data) => {
-    //   const imageFile = {image: data.imgCover[0]}
-    //   const res = await axiosPublic.post(image_hosting_api,imageFile,{
-    //       headers: {
-    //         'content-type': 'multipart/form-data',
-    //       }
-    //   })
-    //   if(res.data.success){
-        // const contentType = data.content;
-        // const courseCode = data.courseCode;
-        // const id = uuidv4();
+    
+       let imageCover ='';
+  
+        const contentType = data.content;
+        if(contentType==='Note'){
+          imageCover ='https://i.ibb.co/PFWLzS5/Hands-2.png';
+        }
+        if(contentType==='Playlist'){
+         imageCover='https://i.ibb.co/fpD594d/YouTube.png'
+        }
+        if(contentType==='questionBank'){
+         imageCover='https://i.ibb.co/4MR0GKt/Questions-Solve.png'
+        }
+        if(contentType==='other'){
+         imageCover='https://i.ibb.co/1msKgzx/resources.png'
+        }
+        const courseCode = data.courseCode;
+        const id = aContribution.id;
   
         const resource = {
           id,
@@ -57,7 +57,7 @@ const EditMyContribution = () => {
           type: data.exam,
           star: 20,
           url: data.url,
-        //   imgCover: res.data.data.display_url,
+          imgCover: imageCover,
           semseter: data.semester,
           description: data.description,
           authorName: user.displayName,
@@ -65,34 +65,35 @@ const EditMyContribution = () => {
           contentType: data.content,
           courseCode: data.courseCode,
         }
-        console.log(resource)
-        // const result = await axiosPublic.patch(`/users/${courseCode}`,{contentType, resource})
+        // console.log(resource)
+        // const result = await axiosPublic.patch(`/courses/${courseCode}`,{contentType, resource})
+        const result = await axiosPublic.patch(`/courses/${courseCode}/resources/${id}`,{contentType, resource})
         //  console.log(result)
   
-        // if(result.data.result.modifiedCount>0){
+        if(result.data.result.modifiedCount>0){
           
-        //   Swal.fire({
-        //     position: "top-end",
-        //     icon: "success",
-        //     title: `Thank You for your contribution!`,
-        //     showConfirmButton: false,
-        //     timer: 1500
-        //   });
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: `Thank You for your contribution!`,
+            showConfirmButton: false,
+            timer: 1500
+          });
   
   
           //resource add to cse database done 
           //Now user my contribution handle
-        //   const userResult = await axiosPublic.patch(`/users/${user?.email}`,{resource})
+          // const userResult = await axiosPublic.patch(`/users/${user?.email}`,{resource})
+          const userResult = await axiosPublic.patch(`/users/${user?.email}/contribution/${id}`,{resource})
            
-        //   console.log(userResult)
-        // }
+           console.log(userResult)
+         }
        
       
-    //   }
+      
       // console.log(data)
      
     };
-  
   // if(errors){
   //   console.log(errors)
   // }
@@ -131,8 +132,6 @@ const EditMyContribution = () => {
     {errors.semester && <p className="text-red-500">{errors.semester.message}</p>}
   </label>
 </div>
-
-
 
 <div className="my-6 flex gap-4">
   <label className="block w-1/2 text-sm font-semibold text-gray-700 mb-2">
@@ -188,7 +187,7 @@ const EditMyContribution = () => {
 </div>
 
 <div className="flex justify-center items-center">
-  <button type="submit" className="cursor-pointer rounded-lg bg-[#9a031e] px-8 py-5 tracking-widest text-sm font-semibold text-white" placeholder="Contribute">Edit Contribute</button>
+  <button type="submit" className="cursor-pointer rounded-lg bg-[#9a031e] px-8 py-5 tracking-widest text-sm font-semibold text-white" >Edit Contribute</button>
 </div>
 
 </form>
@@ -198,8 +197,8 @@ const EditMyContribution = () => {
 
 
 
-        </div>
-    );
+    </div>
+  );
 };
 
 export default EditMyContribution;
