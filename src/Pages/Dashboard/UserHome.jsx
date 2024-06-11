@@ -1,6 +1,8 @@
 import { TbHomeStar } from "react-icons/tb";
 import useUserInfo from "../../Hooks/useUserInfo";
 import HeadDash from "./HeadDash";
+import { Link } from "react-router-dom";
+import { CiMail } from "react-icons/ci";
 
 const UserHome = () => {
     
@@ -17,7 +19,7 @@ const UserHome = () => {
 
       {/* user home state */}
        <div className="flex justify-center">
-       <div className="stats shadow-lg border-2  w-5/6 px-4  ">
+       <div className="stats shadow-lg border-2 w-full  md:w-5/6 px-2 md:px-4  ">
   
         <div className="stat">
             <div className="stat-figure text-primary">
@@ -47,7 +49,7 @@ const UserHome = () => {
             </div>
             <div className="stat-value">Hi,</div>
             <div className="stat-title">{userInfo.name}</div>
-            <div className="stat-desc text-secondary">{userInfo.email}</div>
+            {/* <div className="stat-desc text-secondary">{userInfo.email}</div> */}
         </div>
         
     </div>
@@ -55,15 +57,14 @@ const UserHome = () => {
 
 
 
-        <div className="px-10">
-        <div className="bg-white rounded-3xl mx-4 md:mx-auto  border-2 border-gray-400 mt-10">
-        <div className="px-8 py-6 md:p-10">
-            <h1 className="text-4xl md:text-4xl font-medium leading-tight text-gray-800 mb-6"> go,  Google I/O</h1>
-            <p className="text-base md:text-lg font-normal leading-normal text-gray-800 mb-6">Join us online on May 10, 2023</p>
-            <p className="text-base md:text-lg font-normal leading-normal text-gray-800 mt-6">Hi Young,</p>
-            <p className="text-sm md:text-base font-normal leading-normal text-gray-800 mt-2">Google I/O 2023 is around the
-                corner! Tune in to watch the livestreamed keynotes at 10am PT, then dive into 100+ technical sessions,
-                codelabs, and more, on demand. Learn about...
+        <div className=" md:px-10">
+        <div className="bg-white rounded-3xl mx-2 md:mx-auto  border-2 border-gray-400 mt-10">
+        <div className="px-6 py-4 md:p-10">
+            <h1 className="text-xl md:text-4xl font-medium leading-tight text-gray-800 mb-2"> {userInfo.name}</h1>
+            <p className="text-base md:text-lg font-normal leading-normal text-blue-800 mb-6 flex items-center"><CiMail className="mr-1 text-lg" />{userInfo.email}</p>
+            <p className="text-base md:text-lg font-normal leading-normal text-gray-800 mt-6">Hi Dear,</p>
+            <p className="text-sm md:text-base font-normal leading-normal text-gray-800 mt-2">Thank you for being a valued member of our community. We hope you find our resources helpful and inspiring as you continue your journey in learning and sharing knowledge.<br/>If you have any questions or need support, feel free to reach out. We are here to help you succeed! 
+            <br/> <Link to="https://porboshobai@gmail.com" target="_blank" className="text-blue-500 font-semibold">Contact Us : porboshobai@gmail.com</Link> 
             </p>
             </div>
         </div>

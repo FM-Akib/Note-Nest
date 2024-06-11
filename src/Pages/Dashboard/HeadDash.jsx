@@ -7,7 +7,7 @@ const HeadDash = ({head,subHead,icn}) => {
     <div className="relative  bottom-0 isolate overflow-hidden px-6  ">
 
         <h4
-            className="flex items-center justify-center mx-auto max-w-2xl text-center text-3xl font-bold tracking-tight sm:text-4xl text-[#1E2D24] ">
+            className="flex items-center justify-center mx-auto max-w-2xl text-center text-2xl font-bold tracking-tight sm:text-4xl text-[#1E2D24] ">
             {icn}{head}
         </h4>
 
