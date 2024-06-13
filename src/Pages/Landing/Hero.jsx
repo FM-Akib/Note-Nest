@@ -26,7 +26,7 @@ const Hero = () => {
               <span className="block font-semibold text-gray-500 dark:text-gray-500">
                 Our collaboration partner,
               </span>
-              <div className="grid grid-cols-3 space-x-4 md:space-x-6 md:flex md:justify-center lg:justify-start">
+              <div className="grid grid-cols-1 space-x-4 md:space-x-6 md:flex md:justify-center lg:justify-start">
                 <Link
                   aria-label="add to slack"
                   to="https://m.facebook.com/groups/1134953564340876/?ref=share&mibextid=NSMWBT" target="_blank"
@@ -41,7 +41,7 @@ const Hero = () => {
                       width="128"
                       height="128"
                     />
-                    <span className="hidden font-medium md:block text-gray-700 ">IIUC Competition Hub</span>
+                    <span className=" font-medium md:block text-gray-700 ">IIUC Competition Hub</span>
                   </div>
                 </Link>
 
