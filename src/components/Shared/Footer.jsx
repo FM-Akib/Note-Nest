@@ -12,10 +12,10 @@ const Footer = () => {
                     <img className="w-52" src="https://i.ibb.co/DfKg1f3/1.png" alt="" /></Link>
         
                     <ul className="text-lg flex items-center justify-center flex-col gap-7 md:flex-row md:gap-12 transition-all duration-500 py-10 mb-10 border-b border-gray-200">
-                        <li><a href="#" className="text-gray-800 hover:text-gray-900">Pagedone</a></li>
-                        <li><a href="#" className=" text-gray-800 hover:text-gray-900">Products</a></li>
+                        <li><Link to="/clubs" className="text-gray-800 hover:text-gray-900">Clubs</Link></li>
+                        <li><a href="#" className=" text-gray-800 hover:text-gray-900">Team</a></li>
                         <li><a href="#" className=" text-gray-800 hover:text-gray-900">Resources</a></li>
-                        <li><a href="#" className=" text-gray-800 hover:text-gray-900">Blogs</a></li>
+                        <li><a href="#" className=" text-gray-800 hover:text-gray-900">Faq</a></li>
                         <li><a href="#" className=" text-gray-800 hover:text-gray-900">Support</a></li>
                     </ul>
                     <div className="flex space-x-10 justify-center items-center mb-14">

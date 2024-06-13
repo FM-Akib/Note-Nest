@@ -13,7 +13,7 @@ const UserHome = () => {
 
 
     return (
-        <div className="pt-20 ">
+        <div className="pt-20 min-h-screen">
 
        <HeadDash icn={<TbHomeStar className="text-[#EFCA08]" />} head="Your Nest" subHead="Welcome to your Nest."></HeadDash>
 
