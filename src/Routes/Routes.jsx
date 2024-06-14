@@ -15,6 +15,7 @@ import MyContribution from "../Pages/Dashboard/MyContribution";
 import Bookmarked from "../Pages/Dashboard/Bookmarked";
 import Clubs from "../Pages/Clubs/Clubs";
 import EditMyContribution from "../Pages/Dashboard/EditMyContribution";
+import Projects from "../Pages/Projects/Projects";
 
 
   export const router = createBrowserRouter([
@@ -37,6 +38,10 @@ import EditMyContribution from "../Pages/Dashboard/EditMyContribution";
        {
         path: "/clubs",
         element: <Clubs></Clubs>
+       },
+       {
+        path: "/projects",
+        element: <Projects></Projects>
        }
       ]
     },

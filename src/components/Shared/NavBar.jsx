@@ -24,6 +24,8 @@ const handleLogout = () => {
                     <li><Link to="/eee">EEE</Link></li>
                     <li><Link to="/pharmacy">Pharmacy</Link></li>
                     <li><Link to="/clubs">Clubs</Link></li>
+                    <li><Link to="/projects">Projects</Link></li>
+
                     {/* <li>
                     <a>Parent</a>
                     <ul className="p-2">
@@ -44,6 +46,8 @@ const handleLogout = () => {
                 <li><Link to="/eee">EEE</Link></li>
                 <li><Link to="/pharmacy">Pharmacy</Link></li>
                 <li><Link to="/clubs">Clubs</Link></li>
+                <li><Link to="/projects">Projects</Link></li>
+
 
                 {/* <li>
                     <details>
