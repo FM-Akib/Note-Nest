@@ -52,7 +52,7 @@ const CseHome = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-3 sm:gap-5 not-prose">
            
             <a href="https://t.me/cse_7th_resourses/303" target="_blank"
-                className="hover:shadow-lg mt-6 md:mt-0 relative flex flex-col items-start justify-between p-6 overflow-hidden rounded-xl border border-gray-200   bg-white group">
+                className="hover:shadow-xl transition-all duration-500 mt-6 md:mt-0 relative flex flex-col items-start justify-between p-6 overflow-hidden rounded-xl border border-gray-200   bg-white group">
                 <span className="absolute w-full h-full bg-white  inset-0   bg-opacity-30"></span>
                 <div className="flex items-center justify-between w-full mb-4 ">
                     <img src="https://i.ibb.co/MD30nHp/Cse-Resources.png"  className="relative rounded-md h-10 md:h-11"/>
@@ -71,7 +71,7 @@ const CseHome = () => {
             </a>
 
             <a href="https://t.me/+Fx6j4mqFhPUzYTk1" target="_blank"
-                className="hover:shadow-lg relative flex flex-col items-start justify-between p-6 overflow-hidden rounded-xl border border-gray-200   bg-white group">
+                className="hover:shadow-xl transition-all duration-500 relative flex flex-col items-start justify-between p-6 overflow-hidden rounded-xl border border-gray-200   bg-white group">
                 <span className="absolute w-full h-full bg-white  inset-0   bg-opacity-30"></span>
                 <div className="flex items-center justify-between w-full mb-4 ">
                     <img src="https://i.ibb.co/WtYxwB5/Cse-Resources-1.png"  className="relative rounded-md h-10 md:h-11"/>
@@ -90,7 +90,7 @@ const CseHome = () => {
             </a>
 
             <a href="https://t.me/quesbankofcse" target="_blank"
-                className="hover:shadow-lg relative flex flex-col items-start justify-between p-6 overflow-hidden rounded-xl border border-gray-200   bg-white group">
+                className="hover:shadow-xl transition-all duration-500 relative flex flex-col items-start justify-between p-6 overflow-hidden rounded-xl border border-gray-200   bg-white group">
                 <span className="absolute w-full h-full bg-white  inset-0   bg-opacity-30"></span>
                 <div className="flex items-center justify-between w-full mb-4 ">
                     <img src="https://i.ibb.co/vqqn7fS/Cse-Resources-2.png"  className="relative rounded-md h-10 md:h-11"/>

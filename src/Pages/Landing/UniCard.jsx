@@ -10,7 +10,7 @@ const UniCard = () => {
         className="relative flex bg-white xl:w-[40%] md:w-[50%] sm:w-[80%] xs:w-[96%] gap-4 items-center p-2 border dark:border-gray-400/30 border-gray-400/30 rounded-lg ">
         <div
             className="absolute flex justify-center  px-2 text-xl font-bold text-center text-green-500  dark:bg-white bg-gray-800 rounded -top-2 -left-2">
-            <span className="self-end text-sm text-red-500">#</span>
+            {/* <span className="self-end text-sm text-red-500">#</span> */}
             
         </div>
 

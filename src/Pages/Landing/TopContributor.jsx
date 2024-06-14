@@ -19,7 +19,7 @@ const TopContributor = () => {
             </div>
 
 
-            <div className="py-4 bg-white border-[1px]  shadow-xl border-slate-300 rounded-3xl flex ">
+            <div className="py-4 bg-white border-[1px]  shadow-xl border-slate-300 rounded-xl flex ">
             <Marquee >
                 {
                     users?.map(auser=>  <div key={auser._id}  className="flex items-center flex-col ml-4 space-y-4 sm:flex-row sm:space-y-0 sm:space-x-6 p-4 border-e-2 ">

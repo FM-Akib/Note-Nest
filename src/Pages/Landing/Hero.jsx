@@ -4,13 +4,13 @@ import competionHubLogo from '../../assets/competitonHublogo.png'
 const Hero = () => {
     return (
         <div className="bg-white relative pt-10 pb-20 lg:pt-6 dark:bg-[#F8F0FB]">
-        <div className="relative xl:container m-auto px-6 md:px-12 lg:px-6">
+        <div className="relative xl:container m-auto px-4 md:px-12 lg:px-6">
           {/* <h1 className="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-2xl text-center sm:text-5xl md:text-3xl lg:w-auto lg:text-left xl:text-5xl dark:text-slate-500"><br className="lg:block hidden" />
             <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-[#F50057] to-[#fe3f82]">
               IIUC Note Nest
             </span>,
           </h1> */}
-          <div className="flex  items-center justify-start bg-gradient-to-tr  pt-10">
+          <div className="flex  items-center justify-start bg-gradient-to-tr pt-4 md:pt-10">
             <div className="w-max">
                 <h1
                 className="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-[#F50057] pr-5 text-xl md:text-2xl text-[#F50057] font-bold">
@@ -19,7 +19,7 @@ const Hero = () => {
             </div>
             </div>
           <div className="lg:flex">
-            <div className="relative mt-8 md:mt-16 space-y-8 sm:w-10/12 md:w-2/3 lg:ml-0 sm:mx-auto text-center lg:text-left lg:mr-auto lg:w-7/12">
+            <div className="relative mt-4 md:mt-10 space-y-8 sm:w-10/12 md:w-2/3 lg:ml-0 sm:mx-auto text-center lg:text-left lg:mr-auto lg:w-7/12">
               <p className="sm:text-lg text-gray-700 dark:text-gray-600 lg:w-11/12">
               A platform for IIUC students to share and access academic resources like notes and papers. It&apos;s organized by courses, allows users to contribute materials, search and filter content, bookmark resources, and receive notifications. It fosters collaborative learning among students.
               </p>
@@ -82,7 +82,7 @@ const Hero = () => {
                 </a> */}
               </div>
   
-              <div className="dark:text-gray-600">
+              <div className="dark:text-gray-600 text-sm md:text-md">
                 🔥🌟 <span>A product by iiuc team <span className="font-semibold">Hatti Matim Tim</span> .</span>
                 {/* <a href="#" className="font-semibold text-gray-700 ">Discord,</a>
                 <a href="#" className="font-semibold text-gray-700 ">Telegram</a> */}
