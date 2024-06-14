@@ -13,8 +13,8 @@ const Hero = () => {
           <div className="flex  items-center justify-start bg-gradient-to-tr  pt-10">
             <div className="w-max">
                 <h1
-                className="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-[#F50057] pr-5 text-4xl text-[#F50057] font-bold">
-                Note Nest ...
+                className="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-[#F50057] pr-5 text-xl md:text-2xl text-[#F50057] font-bold">
+                A note sharing flatform ...
                 </h1>
             </div>
             </div>
@@ -30,7 +30,7 @@ const Hero = () => {
                 <Link
                   aria-label="add to slack"
                   to="https://m.facebook.com/groups/1134953564340876/?ref=share&mibextid=NSMWBT" target="_blank"
-                  className="p-4 border border-gray-400 bg-white   hover:bg-[#fdf8f8]  rounded-lg duration-300 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/20 dark:hover:border-cyan-300/30"
+                  className="p-3 md:p-4 border border-gray-400 bg-white   hover:bg-[#fdf8f8]  rounded-lg duration-300 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/20 dark:hover:border-cyan-300/30"
                 >
                   <div className="flex justify-center items-center space-x-4 px-2">
                     <img
