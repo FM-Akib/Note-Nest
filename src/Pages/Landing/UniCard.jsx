@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import iiuc from '../../assets/iiucLogo.png'
 import { FcLink } from 'react-icons/fc';
+import '../../App.css';
 
 const UniCard = () => {
     return (
@@ -20,7 +21,7 @@ const UniCard = () => {
         </a>
 
 
-        <div className="flex flex-col justify-between flex-grow gap-3 px-2">
+        <div className="exo-font flex flex-col justify-between flex-grow gap-3 px-2">
             <div className="w-full">
                 <Link to="https://www.iiuc.ac.bd" target="_blank" className="font-semibold md:text-lg text-black">
                 International Islamic University Chittagong

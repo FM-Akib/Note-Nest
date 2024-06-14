@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import competionHubLogo from '../../assets/competitonHublogo.png'
+import '../../App.css';
+
 
 const Hero = () => {
     return (
@@ -13,7 +15,7 @@ const Hero = () => {
           <div className="flex  items-center justify-start bg-gradient-to-tr pt-4 md:pt-10">
             <div className="w-max">
                 <h1
-                className="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-[#F50057] pr-5 text-xl md:text-2xl text-[#F50057] font-bold">
+                className="exo-font animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-[#F50057] pr-5 text-xl md:text-2xl text-[#F50057] font-bold">
                 A note sharing flatform ...
                 </h1>
             </div>
@@ -82,7 +84,7 @@ const Hero = () => {
                 </a> */}
               </div>
   
-              <div className="dark:text-gray-600 text-sm md:text-md">
+              <div className="dark:text-gray-600 text-sm md:text-lg">
                 🔥🌟 <span>A product by iiuc team <span className="font-semibold">Hatti Matim Tim</span> .</span>
                 {/* <a href="#" className="font-semibold text-gray-700 ">Discord,</a>
                 <a href="#" className="font-semibold text-gray-700 ">Telegram</a> */}

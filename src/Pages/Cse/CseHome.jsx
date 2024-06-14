@@ -89,11 +89,11 @@ const CseHome = () => {
                 <span className="relative text-xs md:text-sm text-gray-600 ">A simple, powerful and flexible AI-Powered Telegram bot that helps your IIUC lifestyle.🔥🎉</span>
             </a>
 
-            <a href="https://t.me/quesbankofcse" target="_blank"
+            <a href="https://www.queryhub.info/" target="_blank"
                 className="hover:shadow-xl transition-all duration-500 relative flex flex-col items-start justify-between p-6 overflow-hidden rounded-xl border border-gray-200   bg-white group">
                 <span className="absolute w-full h-full bg-white  inset-0   bg-opacity-30"></span>
                 <div className="flex items-center justify-between w-full mb-4 ">
-                    <img src="https://i.ibb.co/vqqn7fS/Cse-Resources-2.png"  className="relative rounded-md h-10 md:h-11"/>
+                    <img src="https://i.ibb.co/tzKqqDW/Cse-Resources-3.png"  className="relative rounded-md h-10 md:h-11"/>
                     {/* <h1 className='text-gray-800 font-semibold'>Cse Resources</h1> */}
                     <span className="  flex-shrink-0 translate-x-0 py-1 px-2.5 text-[0.6rem] opacity-100 transition-all ease-out duration-200 rounded-full bg-blue-50   text-blue-500 flex items-center justify-center">
                         <span>View Website</span>
@@ -105,7 +105,7 @@ const CseHome = () => {
                     </svg>
                     </span>
                 </div>
-                <span className="relative text-xs md:text-sm text-gray-600 ">Access a vast collection of past papers, sample questions, and study materials to excel in your CSE courses. </span>
+                <span className="relative text-xs md:text-sm text-gray-600 ">Empower your studies effortlessly! Our web app is your academic superpower—upload PDFs, fire away any question, and behold instant clarity at lightning speed. </span>
             </a>
 
         </div>

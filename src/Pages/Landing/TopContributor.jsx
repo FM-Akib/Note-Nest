@@ -1,7 +1,7 @@
 import Marquee from "react-fast-marquee";
 import useAllusers from "../../Hooks/useAllusers";
 import { RiMedalFill } from "react-icons/ri";
-
+import '../../App.css';
 
 const TopContributor = () => {
     const { isLoading, isError, users, error } = useAllusers();
@@ -15,7 +15,7 @@ const TopContributor = () => {
 
             <div className="flex items-center justify-center py-10">
             <RiMedalFill className="text-[#EFCA08] text-3xl mr-1" />
-                <h1 className="font-semibold text-2xl tracking-widest">Top Contributors</h1>
+                <h1 className="exo-font font-semibold text-2xl tracking-wider">Top Contributors</h1>
             </div>
 
 
