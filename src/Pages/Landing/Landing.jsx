@@ -1,3 +1,4 @@
+import Features from "./Features";
 import Hero from "./Hero";
 import TopContributor from "./TopContributor";
 import UniCard from "./UniCard";
@@ -12,7 +13,7 @@ const Landing = () => {
           <Hero></Hero>
           <UniCard></UniCard>
           <TopContributor></TopContributor>
-
+          <Features></Features>
 
 
         </div>
