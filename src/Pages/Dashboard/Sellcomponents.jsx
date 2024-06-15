@@ -5,9 +5,12 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import { v4 as uuidv4 } from 'uuid';
 
 
 
+ const image_hosting_key= import.meta.env.VITE_apiKey_Image;
+ const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
 const Sellcomponents = () => {
   const {
     register,
@@ -19,18 +22,31 @@ const Sellcomponents = () => {
   const axiosPublic = useAxiosPublic();
 
   const onSubmit = async(data) => {
-  
 
-      // const resource = {
-       
-      //   title: data.title,
-      //   price: data.price,
-      //   contact: data.contact,
-      //   description: data.description,
-      //   authorName: user.displayName,
-      //   authorImg: user.photoURL,
-      //   projectImg: data.projectImg,
-      // }
+    const imageFile = {image: data.image[0]}
+    const res = await axiosPublic.post(image_hosting_api,imageFile,{
+        headers: {
+            'content-type': 'multipart/form-data',
+        }
+    })
+    if(res.data.success){
+      const id = uuidv4();
+
+
+      const components = {
+        id,
+        title: data.title,
+        price: data.price,
+        contact: data.contact,
+        description: data.description,
+        authorName: user.displayName,
+        authorImg: user.photoURL,
+        projectImg: res.data.data.display_url,
+      }
+        console.log(components)
+    }
+
+     
       
       // const result = await axiosPublic.patch(`/courses/${courseCode}/resources/${id}`,{contentType, resource})
  
@@ -69,6 +85,7 @@ const Sellcomponents = () => {
                 <div className="mb-5">
                     <label  className="block mb-2 font-bold text-gray-600">Components Name</label>
                     <input {...register("title", { required: true })} type="text" placeholder="Sell components name." className="border border-gray-300 shadow p-3 w-full rounded mb-"/>
+                    {errors.title && <p className="text-sm text-red-400 mt-2">Component name is required*.</p>}
                 </div>
 
 
@@ -76,23 +93,28 @@ const Sellcomponents = () => {
                 <div className="mb-5 md:w-1/2">
                     <label className="block mb-2 font-bold text-gray-600">Price</label>
                     <input {...register("price", { required: true })} placeholder="Enter a price." className="border border-red-300 shadow p-3 w-full rounded mb-"/>
-                    {/* <p className="text-sm text-red-400 mt-2">Twitter username is required</p> */}
+                    {errors.price && <p className="text-sm text-red-400 mt-2">Price is required*.</p>}
+
                 </div>
 
                 <div className="mb-5 md:w-1/2">
                     <label className="block mb-2 font-bold text-gray-600">Contact</label>
                     <input {...register("contact", { required: true })} placeholder="Give a contact number." className="border border-red-300 shadow p-3 w-full rounded mb-"/>
-                    {/* <p className="text-sm text-red-400 mt-2">Twitter username is required</p> */}
+                    {errors.contact && <p className="text-sm text-red-400 mt-2">Contact info is required*.</p>}
+                  
                 </div>
                 </div>
                 <div className="mb-5">
                     <label  className="block mb-2 font-bold text-gray-600">Component Image</label>
                     <input {...register("image", { required: true })} type="file"  className=" shadow p-3 w-full rounded mb-"/>
+                    {errors.image && <p className="text-sm text-red-400 mt-2">Image is required*.</p>}
+
                 </div>
                 
                 <div className="mb-5">
                     <label  className="block mb-2 font-bold text-gray-600">Short description</label>
                     <textarea {...register("description", { required: true })} type="text" placeholder="Short description about your components." className="border border-gray-300 shadow p-3 w-full rounded mb-"/>
+                    {errors.description && <p className="text-sm text-red-400 mt-2">Description is required*.</p>}
                 </div>
 
 
