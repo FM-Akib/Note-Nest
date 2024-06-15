@@ -1,9 +1,60 @@
 import { RiShieldStarFill } from "react-icons/ri";
 import HeadDash from "./HeadDash";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
+
+
 
 const Sellcomponents = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm();
+
+  const {user} = useContext(AuthContext)
+  const axiosPublic = useAxiosPublic();
+
+  const onSubmit = async(data) => {
+  
+
+      // const resource = {
+       
+      //   title: data.title,
+      //   price: data.price,
+      //   contact: data.contact,
+      //   description: data.description,
+      //   authorName: user.displayName,
+      //   authorImg: user.photoURL,
+      //   projectImg: data.projectImg,
+      // }
+      
+      // const result = await axiosPublic.patch(`/courses/${courseCode}/resources/${id}`,{contentType, resource})
+ 
+
+      // if(result.data.result.modifiedCount>0){
+        
+      //   Swal.fire({
+      //     position: "top-end",
+      //     icon: "success",
+      //     title: `Thank You for your contribution!`,
+      //     showConfirmButton: false,
+      //     timer: 1500
+      //   });
+
+
+        //resource add to cse database done 
+        //Now user my contribution handle
+        // const userResult = await axiosPublic.patch(`/users/${user?.email}/contribution/${id}`,{resource})
+         
+          console.log(data)
+       
+  };
     return (
-        <div className="pt-20 md:px-20 px-2 overflow-y-auto min-h-screen max-h-screen">
+        <div className="pt-20 md:px-20 px-0 overflow-y-auto min-h-screen max-h-screen">
             <HeadDash icn={<RiShieldStarFill className="text-[#EFCA08]" />} head="Sell Components" subHead="Sell your project components"></HeadDash>
   
   
@@ -11,36 +62,42 @@ const Sellcomponents = () => {
   <div className=" flex items-center">
     <div className="w-full">
         {/* <h2 className="text-center text-blue-400 font-bold text-2xl uppercase mb-10">Fill out our form</h2> */}
-        <div className="bg-white p-10 rounded-lg shadow md:w-4/4 mx-auto lg:w-2/2">
+        <div className="bg-white p-4 md:p-10 rounded-lg shadow md:w-4/4 mx-auto lg:w-2/2">
            
+           <form onSubmit={handleSubmit(onSubmit)} className="p-2 md:p-8">
+
                 <div className="mb-5">
                     <label  className="block mb-2 font-bold text-gray-600">Components Name</label>
-                    <input type="text" placeholder="Sell components name." className="border border-gray-300 shadow p-3 w-full rounded mb-"/>
+                    <input {...register("title", { required: true })} type="text" placeholder="Sell components name." className="border border-gray-300 shadow p-3 w-full rounded mb-"/>
                 </div>
 
 
-                <div className="w-full flex gap-4">
-                <div className="mb-5 w-1/2">
+                <div className="w-full flex flex-col md:flex-row md:gap-4">
+                <div className="mb-5 md:w-1/2">
                     <label className="block mb-2 font-bold text-gray-600">Price</label>
-                    <input placeholder="Enter a price." className="border border-red-300 shadow p-3 w-full rounded mb-"/>
+                    <input {...register("price", { required: true })} placeholder="Enter a price." className="border border-red-300 shadow p-3 w-full rounded mb-"/>
                     {/* <p className="text-sm text-red-400 mt-2">Twitter username is required</p> */}
                 </div>
 
-                <div className="mb-5 w-1/2">
+                <div className="mb-5 md:w-1/2">
                     <label className="block mb-2 font-bold text-gray-600">Contact</label>
-                    <input placeholder="Give a contact number." className="border border-red-300 shadow p-3 w-full rounded mb-"/>
+                    <input {...register("contact", { required: true })} placeholder="Give a contact number." className="border border-red-300 shadow p-3 w-full rounded mb-"/>
                     {/* <p className="text-sm text-red-400 mt-2">Twitter username is required</p> */}
                 </div>
+                </div>
+                <div className="mb-5">
+                    <label  className="block mb-2 font-bold text-gray-600">Component Image</label>
+                    <input {...register("image", { required: true })} type="file"  className=" shadow p-3 w-full rounded mb-"/>
                 </div>
                 
                 <div className="mb-5">
                     <label  className="block mb-2 font-bold text-gray-600">Short description</label>
-                    <textarea type="text" placeholder="S hort description about your components." className="border border-gray-300 shadow p-3 w-full rounded mb-"/>
+                    <textarea {...register("description", { required: true })} type="text" placeholder="Short description about your components." className="border border-gray-300 shadow p-3 w-full rounded mb-"/>
                 </div>
 
 
                 <button className="block w-full bg-blue-500 text-white font-bold p-4 rounded-lg">Submit</button>
-            
+         </form>   
         </div>
     </div>
 </div>
