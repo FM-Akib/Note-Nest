@@ -16,6 +16,8 @@ import Bookmarked from "../Pages/Dashboard/Bookmarked";
 import Clubs from "../Pages/Clubs/Clubs";
 import EditMyContribution from "../Pages/Dashboard/EditMyContribution";
 import Projects from "../Pages/Projects/Projects";
+import Myprojects from "../Pages/Dashboard/Myprojects";
+
 
 
   export const router = createBrowserRouter([
@@ -79,10 +81,15 @@ import Projects from "../Pages/Projects/Projects";
           path: "bookmarked",
           element: <Bookmarked></Bookmarked>
         },
+        // {
+        //   path: "/myprojects",
+        //   element: <Myprojects></Myprojects>
+        // },
         {
           path: "editContribution/:id",
           element: <EditMyContribution></EditMyContribution>
-        }
+        },
+  
       ]
     }
   ]);
