@@ -70,6 +70,7 @@ const SignUp = () => {
                     password: data.password,
                     myContribution: [],
                     bookmarked: [],
+                    components: [],
                 }
                 axiosPublic.post('/users',user)
                 .then(result => {

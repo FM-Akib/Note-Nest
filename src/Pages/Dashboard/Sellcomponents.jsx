@@ -43,32 +43,33 @@ const Sellcomponents = () => {
         authorImg: user.photoURL,
         projectImg: res.data.data.display_url,
       }
-        console.log(components)
+      const result = await axiosPublic.patch(`/users/components/${user.email}`,{components})
+
+      if(result.data.result.modifiedCount>0){
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: `Components added for sale!`,
+          showConfirmButton: false,
+          timer: 1500
+        });
+
+
+      
+        const componentsResult = await axiosPublic.post(`/components`,{components})
+         
+        console.log(componentsResult)
+      }    
+
     }
 
      
       
-      // const result = await axiosPublic.patch(`/courses/${courseCode}/resources/${id}`,{contentType, resource})
  
 
-      // if(result.data.result.modifiedCount>0){
         
-      //   Swal.fire({
-      //     position: "top-end",
-      //     icon: "success",
-      //     title: `Thank You for your contribution!`,
-      //     showConfirmButton: false,
-      //     timer: 1500
-      //   });
-
-
-        //resource add to cse database done 
-        //Now user my contribution handle
-        // const userResult = await axiosPublic.patch(`/users/${user?.email}/contribution/${id}`,{resource})
-         
-          console.log(data)
-       
   };
+  
     return (
         <div className="pt-20 md:px-20 px-0 overflow-y-auto min-h-screen max-h-screen">
             <HeadDash icn={<RiShieldStarFill className="text-[#EFCA08]" />} head="Sell Components" subHead="Sell your project components"></HeadDash>
