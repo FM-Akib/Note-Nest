@@ -17,6 +17,7 @@ import Clubs from "../Pages/Clubs/Clubs";
 import EditMyContribution from "../Pages/Dashboard/EditMyContribution";
 import Projects from "../Pages/Projects/Projects";
 import Myprojects from "../Pages/Dashboard/Myprojects";
+import Sellcomponents from "../Pages/Dashboard/Sellcomponents";
 
 
 
@@ -81,10 +82,14 @@ import Myprojects from "../Pages/Dashboard/Myprojects";
           path: "bookmarked",
           element: <Bookmarked></Bookmarked>
         },
-        // {
-        //   path: "/myprojects",
-        //   element: <Myprojects></Myprojects>
-        // },
+        {
+          path: "myprojects",
+          element: <Myprojects></Myprojects>
+        },
+        {
+          path: "sellprojects",
+          element: <Sellcomponents></Sellcomponents>
+        },
         {
           path: "editContribution/:id",
           element: <EditMyContribution></EditMyContribution>
