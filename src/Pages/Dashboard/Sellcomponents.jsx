@@ -39,6 +39,7 @@ const Sellcomponents = () => {
         price: data.price,
         contact: data.contact,
         description: data.description,
+        sale:'Available',
         authorName: user.displayName,
         authorImg: user.photoURL,
         projectImg: res.data.data.display_url,
