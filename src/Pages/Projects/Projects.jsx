@@ -1,18 +1,21 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { TbCoinTaka } from "react-icons/tb";
+import useProjects from "../../Hooks/useProjects";
 
 
 const Projects = () => {
-    const [components,setComponents] =  useState([])
+    // const [components,setComponents] =  useState([])
    
     
 
-    useEffect(() => {
-        fetch('http://localhost:5000/components')
-        .then(response => response.json())
-        .then(data => {setComponents(data)});
-    }, []);
-    console.log(components)
-
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/components')
+    //     .then(response => response.json())
+    //     .then(data => {setComponents(data)});
+    // }, []);
+    // console.log(components)
+     
+    const {components} = useProjects()
 
     const [selectedComponent, setSelectedComponent] = useState(null);
 
@@ -74,7 +77,7 @@ const Projects = () => {
                             <p className="text-gray-600 text-sm mb-2">{component.description}</p>
                             <p className="text-gray-600 text-sm mb-3"> <span className="text-gray-600 font-semibold">Own by </span> - {component.authorName}</p>
                             <div className="flex items-center justify-between">
-                                <span className="font-bold text-lg">BDT- {component.price}</span>
+                                <span className="font-bold text-lg flex items-center">BDT- {component.price} <TbCoinTaka className="ml-1 text-xl" /></span>
                                 <button
                                     className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
                                     onClick={() => openModal(component)}
