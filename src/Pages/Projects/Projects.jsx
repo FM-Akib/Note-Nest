@@ -64,15 +64,15 @@ const Projects = () => {
 
             <div className="grid md:grid-cols-3 gap-6 md:gap-0 px-4 md:px-20 mt-7">
                 {components?.map(component => (
-                    <div key={component.id} className="bg-white rounded-lg overflow-hidden shadow-lg ring-4 ring-blue-300 ring-opacity-40 max-w-sm hover:ring-red-300">
+                    <div key={component.id} className="relative flex flex-col justify-between bg-white rounded-lg overflow-hidden shadow-lg ring-4 ring-blue-300 ring-opacity-40 max-w-sm hover:ring-red-300">
                         <div className="relative">
-                            <img className="w-full" src={component.projectImg} alt={component.title} />
-                            <div className="absolute top-0 right-0 bg-red-500 text-white px-2 py-1 m-2 rounded-md text-sm font-medium">SALE</div>
+                            <img className="w-full " src={component.projectImg} alt={component.title} />
+                            <div className="absolute top-0 right-0 bg-red-500 text-white px-2 py-1 m-2 rounded-md text-sm font-medium">{component.sale?component.sale:'Available'}</div>
                         </div>
-                        <div className="p-4">
+                        <div className="p-4 w-full">
                             <h3 className="text-lg font-medium mb-2">{component.title}</h3>
-                            <p className="text-gray-600 text-sm mb-4">{component.description}</p>
-                            <p className="text-gray-600 text-sm mb-4"> <span className="text-gray-600 font-semibold">Own by </span> - {component.authorName}</p>
+                            <p className="text-gray-600 text-sm mb-2">{component.description}</p>
+                            <p className="text-gray-600 text-sm mb-3"> <span className="text-gray-600 font-semibold">Own by </span> - {component.authorName}</p>
                             <div className="flex items-center justify-between">
                                 <span className="font-bold text-lg">BDT- {component.price}</span>
                                 <button
