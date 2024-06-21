@@ -1,13 +1,40 @@
 import { RiShieldStarFill } from "react-icons/ri";
 import HeadDash from "./HeadDash";
 import useUserInfo from "../../Hooks/useUserInfo";
+import { useForm } from "react-hook-form";
 
 const Myprojects = () => {
 
     const {userInfo} = useUserInfo()
-    //    console.log(userInfo)
-       const {components} = userInfo;
+    const {components,email} = userInfo;
+    console.log(email)
+
+    const {
+        register,
+        handleSubmit
+      } = useForm();
+
+    const onSubmit = async(data,component) => {
     
+    console.log(data);
+
+      
+    const resource = {
+        id: component.id,
+        title: component.title,
+        contact: component.contact,
+        price: data.price,
+        sale: data.status,
+        projectImg: component.projectImg,
+        description: component.description,
+        authorName: component.authorName,
+        authorImg: component.authorImg,
+      }
+      console.log( resource);
+    
+        
+     };
+  
     return (
         <div className="pt-20 md:px-20 px-2 overflow-y-auto min-h-screen max-h-screen">
             <HeadDash icn={<RiShieldStarFill className="text-[#EFCA08]" />} head="My Components" subHead="Your Hub for Quality Project Components"></HeadDash>
@@ -59,29 +86,29 @@ const Myprojects = () => {
 
 
 
+                    <form onSubmit={handleSubmit(data => onSubmit(data, component))}  className="flex flex-col md:flex-row gap-4 sm:gap-6">
+
                     <div className="flex flex-col-reverse">
                     <div>
                     <label  className="block text-sm font-medium text-gray-900"> Status </label>
 
-                    <select
-                        name="HeadlineAct"
-                        id="HeadlineAct"
+                    <select {...register("status", { required: true })} 
+                     defaultValue={component.sale}
                         className="mt-1.5 w-full px-2 py-1 rounded-lg border-gray-300 text-gray-700 sm:text-sm"
                     >
                         <option value="">Please select</option>
                         <option value="Available">Available</option>
-                        <option value="Sold out">Sold out</option>
+                        <option value="Sold-out">Sold-out</option>
                     </select>
                     </div>
                     </div>
 
+
                     <div className="flex flex-col-reverse">
                     <label
                     className="relative block overflow-hidden border-b border-gray-200 bg-transparent pt-3 focus-within:border-blue-600">
-                    <input
-                        type="text"
-                        id="UserEmail"
-                        placeholder="Email"
+                    <input {...register("price", { required: true })} defaultValue={component.price}
+                       
                         className="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
                     />
 
@@ -95,8 +122,8 @@ const Myprojects = () => {
 
 
                  
-                    <button
-                    className="group relative inline-block overflow-hidden border border-indigo-600 px-8 py-2 focus:outline-none focus:ring rounded-md"
+                    <button 
+                    className="group relative inline-block overflow-hidden border border-indigo-600 px-8 py-2 focus:outline-none focus:ring rounded-sm"
                     >
                     <span
                         className="absolute inset-y-0 left-0 w-[2px] bg-indigo-600 transition-all group-hover:w-full group-active:bg-indigo-500"
@@ -109,6 +136,8 @@ const Myprojects = () => {
                     </span>
                     </button>
 
+
+                    </form>
 
                 </dl>
             </div>)

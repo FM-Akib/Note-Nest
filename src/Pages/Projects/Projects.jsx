@@ -65,7 +65,7 @@ const Projects = () => {
             </div>
         </div>
 
-            <div className="grid md:grid-cols-3 gap-6 md:gap-0 px-4 md:px-20 mt-7">
+            <div className="grid md:grid-cols-3 gap-8  px-4  md:px-20 mt-7">
                 {components?.map(component => (
                     <div key={component.id} className="relative flex flex-col justify-between bg-white rounded-lg overflow-hidden shadow-lg ring-4 ring-blue-300 ring-opacity-40 max-w-sm hover:ring-red-300">
                         <div className="relative">
