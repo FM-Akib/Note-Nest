@@ -2,32 +2,51 @@ import { RiShieldStarFill } from "react-icons/ri";
 import HeadDash from "./HeadDash";
 import useUserInfo from "../../Hooks/useUserInfo";
 import { useForm } from "react-hook-form";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import Swal from "sweetalert2";
 
 
 const Myprojects = () => {
     const { userInfo } = useUserInfo();
     const { components, email } = userInfo;
-    console.log(email);
+    const axiosPublic = useAxiosPublic();
 
     const {
         reset
     } = useForm();
 
     const handleUpdate = async (data, component) => {
-        console.log(data);
-
-        const updatedComponent = {
+        const resource = {
             ...component,
             price: data.price,
             sale: data.status,
         };
-        console.log(updatedComponent);
-
-        // Here you can add the code to handle the data update, such as making an API call.
-        // After processing, reset the form fields for this component
-        reset();
+    
+        try {
+            const result = await axiosPublic.patch(`/users/${email}/components/${component.id}`, { resource });
+    
+            if (result.data.result.modifiedCount > 0) {
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: `Updated your components!`,
+                    showConfirmButton: false,
+                    timer: 1500,
+                });
+            }
+            reset();
+        } catch (error) {
+            console.error('Error updating component:', error);
+            Swal.fire({
+                position: "top-end",
+                icon: "error",
+                title: `Failed to update components!`,
+                showConfirmButton: false,
+                timer: 1500,
+            });
+        }
     };
-
+    
     return (
         <div className="pt-20 md:px-20 px-2 overflow-y-auto min-h-screen max-h-screen">
             <HeadDash icn={<RiShieldStarFill className="text-[#EFCA08]" />} head="My Components" subHead="Your Hub for Quality Project Components"></HeadDash>
