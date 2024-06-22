@@ -61,8 +61,8 @@ const Clubs = () => {
             className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-black/60 bg-fixed">
             <div className="flex h-full items-center justify-center">
                 <div className="px-6 text-center text-white md:px-12">
-                <h1 className="mb-6 text-5xl font-bold">University Clubs</h1>
-                <h3 className="mb-8 text-2xl font-bold">All departments club and necessary group link are here</h3>
+                <h1 className="mb-2 md:mb-6 text-3xl md:text-5xl font-bold">University Clubs</h1>
+                <h3 className="mb-8 text-lg md:text-2xl font-bold">All departments club and necessary group link are here</h3>
                 </div>
             </div>
             </div>
@@ -76,7 +76,7 @@ const Clubs = () => {
   <div className="w-full max-w-3xl my-4 mx-auto p-2 ">
 
 <div className="border border-[#5fffb4] p-4 md:p-6 rounded-lg text-center bg-white">  
-    <p className="text-lg mb-4 text-gray-700">       
+    <p className="text-md md:text-lg mb-4 text-gray-700">       
     💡Discover the clubs and groups that match your interests and needs right here!
     </p>
 

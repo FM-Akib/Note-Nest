@@ -95,7 +95,7 @@ const EditMyContribution = () => {
 
 
             <div className="mx-2 mt-10 border-2 border-slate-200 rounded-lg">
-  <div className="mt-10 text-center font-bold flex justify-center items-center"><GiRoundStar className="mr-1 text-[#EFCA08]"/> Make sure all selector are select perfectfully.</div>
+  <div className="mt-10 text-center font-bold flex flex-col md:flex-row justify-center items-center"><GiRoundStar className="mr-1 text-[#EFCA08]"/> Make sure all selector are select perfectfully.</div>
   {/* <div className="mt-3 text-center text-4xl font-bold">Make an Appointment</div> */}
 
 
@@ -124,8 +124,8 @@ const EditMyContribution = () => {
       </label>
     </div>
 
-    <div className="my-6 flex gap-4">
-      <label className="block w-1/2 text-sm font-semibold text-gray-700 mb-2">
+    <div className="my-6 flex flex-col md:flex-row gap-4">
+      <label className="block md:w-1/2 text-sm font-semibold text-gray-700 mb-2">
         Course Code *
         <select {...register("courseCode", { required: true })} defaultValue={aContribution?.courseCode} defaultChecked={false} className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
           {cse.map(item => <option key={item.id} value={item.courseCode}>{item.courseCode}</option>)}
@@ -133,7 +133,7 @@ const EditMyContribution = () => {
         {errors.courseCode && <span className="text-red-500">{errors.courseCode.message}</span>}
       </label>
 
-      <label className="block w-1/2 text-sm font-semibold text-gray-700 mb-2">
+      <label className="block md:w-1/2 text-sm font-semibold text-gray-700 mb-2">
         Exam *
         <select {...register("exam", { required: true })} defaultChecked={aContribution?.type} className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
           <option value="mid">Mid Term</option>
@@ -142,7 +142,7 @@ const EditMyContribution = () => {
         {errors.exam && <span className="text-red-500">{errors.exam.message}</span>}
       </label>
 
-      <label className="block w-1/2 text-sm font-semibold text-gray-700 mb-2">
+      <label className="block md:w-1/2 text-sm font-semibold text-gray-700 mb-2">
         Content About
         <select {...register("content", { required: true })} defaultValue={aContribution?.contentType} defaultChecked={false} className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-4 font-semibold text-gray-500 shadow-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 sm:text-sm">
           <option value="Playlist">PlayList</option>
