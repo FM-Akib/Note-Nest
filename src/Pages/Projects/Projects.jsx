@@ -70,7 +70,7 @@ const Projects = () => {
                     <div key={component.id} className="relative flex flex-col justify-between bg-white rounded-lg overflow-hidden shadow-lg ring-4 ring-blue-300 ring-opacity-40 max-w-sm hover:ring-red-300">
                         <div className="relative">
                             <img className="w-full " src={component.projectImg} alt={component.title} />
-                            <div className="absolute top-0 right-0 bg-red-500 text-white px-2 py-1 m-2 rounded-md text-sm font-medium">{component.sale?component.sale:'Available'}</div>
+                            <div className={`${component?.sale==='Sold-out'?'bg-red-500':'bg-emerald-500'} absolute top-0 right-0  text-white px-2 py-1 m-2 rounded-md text-sm font-medium`}>{component.sale?component.sale:'Available'}</div>
                         </div>
                         <div className="p-4 w-full">
                             <h3 className="text-lg font-medium mb-2">{component.title}</h3>
@@ -79,7 +79,7 @@ const Projects = () => {
                             <div className="flex items-center justify-between">
                                 <span className="font-bold text-lg flex items-center">BDT- {component.price} <TbCoinTaka className="ml-1 text-xl" /></span>
                                 <button
-                                    className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+                                    className={`${component?.sale==='Sold-out'?'hidden':''} bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded`}
                                     onClick={() => openModal(component)}
                                 >
                                     Buy Now
