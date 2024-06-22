@@ -8,7 +8,7 @@ import Swal from "sweetalert2";
 
 const Myprojects = () => {
     const { userInfo } = useUserInfo();
-    const { components, email } = userInfo;
+    const { components, email,  } = userInfo;
     const axiosPublic = useAxiosPublic();
 
     const {
@@ -21,7 +21,7 @@ const Myprojects = () => {
             price: data.price,
             sale: data.status,
         };
-    
+        console.log(resource);
         try {
             const result = await axiosPublic.patch(`/users/${email}/components/${component.id}`, { resource });
     
@@ -33,6 +33,7 @@ const Myprojects = () => {
                     showConfirmButton: false,
                     timer: 1500,
                 });
+                
             }
             reset();
         } catch (error) {
