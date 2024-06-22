@@ -7,11 +7,11 @@ const HeadDash = ({head,subHead,icn}) => {
     <div className="relative  bottom-0 isolate overflow-hidden px-6  ">
 
         <h4
-            className="flex items-center justify-center mx-auto max-w-2xl text-center text-2xl font-bold tracking-tight sm:text-4xl text-[#1E2D24] ">
+            className="flex items-center justify-center gap-1 mx-auto max-w-2xl text-center text-2xl font-bold tracking-tight sm:text-4xl text-[#1E2D24] ">
             {icn}{head}
         </h4>
 
-        <p className="mx-auto mt-2 max-w-xl text-center text-lg leading-8  text-gray-700">
+        <p className="mx-auto mt-2 max-w-xl text-center text-lg leading-8 mb-4  text-gray-700">
             {subHead}
         </p>
 
@@ -22,8 +22,16 @@ const HeadDash = ({head,subHead,icn}) => {
                 Notify me
             </button>
         </form> */}
+        <span className="relative flex justify-center">
+        <div
+            className="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-gray-500 to-transparent opacity-75"
+        ></div>
 
-        <svg viewBox="0 0 1024 1024" className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2"
+        <span className="relative z-10 bg-[#F8F0FB] px-6">***</span>
+        </span>
+
+
+        {/* <svg viewBox="0 0 1024 1024" className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2"
             aria-hidden="true">
             <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fillOpacity="0.7">
             </circle>
@@ -34,7 +42,7 @@ const HeadDash = ({head,subHead,icn}) => {
                     <stop offset="1" stopColor="#7ED321" stopOpacity="0"></stop>
                 </radialGradient>
             </defs>
-        </svg>
+        </svg> */}
     </div>
 
 </div>

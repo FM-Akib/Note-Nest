@@ -1,4 +1,3 @@
-import { RiShieldStarFill } from "react-icons/ri";
 import HeadDash from "./HeadDash";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
@@ -6,6 +5,7 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { v4 as uuidv4 } from 'uuid';
+import {  AiOutlineControl } from "react-icons/ai";
 
 
 
@@ -73,7 +73,7 @@ const Sellcomponents = () => {
   
     return (
         <div className="pt-20 md:px-20 px-0 overflow-y-auto min-h-screen max-h-screen">
-            <HeadDash icn={<RiShieldStarFill className="text-[#EFCA08]" />} head="Sell Components" subHead="Sell your project components"></HeadDash>
+        <HeadDash icn={<AiOutlineControl className="text-[#EFCA08] text-4xl" />} head="Sell Components" subHead="Sell your project components"></HeadDash>
   
   
   
@@ -94,14 +94,14 @@ const Sellcomponents = () => {
                 <div className="w-full flex flex-col md:flex-row md:gap-4">
                 <div className="mb-5 md:w-1/2">
                     <label className="block mb-2 font-bold text-gray-600">Price</label>
-                    <input {...register("price", { required: true })} placeholder="Enter a price." className="border border-red-300 shadow p-3 w-full rounded mb-"/>
+                    <input {...register("price", { required: true })} placeholder="Enter a price." className="border border-gray-300 shadow p-3 w-full rounded mb-"/>
                     {errors.price && <p className="text-sm text-red-400 mt-2">Price is required*.</p>}
 
                 </div>
 
                 <div className="mb-5 md:w-1/2">
                     <label className="block mb-2 font-bold text-gray-600">Contact</label>
-                    <input {...register("contact", { required: true })} placeholder="Give a contact number." className="border border-red-300 shadow p-3 w-full rounded mb-"/>
+                    <input {...register("contact", { required: true })} placeholder="Give a contact number." className="border border-gray-300 shadow p-3 w-full rounded mb-"/>
                     {errors.contact && <p className="text-sm text-red-400 mt-2">Contact info is required*.</p>}
                   
                 </div>

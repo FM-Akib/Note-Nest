@@ -1,9 +1,10 @@
-import { RiShieldStarFill } from "react-icons/ri";
+
 import HeadDash from "./HeadDash";
 import useUserInfo from "../../Hooks/useUserInfo";
 import { useForm } from "react-hook-form";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import Swal from "sweetalert2";
+import { IoFileTrayStackedOutline } from "react-icons/io5";
 
 
 const Myprojects = () => {
@@ -50,7 +51,7 @@ const Myprojects = () => {
     
     return (
         <div className="pt-20 md:px-20 px-2 overflow-y-auto min-h-screen max-h-screen">
-            <HeadDash icn={<RiShieldStarFill className="text-[#EFCA08]" />} head="My Components" subHead="Your Hub for Quality Project Components"></HeadDash>
+            <HeadDash icn={<IoFileTrayStackedOutline className="text-[#EFCA08]" />} head="My Components" subHead="Your Hub for Quality Project Components"></HeadDash>
             {
                 components?.map((component) => (
                     <ComponentCard 
