@@ -18,6 +18,7 @@ import EditMyContribution from "../Pages/Dashboard/EditMyContribution";
 import Projects from "../Pages/Projects/Projects";
 import Myprojects from "../Pages/Dashboard/Myprojects";
 import Sellcomponents from "../Pages/Dashboard/Sellcomponents";
+import ErrorPage from "../Pages/Error/ErrorPage";
 
 
 
@@ -45,6 +46,10 @@ import Sellcomponents from "../Pages/Dashboard/Sellcomponents";
        {
         path: "/projects",
         element: <Projects></Projects>
+       },
+       {
+        path: "*",
+        element: <ErrorPage/>
        }
       ]
     },
@@ -63,6 +68,10 @@ import Sellcomponents from "../Pages/Dashboard/Sellcomponents";
         {
           path: "contribute",
           element: <Contribute></Contribute>
+        },
+        {
+         path: "*",
+         element: <ErrorPage/>
         }
       ]
     },
@@ -94,6 +103,10 @@ import Sellcomponents from "../Pages/Dashboard/Sellcomponents";
           path: "editContribution/:id",
           element: <EditMyContribution></EditMyContribution>
         },
+        {
+         path: "*",
+         element: <ErrorPage/>
+        }
   
       ]
     }
