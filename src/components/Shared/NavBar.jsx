@@ -17,7 +17,7 @@ const NavBar = () => {
         <div className="navbar md:px-28 bg-[#1E2D24] text-white fixed z-30">
             <div className="navbar-start">
                 <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden px-2">
+                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden px-4">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#1E2D24] rounded-box w-52">
@@ -30,7 +30,7 @@ const NavBar = () => {
                 </div>
                 <NavLink to="/" className="btn btn-ghost p-0 text-xl">
                     <img className="h-full" src={iiuc} alt="" />
-                    <img className="h-full" src="https://i.ibb.co/x22cWLD/2.png" alt="" />
+                    <img className="sm:h-full h-5/6" src="https://i.ibb.co/x22cWLD/2.png" alt="" />
                 </NavLink>
             </div>
             <div className="navbar-center hidden lg:flex">

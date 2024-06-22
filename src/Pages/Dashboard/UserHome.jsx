@@ -19,7 +19,7 @@ const UserHome = () => {
 
       {/* user home state */}
        <div className="flex justify-center">
-       <div className="stats shadow-lg border-2 w-full  md:w-5/6 px-2 md:px-4  ">
+       <div className="stats shadow-lg border-2 w-full md:w-5/6 px-2 md:px-4 flex flex-col-reverse md:flex-row">
   
         <div className="stat">
             <div className="stat-figure text-primary">
@@ -39,7 +39,7 @@ const UserHome = () => {
             <div className="stat-desc">Thank you for your contribution</div>
         </div>
         
-        <div className="stat">
+        <div className="stat flex flex-col md:flex-row">
             <div className="stat-figure text-secondary">
             <div className="avatar online">
                 <div className="w-16 rounded-full">
@@ -47,8 +47,11 @@ const UserHome = () => {
                 </div>
             </div>
             </div>
+
+            <div className="flex flex-col justify-center ">
             <div className="stat-value">Hi,</div>
             <div className="stat-title">{userInfo.name}</div>
+            </div>
             {/* <div className="stat-desc text-secondary">{userInfo.email}</div> */}
         </div>
         
