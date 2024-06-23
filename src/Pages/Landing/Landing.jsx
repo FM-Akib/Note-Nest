@@ -1,3 +1,4 @@
+import Departments from "./Departments";
 import Features from "./Features";
 import Hero from "./Hero";
 import TopContributor from "./TopContributor";
@@ -14,7 +15,7 @@ const Landing = () => {
           <UniCard></UniCard>
           <TopContributor></TopContributor>
           <Features></Features>
-
+          <Departments/>
 
         </div>
       
