@@ -12,37 +12,27 @@ import PropTypes from "prop-types";
 const testimonialList = [
 	{
 		author: {
-			fullName: "Akshay Kumar",
+			fullName: "Clubs",
 			picture:
-				"https://cdn.easyfrontend.com/pictures/testimonial/testimonial_15.png",
-			designation: "Founder / CEO",
+				"https://i.ibb.co/hR5mP16/Untitled-design-1.png",
+			designation: "Join a Community of Passionate Enthusiasts",
 		},
-		rating: 3.5,
+		rating: 0,
 		description:
-			"It’s easier to reach your savings goals when you have the right savings account. Take a look and find the right one for you.It’s easier to reach your savings goals when you have the right savings account. Take a look and find the right one for youIt’s easier to reach your savings goals when you have the right savings account. Take a look and find the right one for you!",
+			"Discover and join clubs that match your interests. Stay updated on events, engage with members, and showcase your club’s achievements. Seamlessly communicate and coordinate with fellow enthusiasts. Join a club today and be part of a vibrant community.",
 	},
 	{
 		author: {
-			fullName: "Raima Sen",
+			fullName: "Projects Components",
 			picture:
-				"https://cdn.easyfrontend.com/pictures/testimonial/testimonial_15.png",
-			designation: "UI Designer",
+				"https://i.ibb.co/tqrKTC0/Untitled-design-2.png",
+			designation: "Your Hub for Buying and Selling Project Parts",
 		},
-		rating: 4,
+		rating: 0,
 		description:
-			"It’s easier to reach your savings goals when you have the right savings account. Take a look and find the right one for you.It’s easier to reach your savings goals when you have the right savings account. Take a look and find the right one for youIt’s easier to reach your savings goals when you have the right savings account. Take a look and find the right one for you!",
+			"Empowering university students to easily buy and sell quality project components. Connect with peers, discover essential parts, and trade efficiently to bring your academic projects to life. Simplify your project journey with our user-friendly platform.",
 	},
-	{
-		author: {
-			fullName: "Arjun Kapur",
-			picture:
-				"https://cdn.easyfrontend.com/pictures/testimonial/testimonial_15.png",
-			designation: "HR Manager",
-		},
-		rating: 5,
-		description:
-			"It’s easier to reach your savings goals when you have the right savings account. Take a look and find the right one for you.It’s easier to reach your savings goals when you have the right savings account. Take a look and find the right one for youIt’s easier to reach your savings goals when you have the right savings account. Take a look and find the right one for you!",
-	},
+	
 ];
 
 const Rating = ({ rating, showLabel, className, ...rest }) => (
@@ -97,11 +87,10 @@ const Departments = () => {
             <div className="flex justify-center text-center mb-6 lg:mb-12">
                 <div className="max-w-lg">
                     <h2 className="text-3xl leading-none md:text-[45px] font-bold mb-6">
-                        Community Reviews
+					Extensive Features
                     </h2>
                     <p className="">
-                        Assumenda non repellendus distinctio nihil dicta sapiente,
-                        quibusdam maiores, illum at qui.
+					Dive Deep into Our Comprehensive Capabilities
                     </p>
                 </div>
             </div>
