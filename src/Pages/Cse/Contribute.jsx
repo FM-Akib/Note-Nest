@@ -183,7 +183,7 @@ const Contribute = () => {
 </div>
 
 <div className="my-6">
-<label className="block w-full md:w-1/2 text-sm font-semibold text-gray-700 mb-2">
+<label className="block w-full  text-sm font-semibold text-gray-700 mb-2">
 Upload your file in Google Drive or YouTube then Submit your shareable drive link or YouTube link*
   <input {...register("url", { required: true })} type="url" className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-4 placeholder-red-400 shadow-sm placeholder:font-semibold placeholder:text-gray-500 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-500 text-sm" placeholder="URL: Upload drive link or YouTube link*" />
     {errors.url && <span className="text-red-500">{errors.url.message}</span>}
