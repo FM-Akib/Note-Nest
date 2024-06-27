@@ -103,7 +103,7 @@ const SignUp = () => {
 
             <div className=" border-l-2 md:border-t-2 md:border-b-2 border-r-2 md:border-r-0 md:rounded-l-md col-span-5 bg-white">
 
-            <div className="w-full max-w-md mx-auto p-8 space-y-3 rounded-xl bg-white text-gray-800 ">
+            <div className="w-full max-w-md mx-auto p-4 md:p-8 space-y-3 rounded-xl bg-white text-gray-800 ">
             <h1 className="text-2xl font-bold text-center">Register</h1>
 
 
@@ -119,21 +119,21 @@ const SignUp = () => {
                 <input {...register("image")} type="file" name="image" id="image"  className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
             </div>
 
-            <div className="md:flex md:gap-2 space-y-1">
+            <div className="md:flex md:gap-2 space-y-1 items-center justify-center">
             <div className="space-y-1 text-sm">
                 <label htmlFor="dept" className="block text-gray-600">Short name of Department</label>
-                <input {...register("dept")} type="text" name="name" id="name" placeholder="CSE/EEE/.." className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
+                <input {...register("dept")} type="text" name="dept" id="dept" placeholder="CSE/EEE/.." className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
             </div>
 
             <div className="space-y-1 text-sm">
-                <label htmlFor="id" className="block text-gray-600">Matric ID</label>
-                <input {...register("ID")} type="text" name="name" id="name" placeholder="C211008" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
+                <label htmlFor="ID" className="block text-gray-600">Matric ID</label>
+                <input {...register("ID")} type="text" name="ID" id="ID" placeholder="C211008" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
             </div>
             </div>
 
             <div className="space-y-1 text-sm">
                 <label htmlFor="email" className="block text-gray-600">Email</label>
-                <input type="text" {...register("email")} name="email" id="email" placeholder="Email" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
+                <input type="email" {...register("email")} name="email" id="email" placeholder="Email" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
             </div>
 
             <div className="space-y-1 text-sm">
