@@ -21,7 +21,7 @@ const CseContent = () => {
     console.log(liked,stars);
 
     useEffect(() => {
-        fetch('http://localhost:5000/cseCourses')
+        fetch('https://note-nest-server-three.vercel.app/cseCourses')
         .then(response => response.json())
         .then(data => setResourceCse(data));
     }, []);
@@ -105,7 +105,7 @@ const CseContent = () => {
             setStars(currentPlaylist.star + 1);
             setLiked(true);
         }
-        fetch('http://localhost:5000/cseCourses')
+        fetch('https://note-nest-server-three.vercel.app/cseCourses')
             .then(response => response.json())
             .then(data => setResourceCse(data));
     } catch (error) {

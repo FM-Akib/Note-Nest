@@ -9,7 +9,7 @@ const Projects = () => {
     
 
     // useEffect(() => {
-    //     fetch('http://localhost:5000/components')
+    //     fetch('https://note-nest-server-three.vercel.app/components')
     //     .then(response => response.json())
     //     .then(data => {setComponents(data)});
     // }, []);
