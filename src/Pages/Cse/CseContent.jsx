@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
-import { GoVideo } from "react-icons/go";
+// import { GoVideo } from "react-icons/go";
 import { FaStar } from "react-icons/fa";
 import { LiaBullseyeSolid } from "react-icons/lia";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
@@ -73,6 +73,8 @@ const CseContent = () => {
     }
    }
 
+
+   //Like functionality are added
    const handleLike = async (courseCode,contentType, playlistId) => {
     try {
         let currentPlaylist ;
@@ -133,7 +135,7 @@ const CseContent = () => {
 
 
 
-{/* Miiiiid Section */}
+{/* Miiiiid Section here======================================================================================================================= */}
 
 
     <div role="tablist" className="tabs tabs-lifted">
@@ -188,16 +190,16 @@ const CseContent = () => {
                                     <div className="flex items-center space-x-4 justify-between">
                                         <div className="flex items-center gap-3">
                                             <img src={item.authorImg} className="rounded-full h-8 w-8" />
-                                            <span className="text-sm">{item.authorName} <br /> <span className="text-xs">3AM</span>  </span>
+                                            <span className="text-sm">{item.authorName} <br /> <span className="text-xs">Dept. of CSE</span>  </span>
                                         </div>
                                     </div>
                                     <div className="flex flex-col md:flex-row items-center space-x-4 justify-between">
-                                        <div className="text-grey-500 flex flex-row space-x-1 my-4">
+                                        {/* <div className="text-grey-500 flex flex-row space-x-1 my-4">
                                             <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                             </svg>
                                             <p className="text-xs">2 hours ago</p>
-                                        </div>
+                                        </div> */}
                                         <div className="flex flex-row items-center space-x-1 ">
                                             <button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
                                                 <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -275,46 +277,72 @@ const CseContent = () => {
             </span>
           </summary>
 
-          <p className="mt-4 leading-relaxed text-gray-700">
-          {midNote.map((item, i) => (<div key={i} className='flex items-center justify-center mb-4'>
-                            <div className="p-4 bg-gray-200 items-center justify-between w-full rounded-xl group sm:flex space-x-6  bg-opacity-50 shadow-xl hover:rounded-2xl">
-                                <img className="block w-3/12 h-56 rounded-lg mx-0" alt="art cover" src='https://picsum.photos/seed/2/2000/1000' />
-                                <div className="sm:w-9/12 pl-0 p-5">
-                                    <div className="space-y-2">
-                                        <div className="space-y-1">
-                                            <h4 className="text-md font-semibold text-cyan-900 text-justify">
-                                                {item.NoteTitle}
-                                            </h4>
-                                            <p className="">{item.Description}</p>
-                                            <p className="font-semibold">{courseCode} - {courseTitle}</p>
+          <p className="mt-4 leading-relaxed text-gray-700">           
+           {midNote?.length ? midNote?.map((item, i) => {
+                const liked = item?.likes?.includes(user?.email);
+                return (
+                    <div key={i} className="flex flex-col md:flex-row items-center justify-center mb-4 ">
+                        <div className="flex flex-col md:flex-row border-2 p-2 md:p-4 items-center justify-between w-full max-w-5xl bg-gray-200 rounded-xl group md:space-x-6 space-x-2 bg-opacity-50 shadow-sm hover:rounded-2xl">
+                            <img className="block w-full md:w-1/3 h-56 rounded-lg mx-0" alt="art cover" src={item.imgCover} />
+                            <div className="md:w-2/3 w-full pl-0 p-5">
+                                <div className="space-y-2">
+                                    <div className="space-y-1">
+                                        <h4 className="text-md font-semibold text-cyan-900 text-justify">
+                                            {item.title}
+                                        </h4>
+                                        <p className="break-words">{item.description}</p>
+                                        <p className="font-semibold text-sm md:text-md">{courseCode} - {courseTitle}</p>
+                                    </div>
+                                    <div className="flex items-center space-x-4 justify-between">
+                                        <div className="flex items-center gap-3">
+                                            <img src={item.authorImg} className="rounded-full h-8 w-8" />
+                                            <span className="text-sm">{item.authorName} <br /> <span className="text-xs">Dept. of CSE</span>  </span>
                                         </div>
-                                        <div className="flex items-center space-x-4 justify-between">
-                                            <div className="flex items-center gap-3 ">
-                                                <img src="https://flowbite.com/docs/images/people/profile-picture-1.jpg" className="rounded-full h-8 w-8" />
-                                                <span className="text-sm">{item.authorName} <br /> <span className="text-xs">3AM</span>  </span>
-                                            </div>
-                                        </div>
-                                        <div className="flex items-center space-x-4 justify-between">
-                                            <div className="text-grey-500 flex flex-row space-x-1 my-4">
-                                                <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                                <p className="text-xs">2 hours ago</p>
-                                            </div>
-                                            <div className="flex flex-row space-x-1">
-                                                <div className="bg-red-500 shadow-lg shadow-red-600 text-white cursor-pointer px-3 py-1 text-center justify-center items-center rounded-xl flex space-x-2 flex-row">
+                                    </div>
+                                    <div className="flex flex-col md:flex-row items-center space-x-4 justify-between">
+                                        {/* <div className="text-grey-500 flex flex-row space-x-1 my-4">
+                                            <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            </svg>
+                                            <p className="text-xs">2 hours ago</p>
+                                        </div> */}
+                                        <div className="flex flex-row items-center space-x-1 ">
+                                            <button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
+                                                <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        fillRule="evenodd"
+                                                        clipRule="evenodd"
+                                                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
+                                                        fill="#9A031E"
+                                                    />
+                                                </svg>
+                                            </button>
 
-                                                    <span className="flex items-center ">  <GoVideo className="mr-1"/>View</span>
-                                                </div>
-                                                <div className="bg-green-500 shadow-lg shadow-green-600 text-white cursor-pointer px-3 text-center justify-center items-center py-1 rounded-xl flex space-x-2 flex-row">
-                                                    <svg stroke="currentColor" fill="currentColor" viewBox="0 0 1024 1024" className="text-xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M885.9 533.7c16.8-22.2 26.1-49.4 26.1-77.7 0-44.9-25.1-87.4-65.5-111.1a67.67 67.67 0 0 0-34.3-9.3H572.4l6-122.9c1.4-29.7-9.1-57.9-29.5-79.4A106.62 106.62 0 0 0 471 99.9c-52 0-98 35-111.8 85.1l-85.9 311H144c-17.7 0-32 14.3-32 32v364c0 17.7 14.3 32 32 32h601.3c9.2 0 18.2-1.8 26.5-5.4 47.6-20.3 78.3-66.8 78.3-118.4 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7-.2-12.6-2-25.1-5.6-37.1zM184 852V568h81v284h-81zm636.4-353l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 22.4-13.2 42.6-33.6 51.8H329V564.8l99.5-360.5a44.1 44.1 0 0 1 42.2-32.3c7.6 0 15.1 2.2 21.1 6.7 9.9 7.4 15.2 18.6 14.6 30.5l-9.6 198.4h314.4C829 418.5 840 436.9 840 456c0 16.5-7.2 32.1-19.6 43z"></path></svg>
-                                                    <span>{item.stars}</span>
-                                                </div>
-                                            </div>
+                                            <Link to={item.url} target="_blank">
+                                                <button className="bg-white hover:bg-red-400 hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
+                                                    <LiaBullseyeSolid className="mr-1" /> View
+                                                </button>
+                                            </Link>
+
+                                            <button
+                                                onClick={() => handleLike(courseCode,item.contentType, item.id)}
+                                                className={`${
+                                                    liked ? 'bg-blue-500 text-white' : 'bg-white text-slate-500'
+                                                } hover:${
+                                                    liked ? 'bg-blue-700' : ''
+                                                }  font-bold py-2 px-4 rounded-md flex border-2 border-slate-200 justify-between items-center`}
+                                            >
+                                                <FaStar />
+                                                <span className="ml-1">{item.star}</span>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    ))}
+                    </div>
+                );
+            }) : <p className="text-gray-500">No Note available.</p>}
           </p>
         </details>
 
@@ -337,45 +365,71 @@ const CseContent = () => {
           </summary>
 
           <p className="mt-4 leading-relaxed text-gray-700">
-          {midquestionBank.map((item, i) => (<div key={i} className='flex items-center justify-center mb-4'>
-                            <div className="p-4 bg-gray-200 items-center justify-between w-full rounded-xl group sm:flex space-x-6  bg-opacity-50 shadow-xl hover:rounded-2xl">
-                                <img className="block w-3/12 h-56 rounded-lg mx-0" alt="art cover" src='https://picsum.photos/seed/2/2000/1000' />
-                                <div className="sm:w-9/12 pl-0 p-5">
-                                    <div className="space-y-2">
-                                        <div className="space-y-1">
-                                            <h4 className="text-md font-semibold text-cyan-900 text-justify">
-                                                {item.questionTitle}
-                                            </h4>
-                                            <p className="">{item.Description}</p>
-                                            <p className="font-semibold">{courseCode} - {courseTitle}</p>
+        {midquestionBank?.length ? midquestionBank?.map((item, i) => {
+                const liked = item?.likes?.includes(user?.email);
+                return (
+                    <div key={i} className="flex flex-col md:flex-row items-center justify-center mb-4 ">
+                        <div className="flex flex-col md:flex-row border-2 p-2 md:p-4 items-center justify-between w-full max-w-5xl bg-gray-200 rounded-xl group md:space-x-6 space-x-2 bg-opacity-50 shadow-sm hover:rounded-2xl">
+                            <img className="block w-full md:w-1/3 h-56 rounded-lg mx-0" alt="art cover" src={item.imgCover} />
+                            <div className="md:w-2/3 w-full pl-0 p-5">
+                                <div className="space-y-2">
+                                    <div className="space-y-1">
+                                        <h4 className="text-md font-semibold text-cyan-900 text-justify">
+                                            {item.title}
+                                        </h4>
+                                        <p className="break-words">{item.description}</p>
+                                        <p className="font-semibold text-sm md:text-md">{courseCode} - {courseTitle}</p>
+                                    </div>
+                                    <div className="flex items-center space-x-4 justify-between">
+                                        <div className="flex items-center gap-3">
+                                            <img src={item.authorImg} className="rounded-full h-8 w-8" />
+                                            <span className="text-sm">{item.authorName} <br /> <span className="text-xs">Dept. of CSE</span>  </span>
                                         </div>
-                                        <div className="flex items-center space-x-4 justify-between">
-                                            <div className="flex items-center gap-3 ">
-                                                <img src="https://flowbite.com/docs/images/people/profile-picture-1.jpg" className="rounded-full h-8 w-8" />
-                                                <span className="text-sm">{item.authorName} <br /> <span className="text-xs">3AM</span>  </span>
-                                            </div>
-                                        </div>
-                                        <div className="flex items-center space-x-4 justify-between">
-                                            <div className="text-grey-500 flex flex-row space-x-1 my-4">
-                                                <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                                <p className="text-xs">2 hours ago</p>
-                                            </div>
-                                            <div className="flex flex-row space-x-1">
-                                                <div className="bg-red-500 shadow-lg shadow-red-600 text-white cursor-pointer px-3 py-1 text-center justify-center items-center rounded-xl flex space-x-2 flex-row">
+                                    </div>
+                                    <div className="flex flex-col md:flex-row items-center space-x-4 justify-between">
+                                        {/* <div className="text-grey-500 flex flex-row space-x-1 my-4">
+                                            <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            </svg>
+                                            <p className="text-xs">2 hours ago</p>
+                                        </div> */}
+                                        <div className="flex flex-row items-center space-x-1 ">
+                                            <button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
+                                                <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        fillRule="evenodd"
+                                                        clipRule="evenodd"
+                                                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
+                                                        fill="#9A031E"
+                                                    />
+                                                </svg>
+                                            </button>
 
-                                                    <span className="flex items-center ">  <GoVideo className="mr-1"/>View</span>
-                                                </div>
-                                                <div className="bg-green-500 shadow-lg shadow-green-600 text-white cursor-pointer px-3 text-center justify-center items-center py-1 rounded-xl flex space-x-2 flex-row">
-                                                    <svg stroke="currentColor" fill="currentColor" viewBox="0 0 1024 1024" className="text-xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M885.9 533.7c16.8-22.2 26.1-49.4 26.1-77.7 0-44.9-25.1-87.4-65.5-111.1a67.67 67.67 0 0 0-34.3-9.3H572.4l6-122.9c1.4-29.7-9.1-57.9-29.5-79.4A106.62 106.62 0 0 0 471 99.9c-52 0-98 35-111.8 85.1l-85.9 311H144c-17.7 0-32 14.3-32 32v364c0 17.7 14.3 32 32 32h601.3c9.2 0 18.2-1.8 26.5-5.4 47.6-20.3 78.3-66.8 78.3-118.4 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7-.2-12.6-2-25.1-5.6-37.1zM184 852V568h81v284h-81zm636.4-353l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 22.4-13.2 42.6-33.6 51.8H329V564.8l99.5-360.5a44.1 44.1 0 0 1 42.2-32.3c7.6 0 15.1 2.2 21.1 6.7 9.9 7.4 15.2 18.6 14.6 30.5l-9.6 198.4h314.4C829 418.5 840 436.9 840 456c0 16.5-7.2 32.1-19.6 43z"></path></svg>
-                                                    <span>{item.stars}</span>
-                                                </div>
-                                            </div>
+                                            <Link to={item.url} target="_blank">
+                                                <button className="bg-white hover:bg-red-400 hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
+                                                    <LiaBullseyeSolid className="mr-1" /> View
+                                                </button>
+                                            </Link>
+
+                                            <button
+                                                onClick={() => handleLike(courseCode,item.contentType, item.id)}
+                                                className={`${
+                                                    liked ? 'bg-blue-500 text-white' : 'bg-white text-slate-500'
+                                                } hover:${
+                                                    liked ? 'bg-blue-700' : ''
+                                                }  font-bold py-2 px-4 rounded-md flex border-2 border-slate-200 justify-between items-center`}
+                                            >
+                                                <FaStar />
+                                                <span className="ml-1">{item.star}</span>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    ))}
+                    </div>
+                );
+            }) : <p className="text-gray-500">No QuestionBank available.</p>}
           </p>
         </details>
 
@@ -401,45 +455,71 @@ const CseContent = () => {
           </summary>
 
           <p className="mt-4 leading-relaxed text-gray-700">
-          {midOther.map((item, i) => (<div key={i} className='flex items-center justify-center mb-4'>
-                            <div className="p-4 bg-gray-200 items-center justify-between w-full rounded-xl group sm:flex space-x-6  bg-opacity-50 shadow-xl hover:rounded-2xl">
-                                <img className="block w-3/12 h-56 rounded-lg mx-0" alt="art cover" src='https://picsum.photos/seed/2/2000/1000' />
-                                <div className="sm:w-9/12 pl-0 p-5">
-                                    <div className="space-y-2">
-                                        <div className="space-y-1">
-                                            <h4 className="text-md font-semibold text-cyan-900 text-justify">
-                                                {item.Title}
-                                            </h4>
-                                            <p className="">{item.Description}</p>
-                                            <p className="font-semibold">{courseCode} - {courseTitle}</p>
+          {midOther?.length ? midOther?.map((item, i) => {
+                const liked = item?.likes?.includes(user?.email);
+                return (
+                    <div key={i} className="flex flex-col md:flex-row items-center justify-center mb-4 ">
+                        <div className="flex flex-col md:flex-row border-2 p-2 md:p-4 items-center justify-between w-full max-w-5xl bg-gray-200 rounded-xl group md:space-x-6 space-x-2 bg-opacity-50 shadow-sm hover:rounded-2xl">
+                            <img className="block w-full md:w-1/3 h-56 rounded-lg mx-0" alt="art cover" src={item.imgCover} />
+                            <div className="md:w-2/3 w-full pl-0 p-5">
+                                <div className="space-y-2">
+                                    <div className="space-y-1">
+                                        <h4 className="text-md font-semibold text-cyan-900 text-justify">
+                                            {item.title}
+                                        </h4>
+                                        <p className="break-words">{item.description}</p>
+                                        <p className="font-semibold text-sm md:text-md">{courseCode} - {courseTitle}</p>
+                                    </div>
+                                    <div className="flex items-center space-x-4 justify-between">
+                                        <div className="flex items-center gap-3">
+                                            <img src={item.authorImg} className="rounded-full h-8 w-8" />
+                                            <span className="text-sm">{item.authorName} <br /> <span className="text-xs">Dept. of CSE</span>  </span>
                                         </div>
-                                        <div className="flex items-center space-x-4 justify-between">
-                                            <div className="flex items-center gap-3 ">
-                                                <img src="https://flowbite.com/docs/images/people/profile-picture-1.jpg" className="rounded-full h-8 w-8" />
-                                                <span className="text-sm">{item.authorName} <br /> <span className="text-xs">3AM</span>  </span>
-                                            </div>
-                                        </div>
-                                        <div className="flex items-center space-x-4 justify-between">
-                                            <div className="text-grey-500 flex flex-row space-x-1 my-4">
-                                                <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                                <p className="text-xs">2 hours ago</p>
-                                            </div>
-                                            <div className="flex flex-row space-x-1">
-                                                <div className="bg-red-500 shadow-lg shadow-red-600 text-white cursor-pointer px-3 py-1 text-center justify-center items-center rounded-xl flex space-x-2 flex-row">
+                                    </div>
+                                    <div className="flex flex-col md:flex-row items-center space-x-4 justify-between">
+                                        {/* <div className="text-grey-500 flex flex-row space-x-1 my-4">
+                                            <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            </svg>
+                                            <p className="text-xs">2 hours ago</p>
+                                        </div> */}
+                                        <div className="flex flex-row items-center space-x-1 ">
+                                            <button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
+                                                <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        fillRule="evenodd"
+                                                        clipRule="evenodd"
+                                                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
+                                                        fill="#9A031E"
+                                                    />
+                                                </svg>
+                                            </button>
 
-                                                    <span className="flex items-center ">  <GoVideo className="mr-1"/>View</span>
-                                                </div>
-                                                <div className="bg-green-500 shadow-lg shadow-green-600 text-white cursor-pointer px-3 text-center justify-center items-center py-1 rounded-xl flex space-x-2 flex-row">
-                                                    <svg stroke="currentColor" fill="currentColor" viewBox="0 0 1024 1024" className="text-xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M885.9 533.7c16.8-22.2 26.1-49.4 26.1-77.7 0-44.9-25.1-87.4-65.5-111.1a67.67 67.67 0 0 0-34.3-9.3H572.4l6-122.9c1.4-29.7-9.1-57.9-29.5-79.4A106.62 106.62 0 0 0 471 99.9c-52 0-98 35-111.8 85.1l-85.9 311H144c-17.7 0-32 14.3-32 32v364c0 17.7 14.3 32 32 32h601.3c9.2 0 18.2-1.8 26.5-5.4 47.6-20.3 78.3-66.8 78.3-118.4 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7-.2-12.6-2-25.1-5.6-37.1zM184 852V568h81v284h-81zm636.4-353l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 22.4-13.2 42.6-33.6 51.8H329V564.8l99.5-360.5a44.1 44.1 0 0 1 42.2-32.3c7.6 0 15.1 2.2 21.1 6.7 9.9 7.4 15.2 18.6 14.6 30.5l-9.6 198.4h314.4C829 418.5 840 436.9 840 456c0 16.5-7.2 32.1-19.6 43z"></path></svg>
-                                                    <span>{item.stars}</span>
-                                                </div>
-                                            </div>
+                                            <Link to={item.url} target="_blank">
+                                                <button className="bg-white hover:bg-red-400 hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
+                                                    <LiaBullseyeSolid className="mr-1" /> View
+                                                </button>
+                                            </Link>
+
+                                            <button
+                                                onClick={() => handleLike(courseCode,item.contentType, item.id)}
+                                                className={`${
+                                                    liked ? 'bg-blue-500 text-white' : 'bg-white text-slate-500'
+                                                } hover:${
+                                                    liked ? 'bg-blue-700' : ''
+                                                }  font-bold py-2 px-4 rounded-md flex border-2 border-slate-200 justify-between items-center`}
+                                            >
+                                                <FaStar />
+                                                <span className="ml-1">{item.star}</span>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    ))}
+                    </div>
+                );
+            }) : <p className="text-gray-500">No Others resource available.</p>}
           </p>
         </details>
 
@@ -451,7 +531,18 @@ const CseContent = () => {
 
 
 
-{/* Finaaaaaaaaaal Section */}
+
+
+
+
+
+
+
+
+
+
+
+{/* Finaaaaaaaaaal Section here======================================================================================================================= */}
 
 
   <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Final" />
@@ -462,14 +553,14 @@ const CseContent = () => {
           <summary className="flex items-center justify-between cursor-pointer">
             <h5 className="text-lg font-medium text-gray-900 flex items-center gap-2">
             <svg width="30px" height="30px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M27 4H5C3.34315 4 2 5.34315 2 7V25C2 26.6569 3.34315 28 5 28H27C28.6569 28 30 26.6569 30 25V7C30 5.34315 28.6569 4 27 4Z" fill="#B71C1C"/>
-<path d="M25 24H7C6.73478 24 6.48043 23.8946 6.29289 23.7071C6.10536 23.5196 6 23.2652 6 23C6 22.7348 6.10536 22.4804 6.29289 22.2929C6.48043 22.1054 6.73478 22 7 22H25C25.2652 22 25.5196 22.1054 25.7071 22.2929C25.8946 22.4804 26 22.7348 26 23C26 23.2652 25.8946 23.5196 25.7071 23.7071C25.5196 23.8946 25.2652 24 25 24Z" fill="#EEEEEE"/>
-<path d="M19 25C18.7348 25 18.4804 24.8946 18.2929 24.7071C18.1054 24.5196 18 24.2652 18 24V22C18 21.7348 18.1054 21.4804 18.2929 21.2929C18.4804 21.1054 18.7348 21 19 21C19.2652 21 19.5196 21.1054 19.7071 21.2929C19.8946 21.4804 20 21.7348 20 22V24C20 24.2652 19.8946 24.5196 19.7071 24.7071C19.5196 24.8946 19.2652 25 19 25Z" fill="#EEEEEE"/>
-<path d="M20.45 12.67L13.45 9.16996C13.2978 9.09325 13.1285 9.05673 12.9581 9.06386C12.7878 9.071 12.6222 9.12155 12.4769 9.21072C12.3316 9.2999 12.2115 9.42473 12.1281 9.57336C12.0446 9.722 12.0005 9.8895 12 10.06V17.94C12.0013 18.1182 12.0502 18.2928 12.1416 18.4457C12.233 18.5987 12.3637 18.7244 12.52 18.81C12.6648 18.897 12.831 18.942 13 18.94C13.1872 18.9406 13.3709 18.8886 13.53 18.79L20.53 14.41C20.6816 14.3156 20.8051 14.1823 20.8877 14.024C20.9704 13.8658 21.0091 13.6883 21 13.51C20.9905 13.3339 20.9347 13.1635 20.8381 13.0159C20.7415 12.8684 20.6076 12.7491 20.45 12.67Z" fill="#EEEEEE"/>
-<path d="M5 4C4.20435 4 3.44129 4.31607 2.87868 4.87868C2.31607 5.44129 2 6.20435 2 7V25C2 25.7956 2.31607 26.5587 2.87868 27.1213C3.44129 27.6839 4.20435 28 5 28H16V4H5Z" fill="#E53935"/>
-<path d="M7 22C6.73478 22 6.48043 22.1054 6.29289 22.2929C6.10536 22.4804 6 22.7348 6 23C6 23.2652 6.10536 23.5196 6.29289 23.7071C6.48043 23.8946 6.73478 24 7 24H16V22H7Z" fill="#FAFAFA"/>
-<path d="M13.45 9.16996C13.2978 9.09325 13.1285 9.05673 12.9581 9.06386C12.7878 9.071 12.6222 9.12155 12.4769 9.21072C12.3316 9.2999 12.2115 9.42473 12.1281 9.57336C12.0446 9.722 12.0005 9.8895 12 10.06V17.94C12.0013 18.1182 12.0502 18.2928 12.1416 18.4457C12.233 18.5987 12.3637 18.7244 12.52 18.81C12.6648 18.897 12.831 18.942 13 18.94C13.1872 18.9406 13.3709 18.8886 13.53 18.79L16 17.24V10.44L13.45 9.16996Z" fill="#FFEBEE"/>
-</svg>  PlayLists - Tutorials
+                <path d="M27 4H5C3.34315 4 2 5.34315 2 7V25C2 26.6569 3.34315 28 5 28H27C28.6569 28 30 26.6569 30 25V7C30 5.34315 28.6569 4 27 4Z" fill="#B71C1C"/>
+                <path d="M25 24H7C6.73478 24 6.48043 23.8946 6.29289 23.7071C6.10536 23.5196 6 23.2652 6 23C6 22.7348 6.10536 22.4804 6.29289 22.2929C6.48043 22.1054 6.73478 22 7 22H25C25.2652 22 25.5196 22.1054 25.7071 22.2929C25.8946 22.4804 26 22.7348 26 23C26 23.2652 25.8946 23.5196 25.7071 23.7071C25.5196 23.8946 25.2652 24 25 24Z" fill="#EEEEEE"/>
+                <path d="M19 25C18.7348 25 18.4804 24.8946 18.2929 24.7071C18.1054 24.5196 18 24.2652 18 24V22C18 21.7348 18.1054 21.4804 18.2929 21.2929C18.4804 21.1054 18.7348 21 19 21C19.2652 21 19.5196 21.1054 19.7071 21.2929C19.8946 21.4804 20 21.7348 20 22V24C20 24.2652 19.8946 24.5196 19.7071 24.7071C19.5196 24.8946 19.2652 25 19 25Z" fill="#EEEEEE"/>
+                <path d="M20.45 12.67L13.45 9.16996C13.2978 9.09325 13.1285 9.05673 12.9581 9.06386C12.7878 9.071 12.6222 9.12155 12.4769 9.21072C12.3316 9.2999 12.2115 9.42473 12.1281 9.57336C12.0446 9.722 12.0005 9.8895 12 10.06V17.94C12.0013 18.1182 12.0502 18.2928 12.1416 18.4457C12.233 18.5987 12.3637 18.7244 12.52 18.81C12.6648 18.897 12.831 18.942 13 18.94C13.1872 18.9406 13.3709 18.8886 13.53 18.79L20.53 14.41C20.6816 14.3156 20.8051 14.1823 20.8877 14.024C20.9704 13.8658 21.0091 13.6883 21 13.51C20.9905 13.3339 20.9347 13.1635 20.8381 13.0159C20.7415 12.8684 20.6076 12.7491 20.45 12.67Z" fill="#EEEEEE"/>
+                <path d="M5 4C4.20435 4 3.44129 4.31607 2.87868 4.87868C2.31607 5.44129 2 6.20435 2 7V25C2 25.7956 2.31607 26.5587 2.87868 27.1213C3.44129 27.6839 4.20435 28 5 28H16V4H5Z" fill="#E53935"/>
+                <path d="M7 22C6.73478 22 6.48043 22.1054 6.29289 22.2929C6.10536 22.4804 6 22.7348 6 23C6 23.2652 6.10536 23.5196 6.29289 23.7071C6.48043 23.8946 6.73478 24 7 24H16V22H7Z" fill="#FAFAFA"/>
+                <path d="M13.45 9.16996C13.2978 9.09325 13.1285 9.05673 12.9581 9.06386C12.7878 9.071 12.6222 9.12155 12.4769 9.21072C12.3316 9.2999 12.2115 9.42473 12.1281 9.57336C12.0446 9.722 12.0005 9.8895 12 10.06V17.94C12.0013 18.1182 12.0502 18.2928 12.1416 18.4457C12.233 18.5987 12.3637 18.7244 12.52 18.81C12.6648 18.897 12.831 18.942 13 18.94C13.1872 18.9406 13.3709 18.8886 13.53 18.79L16 17.24V10.44L13.45 9.16996Z" fill="#FFEBEE"/>
+                </svg>  PlayLists - Tutorials
             </h5>
 
             <span className="relative flex-shrink-0 ml-1.5 w-5 h-5">
@@ -484,7 +575,7 @@ const CseContent = () => {
           </summary>
 
           <p className="mt-4 leading-relaxed text-gray-700">
-           
+{/*            
           {finalPlaylist.map((playlist, i) => (<div key={i} className='flex items-center justify-center  mb-4'>
                             <div className="p-4 items-center justify-between w-full bg-gray-200 rounded-xl group sm:flex space-x-6  bg-opacity-50 shadow-xl hover:rounded-2xl">
                                 <img className="block w-3/12 h-40 rounded-lg mx-0" alt="art cover" src='https://picsum.photos/seed/2/2000/1000' />
@@ -523,7 +614,72 @@ const CseContent = () => {
                                 </div>
                             </div>
                         </div>
-                    ))}
+                    ))} */}
+            {finalPlaylist?.length ? finalPlaylist?.map((item, i) => {
+                const liked = item?.likes?.includes(user?.email);
+                return (
+                    <div key={i} className="flex flex-col md:flex-row items-center justify-center mb-4 ">
+                        <div className="flex flex-col md:flex-row border-2 p-2 md:p-4 items-center justify-between w-full max-w-5xl bg-gray-200 rounded-xl group md:space-x-6 space-x-2 bg-opacity-50 shadow-sm hover:rounded-2xl">
+                            <img className="block w-full md:w-1/3 h-56 rounded-lg mx-0" alt="art cover" src={item.imgCover} />
+                            <div className="md:w-2/3 w-full pl-0 p-5">
+                                <div className="space-y-2">
+                                    <div className="space-y-1">
+                                        <h4 className="text-md font-semibold text-cyan-900 text-justify">
+                                            {item.title}
+                                        </h4>
+                                        <p className="break-words">{item.description}</p>
+                                        <p className="font-semibold text-sm md:text-md">{courseCode} - {courseTitle}</p>
+                                    </div>
+                                    <div className="flex items-center space-x-4 justify-between">
+                                        <div className="flex items-center gap-3">
+                                            <img src={item.authorImg} className="rounded-full h-8 w-8" />
+                                            <span className="text-sm">{item.authorName} <br /> <span className="text-xs">Dept. of CSE</span>  </span>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-col md:flex-row items-center space-x-4 justify-between">
+                                        {/* <div className="text-grey-500 flex flex-row space-x-1 my-4">
+                                            <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            </svg>
+                                            <p className="text-xs">2 hours ago</p>
+                                        </div> */}
+                                        <div className="flex flex-row items-center space-x-1 ">
+                                            <button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
+                                                <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        fillRule="evenodd"
+                                                        clipRule="evenodd"
+                                                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
+                                                        fill="#9A031E"
+                                                    />
+                                                </svg>
+                                            </button>
+
+                                            <Link to={item.url} target="_blank">
+                                                <button className="bg-white hover:bg-red-400 hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
+                                                    <LiaBullseyeSolid className="mr-1" /> View
+                                                </button>
+                                            </Link>
+
+                                            <button
+                                                onClick={() => handleLike(courseCode,item.contentType, item.id)}
+                                                className={`${
+                                                    liked ? 'bg-blue-500 text-white' : 'bg-white text-slate-500'
+                                                } hover:${
+                                                    liked ? 'bg-blue-700' : ''
+                                                }  font-bold py-2 px-4 rounded-md flex border-2 border-slate-200 justify-between items-center`}
+                                            >
+                                                <FaStar />
+                                                <span className="ml-1">{item.star}</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                );
+            }) : <p className="text-gray-500">No playlists available.</p>}
           </p>
         </details>
 
@@ -565,46 +721,73 @@ const CseContent = () => {
             </span>
           </summary>
 
-          <p className="mt-4 leading-relaxed text-gray-700">
-          {finalNote.map((item, i) => (<div key={i} className='flex items-center justify-center mb-4'>
-                            <div className="p-4 bg-gray-200 items-center justify-between w-full rounded-xl group sm:flex space-x-6  bg-opacity-50 shadow-xl hover:rounded-2xl">
-                                <img className="block w-3/12 h-40 rounded-lg mx-0" alt="art cover" src='https://picsum.photos/seed/2/2000/1000' />
-                                <div className="sm:w-9/12 pl-0 p-5">
-                                    <div className="space-y-2">
-                                        <div className="space-y-1">
-                                            <h4 className="text-md font-semibold text-cyan-900 text-justify">
-                                                {item.NoteTitle}
-                                            </h4>
-                                            <p className="">{item.Description}</p>
-                                            <p className="font-semibold">{courseCode} - {courseTitle}</p>
+          <p className="mt-4 leading-relaxed text-gray-700">        
+        {finalNote?.length ? finalNote?.map((item, i) => {
+                const liked = item?.likes?.includes(user?.email);
+                return (
+                    <div key={i} className="flex flex-col md:flex-row items-center justify-center mb-4 ">
+                        <div className="flex flex-col md:flex-row border-2 p-2 md:p-4 items-center justify-between w-full max-w-5xl bg-gray-200 rounded-xl group md:space-x-6 space-x-2 bg-opacity-50 shadow-sm hover:rounded-2xl">
+                            <img className="block w-full md:w-1/3 h-56 rounded-lg mx-0" alt="art cover" src={item.imgCover} />
+                            <div className="md:w-2/3 w-full pl-0 p-5">
+                                <div className="space-y-2">
+                                    <div className="space-y-1">
+                                        <h4 className="text-md font-semibold text-cyan-900 text-justify">
+                                            {item.title}
+                                        </h4>
+                                        <p className="break-words">{item.description}</p>
+                                        <p className="font-semibold text-sm md:text-md">{courseCode} - {courseTitle}</p>
+                                    </div>
+                                    <div className="flex items-center space-x-4 justify-between">
+                                        <div className="flex items-center gap-3">
+                                            <img src={item.authorImg} className="rounded-full h-8 w-8" />
+                                            <span className="text-sm">{item.authorName} <br /> <span className="text-xs">Dept. of CSE</span>  </span>
                                         </div>
-                                        <div className="flex items-center space-x-4 justify-between">
-                                            <div className="flex items-center gap-3 ">
-                                                <img src="https://flowbite.com/docs/images/people/profile-picture-1.jpg" className="rounded-full h-8 w-8" />
-                                                <span className="text-sm">{item.authorName} <br /> <span className="text-xs">3AM</span>  </span>
-                                            </div>
-                                        </div>
-                                        <div className="flex items-center space-x-4 justify-between">
-                                            <div className="text-grey-500 flex flex-row space-x-1 my-4">
-                                                <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                                <p className="text-xs">2 hours ago</p>
-                                            </div>
-                                            <div className="flex flex-row space-x-1">
-                                                <div className="bg-red-500 shadow-lg shadow-red-600 text-white cursor-pointer px-3 py-1 text-center justify-center items-center rounded-xl flex space-x-2 flex-row">
+                                    </div>
+                                    <div className="flex flex-col md:flex-row items-center space-x-4 justify-between">
+                                        {/* <div className="text-grey-500 flex flex-row space-x-1 my-4">
+                                            <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            </svg>
+                                            <p className="text-xs">2 hours ago</p>
+                                        </div> */}
+                                        <div className="flex flex-row items-center space-x-1 ">
+                                            <button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
+                                                <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        fillRule="evenodd"
+                                                        clipRule="evenodd"
+                                                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
+                                                        fill="#9A031E"
+                                                    />
+                                                </svg>
+                                            </button>
 
-                                                    <span className="flex items-center ">  <GoVideo className="mr-1"/>View</span>
-                                                </div>
-                                                <div className="bg-green-500 shadow-lg shadow-green-600 text-white cursor-pointer px-3 text-center justify-center items-center py-1 rounded-xl flex space-x-2 flex-row">
-                                                    <svg stroke="currentColor" fill="currentColor" viewBox="0 0 1024 1024" className="text-xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M885.9 533.7c16.8-22.2 26.1-49.4 26.1-77.7 0-44.9-25.1-87.4-65.5-111.1a67.67 67.67 0 0 0-34.3-9.3H572.4l6-122.9c1.4-29.7-9.1-57.9-29.5-79.4A106.62 106.62 0 0 0 471 99.9c-52 0-98 35-111.8 85.1l-85.9 311H144c-17.7 0-32 14.3-32 32v364c0 17.7 14.3 32 32 32h601.3c9.2 0 18.2-1.8 26.5-5.4 47.6-20.3 78.3-66.8 78.3-118.4 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7-.2-12.6-2-25.1-5.6-37.1zM184 852V568h81v284h-81zm636.4-353l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 22.4-13.2 42.6-33.6 51.8H329V564.8l99.5-360.5a44.1 44.1 0 0 1 42.2-32.3c7.6 0 15.1 2.2 21.1 6.7 9.9 7.4 15.2 18.6 14.6 30.5l-9.6 198.4h314.4C829 418.5 840 436.9 840 456c0 16.5-7.2 32.1-19.6 43z"></path></svg>
-                                                    <span>{item.stars}</span>
-                                                </div>
-                                            </div>
+                                            <Link to={item.url} target="_blank">
+                                                <button className="bg-white hover:bg-red-400 hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
+                                                    <LiaBullseyeSolid className="mr-1" /> View
+                                                </button>
+                                            </Link>
+
+                                            <button
+                                                onClick={() => handleLike(courseCode,item.contentType, item.id)}
+                                                className={`${
+                                                    liked ? 'bg-blue-500 text-white' : 'bg-white text-slate-500'
+                                                } hover:${
+                                                    liked ? 'bg-blue-700' : ''
+                                                }  font-bold py-2 px-4 rounded-md flex border-2 border-slate-200 justify-between items-center`}
+                                            >
+                                                <FaStar />
+                                                <span className="ml-1">{item.star}</span>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    ))}
+                    </div>
+                );
+            }) : <p className="text-gray-500">No Note available.</p>}
+                    
           </p>
         </details>
 
@@ -627,45 +810,71 @@ const CseContent = () => {
           </summary>
 
           <p className="mt-4 leading-relaxed text-gray-700">
-          {finalquestionBank.map((item, i) => (<div key={i} className='flex items-center justify-center mb-4'>
-                            <div className="p-4 bg-gray-200 items-center justify-between w-full rounded-xl group sm:flex space-x-6  bg-opacity-50 shadow-xl hover:rounded-2xl">
-                                <img className="block w-3/12 h-40 rounded-lg mx-0" alt="art cover" src='https://picsum.photos/seed/2/2000/1000' />
-                                <div className="sm:w-9/12 pl-0 p-5">
-                                    <div className="space-y-2">
-                                        <div className="space-y-1">
-                                            <h4 className="text-md font-semibold text-cyan-900 text-justify">
-                                                {item.questionTitle}
-                                            </h4>
-                                            <p className="">{item.Description}</p>
-                                            <p className="font-semibold">{courseCode} - {courseTitle}</p>
+                {finalquestionBank?.length ? finalquestionBank?.map((item, i) => {
+                const liked = item?.likes?.includes(user?.email);
+                return (
+                    <div key={i} className="flex flex-col md:flex-row items-center justify-center mb-4 ">
+                        <div className="flex flex-col md:flex-row border-2 p-2 md:p-4 items-center justify-between w-full max-w-5xl bg-gray-200 rounded-xl group md:space-x-6 space-x-2 bg-opacity-50 shadow-sm hover:rounded-2xl">
+                            <img className="block w-full md:w-1/3 h-56 rounded-lg mx-0" alt="art cover" src={item.imgCover} />
+                            <div className="md:w-2/3 w-full pl-0 p-5">
+                                <div className="space-y-2">
+                                    <div className="space-y-1">
+                                        <h4 className="text-md font-semibold text-cyan-900 text-justify">
+                                            {item.title}
+                                        </h4>
+                                        <p className="break-words">{item.description}</p>
+                                        <p className="font-semibold text-sm md:text-md">{courseCode} - {courseTitle}</p>
+                                    </div>
+                                    <div className="flex items-center space-x-4 justify-between">
+                                        <div className="flex items-center gap-3">
+                                            <img src={item.authorImg} className="rounded-full h-8 w-8" />
+                                            <span className="text-sm">{item.authorName} <br /> <span className="text-xs">Dept. of CSE</span>  </span>
                                         </div>
-                                        <div className="flex items-center space-x-4 justify-between">
-                                            <div className="flex items-center gap-3 ">
-                                                <img src="https://flowbite.com/docs/images/people/profile-picture-1.jpg" className="rounded-full h-8 w-8" />
-                                                <span className="text-sm">{item.authorName} <br /> <span className="text-xs">3AM</span>  </span>
-                                            </div>
-                                        </div>
-                                        <div className="flex items-center space-x-4 justify-between">
-                                            <div className="text-grey-500 flex flex-row space-x-1 my-4">
-                                                <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                                <p className="text-xs">2 hours ago</p>
-                                            </div>
-                                            <div className="flex flex-row space-x-1">
-                                                <div className="bg-red-500 shadow-lg shadow-red-600 text-white cursor-pointer px-3 py-1 text-center justify-center items-center rounded-xl flex space-x-2 flex-row">
+                                    </div>
+                                    <div className="flex flex-col md:flex-row items-center space-x-4 justify-between">
+                                        {/* <div className="text-grey-500 flex flex-row space-x-1 my-4">
+                                            <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            </svg>
+                                            <p className="text-xs">2 hours ago</p>
+                                        </div> */}
+                                        <div className="flex flex-row items-center space-x-1 ">
+                                            <button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
+                                                <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        fillRule="evenodd"
+                                                        clipRule="evenodd"
+                                                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
+                                                        fill="#9A031E"
+                                                    />
+                                                </svg>
+                                            </button>
 
-                                                    <span className="flex items-center ">  <GoVideo className="mr-1"/>View</span>
-                                                </div>
-                                                <div className="bg-green-500 shadow-lg shadow-green-600 text-white cursor-pointer px-3 text-center justify-center items-center py-1 rounded-xl flex space-x-2 flex-row">
-                                                    <svg stroke="currentColor" fill="currentColor" viewBox="0 0 1024 1024" className="text-xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M885.9 533.7c16.8-22.2 26.1-49.4 26.1-77.7 0-44.9-25.1-87.4-65.5-111.1a67.67 67.67 0 0 0-34.3-9.3H572.4l6-122.9c1.4-29.7-9.1-57.9-29.5-79.4A106.62 106.62 0 0 0 471 99.9c-52 0-98 35-111.8 85.1l-85.9 311H144c-17.7 0-32 14.3-32 32v364c0 17.7 14.3 32 32 32h601.3c9.2 0 18.2-1.8 26.5-5.4 47.6-20.3 78.3-66.8 78.3-118.4 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7-.2-12.6-2-25.1-5.6-37.1zM184 852V568h81v284h-81zm636.4-353l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 22.4-13.2 42.6-33.6 51.8H329V564.8l99.5-360.5a44.1 44.1 0 0 1 42.2-32.3c7.6 0 15.1 2.2 21.1 6.7 9.9 7.4 15.2 18.6 14.6 30.5l-9.6 198.4h314.4C829 418.5 840 436.9 840 456c0 16.5-7.2 32.1-19.6 43z"></path></svg>
-                                                    <span>{item.stars}</span>
-                                                </div>
-                                            </div>
+                                            <Link to={item.url} target="_blank">
+                                                <button className="bg-white hover:bg-red-400 hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
+                                                    <LiaBullseyeSolid className="mr-1" /> View
+                                                </button>
+                                            </Link>
+
+                                            <button
+                                                onClick={() => handleLike(courseCode,item.contentType, item.id)}
+                                                className={`${
+                                                    liked ? 'bg-blue-500 text-white' : 'bg-white text-slate-500'
+                                                } hover:${
+                                                    liked ? 'bg-blue-700' : ''
+                                                }  font-bold py-2 px-4 rounded-md flex border-2 border-slate-200 justify-between items-center`}
+                                            >
+                                                <FaStar />
+                                                <span className="ml-1">{item.star}</span>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    ))}
+                    </div>
+                );
+            }) : <p className="text-gray-500">No QuestionBank available.</p>}
           </p>
         </details>
 
@@ -691,45 +900,71 @@ const CseContent = () => {
           </summary>
 
           <p className="mt-4 leading-relaxed text-gray-700">
-          {finalOther.map((item, i) => (<div key={i} className='flex items-center justify-center mb-4'>
-                            <div className="p-4 bg-gray-200 items-center justify-between w-full rounded-xl group sm:flex space-x-6  bg-opacity-50 shadow-xl hover:rounded-2xl">
-                                <img className="block w-3/12 h-40 rounded-lg mx-0" alt="art cover" src='https://picsum.photos/seed/2/2000/1000' />
-                                <div className="sm:w-9/12 pl-0 p-5">
-                                    <div className="space-y-2">
-                                        <div className="space-y-1">
-                                            <h4 className="text-md font-semibold text-cyan-900 text-justify">
-                                                {item.Title}
-                                            </h4>
-                                            <p className="">{item.Description}</p>
-                                            <p className="font-semibold">{courseCode} - {courseTitle}</p>
+          {finalOther?.length ? finalOther?.map((item, i) => {
+                const liked = item?.likes?.includes(user?.email);
+                return (
+                    <div key={i} className="flex flex-col md:flex-row items-center justify-center mb-4 ">
+                        <div className="flex flex-col md:flex-row border-2 p-2 md:p-4 items-center justify-between w-full max-w-5xl bg-gray-200 rounded-xl group md:space-x-6 space-x-2 bg-opacity-50 shadow-sm hover:rounded-2xl">
+                            <img className="block w-full md:w-1/3 h-56 rounded-lg mx-0" alt="art cover" src={item.imgCover} />
+                            <div className="md:w-2/3 w-full pl-0 p-5">
+                                <div className="space-y-2">
+                                    <div className="space-y-1">
+                                        <h4 className="text-md font-semibold text-cyan-900 text-justify">
+                                            {item.title}
+                                        </h4>
+                                        <p className="break-words">{item.description}</p>
+                                        <p className="font-semibold text-sm md:text-md">{courseCode} - {courseTitle}</p>
+                                    </div>
+                                    <div className="flex items-center space-x-4 justify-between">
+                                        <div className="flex items-center gap-3">
+                                            <img src={item.authorImg} className="rounded-full h-8 w-8" />
+                                            <span className="text-sm">{item.authorName} <br /> <span className="text-xs">Dept. of CSE</span>  </span>
                                         </div>
-                                        <div className="flex items-center space-x-4 justify-between">
-                                            <div className="flex items-center gap-3 ">
-                                                <img src="https://flowbite.com/docs/images/people/profile-picture-1.jpg" className="rounded-full h-8 w-8" />
-                                                <span className="text-sm">{item.authorName} <br /> <span className="text-xs">3AM</span>  </span>
-                                            </div>
-                                        </div>
-                                        <div className="flex items-center space-x-4 justify-between">
-                                            <div className="text-grey-500 flex flex-row space-x-1 my-4">
-                                                <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                                <p className="text-xs">2 hours ago</p>
-                                            </div>
-                                            <div className="flex flex-row space-x-1">
-                                                <div className="bg-red-500 shadow-lg shadow-red-600 text-white cursor-pointer px-3 py-1 text-center justify-center items-center rounded-xl flex space-x-2 flex-row">
+                                    </div>
+                                    <div className="flex flex-col md:flex-row items-center space-x-4 justify-between">
+                                        {/* <div className="text-grey-500 flex flex-row space-x-1 my-4">
+                                            <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            </svg>
+                                            <p className="text-xs">2 hours ago</p>
+                                        </div> */}
+                                        <div className="flex flex-row items-center space-x-1 ">
+                                            <button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
+                                                <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        fillRule="evenodd"
+                                                        clipRule="evenodd"
+                                                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
+                                                        fill="#9A031E"
+                                                    />
+                                                </svg>
+                                            </button>
 
-                                                    <span className="flex items-center ">  <GoVideo className="mr-1"/>View</span>
-                                                </div>
-                                                <div className="bg-green-500 shadow-lg shadow-green-600 text-white cursor-pointer px-3 text-center justify-center items-center py-1 rounded-xl flex space-x-2 flex-row">
-                                                    <svg stroke="currentColor" fill="currentColor" viewBox="0 0 1024 1024" className="text-xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M885.9 533.7c16.8-22.2 26.1-49.4 26.1-77.7 0-44.9-25.1-87.4-65.5-111.1a67.67 67.67 0 0 0-34.3-9.3H572.4l6-122.9c1.4-29.7-9.1-57.9-29.5-79.4A106.62 106.62 0 0 0 471 99.9c-52 0-98 35-111.8 85.1l-85.9 311H144c-17.7 0-32 14.3-32 32v364c0 17.7 14.3 32 32 32h601.3c9.2 0 18.2-1.8 26.5-5.4 47.6-20.3 78.3-66.8 78.3-118.4 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7 0-12.6-1.8-25-5.4-37 16.8-22.2 26.1-49.4 26.1-77.7-.2-12.6-2-25.1-5.6-37.1zM184 852V568h81v284h-81zm636.4-353l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 16.5-7.2 32.2-19.6 43l-21.9 19 13.9 25.4a56.2 56.2 0 0 1 6.9 27.3c0 22.4-13.2 42.6-33.6 51.8H329V564.8l99.5-360.5a44.1 44.1 0 0 1 42.2-32.3c7.6 0 15.1 2.2 21.1 6.7 9.9 7.4 15.2 18.6 14.6 30.5l-9.6 198.4h314.4C829 418.5 840 436.9 840 456c0 16.5-7.2 32.1-19.6 43z"></path></svg>
-                                                    <span>{item.stars}</span>
-                                                </div>
-                                            </div>
+                                            <Link to={item.url} target="_blank">
+                                                <button className="bg-white hover:bg-red-400 hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
+                                                    <LiaBullseyeSolid className="mr-1" /> View
+                                                </button>
+                                            </Link>
+
+                                            <button
+                                                onClick={() => handleLike(courseCode,item.contentType, item.id)}
+                                                className={`${
+                                                    liked ? 'bg-blue-500 text-white' : 'bg-white text-slate-500'
+                                                } hover:${
+                                                    liked ? 'bg-blue-700' : ''
+                                                }  font-bold py-2 px-4 rounded-md flex border-2 border-slate-200 justify-between items-center`}
+                                            >
+                                                <FaStar />
+                                                <span className="ml-1">{item.star}</span>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    ))}
+                    </div>
+                );
+            }) : <p className="text-gray-500">No Others resource available.</p>}
           </p>
         </details>
 
