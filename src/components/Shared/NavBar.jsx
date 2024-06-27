@@ -57,11 +57,11 @@ const NavBar = () => {
                             <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content rounded-box w-52 bg-[#1E2D24]">
                                 <li>
                                     <NavLink to="/dashboard/home" className="justify-between" activeClassName="bg-white text-gray-600">
-                                        Profile
-                                        <span className="badge">New</span>
+                                        Dashboard
+                                        <span className="badge">user</span>
                                     </NavLink>
                                 </li>
-                                <li><a>Settings</a></li>
+                                {/* <li><a>Settings</a></li> */}
                                 <li><button onClick={handleLogout}>Logout</button></li>
                             </ul>
                         </div>
