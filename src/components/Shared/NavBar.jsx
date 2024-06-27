@@ -2,10 +2,13 @@ import { NavLink } from 'react-router-dom';
 import iiuc from '../../assets/iiucLogo.png';
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
-import avatar from '../../assets/Male_avatar.png'
+// import avatar from '../../assets/Male_avatar.png'
+import useUserInfo from '../../Hooks/useUserInfo';
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
+   const {userInfo} = useUserInfo()
+
 
     const handleLogout = () => {
         logOut()
@@ -48,7 +51,7 @@ const NavBar = () => {
                         <div className="dropdown dropdown-end mr-4">
                             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                                 <div className="w-10 rounded-full">
-                                    <img alt="" src={user?.photoURL ? user.photoURL : avatar} />
+                                    <img alt="" src={user?.photoURL ? user.photoURL : userInfo?.image} />
                                 </div>
                             </div>
                             <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content rounded-box w-52 bg-[#1E2D24]">

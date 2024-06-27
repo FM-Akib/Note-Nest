@@ -1,11 +1,12 @@
 import { useForm } from "react-hook-form";
 import useCseCourses from "../../Hooks/useCseCourses";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
-import { useContext } from "react";
-import { AuthContext } from "../../Providers/AuthProvider";
+// import { useContext } from "react";
+// import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import { v4 as uuidv4 } from 'uuid';
 import { GiRoundStar } from "react-icons/gi";
+import useUserInfo from "../../Hooks/useUserInfo";
 
 
 
@@ -21,8 +22,10 @@ const Contribute = () => {
     formState: { errors }
   } = useForm();
 
-  const {user} = useContext(AuthContext)
-  console.log(user)
+  // const {user} = useContext(AuthContext)
+  // console.log(user)
+  const {userInfo} = useUserInfo()
+
   const axiosPublic = useAxiosPublic();
 
   const onSubmit = async(data) => {
@@ -54,8 +57,8 @@ const Contribute = () => {
         imgCover: imageCover,
         semseter: data.semester,
         description: data.description,
-        authorName: user.displayName,
-        authorImg: user.photoURL,
+        authorName: userInfo.name,
+        authorImg: userInfo.image,
         contentType: data.content,
         courseCode: data.courseCode,
       }
@@ -76,7 +79,7 @@ const Contribute = () => {
 
         //resource add to cse database done 
         //Now user my contribution handle
-        const userResult = await axiosPublic.patch(`/users/${user?.email}`,{resource})
+        const userResult = await axiosPublic.patch(`/users/${userInfo?.email}`,{resource})
          
         console.log(userResult)
       }

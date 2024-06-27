@@ -26,6 +26,9 @@ const SignUp = () => {
                     name: result.user?.displayName,
                     email: result.user?.email,
                     image: result.user?.photoURL,
+                    myContribution: [],
+                    bookmarked: [],
+                    components: [],
                 }
                 // console.log(user)
                

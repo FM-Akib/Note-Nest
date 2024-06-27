@@ -41,7 +41,7 @@ const UserHome = () => {
         
         <div className="stat flex flex-col md:flex-row">
             <div className="stat-figure text-secondary">
-            <div className="avatar online">
+            <div className="avatar ">
                 <div className="w-16 rounded-full">
                 <img src={userInfo.image} />
                 </div>

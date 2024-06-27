@@ -9,6 +9,9 @@ const TopContributor = () => {
     if (isLoading) return <div>Loading...</div>;
     if (isError) return <div>Error: {error.message}</div>;
     console.log(users) 
+    const calculateTotalStars = (contributions) => {
+        return contributions.reduce((total, contribution) => total + (contribution.star || 0), 0);
+      };
     return (
         <div className="md:px-2  mt-20">
 
@@ -34,7 +37,7 @@ const TopContributor = () => {
                             <a href="#" rel="author">{auser.name}</a>
                         </p>
                         <div className=" prose prose-sm text-gray-400">
-                            <p className="font-semibold">{auser?.dept} - {auser?.ID}</p>
+                            <p className="font-semibold">Total Stars - {calculateTotalStars(auser.myContribution)}</p>
                         </div>
                         {/* <div className="flex">
                             <a href="#" target="_blank" rel="noopener noreferrer">
