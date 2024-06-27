@@ -201,23 +201,39 @@ const CseContent = () => {
                                             <p className="text-xs">2 hours ago</p>
                                         </div> */}
                                         <div className="flex flex-row items-center space-x-1 ">
-                                            <button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
-                                                <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        fillRule="evenodd"
-                                                        clipRule="evenodd"
-                                                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
-                                                        fill="#9A031E"
-                                                    />
-                                                </svg>
-                                            </button>
+                                         {
+                                            user?<button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
+                                            <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    fillRule="evenodd"
+                                                    clipRule="evenodd"
+                                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
+                                                    fill="#9A031E"
+                                                />
+                                            </svg>
+                                        </button>:<>
+                                        <Link to="/login">
+                                        <button className=" text-white  font-bold py-2 px-4 rounded ">
+                                            <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    fillRule="evenodd"
+                                                    clipRule="evenodd"
+                                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
+                                                    fill="#9A031E"
+                                                />
+                                            </svg>
+                                        </button>
+                                        </Link>
+                                        </>
+                                         }
 
                                             <Link to={item.url} target="_blank">
                                                 <button className="bg-white hover:bg-red-400 hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
                                                     <LiaBullseyeSolid className="mr-1" /> View
                                                 </button>
                                             </Link>
-
+                                        {
+                                            user? 
                                             <button
                                                 onClick={() => handleLike(courseCode,item.contentType, item.id)}
                                                 className={`${
@@ -228,7 +244,22 @@ const CseContent = () => {
                                             >
                                                 <FaStar />
                                                 <span className="ml-1">{item.star}</span>
+                                            </button> : <> 
+                                            <Link to="/login">
+                                            
+                                            <button
+                                                className={`${
+                                                    liked ? 'bg-blue-500 text-white' : 'bg-white text-slate-500'
+                                                } hover:${
+                                                    liked ? 'bg-blue-700' : ''
+                                                }  font-bold py-2 px-4 rounded-md flex border-2 border-slate-200 justify-between items-center`}
+                                            >
+                                                <FaStar />
+                                                <span className="ml-1">{item.star}</span>
                                             </button>
+                                            </Link>
+                                             </>
+                                        }
                                         </div>
                                     </div>
                                 </div>
@@ -307,24 +338,39 @@ const CseContent = () => {
                                             <p className="text-xs">2 hours ago</p>
                                         </div> */}
                                         <div className="flex flex-row items-center space-x-1 ">
-                                            <button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
-                                                <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        fillRule="evenodd"
-                                                        clipRule="evenodd"
-                                                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
-                                                        fill="#9A031E"
-                                                    />
-                                                </svg>
-                                            </button>
+                                         {
+                                            user? <button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
+                                            <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    fillRule="evenodd"
+                                                    clipRule="evenodd"
+                                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
+                                                    fill="#9A031E"
+                                                />
+                                            </svg>
+                                        </button>:<>
+                                        <Link to="/login">
+                                        <button  className=" text-white  font-bold py-2 px-4 rounded ">
+                                            <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    fillRule="evenodd"
+                                                    clipRule="evenodd"
+                                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
+                                                    fill="#9A031E"
+                                                />
+                                            </svg>
+                                        </button></Link>
+                                        </>
+                                         }
 
                                             <Link to={item.url} target="_blank">
                                                 <button className="bg-white hover:bg-red-400 hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
                                                     <LiaBullseyeSolid className="mr-1" /> View
                                                 </button>
                                             </Link>
-
-                                            <button
+                                        
+                                        {
+                                            user? <button
                                                 onClick={() => handleLike(courseCode,item.contentType, item.id)}
                                                 className={`${
                                                     liked ? 'bg-blue-500 text-white' : 'bg-white text-slate-500'
@@ -334,7 +380,22 @@ const CseContent = () => {
                                             >
                                                 <FaStar />
                                                 <span className="ml-1">{item.star}</span>
-                                            </button>
+                                            </button>:<>
+                                            
+                                            <Link to="/login">
+                                            <button
+                                                className={`${
+                                                    liked ? 'bg-blue-500 text-white' : 'bg-white text-slate-500'
+                                                } hover:${
+                                                    liked ? 'bg-blue-700' : ''
+                                                }  font-bold py-2 px-4 rounded-md flex border-2 border-slate-200 justify-between items-center`}
+                                            >
+                                                <FaStar />
+                                                <span className="ml-1">{item.star}</span>
+                                            </button></Link>
+                                            </>
+                                        }
+
                                         </div>
                                     </div>
                                 </div>
@@ -394,16 +455,29 @@ const CseContent = () => {
                                             <p className="text-xs">2 hours ago</p>
                                         </div> */}
                                         <div className="flex flex-row items-center space-x-1 ">
-                                            <button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
-                                                <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        fillRule="evenodd"
-                                                        clipRule="evenodd"
-                                                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
-                                                        fill="#9A031E"
-                                                    />
-                                                </svg>
-                                            </button>
+                                         {
+                                            user ? <button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
+                                            <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    fillRule="evenodd"
+                                                    clipRule="evenodd"
+                                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
+                                                    fill="#9A031E"
+                                                />
+                                            </svg>
+                                        </button>:<>  <Link to="/login">
+                                        <button  className=" text-white  font-bold py-2 px-4 rounded ">
+                                            <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    fillRule="evenodd"
+                                                    clipRule="evenodd"
+                                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
+                                                    fill="#9A031E"
+                                                />
+                                            </svg>
+                                        </button>
+                                        </Link>  </>
+                                         }
 
                                             <Link to={item.url} target="_blank">
                                                 <button className="bg-white hover:bg-red-400 hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
@@ -411,7 +485,8 @@ const CseContent = () => {
                                                 </button>
                                             </Link>
 
-                                            <button
+                                        {
+                                            user?<button
                                                 onClick={() => handleLike(courseCode,item.contentType, item.id)}
                                                 className={`${
                                                     liked ? 'bg-blue-500 text-white' : 'bg-white text-slate-500'
@@ -421,7 +496,20 @@ const CseContent = () => {
                                             >
                                                 <FaStar />
                                                 <span className="ml-1">{item.star}</span>
+                                            </button>:<>  <Link to="/login">
+                                            <button
+                                               
+                                                className={`${
+                                                    liked ? 'bg-blue-500 text-white' : 'bg-white text-slate-500'
+                                                } hover:${
+                                                    liked ? 'bg-blue-700' : ''
+                                                }  font-bold py-2 px-4 rounded-md flex border-2 border-slate-200 justify-between items-center`}
+                                            >
+                                                <FaStar />
+                                                <span className="ml-1">{item.star}</span>
                                             </button>
+                                            </Link></>
+                                        }
                                         </div>
                                     </div>
                                 </div>
@@ -483,7 +571,8 @@ const CseContent = () => {
                                             </svg>
                                             <p className="text-xs">2 hours ago</p>
                                         </div> */}
-                                        <div className="flex flex-row items-center space-x-1 ">
+                                        <div className="flex flex-row items-center space-x-1 ">           
+                                            {user? 
                                             <button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
                                                 <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path
@@ -493,7 +582,19 @@ const CseContent = () => {
                                                         fill="#9A031E"
                                                     />
                                                 </svg>
+                                            </button>: <>  <Link to="/login">
+                                            
+                                            <button  className=" text-white  font-bold py-2 px-4 rounded ">
+                                                <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        fillRule="evenodd"
+                                                        clipRule="evenodd"
+                                                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
+                                                        fill="#9A031E"
+                                                    />
+                                                </svg>
                                             </button>
+                                            </Link> </>}
 
                                             <Link to={item.url} target="_blank">
                                                 <button className="bg-white hover:bg-red-400 hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
@@ -501,7 +602,9 @@ const CseContent = () => {
                                                 </button>
                                             </Link>
 
-                                            <button
+
+                                            {
+                                                user?                                             <button
                                                 onClick={() => handleLike(courseCode,item.contentType, item.id)}
                                                 className={`${
                                                     liked ? 'bg-blue-500 text-white' : 'bg-white text-slate-500'
@@ -511,7 +614,20 @@ const CseContent = () => {
                                             >
                                                 <FaStar />
                                                 <span className="ml-1">{item.star}</span>
+                                            </button> : <><Link to="/login">
+                                            <button
+                                               
+                                                className={`${
+                                                    liked ? 'bg-blue-500 text-white' : 'bg-white text-slate-500'
+                                                } hover:${
+                                                    liked ? 'bg-blue-700' : ''
+                                                }  font-bold py-2 px-4 rounded-md flex border-2 border-slate-200 justify-between items-center`}
+                                            >
+                                                <FaStar />
+                                                <span className="ml-1">{item.star}</span>
                                             </button>
+                                            </Link> </>
+                                            }
                                         </div>
                                     </div>
                                 </div>
@@ -644,16 +760,31 @@ const CseContent = () => {
                                             <p className="text-xs">2 hours ago</p>
                                         </div> */}
                                         <div className="flex flex-row items-center space-x-1 ">
-                                            <button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
-                                                <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        fillRule="evenodd"
-                                                        clipRule="evenodd"
-                                                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
-                                                        fill="#9A031E"
-                                                    />
-                                                </svg>
-                                            </button>
+                                        {
+                                            user?<button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
+                                            <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    fillRule="evenodd"
+                                                    clipRule="evenodd"
+                                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
+                                                    fill="#9A031E"
+                                                />
+                                            </svg>
+                                        </button>:<>
+                                        <Link to="/login">
+                                        <button className=" text-white  font-bold py-2 px-4 rounded ">
+                                            <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    fillRule="evenodd"
+                                                    clipRule="evenodd"
+                                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
+                                                    fill="#9A031E"
+                                                />
+                                            </svg>
+                                        </button>
+                                        </Link>
+                                        </>
+                                         }
 
                                             <Link to={item.url} target="_blank">
                                                 <button className="bg-white hover:bg-red-400 hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
@@ -661,6 +792,8 @@ const CseContent = () => {
                                                 </button>
                                             </Link>
 
+                                            {
+                                            user? 
                                             <button
                                                 onClick={() => handleLike(courseCode,item.contentType, item.id)}
                                                 className={`${
@@ -671,7 +804,22 @@ const CseContent = () => {
                                             >
                                                 <FaStar />
                                                 <span className="ml-1">{item.star}</span>
+                                            </button> : <> 
+                                            <Link to="/login">
+                                            
+                                            <button
+                                                className={`${
+                                                    liked ? 'bg-blue-500 text-white' : 'bg-white text-slate-500'
+                                                } hover:${
+                                                    liked ? 'bg-blue-700' : ''
+                                                }  font-bold py-2 px-4 rounded-md flex border-2 border-slate-200 justify-between items-center`}
+                                            >
+                                                <FaStar />
+                                                <span className="ml-1">{item.star}</span>
                                             </button>
+                                            </Link>
+                                             </>
+                                        }
                                         </div>
                                     </div>
                                 </div>
@@ -751,23 +899,39 @@ const CseContent = () => {
                                             <p className="text-xs">2 hours ago</p>
                                         </div> */}
                                         <div className="flex flex-row items-center space-x-1 ">
-                                            <button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
-                                                <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        fillRule="evenodd"
-                                                        clipRule="evenodd"
-                                                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
-                                                        fill="#9A031E"
-                                                    />
-                                                </svg>
-                                            </button>
+                                        {
+                                            user?<button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
+                                            <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    fillRule="evenodd"
+                                                    clipRule="evenodd"
+                                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
+                                                    fill="#9A031E"
+                                                />
+                                            </svg>
+                                        </button>:<>
+                                        <Link to="/login">
+                                        <button className=" text-white  font-bold py-2 px-4 rounded ">
+                                            <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    fillRule="evenodd"
+                                                    clipRule="evenodd"
+                                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
+                                                    fill="#9A031E"
+                                                />
+                                            </svg>
+                                        </button>
+                                        </Link>
+                                        </>
+                                         }
 
                                             <Link to={item.url} target="_blank">
                                                 <button className="bg-white hover:bg-red-400 hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
                                                     <LiaBullseyeSolid className="mr-1" /> View
                                                 </button>
                                             </Link>
-
+                                            {
+                                            user? 
                                             <button
                                                 onClick={() => handleLike(courseCode,item.contentType, item.id)}
                                                 className={`${
@@ -778,7 +942,22 @@ const CseContent = () => {
                                             >
                                                 <FaStar />
                                                 <span className="ml-1">{item.star}</span>
+                                            </button> : <> 
+                                            <Link to="/login">
+                                            
+                                            <button
+                                                className={`${
+                                                    liked ? 'bg-blue-500 text-white' : 'bg-white text-slate-500'
+                                                } hover:${
+                                                    liked ? 'bg-blue-700' : ''
+                                                }  font-bold py-2 px-4 rounded-md flex border-2 border-slate-200 justify-between items-center`}
+                                            >
+                                                <FaStar />
+                                                <span className="ml-1">{item.star}</span>
                                             </button>
+                                            </Link>
+                                             </>
+                                        }
                                         </div>
                                     </div>
                                 </div>
@@ -839,16 +1018,31 @@ const CseContent = () => {
                                             <p className="text-xs">2 hours ago</p>
                                         </div> */}
                                         <div className="flex flex-row items-center space-x-1 ">
-                                            <button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
-                                                <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        fillRule="evenodd"
-                                                        clipRule="evenodd"
-                                                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
-                                                        fill="#9A031E"
-                                                    />
-                                                </svg>
-                                            </button>
+                                        {
+                                            user?<button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
+                                            <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    fillRule="evenodd"
+                                                    clipRule="evenodd"
+                                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
+                                                    fill="#9A031E"
+                                                />
+                                            </svg>
+                                        </button>:<>
+                                        <Link to="/login">
+                                        <button className=" text-white  font-bold py-2 px-4 rounded ">
+                                            <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    fillRule="evenodd"
+                                                    clipRule="evenodd"
+                                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
+                                                    fill="#9A031E"
+                                                />
+                                            </svg>
+                                        </button>
+                                        </Link>
+                                        </>
+                                         }
 
                                             <Link to={item.url} target="_blank">
                                                 <button className="bg-white hover:bg-red-400 hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
@@ -856,6 +1050,8 @@ const CseContent = () => {
                                                 </button>
                                             </Link>
 
+                                            {
+                                            user? 
                                             <button
                                                 onClick={() => handleLike(courseCode,item.contentType, item.id)}
                                                 className={`${
@@ -866,7 +1062,22 @@ const CseContent = () => {
                                             >
                                                 <FaStar />
                                                 <span className="ml-1">{item.star}</span>
+                                            </button> : <> 
+                                            <Link to="/login">
+                                            
+                                            <button
+                                                className={`${
+                                                    liked ? 'bg-blue-500 text-white' : 'bg-white text-slate-500'
+                                                } hover:${
+                                                    liked ? 'bg-blue-700' : ''
+                                                }  font-bold py-2 px-4 rounded-md flex border-2 border-slate-200 justify-between items-center`}
+                                            >
+                                                <FaStar />
+                                                <span className="ml-1">{item.star}</span>
                                             </button>
+                                            </Link>
+                                             </>
+                                        }
                                         </div>
                                     </div>
                                 </div>
@@ -929,16 +1140,31 @@ const CseContent = () => {
                                             <p className="text-xs">2 hours ago</p>
                                         </div> */}
                                         <div className="flex flex-row items-center space-x-1 ">
-                                            <button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
-                                                <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        fillRule="evenodd"
-                                                        clipRule="evenodd"
-                                                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
-                                                        fill="#9A031E"
-                                                    />
-                                                </svg>
-                                            </button>
+                                        {
+                                            user?<button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
+                                            <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    fillRule="evenodd"
+                                                    clipRule="evenodd"
+                                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
+                                                    fill="#9A031E"
+                                                />
+                                            </svg>
+                                        </button>:<>
+                                        <Link to="/login">
+                                        <button className=" text-white  font-bold py-2 px-4 rounded ">
+                                            <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    fillRule="evenodd"
+                                                    clipRule="evenodd"
+                                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
+                                                    fill="#9A031E"
+                                                />
+                                            </svg>
+                                        </button>
+                                        </Link>
+                                        </>
+                                         }
 
                                             <Link to={item.url} target="_blank">
                                                 <button className="bg-white hover:bg-red-400 hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
@@ -946,6 +1172,8 @@ const CseContent = () => {
                                                 </button>
                                             </Link>
 
+                                            {
+                                            user? 
                                             <button
                                                 onClick={() => handleLike(courseCode,item.contentType, item.id)}
                                                 className={`${
@@ -956,7 +1184,22 @@ const CseContent = () => {
                                             >
                                                 <FaStar />
                                                 <span className="ml-1">{item.star}</span>
+                                            </button> : <> 
+                                            <Link to="/login">
+                                            
+                                            <button
+                                                className={`${
+                                                    liked ? 'bg-blue-500 text-white' : 'bg-white text-slate-500'
+                                                } hover:${
+                                                    liked ? 'bg-blue-700' : ''
+                                                }  font-bold py-2 px-4 rounded-md flex border-2 border-slate-200 justify-between items-center`}
+                                            >
+                                                <FaStar />
+                                                <span className="ml-1">{item.star}</span>
                                             </button>
+                                            </Link>
+                                             </>
+                                        }
                                         </div>
                                     </div>
                                 </div>

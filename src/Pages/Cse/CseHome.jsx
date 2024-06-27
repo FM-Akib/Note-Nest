@@ -1,7 +1,11 @@
 
 import { Link } from 'react-router-dom';
 import '../../App.css';
+import { AuthContext } from '../../Providers/AuthProvider';
+import { useContext } from 'react';
 const CseHome = () => {
+    const {user} = useContext(AuthContext)
+
     return (
         <div>
                    {/* Heading */}
@@ -34,7 +38,7 @@ const CseHome = () => {
                     </p>
                 </div>
                 <div className="flex flex-wrap items-center justify-center gap-6 ">
-                   <Link to="/resources/contribute"> <button className="bg-[#9a031e] hover:bg-[#181313] text-white font-semibold button-text flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 px-8 py-3 text-xs sm:text-sm tracking-widest">Contribute</button></Link>
+                   <Link to={`${user?.email ? '/resources/contribute' : '/login'}`}> <button className="bg-[#9a031e] hover:bg-[#181313] text-white font-semibold button-text flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 px-8 py-3 text-xs sm:text-sm tracking-widest">Contribute</button></Link>
                     <button className="flex items-center justify-center whitespace-nowrap rounded-md border border-zinc-700 bg-zinc-900 text-center text-white backdrop-blur transition-all hover:bg-zinc-800 px-8 py-3 text-xs sm:text-sm">Learn More</button>
                 </div>
             </div>

@@ -2,10 +2,12 @@ import  {  useState } from 'react';
 // import useCseResources from '../../Hooks/useCseResources';
 import { Link } from 'react-router-dom';
 import useCseCourses from '../../Hooks/useCseCourses';
+import { useContext } from 'react';
+import { AuthContext } from '../../Providers/AuthProvider';
 
 const ResourceLeftNav = ({closeNav }) => {
     const [isOpen, setIsOpen] = useState(false);
-
+    const {user} = useContext(AuthContext)
     const toggleOpen = () => {
         setIsOpen(!isOpen);
     };
@@ -28,7 +30,7 @@ const ResourceLeftNav = ({closeNav }) => {
         <div className="h-screen bg-[#9A031E] p-4 text-white overflow-y-scroll">
             <ul className="flex flex-col gap-3 max-w-[280px] mx-auto my-4  ">
 
-            <li onClick={closeNav}> <Link to="/resources/contribute">
+            <li onClick={closeNav}> <Link to={`${user?.email ? '/resources/contribute' : '/login'}`}>
                     <details className="group ">
                        
                         <summary
