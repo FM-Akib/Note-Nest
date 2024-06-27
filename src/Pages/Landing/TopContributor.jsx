@@ -34,7 +34,7 @@ const TopContributor = () => {
                             <a href="#" rel="author">{auser.name}</a>
                         </p>
                         <div className=" prose prose-sm text-gray-400">
-                            <p>Full stack web developer.</p>
+                            <p>{auser?.dept}| {auser?.ID}</p>
                         </div>
                         {/* <div className="flex">
                             <a href="#" target="_blank" rel="noopener noreferrer">

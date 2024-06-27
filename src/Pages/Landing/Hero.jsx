@@ -91,7 +91,7 @@ const Hero = () => {
               </div>
   
               <div className="pt-12 flex gap-6 lg:gap-12 justify-between grayscale lg:w-2/3">
-                <img
+                {/* <img
                   src="https://tailus.io/sources/blocks/tech-startup/preview/images/clients/airbnb.svg"
                   className="h-8 sm:h-10 w-auto lg:h-12"
                   alt="Airbnb logo"
@@ -110,8 +110,11 @@ const Hero = () => {
                   src="https://tailus.io/sources/blocks/tech-startup/preview/images/clients/microsoft.svg"
                   className="h-8 sm:h-10 w-auto lg:h-12"
                   alt="Microsoft logo"
-                />
+                /> */}
               </div>
+
+
+              
             </div>
             <div className="mt-12 md:mt-0 lg:absolute -right-10 lg:w-7/12">
               <div className="relative w-full">

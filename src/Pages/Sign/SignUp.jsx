@@ -66,6 +66,8 @@ const SignUp = () => {
                 const user = {
                     name: data.name,
                     email: data.email,
+                    dept:data.dept,
+                    ID: data.ID,
                     image: res.data.data.display_url,
                     password: data.password,
                     myContribution: [],
@@ -111,18 +113,34 @@ const SignUp = () => {
                 <label htmlFor="name" className="block text-gray-600">Name</label>
                 <input {...register("name")} type="text" name="name" id="name" placeholder="Name" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
             </div>
+
             <div className="space-y-1 text-sm">
                 <label htmlFor="image" className="block text-gray-600">Profile Photo</label>
                 <input {...register("image")} type="file" name="image" id="image"  className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
             </div>
+
+            <div className="md:flex md:gap-2 space-y-1">
+            <div className="space-y-1 text-sm">
+                <label htmlFor="dept" className="block text-gray-600">Short name of Department</label>
+                <input {...register("dept")} type="text" name="name" id="name" placeholder="CSE/EEE/.." className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
+            </div>
+
+            <div className="space-y-1 text-sm">
+                <label htmlFor="id" className="block text-gray-600">Matric ID</label>
+                <input {...register("ID")} type="text" name="name" id="name" placeholder="C211008" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
+            </div>
+            </div>
+
             <div className="space-y-1 text-sm">
                 <label htmlFor="email" className="block text-gray-600">Email</label>
                 <input type="text" {...register("email")} name="email" id="email" placeholder="Email" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
             </div>
+
             <div className="space-y-1 text-sm">
                 <label htmlFor="password" className="block text-gray-600">Password</label>
                 <input {...register("password")} type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border-gray-300 bg-gray-100 text-gray-800 focus:border-emerald-600" />
             </div>
+
             <button className="block w-full p-3 text-center rounded-sm text-gray-50 bg-[#F50057]">Sign Up</button>
             </form>
             <div className="flex items-center pt-4 space-x-1">
