@@ -145,7 +145,8 @@ const CseContent = () => {
 
                   
       {/* Mid Term */}
-      <details className="p-4 md:p-6 group border-b-2 max-w-80 md:max-w-full ">
+      {/* <details className="p-4 md:p-6 group border-b-2 max-w-80 md:max-w-full "> */}
+      <details className="p-4 md:p-6 group border-b-2  ">
         <summary className="flex items-center justify-between cursor-pointer">
           <h5 className="text-lg font-medium text-gray-900 flex items-center gap-2">
             <svg width="30px" height="30px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
