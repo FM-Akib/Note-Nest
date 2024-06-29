@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
@@ -14,7 +14,9 @@ const SignUp = () => {
     const axiosPublic = useAxiosPublic();
     const {CreateUserEmailPassword,SigninWithGoogle} = useContext(AuthContext); 
 
-		
+    const navigate = useNavigate();
+	const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
 
     const handleGoogleSignUp = ()=>{
         SigninWithGoogle()
@@ -45,7 +47,7 @@ const SignUp = () => {
                           });
                          
                     }
-                    // navigate('/',{replace: true})
+                     navigate(from,{replace: true})
                 })
                 
           })
@@ -87,7 +89,8 @@ const SignUp = () => {
                             showConfirmButton: false,
                             timer: 1500
                           });
-                        //   navigate('/',{replace: true})
+                          navigate(from,{replace: true})
+
                     }
                 })
                

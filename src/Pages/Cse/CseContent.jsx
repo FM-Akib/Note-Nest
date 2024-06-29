@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 // import { GoVideo } from "react-icons/go";
 import { FaStar } from "react-icons/fa";
@@ -15,6 +15,8 @@ const CseContent = () => {
     const [resourceCse, setResourceCse] = useState([]);
     const {user} = useContext(AuthContext)
     const axiosPublic = useAxiosPublic();
+   const location = useLocation();
+
     
     const [liked, setLiked] = useState(false);
     const [stars, setStars] = useState();
@@ -246,7 +248,7 @@ const CseContent = () => {
                                                 <FaStar />
                                                 <span className="ml-1">{item.star}</span>
                                             </button> : <> 
-                                            <Link to="/login">
+                                            <Link to={{ pathname: '/login', state: { from: location } }}>
                                             
                                             <button
                                                 className={`${

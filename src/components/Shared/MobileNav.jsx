@@ -3,7 +3,7 @@ import { GiElectric } from "react-icons/gi";
 import { GoProjectSymlink } from "react-icons/go";
 import { MdComputer, MdSportsVolleyball } from "react-icons/md";
 import { RxDashboard } from "react-icons/rx";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const MobileNav = () => {
@@ -11,9 +11,7 @@ const MobileNav = () => {
         const [isDrawerOpen, setIsDrawerOpen] = useState(false);
         const {user} = useContext(AuthContext)
 
-        // const toggleNav = () => {
-        //     setIsNavOpen(!isNavOpen);
-        // };
+        const location = useLocation();
     
         const toggleDrawer = () => {
             setIsDrawerOpen(!isDrawerOpen);
@@ -54,7 +52,7 @@ const MobileNav = () => {
                 user ? <NavLink to="/dashboard/home" className="text-white flex flex-col items-center" onClick={handleNavLinkClick}>
                 <RxDashboard  className="text-2xl" />
                 <span className="text-xs">Dashboard</span>
-            </NavLink> : <NavLink to="/login" className="text-white flex flex-col items-center" onClick={handleNavLinkClick}>
+            </NavLink> : <NavLink to={{ pathname: '/login', state: { from: location } }}  className="text-white flex flex-col items-center" onClick={handleNavLinkClick}>
                     <RxDashboard  className="text-2xl" />
                     <span className="text-xs">Dashboard</span>
                 </NavLink>

@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 import NavBar from "../components/Shared/NavBar";
 import ResourceLeftNav from "../components/Shared/ResourceLeftNav";
 import { useContext, useState } from "react";
@@ -8,7 +8,7 @@ import { AuthContext } from "../Providers/AuthProvider";
 const ResourceLayout = () => {
     const [isNavOpen,setIsNavOpen] = useState(false);
     const {user} = useContext(AuthContext)
-
+    const location = useLocation();
     const toggleNav=()=>{
         setIsNavOpen(!isNavOpen);
     }
@@ -64,7 +64,7 @@ const ResourceLayout = () => {
                             />
                         </svg>
                         <span className="text-xs">Dashboard</span>
-                    </NavLink> : <NavLink to="/login" className="text-white flex flex-col items-center">
+                    </NavLink> : <NavLink to={{ pathname: '/login', state: { from: location } }} className="text-white flex flex-col items-center">
                     <svg
                         width="24px"
                         viewBox="0 0 24 24"

@@ -3,13 +3,16 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
 
 const SignIn = () => {
 	const navigate = useNavigate();
 	const location = useLocation();
 	const from = location.state?.from?.pathname || '/';
+	
 	const {register,handleSubmit} = useForm();
 	const {SigninWithEmailPassword,SigninWithGoogle} = useContext(AuthContext)
+    const axiosPublic = useAxiosPublic();
 	
 	
 	const handleGoogleSignin=()=>{
@@ -17,14 +20,36 @@ const SignIn = () => {
         .then((result) => {
             const Loggeduser = result.user;
                 console.log(Loggeduser)
-                Swal.fire({
-                    position: "top-center",
-                    icon: "success",
-                    title: "Sign in successful.",
-                    showConfirmButton: false,
-                    timer: 1500
-                  });
-                  navigate(from,{replace: true})
+
+
+				const user ={
+                    name: result.user?.displayName,
+                    email: result.user?.email,
+                    image: result.user?.photoURL,
+                    myContribution: [],
+                    bookmarked: [],
+                    components: [],
+                }
+                // console.log(user)
+               
+                axiosPublic.post('/users',user)
+                .then((result) => {
+                  
+                    if(result.data.insertedId){
+						Swal.fire({
+							position: "top-center",
+							icon: "success",
+							title: "login successful.",
+							showConfirmButton: false,
+							timer: 1500
+						});
+						navigate(from,{replace: true})
+                         
+                    }
+                    // navigate('/',{replace: true})
+                })
+
+
           })
           .catch((error) => {
             console.log(error.message);
