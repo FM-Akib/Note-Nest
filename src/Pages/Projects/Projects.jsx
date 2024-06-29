@@ -2,6 +2,7 @@ import { useState } from "react";
 import { TbCoinTaka } from "react-icons/tb";
 import useProjects from "../../Hooks/useProjects";
 import MobileNav from "../../components/Shared/MobileNav";
+import { Helmet } from "react-helmet";
 
 
 const Projects = () => {
@@ -33,6 +34,11 @@ const Projects = () => {
     return (
         <div className="mt-8 ">
             
+
+    <Helmet>
+      <title>Note Nest - Projects</title>
+    </Helmet>
+
 
         <div className="relative border-t border-gray-200 bg-gray-50">
         <div

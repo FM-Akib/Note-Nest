@@ -5,6 +5,7 @@ import { IoIosMedical } from "react-icons/io";
 import { RiGroup2Fill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import MobileNav from "../../components/Shared/MobileNav";
+import { Helmet } from "react-helmet";
 
 const Clubs = () => {
     const [clubs,setClubs] =  useState([])
@@ -57,6 +58,11 @@ const Clubs = () => {
     }
     return (
         <div>
+
+        <Helmet>
+        <title>Note Nest - Clubs</title>
+        </Helmet>
+
             {/* club Heading */}
          <div className="relative h-[350px] overflow-hidden bg-[url('https://i.ibb.co/bWhXSZL/Untitled-design.png')] bg-cover bg-[50%] bg-no-repeat">
             <div

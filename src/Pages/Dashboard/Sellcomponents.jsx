@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { v4 as uuidv4 } from 'uuid';
 import {  AiOutlineControl } from "react-icons/ai";
+import { Helmet } from "react-helmet";
 
 
 
@@ -73,6 +74,10 @@ const Sellcomponents = () => {
   
     return (
         <div className="pt-20 md:px-20 px-0 overflow-y-auto min-h-screen max-h-screen">
+    <Helmet>
+      <title>Note Nest - Sell Compo</title>
+    </Helmet>
+
         <HeadDash icn={<AiOutlineControl className="text-[#EFCA08] text-4xl" />} head="Sell Components" subHead="Sell your project components"></HeadDash>
   
   

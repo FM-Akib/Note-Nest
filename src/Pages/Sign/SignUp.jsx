@@ -4,6 +4,7 @@ import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
  const image_hosting_key= import.meta.env.VITE_apiKey_Image;
  const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
@@ -106,6 +107,12 @@ const SignUp = () => {
 	
     return (
         <div className="md:grid grid-cols-10 p-2 md:p-14 ">
+
+
+            
+    <Helmet>
+      <title>Note Nest - Sign Up</title>
+    </Helmet>
 
             <div className=" border-l-2 md:border-t-2 md:border-b-2 border-r-2 md:border-r-0 md:rounded-l-md col-span-5 bg-white">
 

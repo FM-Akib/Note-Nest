@@ -3,6 +3,7 @@ import useUserInfo from "../../Hooks/useUserInfo";
 import HeadDash from "./HeadDash";
 import { Link } from "react-router-dom";
 import { CiMail } from "react-icons/ci";
+import { Helmet } from "react-helmet";
 
 const UserHome = () => {
     
@@ -14,6 +15,9 @@ const UserHome = () => {
 
     return (
         <div className="pt-20 min-h-screen">
+     <Helmet>
+      <title>Note Nest - User Home</title>
+    </Helmet>
 
        <HeadDash icn={<TbHomeStar className="text-[#EFCA08]" />} head="Your Nest" subHead="Welcome to your Nest."></HeadDash>
 

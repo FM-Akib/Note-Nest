@@ -3,6 +3,7 @@ import useUserInfo from "../../Hooks/useUserInfo";
 import HeadDash from "./HeadDash";
 import { RiShieldStarFill } from "react-icons/ri";
 import { FcInfo } from "react-icons/fc";
+import { Helmet } from "react-helmet";
 
 const MyContribution = () => {
 
@@ -13,7 +14,12 @@ const MyContribution = () => {
 
     return (
         <div className="pt-20 md:px-20 px-2 overflow-y-auto min-h-screen max-h-screen">
-            <HeadDash icn={<RiShieldStarFill className="text-[#EFCA08]" />} head="My Contribution" subHead="All your remarkable contribution are here."></HeadDash>
+
+<Helmet>
+      <title>Note Nest - My Contribution</title>
+    </Helmet>
+
+        <HeadDash icn={<RiShieldStarFill className="text-[#EFCA08]" />} head="My Contribution" subHead="All your remarkable contribution are here."></HeadDash>
 
 
 {

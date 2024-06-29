@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 import { v4 as uuidv4 } from 'uuid';
 import { GiRoundStar } from "react-icons/gi";
 import useUserInfo from "../../Hooks/useUserInfo";
+import { Helmet } from "react-helmet";
 
 
 
@@ -99,6 +100,10 @@ const Contribute = () => {
 
   return (
   <div className="h-screen overflow-y-scroll">
+        
+      <Helmet>
+      <title>Note Nest - Contribute</title>
+      </Helmet>
 
 {/* Heading */}
 <div className="relative border-t border-gray-200 bg-gray-50 mb-2">

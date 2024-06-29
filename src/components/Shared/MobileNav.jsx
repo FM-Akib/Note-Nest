@@ -23,7 +23,7 @@ const MobileNav = () => {
     return (
         <div>
             {/* Bottom Navigation Bar for Mobile */}
-            <div className="md:hidden fixed bottom-0 left-0 right-0 bg-[#1E2D24] z-20 border-slate-400 shadow-2xl shadow-black flex justify-around items-center py-4">
+            <div className="transition ease-in-out duration-300 md:hidden fixed bottom-0 left-0 right-0 bg-[#1E2D24] z-20 border-slate-400 shadow-2xl shadow-black flex justify-around items-center py-4">
                 <NavLink
                     to="/"
                     className={({ isActive }) =>

@@ -9,6 +9,7 @@ import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { useContext } from "react";
 import { GiRoundStar } from "react-icons/gi";
+import { Helmet } from "react-helmet";
 
 
 
@@ -91,6 +92,10 @@ const EditMyContribution = () => {
 
     return (
         <div className="pt-20 md:px-20 px-2 overflow-y-auto max-h-screen">
+
+<Helmet>
+      <title>Note Nest - My Contribution</title>
+    </Helmet>
             <HeadDash icn={<RiShieldStarFill className="text-[#EFCA08]" />} head="Edit Contribution" subHead="Edit your contribution and re-submit it."></HeadDash>
 
 

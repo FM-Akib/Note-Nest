@@ -7,6 +7,7 @@ import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import { v4 as uuidv4 } from 'uuid';
+import { Helmet } from "react-helmet";
 // import { FcDoNotInsert } from "react-icons/fc";
 
 
@@ -118,6 +119,11 @@ const CseContent = () => {
 
     return (
         <div className="overflow-y-auto max-h-screen">
+
+      <Helmet>
+      <title>Note Nest - CSE</title>
+      </Helmet>
+        
 
         {/* Heading */}
         <div className="relative border-t border-gray-200 bg-gray-50 mb-2">

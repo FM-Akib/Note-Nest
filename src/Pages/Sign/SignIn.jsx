@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import { Helmet } from "react-helmet";
 
 const SignIn = () => {
 	const navigate = useNavigate();
@@ -76,6 +77,10 @@ const SignIn = () => {
 		}
     return (
         <div className="md:grid grid-cols-10 p-2 md:p-14 ">
+
+    <Helmet>
+      <title>Note Nest - Login</title>
+    </Helmet>
 
             <div className="border-l-2 md:border-t-2 md:border-b-2 border-r-2 md:border-r-0 col-span-5 bg-white md:rounded-l-md p-10 flex flex-col items-center justify-center">
             <h1 className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">Note <span className="text-[#F50057]"> Nest</span></h1>

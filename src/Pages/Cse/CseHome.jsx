@@ -3,11 +3,15 @@ import { Link } from 'react-router-dom';
 import '../../App.css';
 import { AuthContext } from '../../Providers/AuthProvider';
 import { useContext } from 'react';
+import { Helmet } from 'react-helmet';
 const CseHome = () => {
     const {user} = useContext(AuthContext)
 
     return (
         <div>
+    <Helmet>
+      <title>Note Nest - CSE Home</title>
+    </Helmet>
                    {/* Heading */}
         <div className="relative border-t border-gray-200 bg-gray-50 mb-2">
             <div className="absolute inset-0 h-36 opacity-90 lg:h-full"

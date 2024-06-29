@@ -1,8 +1,12 @@
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
     return (
     <div className="grid h-screen place-content-center bg-white px-4">
+          <Helmet>
+      <title>Note Nest - Error</title>
+    </Helmet>
     <div className="text-center">
     <h1 className="text-9xl font-black text-gray-200">404</h1>
 

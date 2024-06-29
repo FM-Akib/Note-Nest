@@ -8,6 +8,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import HeadDash from "./HeadDash";
 import { IoMdBookmarks } from "react-icons/io";
 import { FcInfo } from "react-icons/fc";
+import { Helmet } from "react-helmet";
 
 const Bookmarked = () => {
    const {userInfo,refetch} = useUserInfo();
@@ -45,6 +46,11 @@ const Bookmarked = () => {
 
     return (
         <div className="pt-20 md:px-20 px-2 overflow-y-auto pb-96 max-h-screen md:mb-20">
+
+<Helmet>
+      <title>Note Nest - Bookmerked</title>
+    </Helmet>
+
             <HeadDash icn={<IoMdBookmarks className="text-[#EFCA08]" />} head="Bookmarked" subHead="All your bookmarked resources are here."></HeadDash>
 
         {

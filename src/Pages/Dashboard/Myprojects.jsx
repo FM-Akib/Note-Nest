@@ -6,6 +6,7 @@ import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import Swal from "sweetalert2";
 import { IoFileTrayStackedOutline } from "react-icons/io5";
 import { FcInfo } from "react-icons/fc";
+import { Helmet } from "react-helmet";
 
 
 const Myprojects = () => {
@@ -52,6 +53,9 @@ const Myprojects = () => {
     
     return (
         <div className="pt-20 md:px-20 px-2 overflow-y-auto min-h-screen max-h-screen">
+    <Helmet>
+      <title>Note Nest - My Project</title>
+    </Helmet>
             <HeadDash icn={<IoFileTrayStackedOutline className="text-[#EFCA08]" />} head="My Components" subHead="Your Hub for Quality Project Components"></HeadDash>
             {
               components?.length?  components?.map((component) => (
