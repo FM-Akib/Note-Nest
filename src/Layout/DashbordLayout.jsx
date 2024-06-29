@@ -126,6 +126,62 @@ const DashbordLayout = () => {
     />
   </svg>}
           </button>
+
+                      {/* Bottom Navigation Bar for Mobile */}
+                      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-[#1E2D24] z-20 border-t-2 border-slate-400 shadow-2xl shadow-black flex justify-around items-center py-2">
+                <NavLink to="/" className="text-white flex flex-col items-center">
+                    <svg
+                        width="24px"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M12 3L2 12h3v8h6V15h2v5h6v-8h3L12 3z"
+                            stroke="#FFFFFF"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                    </svg>
+                    <span className="text-xs">Home</span>
+                </NavLink>
+                 <button
+                    className="text-white flex flex-col items-center"
+                    onClick={toggleNav}
+                >
+                    {isNavOpen ? (
+                        <svg
+                            width="24px"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M16 8L7.99997 16M7.99999 8L16 16"
+                                stroke="#FFFFFF"
+                                strokeWidth="1.5"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            />
+                        </svg>
+                    ) : (
+
+                      <svg
+                      width="24px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                  >
+                      <path
+                          d="M10 2H14V6H10V2ZM2 10H6V14H2V10ZM18 10H22V14H18V10ZM10 18H14V22H10V18ZM4 4H9V9H4V4ZM15 4H20V9H15V4ZM15 15H20V20H15V15ZM4 15H9V20H4V15Z"
+                          fill="#FFFFFF"
+                      />
+                  </svg>
+                    )}
+                    <span className="text-xs">Dashboard</span>
+                </button>
+            </div>
   
 
 
