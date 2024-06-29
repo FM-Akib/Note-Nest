@@ -25,6 +25,12 @@ const ResourceLayout = () => {
         </div>
         
 
+
+
+
+
+
+
 {/* Content */}
         <div className="w-full md:w-4/5">
 

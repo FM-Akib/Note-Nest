@@ -28,7 +28,7 @@ const CseContent = () => {
         .then(data => setResourceCse(data));
     }, []);
 
-    if (resourceCse.length === 0) return <div>Loading...</div>;
+    if (resourceCse.length === 0) return <div className="flex items-center justify-center min-h-screen min-w-screen"><span className="loading text-red-700 loading-dots loading-lg"></span></div> ;
     
     // console.log(resourceCse)
 

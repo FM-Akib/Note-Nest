@@ -6,7 +6,7 @@ import '../../App.css';
 const TopContributor = () => {
     const { isLoading, isError, users, error } = useAllusers();
 
-    if (isLoading) return <div>Loading...</div>;
+    if (isLoading) return <div className="flex items-center justify-center min-h-screen min-w-screen"><span className="loading text-red-700 loading-dots loading-lg"></span></div> ;
     if (isError) return <div>Error: {error.message}</div>;
     console.log(users) 
     const calculateTotalStars = (contributions) => {
