@@ -121,7 +121,7 @@ const ResourceLayout = () => {
         {/* Toggle Button for Mobile */}
 
 
-        <div className="p-2 md:p-4">
+        <div className="p-2 md:p-4 pb-20 md:pb-0">
             <Outlet></Outlet> 
         </div>
             </div>

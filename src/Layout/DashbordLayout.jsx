@@ -102,7 +102,7 @@ const DashbordLayout = () => {
         <div className="w-full md:w-4/5">
 
           {/* Toggle Button for Mobile */}
-          <button className="md:hidden fixed bottom-4 right-4 z-20  text-white rounded-full p-3 shadow-2xl shadow-black border-2 border-slate-400"
+          {/* <button className="md:hidden fixed bottom-4 right-4 z-20  text-white rounded-full p-3 shadow-2xl shadow-black border-2 border-slate-400"
             onClick={toggleNav}>
             {isNavOpen ? <svg
                 width="30px"
@@ -125,7 +125,7 @@ const DashbordLayout = () => {
       fill="#9A031E"
     />
   </svg>}
-          </button>
+          </button> */}
 
                       {/* Bottom Navigation Bar for Mobile */}
                       <div className="md:hidden fixed bottom-0 left-0 right-0 bg-[#1E2D24] z-20 border-t-2 border-slate-400 shadow-2xl shadow-black flex justify-around items-center py-2">
@@ -187,7 +187,7 @@ const DashbordLayout = () => {
 
 
 
-          <div className="p-4 bg-[#F8F0FB]">
+          <div className="p-4 bg-[#F8F0FB] pb-20 md:pb-0">
            <Outlet></Outlet>
           </div>
 
