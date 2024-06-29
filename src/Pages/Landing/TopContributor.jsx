@@ -13,10 +13,10 @@ const TopContributor = () => {
         return contributions.reduce((total, contribution) => total + (contribution.star || 0), 0);
       };
     return (
-        <div className="md:px-2  mt-20">
+        <div className="md:px-2 mt-16 md:mt-24 lg:mt-32">
 
 
-            <div className="flex items-center justify-center py-10">
+            <div className="flex items-center justify-center py-10 ">
             <RiMedalFill className="text-[#EFCA08] text-3xl mr-1" />
                 <h1 className="exo-font font-bold text-xl md:text-2xl ">Top Contributors</h1>
             </div>

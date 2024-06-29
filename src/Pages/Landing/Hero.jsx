@@ -90,7 +90,7 @@ const Hero = () => {
                 <a href="#" className="font-semibold text-gray-700 ">Telegram</a> */}
               </div>
   
-              <div className="pt-12 flex gap-6 lg:gap-12 justify-between grayscale lg:w-2/3">
+              <div className="md:pt-12 flex gap-6 lg:gap-12 justify-between grayscale lg:w-2/3">
                 {/* <img
                   src="https://tailus.io/sources/blocks/tech-startup/preview/images/clients/airbnb.svg"
                   className="h-8 sm:h-10 w-auto lg:h-12"

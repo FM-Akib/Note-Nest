@@ -7,25 +7,29 @@ import { NavLink, useLocation } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const MobileNav = () => {
-        // const [isNavOpen, setIsNavOpen] = useState(false);
-        const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-        const {user} = useContext(AuthContext)
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+    const { user } = useContext(AuthContext);
 
-        const location = useLocation();
-    
-        const toggleDrawer = () => {
-            setIsDrawerOpen(!isDrawerOpen);
-        };
-    
-        const handleNavLinkClick = () => {
-            // setIsNavOpen(false);
-            setIsDrawerOpen(false);
-        };
+    const location = useLocation();
+
+    const toggleDrawer = () => {
+        setIsDrawerOpen(!isDrawerOpen);
+    };
+
+    const handleNavLinkClick = () => {
+        setIsDrawerOpen(false);
+    };
+
     return (
         <div>
-                     {/* Bottom Navigation Bar for Mobile */}
-                     <div className="md:hidden fixed bottom-0 left-0 right-0 bg-[#1E2D24] z-20  border-slate-400 shadow-2xl shadow-black flex justify-around items-center py-4">
-                <NavLink to="/" className="text-white flex flex-col items-center">
+            {/* Bottom Navigation Bar for Mobile */}
+            <div className="md:hidden fixed bottom-0 left-0 right-0 bg-[#1E2D24] z-20 border-slate-400 shadow-2xl shadow-black flex justify-around items-center py-4">
+                <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                        isActive ? "text-white flex flex-col items-center bg-red-700 p-1 rounded-md" : "text-white flex flex-col items-center"
+                    }
+                >
                     <svg
                         width="24px"
                         viewBox="0 0 24 24"
@@ -43,26 +47,52 @@ const MobileNav = () => {
                     <span className="text-xs">Home</span>
                 </NavLink>
 
-                <NavLink to="/clubs" className="text-white flex flex-col items-center" onClick={handleNavLinkClick}>
+                <NavLink
+                    to="/clubs"
+                    className={({ isActive }) =>
+                        isActive ? "text-white flex flex-col items-center bg-red-700 p-1 rounded-md" : "text-white flex flex-col items-center"
+                    }
+                    onClick={handleNavLinkClick}
+                >
                     <MdSportsVolleyball className="text-2xl" />
                     <span className="text-xs">Clubs</span>
                 </NavLink>
 
-              {
-                user ? <NavLink to="/dashboard/home" className="text-white flex flex-col items-center" onClick={handleNavLinkClick}>
-                <RxDashboard  className="text-2xl" />
-                <span className="text-xs">Dashboard</span>
-            </NavLink> : <NavLink to={{ pathname: '/login', state: { from: location } }}  className="text-white flex flex-col items-center" onClick={handleNavLinkClick}>
-                    <RxDashboard  className="text-2xl" />
-                    <span className="text-xs">Dashboard</span>
-                </NavLink>
-              }
+                {user ? (
+                    <NavLink
+                        to="/dashboard/home"
+                        className={({ isActive }) =>
+                            isActive ? "text-white flex flex-col items-center bg-red-700 p-1 rounded-md" : "text-white flex flex-col items-center"
+                        }
+                        onClick={handleNavLinkClick}
+                    >
+                        <RxDashboard className="text-2xl" />
+                        <span className="text-xs">Dashboard</span>
+                    </NavLink>
+                ) : (
+                    <NavLink
+                        to={{ pathname: '/login', state: { from: location } }}
+                        className={({ isActive }) =>
+                            isActive ? "text-white flex flex-col items-center bg-red-700 p-1 rounded-md" : "text-white flex flex-col items-center"
+                        }
+                        onClick={handleNavLinkClick}
+                    >
+                        <RxDashboard className="text-2xl" />
+                        <span className="text-xs">Dashboard</span>
+                    </NavLink>
+                )}
 
-                <NavLink to="/projects" className="text-white flex flex-col items-center" onClick={handleNavLinkClick}>
+                <NavLink
+                    to="/projects"
+                    className={({ isActive }) =>
+                        isActive ? "text-white flex flex-col items-center bg-red-700 p-1 rounded-md" : "text-white flex flex-col items-center"
+                    }
+                    onClick={handleNavLinkClick}
+                >
                     <GoProjectSymlink className="text-2xl" />
                     <span className="text-xs">Projects</span>
                 </NavLink>
-                
+
                 <button className="text-white flex flex-col items-center" onClick={toggleDrawer}>
                     {isDrawerOpen ? (
                         <svg
@@ -98,20 +128,36 @@ const MobileNav = () => {
                 </button>
             </div>
 
-          
             {/* Drawer for Departments */}
-          
             {isDrawerOpen && (
                 <div className="fixed bottom-16 left-0 right-0 bg-[#1E2D24] z-30 border-t-2 border-slate-400 shadow-2xl shadow-black p-4">
-                    <NavLink to="/resources/cse" className="text-white flex items-center mb-2" onClick={handleNavLinkClick}>
+                    <NavLink
+                        to="/resources/cse"
+                        className={({ isActive }) =>
+                            isActive ? "text-white flex items-center mb-2 bg-red-700 p-1 rounded-md" : "text-white flex items-center mb-2"
+                        }
+                        onClick={handleNavLinkClick}
+                    >
                         <MdComputer className="text-2xl mr-2" />
                         <span className="text-base">CSE</span>
                     </NavLink>
-                    <NavLink to="/eee" className="text-white flex items-center mb-2" onClick={handleNavLinkClick}>
+                    <NavLink
+                        to="/eee"
+                        className={({ isActive }) =>
+                            isActive ? "text-white flex items-center mb-2 bg-red-700 p-1 rounded-md" : "text-white flex items-center mb-2"
+                        }
+                        onClick={handleNavLinkClick}
+                    >
                         <GiElectric className="text-2xl mr-2" />
                         <span className="text-base">EEE</span>
                     </NavLink>
-                    <NavLink to="/pharmacy" className="text-white flex items-center mb-2" onClick={handleNavLinkClick}>
+                    <NavLink
+                        to="/pharmacy"
+                        className={({ isActive }) =>
+                            isActive ? "text-white flex items-center mb-2 bg-red-700 p-1 rounded-md" : "text-white flex items-center mb-2"
+                        }
+                        onClick={handleNavLinkClick}
+                    >
                         <svg
                             width="24px"
                             viewBox="0 0 24 24"
