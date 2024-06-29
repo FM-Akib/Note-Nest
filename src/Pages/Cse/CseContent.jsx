@@ -75,7 +75,7 @@ const CseContent = () => {
 
 
    //Like functionality are added
-   const handleLike = async (courseCode,contentType, playlistId) => {
+   const handleLike = async (courseCode,contentType, playlistId,authorEmail) => {
     try {
         let currentPlaylist ;
         if(contentType === 'Playlist'){
@@ -94,13 +94,13 @@ const CseContent = () => {
         const liked = currentPlaylist?.likes?.includes(user.email);
         if (liked) {
             await axiosPublic.delete(`/courses/${courseCode}/${contentType}/${playlistId}/unlike`, {
-                data: { email: user.email }
+                data: { email: user.email,authorEmail:authorEmail }
             });
             setStars(currentPlaylist.star - 1);
             setLiked(false);
         } else {
             await axiosPublic.post(`/courses/${courseCode}/${contentType}/${playlistId}/like`, {
-                email: user.email
+                email: user.email,authorEmail:authorEmail
             });
             setStars(currentPlaylist.star + 1);
             setLiked(true);
@@ -372,7 +372,7 @@ const CseContent = () => {
                                         
                                         {
                                             user? <button
-                                                onClick={() => handleLike(courseCode,item.contentType, item.id)}
+                                                onClick={() => handleLike(courseCode,item.contentType, item.id,item.authorEmail)}
                                                 className={`${
                                                     liked ? 'bg-blue-500 text-white' : 'bg-white text-slate-500'
                                                 } hover:${

@@ -1,12 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { GiElectric } from "react-icons/gi";
 import { GoProjectSymlink } from "react-icons/go";
 import { MdComputer, MdSportsVolleyball } from "react-icons/md";
+import { RxDashboard } from "react-icons/rx";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const MobileNav = () => {
         // const [isNavOpen, setIsNavOpen] = useState(false);
         const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+        const {user} = useContext(AuthContext)
 
         // const toggleNav = () => {
         //     setIsNavOpen(!isNavOpen);
@@ -23,7 +26,7 @@ const MobileNav = () => {
     return (
         <div>
                      {/* Bottom Navigation Bar for Mobile */}
-                     <div className="md:hidden fixed bottom-0 left-0 right-0 bg-[#1E2D24] z-20 border-t-2 border-slate-400 shadow-2xl shadow-black flex justify-around items-center py-2">
+                     <div className="md:hidden fixed bottom-0 left-0 right-0 bg-[#1E2D24] z-20  border-slate-400 shadow-2xl shadow-black flex justify-around items-center py-4">
                 <NavLink to="/" className="text-white flex flex-col items-center">
                     <svg
                         width="24px"
@@ -46,6 +49,16 @@ const MobileNav = () => {
                     <MdSportsVolleyball className="text-2xl" />
                     <span className="text-xs">Clubs</span>
                 </NavLink>
+
+              {
+                user ? <NavLink to="/dashboard/home" className="text-white flex flex-col items-center" onClick={handleNavLinkClick}>
+                <RxDashboard  className="text-2xl" />
+                <span className="text-xs">Dashboard</span>
+            </NavLink> : <NavLink to="/login" className="text-white flex flex-col items-center" onClick={handleNavLinkClick}>
+                    <RxDashboard  className="text-2xl" />
+                    <span className="text-xs">Dashboard</span>
+                </NavLink>
+              }
 
                 <NavLink to="/projects" className="text-white flex flex-col items-center" onClick={handleNavLinkClick}>
                     <GoProjectSymlink className="text-2xl" />
@@ -83,7 +96,7 @@ const MobileNav = () => {
                             />
                         </svg>
                     )}
-                    <span className="text-xs">Menu</span>
+                    <span className="text-xs">Dept</span>
                 </button>
             </div>
 

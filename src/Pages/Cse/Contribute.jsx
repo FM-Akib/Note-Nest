@@ -25,6 +25,7 @@ const Contribute = () => {
   // const {user} = useContext(AuthContext)
   // console.log(user)
   const {userInfo} = useUserInfo()
+   console.log(userInfo)
 
   const axiosPublic = useAxiosPublic();
 
@@ -57,6 +58,7 @@ const Contribute = () => {
         imgCover: imageCover,
         semseter: data.semester,
         description: data.description,
+        authorEmail: userInfo.email,
         authorName: userInfo.name,
         authorImg: userInfo.image,
         contentType: data.content,
