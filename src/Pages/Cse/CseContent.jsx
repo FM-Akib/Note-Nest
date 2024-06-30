@@ -372,11 +372,13 @@ const CseContent = () => {
                                         </>
                                          }
 
-                                            <Link to={item.url} target="_blank">
-                                                <button className="bg-white hover:bg-red-400 hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
-                                                    <LiaBullseyeSolid className="mr-1" /> View
+
+
+                                        <Link to={item.url} target="_blank">
+                                            <button className="bg-white hover:bg-red-400 hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
+                                                <LiaBullseyeSolid className="mr-1" /> View
                                                 </button>
-                                            </Link>
+                                        </Link>
                                         
                                         {
                                             user? <button
