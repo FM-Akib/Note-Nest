@@ -55,37 +55,8 @@ const ResourceLayout = () => {
                     </svg>
                     <span className="text-xs">Home</span>
                 </NavLink>
-                
-                {
-                    user?  <NavLink to="/dashboard/home" className="text-white flex flex-col items-center">
-                        <svg
-                            width="24px"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M10 2H14V6H10V2ZM2 10H6V14H2V10ZM18 10H22V14H18V10ZM10 18H14V22H10V18ZM4 4H9V9H4V4ZM15 4H20V9H15V4ZM15 15H20V20H15V15ZM4 15H9V20H4V15Z"
-                                fill="#FFFFFF"
-                            />
-                        </svg>
-                        <span className="text-xs">Dashboard</span>
-                    </NavLink> : <NavLink to={{ pathname: '/login', state: { from: location } }} className="text-white flex flex-col items-center">
-                    <svg
-                        width="24px"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M10 2H14V6H10V2ZM2 10H6V14H2V10ZM18 10H22V14H18V10ZM10 18H14V22H10V18ZM4 4H9V9H4V4ZM15 4H20V9H15V4ZM15 15H20V20H15V15ZM4 15H9V20H4V15Z"
-                            fill="#FFFFFF"
-                        />
-                    </svg>
-                    <span className="text-xs">Dashboard</span>
-                </NavLink>
-                }
 
+                
                 <button
                     className="text-white flex flex-col items-center"
                     onClick={toggleNav}
@@ -122,6 +93,37 @@ const ResourceLayout = () => {
                     )}
                     <span className="text-xs">Course</span>
                 </button>
+                
+                {
+                    user?  <NavLink to="/dashboard/home" className="text-white flex flex-col items-center">
+                        <svg
+                            width="24px"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M10 2H14V6H10V2ZM2 10H6V14H2V10ZM18 10H22V14H18V10ZM10 18H14V22H10V18ZM4 4H9V9H4V4ZM15 4H20V9H15V4ZM15 15H20V20H15V15ZM4 15H9V20H4V15Z"
+                                fill="#FFFFFF"
+                            />
+                        </svg>
+                        <span className="text-xs">Dashboard</span>
+                    </NavLink> : <NavLink to={{ pathname: '/login', state: { from: location } }} className="text-white flex flex-col items-center">
+                    <svg
+                        width="24px"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M10 2H14V6H10V2ZM2 10H6V14H2V10ZM18 10H22V14H18V10ZM10 18H14V22H10V18ZM4 4H9V9H4V4ZM15 4H20V9H15V4ZM15 15H20V20H15V15ZM4 15H9V20H4V15Z"
+                            fill="#FFFFFF"
+                        />
+                    </svg>
+                    <span className="text-xs">Dashboard</span>
+                </NavLink>
+                }
+
             </div>
 
         {/* Toggle Button for Mobile */}
