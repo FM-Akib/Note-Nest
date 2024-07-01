@@ -3,6 +3,9 @@ import { TbCoinTaka } from "react-icons/tb";
 import useProjects from "../../Hooks/useProjects";
 import MobileNav from "../../components/Shared/MobileNav";
 import { Helmet } from "react-helmet";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import { Link } from "react-router-dom";
 
 
 const Projects = () => {
@@ -16,7 +19,7 @@ const Projects = () => {
     //     .then(data => {setComponents(data)});
     // }, []);
     // console.log(components)
-     
+    const {user} =useContext(AuthContext)
     const {components} = useProjects()
 
     const [selectedComponent, setSelectedComponent] = useState(null);
@@ -48,9 +51,9 @@ const Projects = () => {
                         'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'100\' viewBox=\'0 0 100 100\'%3E%3Cg fill-rule=\'evenodd\'%3E%3Cg fill=\'%23e0e7ff\' fill-opacity=\'1\'%3E%3Cpath opacity=\'.5\' d=\'M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z\'/%3E%3Cpath d=\'M6 5V0H5v5H0v1h5v94h1V6h94V5H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
                 }}
             />
-            <div className="relative mx-auto max-w-7xl px-6 pt-16 pb-12 sm:px-12 lg:pt-24">
+            <div className="relative mx-auto max-w-7xl px-6 pt-5 md:pt-14 pb-12 sm:px-12 lg:pt-20">
                 <header className="mx-auto max-w-2xl text-center">
-                    <h1 className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-4xl flex items-center justify-center gap-3">
+                    <h1 className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-4xl flex items-center justify-center gap-3 ">
                     <svg height="45px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xmlSpace="preserve">
                     <path style={{ fill: '#A5A5A5' }} d="M512,77.913v33.391H0V77.913c0-24.588,19.933-44.522,44.522-44.522h422.957C492.066,33.391,512,53.325,512,77.913z"/>
                     <path style={{ fill: '#777777' }} d="M397.913,66.226v1.113c0,4.61-3.738,8.348-8.348,8.348c-4.61,0-8.348-3.738-8.348-8.348v-1.113c0-4.61,3.738-8.348,8.348-8.348C394.175,57.878,397.913,61.616,397.913,66.226z M422.957,57.878c-4.61,0-8.348,3.738-8.348,8.348v1.113c0,4.61,3.738,8.348,8.348,8.348c4.61,0,8.348-3.738,8.348-8.348v-1.113C431.304,61.616,427.567,57.878,422.957,57.878z M456.348,57.878c-4.61,0-8.348,3.738-8.348,8.348v1.113c0,4.61,3.738,8.348,8.348,8.348s8.348-3.738,8.348-8.348v-1.113C464.696,61.616,460.958,57.878,456.348,57.878z"/>
@@ -65,14 +68,77 @@ const Projects = () => {
                    </svg> 
 
                         Project Components</h1>
-                    <p className="mt-2 text-sm font-semibold text-gray-400">
+                    <p className="mt-2 text-sm  font-semibold text-gray-400">
                     A student marketplace for project components
                     </p>
                 </header>
             </div>
         </div>
 
-            <div className="grid md:grid-cols-3 gap-8  px-4  md:px-20 mt-7">
+
+        
+
+
+        <header className="bg-gray-50">
+            <div className="mx-auto max-w-screen-xl px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
+                <div className="sm:flex sm:items-center sm:justify-between">
+                <div className="text-center sm:text-left">
+                    <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">Sell Project Components</h1>
+
+                    <p className="mt-1.5 text-sm text-gray-500">Your Hub for Buying and Selling Project Parts! 🎉</p>
+                </div>
+
+                <div className="mt-4 flex flex-col gap-4 sm:mt-0 sm:flex-row sm:items-center">
+                    {/* <button
+                    className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-gray-200 bg-white px-5 py-3 text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring"
+                    type="button"
+                    >
+                    <span className="text-sm font-medium"> View Website </span>
+
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-4 w-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                    >
+                        <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                    </svg>
+                    </button> */}
+
+                 {
+                    user?<Link to="/dashboard/sellprojects"  className="block text-center rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring"
+                    type="button"><button
+                    type="button"
+                    >
+                    Sell components
+                    </button> </Link> : <Link to="/login"  className="block rounded-lg text-center bg-indigo-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring"
+                    type="button"><button
+                    type="button"
+                    >
+                    Sell components
+                    </button></Link> 
+                 }
+                </div>
+                </div>
+            </div>
+            </header>
+
+
+
+
+
+
+
+
+
+
+          <div className="grid md:grid-cols-3 gap-8  px-4  md:px-20 mt-7">
                 {components?.map(component => (
                     <div key={component.id} className="relative flex flex-col justify-between bg-white rounded-lg overflow-hidden shadow-lg ring-4 ring-blue-300 ring-opacity-40 max-w-sm hover:ring-red-300">
                         <div className="relative">
