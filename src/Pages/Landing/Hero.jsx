@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import competionHubLogo from '../../assets/competitonHublogo.png'
 import '../../App.css';
+import heroLeft from '../../assets/heroLeftWhite.png'
 
 
 const Hero = () => {
@@ -123,7 +124,8 @@ const Hero = () => {
                   className="absolute scale-75 md:scale-110 inset-0 m-auto w-full h-full md:w-96 md:h-96 rounded-full rotate-45 bg-gradient-to-r from-sky-500 to-cyan-300 blur-3xl"
                 ></div>
                 <img
-                  src="https://tailus.io/sources/blocks/tech-startup/preview/images/globalization-cuate.svg"
+                  // src="https://tailus.io/sources/blocks/tech-startup/preview/images/globalization-cuate.svg"
+                  src={heroLeft}
                   className="relative w-full"
                   alt="wath illustration"
                   loading="lazy"
