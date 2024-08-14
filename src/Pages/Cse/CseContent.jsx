@@ -8,6 +8,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import { v4 as uuidv4 } from 'uuid';
 import { Helmet } from "react-helmet";
+import { CiBookmark } from "react-icons/ci";
 // import { FcDoNotInsert } from "react-icons/fc";
 
 
@@ -203,41 +204,22 @@ const CseContent = () => {
                                         </div>
                                     </div>
                                     <div className="flex flex-col md:flex-row items-center space-x-4 justify-between">
-                                        {/* <div className="text-grey-500 flex flex-row space-x-1 my-4">
-                                            <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                            </svg>
-                                            <p className="text-xs">2 hours ago</p>
-                                        </div> */}
+                                   
                                         <div className="flex flex-row items-center space-x-1 ">
                                          {
-                                            user?<button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
-                                            <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    fillRule="evenodd"
-                                                    clipRule="evenodd"
-                                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
-                                                    fill="#9A031E"
-                                                />
-                                            </svg>
+                                            user?<button onClick={() => handleBookMark(item)} className="font-bold py-2 px-4 rounded ">
+                                            <CiBookmark className=" text-3xl" />
                                         </button>:<>
                                         <Link to="/login">
-                                        <button className=" text-white  font-bold py-2 px-4 rounded ">
-                                            <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    fillRule="evenodd"
-                                                    clipRule="evenodd"
-                                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
-                                                    fill="#9A031E"
-                                                />
-                                            </svg>
+                                        <button className="   font-bold py-2 px-4 rounded ">
+                                        <CiBookmark className=" text-3xl"/>
                                         </button>
                                         </Link>
                                         </>
                                          }
 
                                             <Link to={item.url} target="_blank">
-                                                <button className="bg-white hover:bg-red-400 hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
+                                                <button className="bg-white hover:bg-[#9A031E] hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
                                                     <LiaBullseyeSolid className="mr-1" /> View
                                                 </button>
                                             </Link>
@@ -340,34 +322,15 @@ const CseContent = () => {
                                         </div>
                                     </div>
                                     <div className="flex flex-col md:flex-row items-center space-x-4 justify-between">
-                                        {/* <div className="text-grey-500 flex flex-row space-x-1 my-4">
-                                            <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                            </svg>
-                                            <p className="text-xs">2 hours ago</p>
-                                        </div> */}
+                              
                                         <div className="flex flex-row items-center space-x-1 ">
                                          {
-                                            user? <button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
-                                            <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    fillRule="evenodd"
-                                                    clipRule="evenodd"
-                                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
-                                                    fill="#9A031E"
-                                                />
-                                            </svg>
+                                            user? <button onClick={() => handleBookMark(item)} className="  font-bold py-2 px-4 rounded ">
+                                           <CiBookmark className=" text-3xl"/>
                                         </button>:<>
                                         <Link to="/login">
-                                        <button  className=" text-white  font-bold py-2 px-4 rounded ">
-                                            <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    fillRule="evenodd"
-                                                    clipRule="evenodd"
-                                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
-                                                    fill="#9A031E"
-                                                />
-                                            </svg>
+                                        <button  className="  font-bold py-2 px-4 rounded ">
+                                        <CiBookmark className=" text-3xl"/>
                                         </button></Link>
                                         </>
                                          }
@@ -375,7 +338,7 @@ const CseContent = () => {
 
 
                                         <Link to={item.url} target="_blank">
-                                            <button className="bg-white hover:bg-red-400 hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
+                                            <button className="bg-white hover:bg-[#9A031E] hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
                                                 <LiaBullseyeSolid className="mr-1" /> View
                                                 </button>
                                         </Link>
@@ -459,39 +422,20 @@ const CseContent = () => {
                                         </div>
                                     </div>
                                     <div className="flex flex-col md:flex-row items-center space-x-4 justify-between">
-                                        {/* <div className="text-grey-500 flex flex-row space-x-1 my-4">
-                                            <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                            </svg>
-                                            <p className="text-xs">2 hours ago</p>
-                                        </div> */}
+                            
                                         <div className="flex flex-row items-center space-x-1 ">
                                          {
-                                            user ? <button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
-                                            <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    fillRule="evenodd"
-                                                    clipRule="evenodd"
-                                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
-                                                    fill="#9A031E"
-                                                />
-                                            </svg>
+                                            user ? <button onClick={() => handleBookMark(item)} className="  font-bold py-2 px-4 rounded ">
+                                            <CiBookmark className=" text-3xl"/>
                                         </button>:<>  <Link to="/login">
-                                        <button  className=" text-white  font-bold py-2 px-4 rounded ">
-                                            <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    fillRule="evenodd"
-                                                    clipRule="evenodd"
-                                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
-                                                    fill="#9A031E"
-                                                />
-                                            </svg>
+                                        <button  className="  font-bold py-2 px-4 rounded ">
+                                        <CiBookmark className=" text-3xl"/>
                                         </button>
                                         </Link>  </>
                                          }
 
                                             <Link to={item.url} target="_blank">
-                                                <button className="bg-white hover:bg-red-400 hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
+                                                <button className="bg-white hover:bg-[#9A031E] hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
                                                     <LiaBullseyeSolid className="mr-1" /> View
                                                 </button>
                                             </Link>
@@ -576,39 +520,20 @@ const CseContent = () => {
                                         </div>
                                     </div>
                                     <div className="flex flex-col md:flex-row items-center space-x-4 justify-between">
-                                        {/* <div className="text-grey-500 flex flex-row space-x-1 my-4">
-                                            <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                            </svg>
-                                            <p className="text-xs">2 hours ago</p>
-                                        </div> */}
+                                 
                                         <div className="flex flex-row items-center space-x-1 ">           
                                             {user? 
-                                            <button onClick={() => handleBookMark(item)} className=" text-white  font-bold py-2 px-4 rounded ">
-                                                <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        fillRule="evenodd"
-                                                        clipRule="evenodd"
-                                                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
-                                                        fill="#9A031E"
-                                                    />
-                                                </svg>
+                                            <button onClick={() => handleBookMark(item)} className=" font-bold py-2 px-4 rounded ">
+                                             <CiBookmark className=" text-3xl"/>
                                             </button>: <>  <Link to="/login">
                                             
-                                            <button  className=" text-white  font-bold py-2 px-4 rounded ">
-                                                <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        fillRule="evenodd"
-                                                        clipRule="evenodd"
-                                                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM16 14.0455V11.5488C16 9.40445 16 8.3323 15.4142 7.66615C14.8284 7 13.8856 7 12 7C10.1144 7 9.17157 7 8.58579 7.66615C8 8.3323 8 9.40445 8 11.5488V14.0455C8 15.5937 8 16.3679 8.32627 16.7062C8.48187 16.8675 8.67829 16.9688 8.88752 16.9958C9.32623 17.0522 9.83855 16.5425 10.8632 15.5229C11.3161 15.0722 11.5426 14.8469 11.8046 14.7875C11.9336 14.7583 12.0664 14.7583 12.1954 14.7875C12.4574 14.8469 12.6839 15.0722 13.1368 15.5229C14.1615 16.5425 14.6738 17.0522 15.1125 16.9958C15.3217 16.9688 15.5181 16.8675 15.6737 16.7062C16 16.3679 16 15.5937 16 14.0455Z"
-                                                        fill="#9A031E"
-                                                    />
-                                                </svg>
+                                            <button  className="   font-bold py-2 px-4 rounded ">
+                                            <CiBookmark className=" text-3xl"/>
                                             </button>
                                             </Link> </>}
 
                                             <Link to={item.url} target="_blank">
-                                                <button className="bg-white hover:bg-red-400 hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
+                                                <button className="bg-white hover:bg-[#9A031E] hover:text-white text-slate-600 border-2 border-slate-200 font-bold py-2 px-4 rounded-md mr-[10px] flex justify-between items-center">
                                                     <LiaBullseyeSolid className="mr-1" /> View
                                                 </button>
                                             </Link>
