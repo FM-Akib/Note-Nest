@@ -6,6 +6,7 @@ import Hero from "./Hero";
 import SellComponents from "./SellComponents";
 import TopContributor from "./TopContributor";
 import UniCard from "./UniCard";
+import ContactUs from "./ContactUs";
 const Landing = () => {
 
 
@@ -22,7 +23,7 @@ const Landing = () => {
             <Features />
             <SellComponents />
             <Departments />
-
+            <ContactUs/>
 
 
 
