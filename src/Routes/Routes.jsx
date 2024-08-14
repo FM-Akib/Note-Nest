@@ -20,6 +20,8 @@ import Myprojects from "../Pages/Dashboard/Myprojects";
 import Sellcomponents from "../Pages/Dashboard/Sellcomponents";
 import ErrorPage from "../Pages/Error/ErrorPage";
 import EEEHome from "../Pages/EEE/EEEHome";
+import EEEContent from "../Pages/EEE/EEEContent";
+import ResourceLayoutEee from "../Layout/ResourceLayoutEee";
 
 
 
@@ -74,10 +76,25 @@ import EEEHome from "../Pages/EEE/EEEHome";
          path: "*",
          element: <ErrorPage/>
         },
+      
+      ]
+    },
+    {
+      path: "resourcesEEE",
+      element: <ResourceLayoutEee/>,
+      children:[
+        {
+         path: "*",
+         element: <ErrorPage/>
+        },
         {
           path: "eee",
           element: <EEEHome/>
-        }
+        },
+        {
+          path: "content/:id",
+          element: <EEEContent/>
+        },
       ]
     },
     {

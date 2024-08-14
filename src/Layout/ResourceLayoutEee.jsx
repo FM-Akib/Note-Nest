@@ -1,12 +1,12 @@
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import NavBar from "../components/Shared/NavBar";
-import ResourceLeftNav from "../components/Shared/ResourceLeftNav";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
+import ResourceLeftNavEEE from "../components/Shared/ResourceLeftNavEEE";
 
 
 
-const ResourceLayout = () => {
+const ResourceLayoutEee = () => {
     const [isNavOpen,setIsNavOpen] = useState(false);
     const {user} = useContext(AuthContext)
     const location = useLocation();
@@ -29,13 +29,8 @@ const ResourceLayout = () => {
         
         <div className={`bg-[#9A031E] text-white w-full md:w-1/5 z-10 ${isNavOpen ? 'absolute' : 'hidden'} md:block`}>
         
-         <ResourceLeftNav  closeNav={closeNav} ></ResourceLeftNav>
-{/*         
-        {
-            location.pathname ==='/resources/eee' &&  <ResourceLeftNavEEE  closeNav={closeNav} ></ResourceLeftNavEEE>
-        }
-        */}
-       
+        <ResourceLeftNavEEE  closeNav={closeNav} />
+
        
         </div>
         
@@ -149,4 +144,4 @@ const ResourceLayout = () => {
     );
 };
 
-export default ResourceLayout;
+export default ResourceLayoutEee;
