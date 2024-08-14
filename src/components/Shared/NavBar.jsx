@@ -4,6 +4,8 @@ import { useContext, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 import useUserInfo from '../../Hooks/useUserInfo';
 import toast, { Toaster } from 'react-hot-toast';
+import { RiLogoutCircleRFill } from "react-icons/ri";
+
 
 
 const loggedOutNotify = () =>{
@@ -87,7 +89,7 @@ const NavBar = () => {
                                     </NavLink>
                                 </li>
                                 {/* <li><a>Settings</a></li> */}
-                                <li><button onClick={handleLogout}>Logout</button></li>
+                                <li><button onClick={handleLogout} >Logout<RiLogoutCircleRFill className='text-xl' /></button></li>
                             </ul>
                         </div>
                     ) : (
