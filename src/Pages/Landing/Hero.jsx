@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import competionHubLogo from '../../assets/competitonHublogo.png'
 import '../../App.css';
-import heroLeft from '../../assets/heroLeftWhite.png'
+import heroLeft from '../../assets/HeroLeftWhite.png'
 
 
 const Hero = () => {
