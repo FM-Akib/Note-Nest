@@ -51,7 +51,7 @@ const NavBar = () => {
                     {dropdownOpen && (
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-4 shadow-xl bg-[#1E2D24] rounded-box w-72">
                             <li><NavLink exact to="/resources/cse" activeClassName="bg-white text-gray-600" onClick={handleNavLinkClick}>CSE</NavLink></li>
-                            <li><NavLink exact to="/eee" activeClassName="bg-white text-gray-600" onClick={handleNavLinkClick}>EEE</NavLink></li>
+                            <li><NavLink exact to="/resources/eee" activeClassName="bg-white text-gray-600" onClick={handleNavLinkClick}>EEE</NavLink></li>
                             <li><NavLink exact to="/pharmacy" activeClassName="bg-white text-gray-600" onClick={handleNavLinkClick}>Pharmacy</NavLink></li>
                             <li><NavLink exact to="/clubs" activeClassName="bg-white text-gray-600" onClick={handleNavLinkClick}>Clubs</NavLink></li>
                             <li><NavLink exact to="/projects" activeClassName="bg-white text-gray-600" onClick={handleNavLinkClick}>Project-components</NavLink></li>
@@ -66,7 +66,7 @@ const NavBar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li><NavLink exact to="/resources/cse" activeClassName="bg-white text-gray-600">CSE</NavLink></li>
-                    <li><NavLink exact to="/eee" activeClassName="bg-white text-gray-600">EEE</NavLink></li>
+                    <li><NavLink exact to="/resources/eee" activeClassName="bg-white text-gray-600">EEE</NavLink></li>
                     <li><NavLink exact to="/pharmacy" activeClassName="bg-white text-gray-600">Pharmacy</NavLink></li>
                     <li><NavLink exact to="/clubs" activeClassName="bg-white text-gray-600">Clubs</NavLink></li>
                     <li><NavLink exact to="/projects" activeClassName="bg-white text-gray-600">Project-components</NavLink></li>

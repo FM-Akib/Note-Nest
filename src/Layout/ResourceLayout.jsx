@@ -1,27 +1,44 @@
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import NavBar from "../components/Shared/NavBar";
 import ResourceLeftNav from "../components/Shared/ResourceLeftNav";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
+import ResourceLeftNavEEE from "../components/Shared/ResourceLeftNavEEE";
 
 
 const ResourceLayout = () => {
     const [isNavOpen,setIsNavOpen] = useState(false);
     const {user} = useContext(AuthContext)
     const location = useLocation();
+    
+    useEffect(() => {
+        console.log('Current path:', location.pathname);
+      }, [location]);
+    
+    
     const toggleNav=()=>{
         setIsNavOpen(!isNavOpen);
     }
     const closeNav=()=>{
         setIsNavOpen(false);
     }
+
+
     return (
         <div className="Inter-font bg-[#F8F0FB]">
             <NavBar></NavBar>
         <div className=" pt-[68px]  relative flex h-screen min-w-full">
         
         <div className={`bg-[#9A031E] text-white w-full md:w-1/5 z-10 ${isNavOpen ? 'absolute' : 'hidden'} md:block`}>
-        <ResourceLeftNav  closeNav={closeNav} ></ResourceLeftNav>
+        {
+            location.pathname ==='/resources/cse' &&  <ResourceLeftNav  closeNav={closeNav} ></ResourceLeftNav>
+        }
+        {
+            location.pathname ==='/resources/eee' &&  <ResourceLeftNavEEE  closeNav={closeNav} ></ResourceLeftNavEEE>
+        }
+       
+       
+       
         </div>
         
 

@@ -19,6 +19,7 @@ import Projects from "../Pages/Projects/Projects";
 import Myprojects from "../Pages/Dashboard/Myprojects";
 import Sellcomponents from "../Pages/Dashboard/Sellcomponents";
 import ErrorPage from "../Pages/Error/ErrorPage";
+import EEEHome from "../Pages/EEE/EEEHome";
 
 
 
@@ -72,6 +73,10 @@ import ErrorPage from "../Pages/Error/ErrorPage";
         {
          path: "*",
          element: <ErrorPage/>
+        },
+        {
+          path: "eee",
+          element: <EEEHome/>
         }
       ]
     },

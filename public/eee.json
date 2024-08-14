@@ -1,0 +1,920 @@
+[
+    {
+        "semester": "1st",
+        "courseCode": "CSE-1105",
+        "courseTitle": "Computer Programming I",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "1st",
+        "courseCode": "CSE-1106",
+        "courseTitle": "Computer Programming I Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "1st",
+        "courseCode": "EEE-1101",
+        "courseTitle": "Electrical Circuits I",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "1st",
+        "courseCode": "EEE-1102",
+        "courseTitle": "Electrical Circuits I Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "1st",
+        "courseCode": "MATH-1107",
+        "courseTitle": "Mathematics I (Differential and Integral Calculus)",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "1st",
+        "courseCode": "PHY-1101",
+        "courseTitle": "Physics I",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "1st",
+        "courseCode": "UREL-1106",
+        "courseTitle": "Advanced English",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "1st",
+        "courseCode": "UREM-1101",
+        "courseTitle": "Text of Ethics and Morality",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "2nd",
+        "courseCode": "CE-1204",
+        "courseTitle": "Engineering Drawing Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "2nd",
+        "courseCode": "CSE-1205",
+        "courseTitle": "Computer Programming II",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "2nd",
+        "courseCode": "CSE-1206",
+        "courseTitle": "Computer Programming II Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "2nd",
+        "courseCode": "EEE-1201",
+        "courseTitle": "Electrical Circuits II",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "2nd",
+        "courseCode": "EEE-1202",
+        "courseTitle": "Electrical Circuits II Sessional and Electrical Workshop",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "2nd",
+        "courseCode": "MATH-1207",
+        "courseTitle": "Mathematics II (Differential Equation and Coordinate Geometry)",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "2nd",
+        "courseCode": "PHY-1201",
+        "courseTitle": "Physics II",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "2nd",
+        "courseCode": "PHY-1204",
+        "courseTitle": "Physics Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "2nd",
+        "courseCode": "URED-1201",
+        "courseTitle": "Basic Principles of Islam",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "3rd",
+        "courseCode": "CHEM-2301",
+        "courseTitle": "Chemistry",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "3rd",
+        "courseCode": "CHEM-2304",
+        "courseTitle": "Chemistry Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "3rd",
+        "courseCode": "EEE-2301",
+        "courseTitle": "Electronics I",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "3rd",
+        "courseCode": "EEE-2302",
+        "courseTitle": "Electronics I Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "3rd",
+        "courseCode": "EEE-2303",
+        "courseTitle": "Electrical Machine I",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "3rd",
+        "courseCode": "EEE-2306",
+        "courseTitle": "Numerical Technique Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "3rd",
+        "courseCode": "MATH-2309",
+        "courseTitle": "Mathematics III (Linear Algebra, Matrices and Vector Analysis)",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "3rd",
+        "courseCode": "ME-2301",
+        "courseTitle": "Fundamentals of Mechanical Engineering",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "3rd",
+        "courseCode": "STAT-2303",
+        "courseTitle": "Probability and Statistics",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "3rd",
+        "courseCode": "URED-2302",
+        "courseTitle": "Sciences of Qur’an and Hadith",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "3rd",
+        "courseCode": "URED-2305",
+        "courseTitle": "Comparative Religion",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "4th",
+        "courseCode": "ACC-2401",
+        "courseTitle": "Financial and Managerial Accounting",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "4th",
+        "courseCode": "EEE-2401",
+        "courseTitle": "Electrical Machine II",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "4th",
+        "courseCode": "EEE-2402",
+        "courseTitle": "Electrical Machine Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "4th",
+        "courseCode": "EEE-2407",
+        "courseTitle": "Digital Electronics",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "4th",
+        "courseCode": "EEE-2408",
+        "courseTitle": "Digital Electronics Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "4th",
+        "courseCode": "EEE-2411",
+        "courseTitle": "Electronics II",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "4th",
+        "courseCode": "EEE-2412",
+        "courseTitle": "Electronics II Sessional and Electronics Workshop",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "4th",
+        "courseCode": "EEE-2415",
+        "courseTitle": "Transmission and Distribution of Electrical Power",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "4th",
+        "courseCode": "GEBL-2401",
+        "courseTitle": "Bangla Language and Literature",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "4th",
+        "courseCode": "MATH-2409",
+        "courseTitle": "Mathematics IV (Complex Variable, Laplaces and Fourier Analysis, Z-transform)",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "5th",
+        "courseCode": "ECON-3501",
+        "courseTitle": "Principles of Economics",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "5th",
+        "courseCode": "EEE-3501",
+        "courseTitle": "Continuous Signals and Linear Systems",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "5th",
+        "courseCode": "EEE-3505",
+        "courseTitle": "Microprocessor and Interfacing",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "5th",
+        "courseCode": "EEE-3506",
+        "courseTitle": "Microprocessor and Interfacing Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "5th",
+        "courseCode": "EEE-3508",
+        "courseTitle": "Circuit Simulation Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "5th",
+        "courseCode": "EEE-3515",
+        "courseTitle": "Electrical Properties of Materials",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "5th",
+        "courseCode": "EEE-3519",
+        "courseTitle": "Power System Analysis",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "5th",
+        "courseCode": "EEE-3520",
+        "courseTitle": "Power System Analysis Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "5th",
+        "courseCode": "URED-3503",
+        "courseTitle": "Introduction to Political Thoughts and Social Behaviour",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "6th",
+        "courseCode": "EEE-3601",
+        "courseTitle": "Communication Theory",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "6th",
+        "courseCode": "EEE-3602",
+        "courseTitle": "Communication Theory Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "6th",
+        "courseCode": "EEE-3603",
+        "courseTitle": "Digital Signal Processing I",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "6th",
+        "courseCode": "EEE-3604",
+        "courseTitle": "Digital Signal Processing I Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "6th",
+        "courseCode": "EEE-3607",
+        "courseTitle": "Solid State Devices",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "6th",
+        "courseCode": "EEE-3608",
+        "courseTitle": "Research Methodology and Seminar",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "6th",
+        "courseCode": "EEE-3612",
+        "courseTitle": "Electrical Service Design Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "6th",
+        "courseCode": "EEE-3621",
+        "courseTitle": "Engineering Electromagnetism",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "6th",
+        "courseCode": "GEHE-3601",
+        "courseTitle": "History of the Emergence of Bangladesh",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "6th",
+        "courseCode": "MGT-3601",
+        "courseTitle": "Industrial Management",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "6th",
+        "courseCode": "URED-3604",
+        "courseTitle": "Life and Teachings of the Prophet Muhammad (SAAS)",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "EEE-4701",
+        "courseTitle": "Control System I",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "EEE-4702",
+        "courseTitle": "Control System I Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "EEE-4705",
+        "courseTitle": "Power Electronics",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "EEE-4706",
+        "courseTitle": "Power Electronics Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "EEE-4707",
+        "courseTitle": "Power Plant Engineering",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "EEE-4713",
+        "courseTitle": "Compound Semiconductor and Heterojunction Devices",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "EEE-4715",
+        "courseTitle": "Digital Signal Processing II",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "EEE-4723",
+        "courseTitle": "Microwave Engineering",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "EEE-4724",
+        "courseTitle": "Microwave Engineering Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "EEE-4753",
+        "courseTitle": "VLSI I",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "EEE-4754",
+        "courseTitle": "VLSI I Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "FIN-4701",
+        "courseTitle": "Finance and Marketing for Engineers",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "GOV-4709",
+        "courseTitle": "Government",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "LAW-4725",
+        "courseTitle": "Professional Ethics and Environmental Protection Law",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "PSY-4705",
+        "courseTitle": "Psychology",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "SCO-4703",
+        "courseTitle": "Sociology",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "URIH-4701",
+        "courseTitle": "A Survey of Islamic History and Culture",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4801",
+        "courseTitle": "Power System Protection",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4802",
+        "courseTitle": "Power System Protection Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4804",
+        "courseTitle": "Industrial Attachment",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4805",
+        "courseTitle": "Power System Operation and Control",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4807",
+        "courseTitle": "High Voltage Engineering",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4809",
+        "courseTitle": "VLSI II",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4810",
+        "courseTitle": "VLSI II Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4811",
+        "courseTitle": "Opto-Electronics",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4813",
+        "courseTitle": "Semiconductor Device Theory",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4822",
+        "courseTitle": "General viva-voce",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4825",
+        "courseTitle": "Biomedical Instrumentation",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4826",
+        "courseTitle": "Biomedical Instrumentation Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4827",
+        "courseTitle": "Measurement and Instrumentation",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4828",
+        "courseTitle": "Measurement and Instrumentation Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4833",
+        "courseTitle": "Digital Communication",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4834",
+        "courseTitle": "Digital Communication Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4835",
+        "courseTitle": "Mobile Cellular Communication",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4837",
+        "courseTitle": "Telecommunication Engineering",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4841",
+        "courseTitle": "Antenna and Propagation",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4842",
+        "courseTitle": "Antenna and Propagation Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4843",
+        "courseTitle": "Renewable Energy System",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4844",
+        "courseTitle": "Renewable Energy System Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4845",
+        "courseTitle": "Embedded System",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4846",
+        "courseTitle": "Embedded System Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4847",
+        "courseTitle": "Optical Fiber Communication",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4848",
+        "courseTitle": "Optical Fiber Communication Sessional",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "EEE-4860",
+        "courseTitle": "Project/Thesis",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    }
+]
