@@ -121,7 +121,7 @@ const EEEContent = () => {
         <div className="overflow-y-auto max-h-screen">
 
       <Helmet>
-      <title>Note Nest - CSE</title>
+      <title>Note Nest - EEE</title>
       </Helmet>
         
 

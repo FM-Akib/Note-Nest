@@ -142,7 +142,7 @@ const MobileNav = () => {
                         <span className="text-base">CSE</span>
                     </NavLink>
                     <NavLink
-                        to="/eee"
+                        to="/resourcesEEE/eee"
                         className={({ isActive }) =>
                             isActive ? "text-white flex items-center mb-2 bg-red-700 p-1 rounded-md" : "text-white flex items-center mb-2"
                         }

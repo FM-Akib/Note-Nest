@@ -10,7 +10,7 @@ const EEEHome = () => {
     return (
         <div>
     <Helmet>
-      <title>Note Nest - CSE Home</title>
+      <title>Note Nest - EEE Home</title>
     </Helmet>
                    {/* Heading */}
         <div className="relative border-t border-gray-200 bg-gray-50 mb-2">

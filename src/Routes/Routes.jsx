@@ -22,6 +22,7 @@ import ErrorPage from "../Pages/Error/ErrorPage";
 import EEEHome from "../Pages/EEE/EEEHome";
 import EEEContent from "../Pages/EEE/EEEContent";
 import ResourceLayoutEee from "../Layout/ResourceLayoutEee";
+import ContributeEEE from "../Pages/EEE/ContributeEEE";
 
 
 
@@ -95,6 +96,10 @@ import ResourceLayoutEee from "../Layout/ResourceLayoutEee";
           path: "content/:id",
           element: <EEEContent/>
         },
+        {
+          path: "contribute",
+          element: <ContributeEEE/>
+        }
       ]
     },
     {
