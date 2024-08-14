@@ -4,6 +4,9 @@ import '../../App.css';
 import { AuthContext } from '../../Providers/AuthProvider';
 import { useContext } from 'react';
 import { Helmet } from 'react-helmet';
+import pattern from '../../assets/pattern3.jpg'
+
+
 const EEEHome = () => {
     const {user} = useContext(AuthContext)
 
@@ -30,8 +33,8 @@ const EEEHome = () => {
   
 
 <div className="relative mx-auto mt-5">
-    <div className="rounded-xl p-1" style={{backgroundImage: "linear-gradient(to right bottom, rgb(79, 70, 229) 0%, rgb(165, 56, 164) 50%, rgb(220, 38, 38) 100%)"}}>
-        <div className="rounded-lg bg-white backdrop-blur">
+    <div className="rounded-xl p-1 bg-cover bg-center" style={{ backgroundImage: `url(${pattern})` }}>
+        <div className="rounded-lg bg-white/50 ">
             <div className="flex w-full flex-wrap items-center justify-between gap-4 px-8 py-10 sm:px-16 lg:flex-nowrap">
                 <div className="lg:max-w-xl">
                     <h2 className="block w-full pb-2 bg-gradient-to-b from-white to-gray-800 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl">
@@ -42,7 +45,7 @@ const EEEHome = () => {
                     </p>
                 </div>
                 <div className="flex flex-wrap items-center justify-center gap-6 ">
-                   <Link to={`${user?.email ? '/resources/contribute' : '/login'}`}> <button className="bg-[#9a031e] hover:bg-[#181313] text-white font-semibold button-text flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 px-8 py-3 text-xs sm:text-sm tracking-widest">Contribute</button></Link>
+                   <Link to={`${user?.email ? '/resourcesEEE/contribute' : '/login'}`}> <button className="bg-[#9a031e] hover:bg-[#181313] text-white font-semibold button-text flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-300 px-8 py-3 text-xs sm:text-sm tracking-widest">Contribute</button></Link>
                     <button className="flex items-center justify-center whitespace-nowrap rounded-md border border-zinc-700 bg-zinc-900 text-center text-white backdrop-blur transition-all hover:bg-zinc-800 px-8 py-3 text-xs sm:text-sm">Learn More</button>
                 </div>
             </div>
