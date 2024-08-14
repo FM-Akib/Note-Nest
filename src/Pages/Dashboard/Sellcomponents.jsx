@@ -7,6 +7,8 @@ import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { v4 as uuidv4 } from 'uuid';
 import {  AiOutlineControl } from "react-icons/ai";
 import { Helmet } from "react-helmet";
+import { MdPostAdd } from "react-icons/md";
+
 
 
 
@@ -78,12 +80,12 @@ const Sellcomponents = () => {
       <title>Note Nest - Sell Compo</title>
     </Helmet>
 
-        <HeadDash icn={<AiOutlineControl className="text-[#EFCA08] text-4xl" />} head="Sell Components" subHead="Sell your project components"></HeadDash>
+    <HeadDash icn={<AiOutlineControl className="text-[#EFCA08] text-4xl" />} head="Sell Components" subHead="Sell your project components"></HeadDash>
   
   
   
   <div className=" flex items-center">
-    <div className="w-full">
+    <div className="w-full pb-10">
         {/* <h2 className="text-center text-blue-400 font-bold text-2xl uppercase mb-10">Fill out our form</h2> */}
         <div className="bg-white p-4 md:p-10 rounded-lg shadow md:w-4/4 mx-auto lg:w-2/2">
            
@@ -125,7 +127,8 @@ const Sellcomponents = () => {
                 </div>
 
 
-                <button className="block w-full bg-blue-500 text-white font-bold p-4 rounded-lg">Submit</button>
+                <button className="w-full bg-[#9A031E] text-white font-semibold p-3 rounded-lg flex items-center justify-center gap-1">Submit <MdPostAdd className="text-xl" />
+                </button>
          </form>   
         </div>
     </div>

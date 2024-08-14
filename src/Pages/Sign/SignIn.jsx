@@ -5,6 +5,10 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
 import { Helmet } from "react-helmet";
+import toast, { Toaster } from "react-hot-toast";
+
+
+const notifyFailedLogin = () => toast.error("Sign in failed. Try Again!")
 
 const SignIn = () => {
 	const navigate = useNavigate();
@@ -73,9 +77,15 @@ const SignIn = () => {
                   })
 				.catch((error) => {
 				console.log(error.message);
+				if(error.message){
+					notifyFailedLogin()
+				}
 			});
 		}
     return (
+		<>
+		<Toaster position="top-center" reverseOrder={false}/>
+
         <div className="md:grid grid-cols-10 p-2 md:p-14 ">
 
     <Helmet>
@@ -134,6 +144,7 @@ const SignIn = () => {
             </div>
             
         </div>
+		</>
     );
 };
 

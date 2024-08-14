@@ -1,13 +1,13 @@
 import { useForm } from "react-hook-form";
 import useCseCourses from "../../Hooks/useCseCourses";
 import useAxiosPublic from "../../Hooks/useAxiosPublic";
-// import { useContext } from "react";
-// import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import { v4 as uuidv4 } from 'uuid';
 import { GiRoundStar } from "react-icons/gi";
 import useUserInfo from "../../Hooks/useUserInfo";
 import { Helmet } from "react-helmet";
+import { useState } from "react";
+import { FaStar } from "react-icons/fa";
 
 
 
@@ -15,6 +15,7 @@ import { Helmet } from "react-helmet";
 // const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
 const Contribute = () => {
   const [cse] = useCseCourses()
+  const [loading,setLoading] = useState(false);
 
 
   const {
@@ -23,16 +24,14 @@ const Contribute = () => {
     formState: { errors }
   } = useForm();
 
-  // const {user} = useContext(AuthContext)
-  // console.log(user)
-  const {userInfo} = useUserInfo()
-   console.log(userInfo)
 
+  const {userInfo} = useUserInfo()
   const axiosPublic = useAxiosPublic();
 
   const onSubmit = async(data) => {
-
-     let imageCover ='';
+    setLoading(true);
+     
+    let imageCover ='';
 
       const contentType = data.content;
       if(contentType==='Note'){
@@ -85,6 +84,7 @@ const Contribute = () => {
         const userResult = await axiosPublic.patch(`/users/${userInfo?.email}`,{resource})
          
         console.log(userResult)
+        setLoading(false);
       }
      
     
@@ -101,9 +101,28 @@ const Contribute = () => {
   return (
   <div className="h-screen overflow-y-scroll">
         
-      <Helmet>
-      <title>Note Nest - Contribute</title>
-      </Helmet>
+  <Helmet>
+  <title>Note Nest - Contribute</title>
+  </Helmet>
+
+
+{/* loading */}
+
+  <div className={`${loading? 'block':'hidden'}   absolute bg-white bg-opacity-60 z-10 h-full w-full flex items-center justify-center `}>
+       <div className="flex items-center">
+         <span className="text-3xl mr-4">Loading</span>
+         <svg className="animate-spin h-8 w-8 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none"
+           viewBox="0 0 24 24">
+           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+           <path className="opacity-75" fill="currentColor"
+             d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+           </path>
+         </svg>
+       </div>
+  </div>
+
+
+
 
 {/* Heading */}
 <div className="relative border-t border-gray-200 bg-gray-50 mb-2">
@@ -132,7 +151,7 @@ const Contribute = () => {
   {/* <div className="mt-3 text-center text-4xl font-bold">Make an Appointment</div> */}
 
 
-<form onSubmit={handleSubmit(onSubmit)} className="p-2 md:p-8">
+<form onSubmit={handleSubmit(onSubmit)} className="p-2 md:p-8 bg-[#F8F0FB]">
 
 <div className="md:flex gap-4 items-center">
    <label className="block w-full md:w-1/2 text-sm font-semibold text-gray-700 mb-2">
@@ -215,7 +234,7 @@ Upload your file in Google Drive or YouTube then Submit your shareable drive lin
 </div>
 
 <div className="flex justify-center items-center">
-  <button type="submit" className="cursor-pointer rounded-lg bg-[#9a031e] px-8 py-5 tracking-widest text-sm font-semibold text-white" placeholder="Contribute">Contribute</button>
+  <button type="submit" className="cursor-pointer rounded-lg bg-[#9a031e] px-8 py-5 tracking-widest text-sm font-semibold text-white flex items-center gap-1" placeholder="Contribute">Contribute<FaStar className="text-md" /></button>
 </div>
 
 </form>
