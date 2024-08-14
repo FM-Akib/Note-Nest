@@ -16,13 +16,13 @@ const SellComponents = () => {
                     className="bg-white hover:bg-[#FDC317] mr-4 text-gray-900 py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition duration-200">Buy
                 </Link>
 
-{
-    user?<Link to="/dashboard/sellprojects"
-    className="bg-white hover:bg-[#FDC317] text-gray-900 py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition duration-200">Sell
-</Link>:<Link to="/login"
-                    className="bg-white hover:bg-[#FDC317] text-gray-900 py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition duration-200">Sell
-                </Link>
-}
+            {
+                user?<Link to="/dashboard/sellprojects"
+                className="bg-white hover:bg-[#FDC317] text-gray-900 py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition duration-200">Sell
+                </Link>:<Link to="/login"
+                                className="bg-white hover:bg-[#FDC317] text-gray-900 py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition duration-200">Sell
+                            </Link>
+            }
 
             </div>
             <div className="lg:w-1/2 lg:ml-12">

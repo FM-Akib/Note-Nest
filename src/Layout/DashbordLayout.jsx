@@ -4,6 +4,11 @@ import {  NavLink, Outlet, useNavigate } from "react-router-dom";
 import NavBar from "../components/Shared/NavBar";
 import { AuthContext } from "../Providers/AuthProvider";
 import useUserInfo from "../Hooks/useUserInfo";
+import toast, { Toaster } from "react-hot-toast";
+
+const loggedOutNotify = () =>{
+  toast.success('Logged Out!!')
+}
 
 const DashbordLayout = () => {
     const [isNavOpen,setIsNavOpen] = useState(false);
@@ -15,7 +20,9 @@ const DashbordLayout = () => {
     
    const handleLogout = () => {
        logOut()
-       .then(() => {})
+       .then(() => {
+        loggedOutNotify ()
+       })
        .catch(err => console.log(err));
        navigate('/')
    }
@@ -30,6 +37,10 @@ const DashbordLayout = () => {
 
     return (
     <>
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+        />
       <NavBar></NavBar>
        <div className="relative flex h-screen min-w-full ">
    

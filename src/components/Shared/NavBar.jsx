@@ -2,8 +2,13 @@ import { NavLink } from 'react-router-dom';
 import iiuc from '../../assets/iiucLogo.png';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
-// import avatar from '../../assets/Male_avatar.png'
 import useUserInfo from '../../Hooks/useUserInfo';
+import toast, { Toaster } from 'react-hot-toast';
+
+
+const loggedOutNotify = () =>{
+    toast.success('Logged Out!!')
+}
 
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -12,7 +17,9 @@ const NavBar = () => {
 
     const handleLogout = () => {
         logOut()
-            .then(() => { })
+            .then(() => { 
+                loggedOutNotify() 
+            })
             .catch(err => console.log(err));
     }
 
@@ -21,6 +28,11 @@ const NavBar = () => {
     }
 
     return (
+        <>
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+        />
         <div className="navbar md:px-28 bg-[#1E2D24] text-white fixed z-30">
             <div className="navbar-start">
                 <div className="dropdown">
@@ -89,6 +101,7 @@ const NavBar = () => {
                 }
             </div>
         </div>
+        </>
     );
 };
 

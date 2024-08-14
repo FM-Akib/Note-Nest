@@ -75,11 +75,8 @@ const Projects = () => {
             </div>
         </div>
 
-
-        
-
-
-        <header className="bg-gray-50">
+        <div className="bg-[url(https://i.ibb.co/Wp1Pvxz/pattern.jpg)]">
+        <header className="bg-white/80">
             <div className="mx-auto max-w-screen-xl px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
                 <div className="sm:flex sm:items-center sm:justify-between">
                 <div className="text-center sm:text-left">
@@ -112,12 +109,12 @@ const Projects = () => {
                     </button> */}
 
                  {
-                    user?<Link to="/dashboard/sellprojects"  className="block text-center rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring"
+                    user?<Link to="/dashboard/sellprojects"  className="block text-center rounded-lg bg-[#9A031E] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#9a031fc3] focus:outline-none focus:ring"
                     type="button"><button
                     type="button"
                     >
                     Sell components
-                    </button> </Link> : <Link to="/login"  className="block rounded-lg text-center bg-indigo-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring"
+                    </button> </Link> : <Link to="/login"  className="block rounded-lg text-center bg-[#9A031E] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#9a031fc3] focus:outline-none focus:ring"
                     type="button"><button
                     type="button"
                     >
@@ -127,16 +124,8 @@ const Projects = () => {
                 </div>
                 </div>
             </div>
-            </header>
-
-
-
-
-
-
-
-
-
+        </header>
+        </div>
 
           <div className="grid md:grid-cols-3 gap-8  px-4  md:px-20 mt-7">
                 {components?.map(component => (
