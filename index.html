@@ -2,12 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./public/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.ico" />
     <title>Note Nest</title>
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- EmailJS SDK -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("HAi1u0NDcBzUF2wYy");
+      })();
+    </script>
+
+    <!-- React Main Script -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
