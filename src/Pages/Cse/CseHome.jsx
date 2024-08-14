@@ -52,7 +52,7 @@ const CseHome = () => {
 
 
 
-<div className="mt-10 p-5 pt-8 border ignore border-gray-200 not-prose  relative bg-gray-50 ">
+<div className="mt-10 p-5 pt-8 border ignore border-gray-200 not-prose  relative bg-[url(https://i.ibb.co/VSJFpBb/texture-pattern.jpg)] ">
     <div
         className="text-center absolute w-auto rounded-b-lg border-b uppercase -translate-y-px tracking-wide leading-none border-l border-r border-gray-200  shadow-sm top-0 left-1/2 -translate-x-1/2 px-3 pt-1 pb-2 bg-white  text-gray-400 text-[0.65rem]">
         🤩 Some joss resource Hub from CSE 👇</div>

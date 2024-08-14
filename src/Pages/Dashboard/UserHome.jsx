@@ -65,7 +65,7 @@ const UserHome = () => {
 
 
         <div className=" md:px-10">
-        <div className="bg-white rounded-3xl mx-2 md:mx-auto  border-2 border-gray-400 mt-10">
+        <div className="bg-[url(https://i.ibb.co/VSJFpBb/texture-pattern.jpg)] rounded-3xl mx-2 md:mx-auto  border-2 border-gray-400 mt-10">
         <div className="px-6 py-4 md:p-10">
             <h1 className="text-xl md:text-4xl font-medium leading-tight text-gray-800 mb-2"> {userInfo.name}</h1>
             <p className="text-base md:text-lg font-normal leading-normal text-blue-800 mb-6 flex items-center"><CiMail className="mr-1 text-lg" />{userInfo.email}</p>
