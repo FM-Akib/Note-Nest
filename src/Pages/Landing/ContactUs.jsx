@@ -39,10 +39,10 @@ const ContactUs = () => {
           <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
             <div className="lg:col-span-2 lg:py-12">
               <div className="relative text-center my-8">
-                <h1 className="text-3xl font-extrabold text-gray-700 bg-gray-700/10">
+                <h1 className="text-2xl md:text-3xl font-extrabold text-gray-700 bg-gray-700/10">
                   Get In Touch
                   <span className="absolute inset-0 flex items-end justify-center">
-                    <span className="text-6xl md:text-7xl text-transparent bg-clip-text bg-black opacity-30">
+                    <span className="text-5xl md:text-7xl text-transparent bg-clip-text bg-black opacity-30">
                       Contact Us
                     </span>
                   </span>

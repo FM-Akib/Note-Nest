@@ -13,15 +13,15 @@ const SellComponents = () => {
                 <h1 className="text-4xl font-bold leading-tight mb-4">Marketplace - Buy & Sell Project Components with Ease</h1>
                 <p className="text-xl mb-8">Empowering IIUC students to easily buy and sell project components. Juniors can purchase essential items like Arduino and wires from peers, and anyone can sell their used components after completing projects. Simplify your project journey with our user-friendly platform.</p>
                 <Link to="/projects"
-                    className="bg-white hover:bg-[#FDC317] mr-4 text-gray-900 py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition duration-200">Buy
+                    className="bg-white  border-2 hover:bg-[#FDC317] mr-4 text-gray-900 py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition duration-200">Buy
                 </Link>
 
             {
                 user?<Link to="/dashboard/sellprojects"
-                className="bg-white hover:bg-[#FDC317] text-gray-900 py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition duration-200">Sell
+                className="bg-white border-2 hover:bg-[#FDC317] text-gray-900 py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition duration-200">Sell
                 </Link>:<Link to="/login"
-                                className="bg-white hover:bg-[#FDC317] text-gray-900 py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition duration-200">Sell
-                            </Link>
+                                className="bg-white border hover:bg-[#FDC317] text-gray-900 py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition duration-200">Sell
+                </Link>
             }
 
             </div>
