@@ -6,7 +6,7 @@ import heroLeft from '../../assets/HeroLeftWhite.png'
 
 const Hero = () => {
     return (
-        <div className="bg-white relative pt-10 pb-20 lg:pt-6 dark:bg-[#F8F0FB]">
+        <div className=" relative pt-10 pb-20 lg:pt-6 ">
         <div className="relative xl:container m-auto px-4 md:px-12 lg:px-6">
           {/* <h1 className="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-2xl text-center sm:text-5xl md:text-3xl lg:w-auto lg:text-left xl:text-5xl dark:text-slate-500"><br className="lg:block hidden" />
             <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-[#F50057] to-[#fe3f82]">

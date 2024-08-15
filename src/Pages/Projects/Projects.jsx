@@ -7,18 +7,11 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { Link } from "react-router-dom";
 
+import pattern from '../../assets/patternproject.jpg'
+
 
 const Projects = () => {
-    // const [components,setComponents] =  useState([])
-   
-  
 
-    // useEffect(() => {
-    //     fetch('https://note-nest-server-three.vercel.app/components')
-    //     .then(response => response.json())
-    //     .then(data => {setComponents(data)});
-    // }, []);
-    // console.log(components)
     const {user} =useContext(AuthContext)
     const {components} = useProjects()
 
@@ -43,15 +36,9 @@ const Projects = () => {
     </Helmet>
 
 
-        <div className="relative border-t border-gray-200 bg-gray-50">
-        <div
-                className="absolute inset-0 h-36 opacity-90 lg:h-48"
-                style={{
-                    backgroundImage:
-                        'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'100\' viewBox=\'0 0 100 100\'%3E%3Cg fill-rule=\'evenodd\'%3E%3Cg fill=\'%23e0e7ff\' fill-opacity=\'1\'%3E%3Cpath opacity=\'.5\' d=\'M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z\'/%3E%3Cpath d=\'M6 5V0H5v5H0v1h5v94h1V6h94V5H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
-                }}
-            />
-            <div className="relative mx-auto max-w-7xl px-6 pt-5 md:pt-14 pb-12 sm:px-12 lg:pt-20">
+        <div className="relative border-t border-gray-200 h-36 lg:h-48   bg-cover"  style={{backgroundImage: `url(${pattern})`}}>
+        <div className="absolute inset-0 h-36 opacity-90 lg:h-48 bg-white/70"/>
+            <div className="relative mx-auto max-w-7xl px-6 pt-5 md:pt-14 pb-12 sm:px-12 lg:pt-20 ">
                 <header className="mx-auto max-w-2xl text-center">
                     <h1 className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-4xl flex items-center justify-center gap-3 ">
                     <svg height="45px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xmlSpace="preserve">
@@ -86,28 +73,6 @@ const Projects = () => {
                 </div>
 
                 <div className="mt-4 flex flex-col gap-4 sm:mt-0 sm:flex-row sm:items-center">
-                    {/* <button
-                    className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-gray-200 bg-white px-5 py-3 text-gray-500 transition hover:text-gray-700 focus:outline-none focus:ring"
-                    type="button"
-                    >
-                    <span className="text-sm font-medium"> View Website </span>
-
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                    >
-                        <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                        />
-                    </svg>
-                    </button> */}
-
                  {
                     user?<Link to="/dashboard/sellprojects"  className="block text-center rounded-lg bg-[#9A031E] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#9a031fc3] focus:outline-none focus:ring"
                     type="button"><button
@@ -127,7 +92,9 @@ const Projects = () => {
         </header>
         </div>
 
-          <div className="grid md:grid-cols-3 gap-8  px-4  md:px-20 mt-7">
+        <div className="bg-cover " style={{backgroundImage: `url(${pattern})`}}>
+
+        <div className="grid md:grid-cols-3 gap-8  px-4 pb-10 md:pb-20  md:px-20 pt-7 bg-white/70">
                 {components?.map(component => (
                     <div key={component.id} className="relative flex flex-col justify-between bg-white rounded-lg overflow-hidden shadow-lg ring-4 ring-blue-300 ring-opacity-40 max-w-sm hover:ring-red-300">
                         <div className="relative">
@@ -150,11 +117,15 @@ const Projects = () => {
                         </div>
                     </div>
                 ))}
-            </div>
+        </div>
 
-            {/* The modal */}
-            <input type="checkbox" id="my_modal_6" className="modal-toggle" />
-            <div className="modal" role="dialog">
+        </div>
+
+
+
+        {/* The modal */}
+        <input type="checkbox" id="my_modal_6" className="modal-toggle" />
+        <div className="modal" role="dialog">
                 <div className="modal-box">
                     <h3 className="font-bold text-lg">Confirm Purchase</h3>
                     {selectedComponent && (
@@ -167,7 +138,7 @@ const Projects = () => {
                         </div>
                     )}
                 </div>
-            </div>
+        </div>
 
 
 

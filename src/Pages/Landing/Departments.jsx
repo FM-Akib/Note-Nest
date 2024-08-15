@@ -53,7 +53,7 @@ const Rating = ({ rating, showLabel, className, ...rest }) => (
 					content = (
 						<FontAwesomeIcon
 							icon={faStar}
-							className="text-yellow-200 dark:text-opacity-20"
+							className="text-white dark:text-opacity-20"
 						/>
 					);
 

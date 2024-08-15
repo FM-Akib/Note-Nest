@@ -7,16 +7,19 @@ import SellComponents from "./SellComponents";
 import TopContributor from "./TopContributor";
 import UniCard from "./UniCard";
 import ContactUs from "./ContactUs";
+
+import pattern from '../../assets/patternproject.jpg'
+
 const Landing = () => {
 
 
     return (
-        <div className="px-2 md:px-20">
-
+        <div className=" md:bg-cover  bg-repeat-y" style={{backgroundImage: `url(${pattern})`}}>
+        
         <Helmet>
         <title>Note Nest - Home</title>
         </Helmet>
-
+        <div className="bg-white/90 px-2 md:px-20">
             <Hero />
             <UniCard />
             <TopContributor />
@@ -35,7 +38,7 @@ const Landing = () => {
 
             <MobileNav/>
 
-
+            </div>
 
 
     </div>
