@@ -18,10 +18,6 @@ Welcome to **Note Nest**, a collaborative platform where university students can
   
 - **User Dashboard**: Personalized dashboard for users to manage their contributions, edit content, and keep track of bookmarked notes and other resources.
 
-## 🚀 Getting Started
 
-### Prerequisites
-
-- Ensure you have Node.js and npm installed.
   
 
