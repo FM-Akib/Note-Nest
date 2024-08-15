@@ -8,6 +8,7 @@ import useUserInfo from "../../Hooks/useUserInfo";
 import { Helmet } from "react-helmet";
 import { useState } from "react";
 import { FaStar } from "react-icons/fa";
+import pattern from '../../assets/pattern5.png'
 
 
 
@@ -146,12 +147,12 @@ const Contribute = () => {
 </div>
 
 
- <div className="mx-2 mt-3 md:mt-10 border-2 border-slate-200 rounded-lg">
+<div className="bg-cover mx-2 rounded-lg" style={{ backgroundImage: `url(${pattern})` }}>
+ <div className=" mt-3 md:mt-10 border-2 border-slate-200 rounded-lg bg-[#F8F0FB]/95">
   <div className="mt-4 md:mt-10 mb-2 text-sm md:text-lg text-center font-bold flex justify-center items-center"><GiRoundStar className="mr-2 text-[#EFCA08]"/> For every contribution you earn 20 points</div>
-  {/* <div className="mt-3 text-center text-4xl font-bold">Make an Appointment</div> */}
 
 
-<form onSubmit={handleSubmit(onSubmit)} className="p-2 md:p-8 bg-[#F8F0FB]">
+<form onSubmit={handleSubmit(onSubmit)} className="p-2 md:p-8 ">
 
 <div className="md:flex gap-4 items-center">
    <label className="block w-full md:w-1/2 text-sm font-semibold text-gray-700 mb-2">
@@ -240,6 +241,7 @@ Upload your file in Google Drive or YouTube then Submit your shareable drive lin
 </form>
 
 
+</div>
 </div>
 
 

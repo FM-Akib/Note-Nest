@@ -15,14 +15,14 @@ const ResourceLeftNavPharma = ({closeNav }) => {
      const [pharma] = usePharmaCourses()
  
     
-     const firstSemester =  pharma.filter(course=>course.semester==='1st')
-     const secondSemester = pharma.filter(course=>course.semester==='2nd')
-     const thirdSemester =  pharma.filter(course=>course.semester==='3rd')
-     const fourthSemester = pharma.filter(course=>course.semester==='4th')
-     const fifthSemester =  pharma.filter(course=>course.semester==='5th')
-     const sixthSemester =  pharma.filter(course=>course.semester==='6th')
-     const seventhSemester= pharma.filter(course=>course.semester==='7th')
-     const eightSemester =  pharma.filter(course=>course.semester==='8th')
+     const firstSemester  =  pharma.filter(course=>course.semester==='1st')
+     const secondSemester =  pharma.filter(course=>course.semester==='2nd')
+     const thirdSemester  =  pharma.filter(course=>course.semester==='3rd')
+     const fourthSemester =  pharma.filter(course=>course.semester==='4th')
+     const fifthSemester  =  pharma.filter(course=>course.semester==='5th')
+     const sixthSemester  =  pharma.filter(course=>course.semester==='6th')
+     const seventhSemester=  pharma.filter(course=>course.semester==='7th')
+     const eightSemester  =  pharma.filter(course=>course.semester==='8th')
     
 
     

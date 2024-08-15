@@ -1,5 +1,4 @@
 import  {  useState } from 'react';
-// import useCseResources from '../../Hooks/useCseResources';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
@@ -15,14 +14,14 @@ const ResourceLeftNavEEE = ({closeNav }) => {
      const [eee] = useEEECourses()
  
     
-     const firstSemester =  eee.filter(course=>course.semester==='1st')
-     const secondSemester = eee.filter(course=>course.semester==='2nd')
-     const thirdSemester =  eee.filter(course=>course.semester==='3rd')
-     const fourthSemester = eee.filter(course=>course.semester==='4th')
-     const fifthSemester =  eee.filter(course=>course.semester==='5th')
-     const sixthSemester =  eee.filter(course=>course.semester==='6th')
-     const seventhSemester= eee.filter(course=>course.semester==='7th')
-     const eightSemester =  eee.filter(course=>course.semester==='8th')
+     const firstSemester  =  eee.filter(course=>course.semester==='1st')
+     const secondSemester =  eee.filter(course=>course.semester==='2nd')
+     const thirdSemester  =  eee.filter(course=>course.semester==='3rd')
+     const fourthSemester =  eee.filter(course=>course.semester==='4th')
+     const fifthSemester  =  eee.filter(course=>course.semester==='5th')
+     const sixthSemester  =  eee.filter(course=>course.semester==='6th')
+     const seventhSemester=  eee.filter(course=>course.semester==='7th')
+     const eightSemester  =  eee.filter(course=>course.semester==='8th')
     
 
     

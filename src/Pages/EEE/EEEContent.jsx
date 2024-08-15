@@ -31,16 +31,16 @@ const EEEContent = () => {
 
     if (resourceCse.length === 0) return <div className="flex items-center justify-center min-h-screen min-w-screen"><span className="loading text-red-700 loading-dots loading-lg"></span></div> ;
     
-    // console.log(resourceCse)
+   
 
     const course = resourceCse?.filter(course => course.courseCode === id);
     
     if (!course || course.length === 0) {
         return <div>Course not found</div>;
     }
-//    console.log(course[0])
+
     const {other,questionBank,Note,Playlist,courseCode,courseTitle} = course[0];
-    // console.log(Playlist)
+
 
     const midPlaylist = Playlist.filter(playlist => playlist.type === 'mid');
     const finalPlaylist = Playlist.filter(playlist => playlist.type === 'final');
@@ -96,13 +96,13 @@ const EEEContent = () => {
 
         const liked = currentPlaylist?.likes?.includes(user.email);
         if (liked) {
-            await axiosPublic.delete(`/courses/${courseCode}/${contentType}/${playlistId}/unlike`, {
+            await axiosPublic.delete(`/coursesEEE/${courseCode}/${contentType}/${playlistId}/unlike`, {
                 data: { email: user.email,authorEmail:authorEmail }
             });
             setStars(currentPlaylist.star - 1);
             setLiked(false);
         } else {
-            await axiosPublic.post(`/courses/${courseCode}/${contentType}/${playlistId}/like`, {
+            await axiosPublic.post(`/coursesEEE/${courseCode}/${contentType}/${playlistId}/like`, {
                 email: user.email,authorEmail:authorEmail
             });
             setStars(currentPlaylist.star + 1);

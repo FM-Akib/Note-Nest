@@ -10,7 +10,6 @@ import { Helmet } from "react-helmet";
 import { CiBookmark } from "react-icons/ci";
 
 
-
 const PharmaContent = () => {
     const {id} = useParams();
     const [resourceCse, setResourceCse] = useState([]);
@@ -96,13 +95,13 @@ const PharmaContent = () => {
 
         const liked = currentPlaylist?.likes?.includes(user.email);
         if (liked) {
-            await axiosPublic.delete(`/courses/${courseCode}/${contentType}/${playlistId}/unlike`, {
+            await axiosPublic.delete(`/coursesPharma/${courseCode}/${contentType}/${playlistId}/unlike`, {
                 data: { email: user.email,authorEmail:authorEmail }
             });
             setStars(currentPlaylist.star - 1);
             setLiked(false);
         } else {
-            await axiosPublic.post(`/courses/${courseCode}/${contentType}/${playlistId}/like`, {
+            await axiosPublic.post(`/coursesPharma/${courseCode}/${contentType}/${playlistId}/like`, {
                 email: user.email,authorEmail:authorEmail
             });
             setStars(currentPlaylist.star + 1);

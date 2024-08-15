@@ -7,6 +7,10 @@ import { Link } from "react-router-dom";
 import MobileNav from "../../components/Shared/MobileNav";
 import { Helmet } from "react-helmet";
 
+
+import pattern from '../../assets/pattern9.png'
+
+
 const Clubs = () => {
     const [clubs,setClubs] =  useState([])
     const [filterclubs,setFilterClubs] =  useState([clubs])
@@ -77,11 +81,10 @@ const Clubs = () => {
         </div>
         
 
-    <div className="">
+    <div className="md:bg-cover md:bg-center " style={{backgroundImage:`url(${pattern})`}}>
+    <div className="bg-[#F8F0FB]/90">
 
-
-
-  <div className="w-full max-w-3xl my-4 mx-auto p-2 ">
+     <div className="w-full max-w-3xl py-4 mx-auto p-2 ">
 
 <div className="border border-[#5fffb4] p-4 md:p-6 rounded-lg text-center bg-white">  
     <p className="text-md md:text-lg mb-4 text-gray-700">       
@@ -113,10 +116,10 @@ const Clubs = () => {
    </div>  
   
 
-</div>
+     </div>
 
 
-    <div className="grid gap-8 md:grid-cols-2 lg:gap-10 p-6 md:p-10 ">
+     <div className="grid gap-8 md:grid-cols-2 lg:gap-10 p-6 md:p-10 ">
     
         {
             filterclubs?.map((club,i)=>     <Link  to={club.pageLink} key={i}
@@ -136,8 +139,9 @@ const Clubs = () => {
         </Link>)
         }
     
-    </div> 
+     </div> 
 
+     </div>
     </div>
 
 
@@ -147,7 +151,7 @@ const Clubs = () => {
 
 
 
-   <MobileNav/>
+    <MobileNav/>
 
 
 
