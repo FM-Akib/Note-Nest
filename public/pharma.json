@@ -1,0 +1,749 @@
+[
+    {
+        "semester": "1st",
+        "courseCode": "UREL-1106",
+        "courseTitle": "Advanced English",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "1st",
+        "courseCode": "PHARM-1107",
+        "courseTitle": "Cell Biology and Anatomy",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "1st",
+        "courseCode": "COMP-1101",
+        "courseTitle": "Computer Fundamentals",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "1st",
+        "courseCode": "PHARM-1101",
+        "courseTitle": "Inorganic Pharmacy-I",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "1st",
+        "courseCode": "PHARM-1109",
+        "courseTitle": "Introduction to Pharmacy",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "1st",
+        "courseCode": "PHARM-1103",
+        "courseTitle": "Organic Pharmacy",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "1st",
+        "courseCode": "PHARM-1104",
+        "courseTitle": "Organic Pharmacy Lab",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "1st",
+        "courseCode": "PHARM-1105",
+        "courseTitle": "Physical Pharmacy-I",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "1st",
+        "courseCode": "PHARM-1106",
+        "courseTitle": "Physical Pharmacy-I Lab",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "1st",
+        "courseCode": "UREM-1101",
+        "courseTitle": "Text of Ethics and Morality",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "2nd",
+        "courseCode": "PHARM-1210",
+        "courseTitle": "Basic Mathematics and Statistics Lab",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "2nd",
+        "courseCode": "PHARM-1209",
+        "courseTitle": "Basic Mathematics and Statistics",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "2nd",
+        "courseCode": "URED-1201",
+        "courseTitle": "Basic Principles of Islam (‘Aqidah and ’Ibadah)",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "2nd",
+        "courseCode": "PHARM-1207",
+        "courseTitle": "Human Physiology-I",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "2nd",
+        "courseCode": "PHARM-1208",
+        "courseTitle": "Human Physiology-I Lab",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "2nd",
+        "courseCode": "PHARM-1202",
+        "courseTitle": "Inorganic Pharmacy Lab",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "2nd",
+        "courseCode": "PHARM-1201",
+        "courseTitle": "Inorganic Pharmacy-II",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "2nd",
+        "courseCode": "PHARM-1213",
+        "courseTitle": "Oral Assessment-I",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "2nd",
+        "courseCode": "PHARM-1203",
+        "courseTitle": "Pharmacognosy and Phytochemistry-I",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "2nd",
+        "courseCode": "PHARM-1204",
+        "courseTitle": "Pharmacognosy and Phytochemistry-I Lab",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "2nd",
+        "courseCode": "PHARM-1205",
+        "courseTitle": "Physical Pharmacy-II",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "2nd",
+        "courseCode": "PHARM-1206",
+        "courseTitle": "Physical Pharmacy-II Lab",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "3rd",
+        "courseCode": "PHARM-2301",
+        "courseTitle": "Basic Pharmaceutics",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "3rd",
+        "courseCode": "PHARM-2305",
+        "courseTitle": "Biochemistry and Molecular Biology-I",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "3rd",
+        "courseCode": "URED-2305",
+        "courseTitle": "Comparative Religion",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "3rd",
+        "courseCode": "PHARM-2307",
+        "courseTitle": "Human Physiology-II",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "3rd",
+        "courseCode": "PHARM-2308",
+        "courseTitle": "Human Physiology-II Lab",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "3rd",
+        "courseCode": "PHARM-2311",
+        "courseTitle": "Pathology",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "3rd",
+        "courseCode": "PHARM-2310",
+        "courseTitle": "Pharmaceutical Microbiology and Immunology Lab",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "3rd",
+        "courseCode": "PHARM-2309",
+        "courseTitle": "Pharmaceutical Microbiology and Immunology-I",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "3rd",
+        "courseCode": "PHARM-2303",
+        "courseTitle": "Pharmacognosy and Phytochemistry-II",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "3rd",
+        "courseCode": "PHARM-2304",
+        "courseTitle": "Pharmacognosy and Phytochemistry-II Lab",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "3rd",
+        "courseCode": "URED-2302",
+        "courseTitle": "Sciences of Qur’an and Hadith",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "4th",
+        "courseCode": "GEBL-2401",
+        "courseTitle": "Bengali Language and Literature",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "4th",
+        "courseCode": "PHARM-2404",
+        "courseTitle": "Biochemistry and Molecular Biology Lab",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "4th",
+        "courseCode": "PHARM-2403",
+        "courseTitle": "Biochemistry and Molecular Biology-II",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "4th",
+        "courseCode": "PHARM-2413",
+        "courseTitle": "Oral Assessment-II",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "4th",
+        "courseCode": "PHARM-2409",
+        "courseTitle": "Pharmaceutical Analysis-I",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "4th",
+        "courseCode": "PHARM-2410",
+        "courseTitle": "Pharmaceutical Analysis-I Lab",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "4th",
+        "courseCode": "PHARM-2407",
+        "courseTitle": "Pharmaceutical Microbiology and Immunology-II",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "4th",
+        "courseCode": "PHARM-2401",
+        "courseTitle": "Pharmaceutical Technology-I",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "4th",
+        "courseCode": "PHARM-2402",
+        "courseTitle": "Pharmaceutical Technology-I Lab",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "4th",
+        "courseCode": "PHARM-2405",
+        "courseTitle": "Pharmacology-I",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "5th",
+        "courseCode": "PHARM-3503",
+        "courseTitle": "Biopharmaceutics and Pharmacokinetics-I",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "5th",
+        "courseCode": "PHARM-3504",
+        "courseTitle": "Biopharmaceutics and Pharmacokinetics-I Lab",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "5th",
+        "courseCode": "PHARM-3507",
+        "courseTitle": "Medicinal Chemistry-I",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "5th",
+        "courseCode": "PHARM-3508",
+        "courseTitle": "Medicinal Chemistry-I Lab",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "5th",
+        "courseCode": "PHARM-3509",
+        "courseTitle": "Pharmaceutical Biotechnology",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "5th",
+        "courseCode": "PHARM-3501",
+        "courseTitle": "Pharmaceutical Technology-II",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "5th",
+        "courseCode": "PHARM-3502",
+        "courseTitle": "Pharmaceutical Technology-II Lab",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "5th",
+        "courseCode": "PHARM-3505",
+        "courseTitle": "Pharmacology-II",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "5th",
+        "courseCode": "PHARM-3506",
+        "courseTitle": "Pharmacology-II Lab",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "5th",
+        "courseCode": "URED-3503",
+        "courseTitle": "Political Thoughts and Social Behavior",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "6th",
+        "courseCode": "PHARM-3603",
+        "courseTitle": "Biopharmaceutics and Pharmacokinetics-II",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "6th",
+        "courseCode": "PHARM-3604",
+        "courseTitle": "Biopharmaceutics and Pharmacokinetics-II Lab",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "6th",
+        "courseCode": "PHARM-3601",
+        "courseTitle": "Cosmetology",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "6th",
+        "courseCode": "PHARM-3602",
+        "courseTitle": "Cosmetology Lab",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "6th",
+        "courseCode": "URED-3604",
+        "courseTitle": "Life and Teachings of Prophet Muhammad (SAAS)",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "6th",
+        "courseCode": "PHARM-3607",
+        "courseTitle": "Medicinal Chemistry-II",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "6th",
+        "courseCode": "PHARM-3608",
+        "courseTitle": "Medicinal Chemistry-II Lab",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "6th",
+        "courseCode": "PHARM-3613",
+        "courseTitle": "Oral Assessment-III",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "6th",
+        "courseCode": "PHARM-3609",
+        "courseTitle": "Pharmaceutical Analysis-II",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "6th",
+        "courseCode": "PHARM-3610",
+        "courseTitle": "Pharmaceutical Analysis-II Lab",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "6th",
+        "courseCode": "PHARM-3611",
+        "courseTitle": "Pharmaceutical Engineering-I",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "6th",
+        "courseCode": "PHARM-3605",
+        "courseTitle": "Pharmaceutical Regulatory Affairs",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "URIH-4701",
+        "courseTitle": "A Survey of Islamic History and Culture",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "PHARM-4707",
+        "courseTitle": "Hospital and Community Pharmacy",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "PHARM-4709",
+        "courseTitle": "Pharmaceutical Analysis-III",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "PHARM-4711",
+        "courseTitle": "Pharmaceutical Engineering-II",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "PHARM-4703",
+        "courseTitle": "Pharmaceutical Quality Assurance",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "PHARM-4701",
+        "courseTitle": "Pharmaceutical Technology-III",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "PHARM-4702",
+        "courseTitle": "Pharmaceutical Technology-III Lab",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "PHARM-4705",
+        "courseTitle": "Pharmacology-III",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "7th",
+        "courseCode": "PHARM-4706",
+        "courseTitle": "Pharmacology-III Lab",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "PHARM-4805",
+        "courseTitle": "Clinical Pharmacy",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "PHARM-4806",
+        "courseTitle": "Clinical Pharmacy Lab",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "GEHE-4801",
+        "courseTitle": "History of Emergence of Bangladesh",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "PHARM-4807",
+        "courseTitle": "Medicinal Chemistry-III",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "PHARM-4813",
+        "courseTitle": "Oral Assessment-IV",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "PHARM-4809",
+        "courseTitle": "Pharmaceutical Marketing and Management",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "PHARM-4803",
+        "courseTitle": "Pharmaceutical Quality Control and Validation",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "PHARM-4814",
+        "courseTitle": "Project",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    },
+    {
+        "semester": "8th",
+        "courseCode": "PHARM-4801",
+        "courseTitle": "Toxicology",
+        "Playlist": [],
+        "Note": [],
+        "questionBank": [],
+        "other": []
+    }
+]
