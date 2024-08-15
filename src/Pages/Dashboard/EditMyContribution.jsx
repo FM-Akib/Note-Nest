@@ -11,7 +11,7 @@ import { useContext } from "react";
 import { GiRoundStar } from "react-icons/gi";
 import { Helmet } from "react-helmet";
 
-
+import pattern from '../../assets/pattern5.png'
 
 const EditMyContribution = () => {
     const {id}= useParams()
@@ -21,7 +21,7 @@ const EditMyContribution = () => {
 
     const aContribution = myContribution?.filter(item=>item.id===id)[0]  
     const [cse] = useCseCourses()
-   console.log(aContribution)
+    console.log(aContribution)
 
     const {
       register,
@@ -67,7 +67,22 @@ const EditMyContribution = () => {
           courseCode: data.courseCode,
         }
         
-        const result = await axiosPublic.patch(`/courses/${courseCode}/resources/${id}`,{contentType, resource})
+        let dept;
+
+        
+        if(aContribution.dept==='cse'){
+          dept = 'courses'
+        }
+        else if(aContribution.dept==='eee'){
+          dept = 'coursesEee'
+        }
+        else if(aContribution.dept==='pharmacy'){
+          dept = 'coursesPharma'
+        }
+
+
+
+        const result = await axiosPublic.patch(`/${dept}/${courseCode}/resources/${id}`,{contentType, resource})
    
   
         if(result.data.result.modifiedCount>0){
@@ -90,19 +105,21 @@ const EditMyContribution = () => {
     };
  
 
-    return (
-        <div className="pt-20 md:px-20 px-2 overflow-y-auto max-h-screen">
+  return (
+      <div className="pt-20 md:px-20 px-2 overflow-y-auto max-h-screen">
 
-<Helmet>
-      <title>Note Nest - My Contribution</title>
-    </Helmet>
-            <HeadDash icn={<RiShieldStarFill className="text-[#EFCA08]" />} head="Edit Contribution" subHead="Edit your contribution and re-submit it."></HeadDash>
+  <Helmet>
+    <title>Note Nest - My Contribution</title>
+  </Helmet>
+  
+  <HeadDash icn={<RiShieldStarFill className="text-[#EFCA08]" />} head="Edit Contribution" subHead="Edit your contribution and re-submit it."></HeadDash>
 
 
-            <div className="mx-2 mt-10 border-2 border-slate-200 rounded-lg">
+   <div className="bg-cover mx-2 rounded-lg" style={{ backgroundImage: `url(${pattern})` }}>
+  
+  <div className=" mt-10 border-2 border-slate-200 rounded-lg bg-white/95">
   <div className="mt-10 text-center font-bold flex flex-col md:flex-row justify-center items-center"><GiRoundStar className="mr-1 text-[#EFCA08]"/> Make sure all selector are select perfectfully.</div>
-  {/* <div className="mt-3 text-center text-4xl font-bold">Make an Appointment</div> */}
-
+  
 
   <form onSubmit={handleSubmit(onSubmit)} className="p-2 md:p-8">
 
@@ -190,10 +207,10 @@ const EditMyContribution = () => {
 
 
 </div>
+   </div>
 
 
-
-    </div>
+  </div>
   );
 };
 
