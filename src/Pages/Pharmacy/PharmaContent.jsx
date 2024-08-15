@@ -11,7 +11,7 @@ import { CiBookmark } from "react-icons/ci";
 
 
 
-const EEEContent = () => {
+const PharmaContent = () => {
     const {id} = useParams();
     const [resourceCse, setResourceCse] = useState([]);
     const {user} = useContext(AuthContext)
@@ -24,7 +24,7 @@ const EEEContent = () => {
     console.log(liked,stars);
 
     useEffect(() => {
-        fetch('https://note-nest-server-three.vercel.app/eeeCourses')
+        fetch('https://note-nest-server-three.vercel.app/pharmaCourses')
         .then(response => response.json())
         .then(data => setResourceCse(data));
     }, []);
@@ -108,7 +108,7 @@ const EEEContent = () => {
             setStars(currentPlaylist.star + 1);
             setLiked(true);
         }
-        fetch('https://note-nest-server-three.vercel.app/eeeCourses')
+        fetch('https://note-nest-server-three.vercel.app/pharmaCourses')
             .then(response => response.json())
             .then(data => setResourceCse(data));
     } catch (error) {
@@ -121,7 +121,7 @@ const EEEContent = () => {
         <div className="overflow-y-auto max-h-screen">
 
       <Helmet>
-      <title>Note Nest - EEE</title>
+      <title>Note Nest - Pharmacy</title>
       </Helmet>
         
 
@@ -1096,4 +1096,4 @@ const EEEContent = () => {
     );
 };
 
-export default EEEContent;
+export default PharmaContent;

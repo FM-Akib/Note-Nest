@@ -23,6 +23,10 @@ import EEEHome from "../Pages/EEE/EEEHome";
 import EEEContent from "../Pages/EEE/EEEContent";
 import ResourceLayoutEee from "../Layout/ResourceLayoutEee";
 import ContributeEEE from "../Pages/EEE/ContributeEEE";
+import PharmaHome from "../Pages/Pharmacy/PharmaHome";
+import ResourceLayoutPharma from "../Layout/ResourceLayoutPharma";
+import PharmaContent from "../Pages/Pharmacy/PharmaContent";
+import ContributePharma from "../Pages/Pharmacy/ContributePharma";
 
 
 
@@ -99,6 +103,28 @@ import ContributeEEE from "../Pages/EEE/ContributeEEE";
         {
           path: "contribute",
           element: <ContributeEEE/>
+        }
+      ]
+    },
+    {
+      path: "resourcesPharma",
+      element: <ResourceLayoutPharma/>,
+      children:[
+        {
+         path: "*",
+         element: <ErrorPage/>
+        },
+        {
+          path: "pharmacy",
+          element: <PharmaHome/>
+        },
+        {
+          path: "content/:id",
+          element: <PharmaContent/>
+        },
+        {
+          path: "contribute",
+          element: <ContributePharma/>
         }
       ]
     },
