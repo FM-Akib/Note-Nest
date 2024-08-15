@@ -90,14 +90,9 @@ const Contribute = () => {
       }
      
     
-    
-    // console.log(data)
+ 
    
   };
-
-// if(errors){
-//   console.log(errors)
-// }
 
 
   return (
@@ -110,10 +105,10 @@ const Contribute = () => {
 
 {/* loading */}
 
-  <div className={`${loading? 'block':'hidden'}   absolute bg-white bg-opacity-60 z-10 h-full w-full flex items-center justify-center `}>
-       <div className="flex items-center">
-         <span className="text-3xl mr-4">Loading</span>
-         <svg className="animate-spin h-8 w-8 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none"
+  <div className={` ${loading? 'block':'hidden'} absolute bg-white bg-opacity-80 w-full md:w-5/6 z-10 h-full flex items-center justify-center `}>
+       <div className="flex items-center ">
+         <span className="text-3xl mr-4 text-red-700 font-semibold">Loading ...</span>
+         <svg className="animate-spin h-8 w-8 text-red-800" xmlns="http://www.w3.org/2000/svg" fill="none"
            viewBox="0 0 24 24">
            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
            <path className="opacity-75" fill="currentColor"

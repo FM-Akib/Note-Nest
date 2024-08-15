@@ -14,7 +14,7 @@ const Landing = () => {
 
 
     return (
-        <div className=" md:bg-cover  bg-repeat-y" style={{backgroundImage: `url(${pattern})`}}>
+        <div className="bg-contain" style={{backgroundImage: `url(${pattern})`}}>
         
         <Helmet>
         <title>Note Nest - Home</title>

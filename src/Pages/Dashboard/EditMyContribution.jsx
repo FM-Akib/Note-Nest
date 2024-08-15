@@ -12,10 +12,11 @@ import { GiRoundStar } from "react-icons/gi";
 import { Helmet } from "react-helmet";
 
 import pattern from '../../assets/pattern5.png'
+import { useState } from "react";
 
 const EditMyContribution = () => {
     const {id}= useParams()
-    
+    const [loading,setLoading] = useState(false);
     const {userInfo} = useUserInfo()
     const {myContribution} = userInfo;
 
@@ -33,6 +34,7 @@ const EditMyContribution = () => {
     const axiosPublic = useAxiosPublic();
   
     const onSubmit = async(data) => {
+       setLoading(true);
     
        let imageCover ='';
   
@@ -99,8 +101,8 @@ const EditMyContribution = () => {
           //resource add to cse database done 
           //Now user my contribution handle
           const userResult = await axiosPublic.patch(`/users/${user?.email}/contribution/${id}`,{resource})
-           
-           console.log(userResult)
+          setLoading(false); 
+          console.log(userResult)
          }
     };
  
@@ -114,8 +116,22 @@ const EditMyContribution = () => {
   
   <HeadDash icn={<RiShieldStarFill className="text-[#EFCA08]" />} head="Edit Contribution" subHead="Edit your contribution and re-submit it."></HeadDash>
 
-
-   <div className="bg-cover mx-2 rounded-lg" style={{ backgroundImage: `url(${pattern})` }}>
+{/* loading */}
+  <div className={` ${loading? 'block':'hidden'} absolute bg-white bg-opacity-80 w-full md:w-5/6 z-10 h-full flex items-center justify-center `}>
+       <div className="flex items-center ">
+         <span className="text-3xl mr-4 text-red-700 font-semibold">Loading ...</span>
+         <svg className="animate-spin h-8 w-8 text-red-800" xmlns="http://www.w3.org/2000/svg" fill="none"
+           viewBox="0 0 24 24">
+           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+           <path className="opacity-75" fill="currentColor"
+             d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+           </path>
+         </svg>
+       </div>
+  </div>
+  
+  
+  <div className="bg-cover mx-2 rounded-lg" style={{ backgroundImage: `url(${pattern})` }}>
   
   <div className=" mt-10 border-2 border-slate-200 rounded-lg bg-white/95">
   <div className="mt-10 text-center font-bold flex flex-col md:flex-row justify-center items-center"><GiRoundStar className="mr-1 text-[#EFCA08]"/> Make sure all selector are select perfectfully.</div>
