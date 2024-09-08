@@ -26,7 +26,7 @@ const PharmaHome = () => {
                     <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
                     Department of Pharmacy</h1>
                     <p className="mt-2 text-lg font-semibold text-gray-400 tiro-bangla-regular">
-                    &quot;আঁরা বেজ্ঞুন সি এস ই ইঞ্জিনিয়ার&quot;
+                    &quot;গল্লির মুখোত ফার্মেসির দুয়ান দিয়্যুম দে এরি&quot;
                     </p>
                 </header>
             </div>

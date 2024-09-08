@@ -25,7 +25,7 @@ const EEEHome = () => {
                 <header className="mx-auto max-w-2xl text-center">
                     <h1 className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">Electrical and Electronics Engineering</h1>
                     <p className="mt-2 text-lg font-semibold text-gray-600 tiro-bangla-regular">
-                    &quot;আঁরা বেজ্ঞুন সি এস ই ইঞ্জিনিয়ার&quot;
+                    &quot;ইলেকট্রিক মেস্ত্ররী ন ডাহিবে, আঁরা ইঞ্জিনিয়ার!&quot;
                     </p>
                 </header>
             </div>
