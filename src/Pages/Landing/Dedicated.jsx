@@ -39,7 +39,7 @@ const Dedicated = () => {
 
   return (
       <Parallax
-          className="my-20 bg-cover bg-center"
+          className="mt-14 md:my-20 bg-cover bg-center"
           bgImage={bgImage} 
           strength={200}
           renderLayer={(percentage) => (
