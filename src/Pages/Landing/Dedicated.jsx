@@ -1,6 +1,6 @@
 import { Parallax } from "react-parallax";
-import image4 from "../../assets/Dedicated.png";
-import image3 from "../../assets/DedicatedMobile.png";
+import image4 from "../../assets/Dedicated.webp";
+import image3 from "../../assets/DedicatedMobile.webp";
 import { useState } from "react";
 import { useEffect } from "react";
 const Dedicated = () => {

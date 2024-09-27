@@ -8,18 +8,17 @@ import { Helmet } from "react-helmet";
 const MyContribution = () => {
 
    const {userInfo} = useUserInfo()
-//    console.log(userInfo)
    const {myContribution} = userInfo;
-//    console.log(myContribution);
+
 
     return (
         <div className="pt-20 md:px-20 px-2 overflow-y-auto min-h-screen max-h-screen">
 
-<Helmet>
+    <Helmet>
       <title>Note Nest - My Contribution</title>
     </Helmet>
 
-        <HeadDash icn={<RiShieldStarFill className="text-[#EFCA08]" />} head="My Contribution" subHead="All your remarkable contribution are here."></HeadDash>
+    <HeadDash icn={<RiShieldStarFill className="text-[#EFCA08]" />} head="My Contribution" subHead="All your remarkable contribution are here."></HeadDash>
 
 
 {
