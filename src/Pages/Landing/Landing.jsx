@@ -9,6 +9,7 @@ import UniCard from "./UniCard";
 import ContactUs from "./ContactUs";
 
 import pattern from '../../assets/patternproject.jpg'
+import Dedicated from "./Dedicated";
 
 const Landing = () => {
 
@@ -23,6 +24,7 @@ const Landing = () => {
             <Hero />
             <UniCard />
             <TopContributor />
+            <Dedicated/>
             <Features />
             <SellComponents />
             <Departments />

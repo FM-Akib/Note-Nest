@@ -2,17 +2,14 @@ import { Link } from 'react-router-dom';
 import competionHubLogo from '../../assets/competitonHublogo.png'
 import '../../App.css';
 import heroLeft from '../../assets/HeroLeftWhite.png'
+import { motion } from 'framer-motion';
 
 
 const Hero = () => {
     return (
         <div className=" relative pt-10 pb-20 lg:pt-6 ">
         <div className="relative xl:container m-auto px-4 md:px-12 lg:px-6">
-          {/* <h1 className="sm:mx-auto sm:w-10/12 md:w-2/3 font-black text-blue-900 text-2xl text-center sm:text-5xl md:text-3xl lg:w-auto lg:text-left xl:text-5xl dark:text-slate-500"><br className="lg:block hidden" />
-            <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-[#F50057] to-[#fe3f82]">
-              IIUC Note Nest
-            </span>,
-          </h1> */}
+       
           <div className="flex  items-center justify-start bg-gradient-to-tr pt-4 md:pt-10">
             <div className="w-max">
                 <h1
@@ -23,9 +20,13 @@ const Hero = () => {
             </div>
           <div className="lg:flex">
             <div className="relative mt-4 md:mt-10 space-y-8 sm:w-10/12 md:w-2/3 lg:ml-0 sm:mx-auto text-center lg:text-left lg:mr-auto lg:w-7/12">
-              <p className="sm:text-lg text-gray-700 dark:text-gray-600 lg:w-11/12">
+              <motion.p
+                 initial={{ opacity: 0 }}
+                 animate={{ opacity: 1 }}
+                 transition={{ duration: 1 }}
+              className="sm:text-lg text-gray-700 dark:text-gray-600 lg:w-11/12">
               A platform for IIUC students to share and access academic resources like notes and papers. It&apos;s organized by courses, allows users to contribute materials, search and filter content, bookmark resources, and receive notifications. It fosters collaborative learning among students.
-              </p>
+              </motion.p>
               <span className="block font-semibold text-gray-500 dark:text-gray-500">
                 Our collaboration partner,
               </span>
@@ -35,7 +36,11 @@ const Hero = () => {
                   to="https://m.facebook.com/groups/1134953564340876/?ref=share&mibextid=NSMWBT" target="_blank"
                   className="p-3 md:p-4 border border-gray-400 bg-white   hover:bg-[#fdf8f8]  rounded-lg duration-300 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-600/20 dark:hover:border-cyan-300/30"
                 >
-                  <div className="flex justify-center items-center space-x-4 px-2">
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+                  className="flex justify-center items-center space-x-4 px-2">
                     <img
                       className="w-8 h-8"
                       src={competionHubLogo}
@@ -45,7 +50,7 @@ const Hero = () => {
                       height="128"
                     />
                     <span className=" font-medium md:block text-gray-700 ">IIUC Competition Hub</span>
-                  </div>
+                  </motion.div>
                 </Link>
 
 
