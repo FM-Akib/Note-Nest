@@ -19,3 +19,9 @@
   /* font-weight: 600; */
   font-style: normal;
 }
+
+.video-wrapper {
+  max-width: 100%; /* Adapts to parent container */
+  aspect-ratio: 16 / 9; /* Keeps the 16:9 aspect ratio */
+  margin: 0 auto; /* Centers the video */
+}
