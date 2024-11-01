@@ -2,7 +2,7 @@
 
 Welcome to **Note Nest**, a collaborative platform where university students can share and access notes, suggested playlists, solved questions, and more. Note Nest also offers a marketplace for buying and selling used project components and provides information on popular departmental clubs. It's designed to make academic collaboration easier and more effective.
 
-### 🌐 [Live Link to Note Nest](https://note-nest-21dd0.web.app)
+### 🌐 [Live Link to Note Nest](https://notenest.tech/)
 
 ## 📚 Features
 
