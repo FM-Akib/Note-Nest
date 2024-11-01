@@ -8,6 +8,7 @@ import Swal from "sweetalert2";
 import { v4 as uuidv4 } from 'uuid';
 import { Helmet } from "react-helmet";
 import { CiBookmark } from "react-icons/ci";
+import VideoPreview from "../../components/Shared/VideoPreview";
 
 
 
@@ -186,7 +187,9 @@ const EEEContent = () => {
                 return (
                     <div key={i} className="flex flex-col md:flex-row items-center justify-center mb-4 ">
                         <div className="flex flex-col md:flex-row border-2 p-2 md:p-4 items-center justify-between w-full max-w-5xl bg-gray-200 rounded-xl group md:space-x-6 space-x-2 bg-opacity-50 shadow-sm hover:rounded-2xl">
-                            <img className="block w-full md:w-1/3 h-56 rounded-lg mx-0" alt="art cover" src={item.imgCover} />
+                            {/* <img className="block w-full md:w-1/3 h-56 rounded-lg mx-0" alt="art cover" src={item.imgCover} /> */}
+                            <VideoPreview url={item.url} className="block w-full md:w-1/3 h-56 rounded-lg mx-0" />
+                           
                             <div className="md:w-2/3 w-full pl-0 p-5">
                                 <div className="space-y-2">
                                     <div className="space-y-1">
@@ -632,7 +635,8 @@ const EEEContent = () => {
                 return (
                     <div key={i} className="flex flex-col md:flex-row items-center justify-center mb-4 ">
                         <div className="flex flex-col md:flex-row border-2 p-2 md:p-4 items-center justify-between w-full max-w-5xl bg-gray-200 rounded-xl group md:space-x-6 space-x-2 bg-opacity-50 shadow-sm hover:rounded-2xl">
-                            <img className="block w-full md:w-1/3 h-56 rounded-lg mx-0" alt="art cover" src={item.imgCover} />
+                            {/* <img className="block w-full md:w-1/3 h-56 rounded-lg mx-0" alt="art cover" src={item.imgCover} /> */}
+                            <VideoPreview url={item.url} className="block w-full md:w-1/3 h-56 rounded-lg mx-0" />
                             <div className="md:w-2/3 w-full pl-0 p-5">
                                 <div className="space-y-2">
                                     <div className="space-y-1">
@@ -975,9 +979,9 @@ const EEEContent = () => {
           <summary className="flex items-center justify-between cursor-pointer">
             <h5 className="text-lg font-medium text-gray-900 flex items-center gap-2">
             <svg width="30px" height="30px" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M5.25439 4C3.45947 4 2.00439 5.45507 2.00439 7.25V13.8054C3.17187 12.6871 4.7557 12 6.5 12C7.77408 12 8.96255 12.3666 9.96569 13H20.25C20.6642 13 21 13.3358 21 13.75C21 14.1642 20.6642 14.5 20.25 14.5H11.6238C12.191 15.2255 12.6075 16.0745 12.8261 17H18.25C18.6642 17 19 17.3358 19 17.75C19 18.1642 18.6642 18.5 18.25 18.5H13C13 19.6592 12.6966 20.7475 12.1648 21.6899L14.4749 24.0001H22.751C24.5459 24.0001 26.001 22.545 26.001 20.7501V7.25C26.001 5.45507 24.5459 4 22.751 4H5.25439ZM7 9.75C7 9.33579 7.33579 9 7.75 9H15.25C15.6642 9 16 9.33579 16 9.75C16 10.1642 15.6642 10.5 15.25 10.5H7.75C7.33579 10.5 7 10.1642 7 9.75Z" fill="#F53635"/>
-<path d="M10.8833 21.8226C11.5841 20.8996 12 19.7484 12 18.5C12 15.4624 9.53757 13 6.5 13C3.46243 13 1 15.4624 1 18.5C1 21.5376 3.46243 24 6.5 24C7.74835 24 8.89957 23.5841 9.82264 22.8833L12.7197 25.7803C13.0126 26.0732 13.4874 26.0732 13.7803 25.7803C14.0732 25.4874 14.0732 25.0126 13.7803 24.7197L10.8833 21.8226ZM10.5 18.5C10.5 20.7091 8.70914 22.5 6.5 22.5C4.29086 22.5 2.5 20.7091 2.5 18.5C2.5 16.2909 4.29086 14.5 6.5 14.5C8.70914 14.5 10.5 16.2909 10.5 18.5Z" fill="#212121"/>
-</svg>Others
+            <path d="M5.25439 4C3.45947 4 2.00439 5.45507 2.00439 7.25V13.8054C3.17187 12.6871 4.7557 12 6.5 12C7.77408 12 8.96255 12.3666 9.96569 13H20.25C20.6642 13 21 13.3358 21 13.75C21 14.1642 20.6642 14.5 20.25 14.5H11.6238C12.191 15.2255 12.6075 16.0745 12.8261 17H18.25C18.6642 17 19 17.3358 19 17.75C19 18.1642 18.6642 18.5 18.25 18.5H13C13 19.6592 12.6966 20.7475 12.1648 21.6899L14.4749 24.0001H22.751C24.5459 24.0001 26.001 22.545 26.001 20.7501V7.25C26.001 5.45507 24.5459 4 22.751 4H5.25439ZM7 9.75C7 9.33579 7.33579 9 7.75 9H15.25C15.6642 9 16 9.33579 16 9.75C16 10.1642 15.6642 10.5 15.25 10.5H7.75C7.33579 10.5 7 10.1642 7 9.75Z" fill="#F53635"/>
+            <path d="M10.8833 21.8226C11.5841 20.8996 12 19.7484 12 18.5C12 15.4624 9.53757 13 6.5 13C3.46243 13 1 15.4624 1 18.5C1 21.5376 3.46243 24 6.5 24C7.74835 24 8.89957 23.5841 9.82264 22.8833L12.7197 25.7803C13.0126 26.0732 13.4874 26.0732 13.7803 25.7803C14.0732 25.4874 14.0732 25.0126 13.7803 24.7197L10.8833 21.8226ZM10.5 18.5C10.5 20.7091 8.70914 22.5 6.5 22.5C4.29086 22.5 2.5 20.7091 2.5 18.5C2.5 16.2909 4.29086 14.5 6.5 14.5C8.70914 14.5 10.5 16.2909 10.5 18.5Z" fill="#212121"/>
+            </svg>Others
             </h5>
 
             <span className="relative flex-shrink-0 ml-1.5 w-5 h-5">

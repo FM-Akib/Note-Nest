@@ -8,6 +8,7 @@ import Swal from "sweetalert2";
 import { v4 as uuidv4 } from 'uuid';
 import { Helmet } from "react-helmet";
 import { CiBookmark } from "react-icons/ci";
+import VideoPreview from "../../components/Shared/VideoPreview";
 
 
 const PharmaContent = () => {
@@ -37,7 +38,7 @@ const PharmaContent = () => {
     if (!course || course.length === 0) {
         return <div>Course not found</div>;
     }
-//    console.log(course[0])
+    //    console.log(course[0])
     const {other,questionBank,Note,Playlist,courseCode,courseTitle} = course[0];
     // console.log(Playlist)
 
@@ -185,7 +186,9 @@ const PharmaContent = () => {
                 return (
                     <div key={i} className="flex flex-col md:flex-row items-center justify-center mb-4 ">
                         <div className="flex flex-col md:flex-row border-2 p-2 md:p-4 items-center justify-between w-full max-w-5xl bg-gray-200 rounded-xl group md:space-x-6 space-x-2 bg-opacity-50 shadow-sm hover:rounded-2xl">
-                            <img className="block w-full md:w-1/3 h-56 rounded-lg mx-0" alt="art cover" src={item.imgCover} />
+                            {/* <img className="block w-full md:w-1/3 h-56 rounded-lg mx-0" alt="art cover" src={item.imgCover} /> */}
+                            <VideoPreview url={item.url} className="block w-full md:w-1/3 h-56 rounded-lg mx-0" />
+                           
                             <div className="md:w-2/3 w-full pl-0 p-5">
                                 <div className="space-y-2">
                                     <div className="space-y-1">
@@ -631,7 +634,8 @@ const PharmaContent = () => {
                 return (
                     <div key={i} className="flex flex-col md:flex-row items-center justify-center mb-4 ">
                         <div className="flex flex-col md:flex-row border-2 p-2 md:p-4 items-center justify-between w-full max-w-5xl bg-gray-200 rounded-xl group md:space-x-6 space-x-2 bg-opacity-50 shadow-sm hover:rounded-2xl">
-                            <img className="block w-full md:w-1/3 h-56 rounded-lg mx-0" alt="art cover" src={item.imgCover} />
+                            {/* <img className="block w-full md:w-1/3 h-56 rounded-lg mx-0" alt="art cover" src={item.imgCover} /> */}
+                            <VideoPreview url={item.url} className="block w-full md:w-1/3 h-56 rounded-lg mx-0" />
                             <div className="md:w-2/3 w-full pl-0 p-5">
                                 <div className="space-y-2">
                                     <div className="space-y-1">
